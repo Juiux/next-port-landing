@@ -5,7 +5,8 @@
             █░░ ▄▀█ █▀█ █▀█ █▀█ █▀▀ ▄▀█ █░░ █▀▄▀█<br>
             █▄▄ █▀█ █▀▀ █▀▀ █▀▄ ██▄ █▀█ █▄▄ █░▀░█<br>
             -------------------------------------<br>
-            Arch Installation Guide (UEFI only)  <br>
+            Arch Linux Dual Boot                 <br>
+            Installation Guide (UEFI Only)       <br>
             -------------------------------------
         </p>
         <link rel = "stylesheet" href="/styles/styles.css">
@@ -16,10 +17,10 @@
         </p>
 
         <p id="text">
-            This is a <b>no bullshit</b> tutorial to install Arch Linux on UEFI systems.<br>
+            This is a <b>no bullshit</b> tutorial to dualboot Arch Linux with Windows on UEFI systems.<br>
             Disclaimer : I'm not responsible if your device tries to eat you or suddenly become a time bomb. Do this at your own risk.<br>
             Note : If you are on MBR, consider looking for another countless tutorials on internet or just refer to Arch Wiki.<br>
-            You can read about Arch Linux here https://en.wikipedia.org/wiki/Arch_Linux.
+            You can read about Arch Linux <a id="cmdtext" href="https://wiki.archlinux.org/index.php/Arch_Linux">here</a>.
         </p>
 
         <p id="text-center">
@@ -27,9 +28,9 @@
         </p>
 
         <p id="text">
-            1. Arch Linux ISO. You can download it <a href="https://archlinux.org/download/">here</a>.<br>
+            1. Arch Linux ISO. You can download it <a id="cmdtext" href="https://archlinux.org/download/">here</a>.<br>
             2. A working Arch Linux Live Boot environment.<br>
-            > You can make one by using <a href="https://github.com/pbatard/rufus/releases/download/v3.1/rufus-3.1.exe">Rufus</a>.<br>
+            > You can make one by using <a id="cmdtext" href="https://github.com/pbatard/rufus/releases/download/v3.1/rufus-3.1.exe">Rufus</a>.<br>
             >> Step-by-step :<br>
             >> 1. Make sure that you already downloaded Arch Linux ISO and Rufus. (Note: Links are underlined words above)<br>
             >> 2. Plug your installation medium into your device. (Note: A flashdisk with 8GB of storage would be enough)<br>
@@ -39,7 +40,19 @@
             >> 6. Select the partition scheme. (I'm using GPT on this tutorial)<br>
             >> 7. Leave all other settings to default and hit that start button.<br>
             >> 8. If prompted to select method, use DD method.<br>
-            >> 9. Wait for it to finish install.
+            >> 9. Wait for it to finish install.<br>
+            3. x86_64 compatible device with 512MiB+ of RAM and 20GiB+ of storage. (Shrink some partition with diskmgmt in Windows)<br>
+            4. Balls.
+        </p>
+
+        <p id="text-center">
+            <b>[INSTALLATION]</b>
+        </p>
+
+        <p id="text">
+            <b>Preparations</b><br>
+            1. Disable Secure Boot. <a id="cmdtext" href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot">Here's how</a>.<br>
+            2. Disable Sleep Mode and Hibernation. <b>(READ THIS CAREFULLY)</b> <a id="cmdtext" href="https://www.pugetsystems.com/labs/support-software/How-to-disable-Sleep-Mode-or-Hibernation-793/">Here's how</a>.<br>
         </p>
 
         <p id="text-center">
