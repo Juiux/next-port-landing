@@ -33,3 +33,10 @@ body {
     font-size: 12px;
     color: #00dbff;
 }
+
+#cmdtext-center {
+    font-family: monospace;
+    font-size: 12px;
+    color: #00dbff;
+    text-align: center;
+}
