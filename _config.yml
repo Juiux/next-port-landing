@@ -34,7 +34,7 @@ theme: minima
 #  - jekyll-feed
 
 minima:
-  skin: classic
+  skin: dark
 
 # Exclude from processing.
 # The following items will not be processed, by default.
