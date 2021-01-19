@@ -1,8 +1,8 @@
 # Setup
 title: Lapprealm
-url: https://irvanmalik48.github.io
+url:
 paginate: 1
-baseurl: "https://irvanmalik48.github.io"
+baseurl: ""
 permalink: pretty
 
 # Gems
@@ -34,7 +34,7 @@ sass:
 author:
   name: Irvan Malik
   url: https://t.me/lapprealm
-  email: markdotto@gmail.com
+  email: irvanmalik48@gmail.com
 
 # Custom vars
 version: 3.0.0
