@@ -30,9 +30,17 @@ url: "https://irvanmalik48.github.io" # the base hostname & protocol for your si
 # Build settings
 markdown: kramdown
 theme: minima
-skin: dark
 plugins:
   - jekyll-feed
+
+# Minima
+minima:
+  skin: dark
+  social_links:
+    telegram: https://t.me/lapprealm
+    instagram: https://instagram.com/irvann48_
+    
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
