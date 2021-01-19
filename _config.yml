@@ -30,8 +30,8 @@ url: "https://irvanmalik48.github.io" # the base hostname & protocol for your si
 # Build settings
 markdown: kramdown
 theme: minima
-plugins:
-  - jekyll-feed
+# plugins:
+#  - jekyll-feed
 
 minima:
   skin: classic
