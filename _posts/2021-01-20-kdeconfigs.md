@@ -3,7 +3,7 @@ layout: post
 title: Venturing the Land of KDE | My Configuration
 ---
 
-![Gawr](img/eyecandy2.png)
+![Gawr](https://raw.githubusercontent.com/irvanmalik48/irvanmalik48.github.io/main/img/eyecandy2.png)
 
 ## Prologue
 
@@ -20,6 +20,6 @@ In Linux, there's this thing called Desktop Environment or simply DE. Wikipedia 
 So that's it for the wrap-up. As most of you are probably a Linux hobbyists already, yes, I'm a KDE user (hence the title). I know some Linux users feel some distaste for certain DEs with big memory consumption but KDE is worth its name. It has a wide array of customizations here and there to be discovered and the limit is really your imagination.
 
 ## My Configuration
-![Gura](img/eyecandy1.png)
-![Gawr](img/eyecandy2.png)
+![Gura](https://raw.githubusercontent.com/irvanmalik48/irvanmalik48.github.io/main/img/eyecandy1.png)
+![Gawr](https://raw.githubusercontent.com/irvanmalik48/irvanmalik48.github.io/main/img/eyecandy2.png)
 In construction, please wait plox
