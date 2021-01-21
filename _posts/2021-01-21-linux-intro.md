@@ -13,19 +13,19 @@ So, for all of you who doesn't know what Linux is or never heard any of it, don'
 According to Wikipedia,
 
 > Linux is a family of open-source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds. Linux is typically packaged in a Linux distribution.\
-\
+>
 The open source nature of Linux is the key to its growth. Because Linux is freely redistributable, everyone may create a distribution for any purpose. Popular Linux distributions include Debian, Ubuntu, Fedora, Arch, Gentoo, and many more. Commercial distributions include Red Hat Enterprise Linux and SUSE Linux Enterprise Server.\
-\
+
 > Linux that is intended for desktop use includes a windowing system such as X11 or Wayland, and a desktop environment such as XFCE, GNOME, and KDE Plasma with their own respective apps, window manager, and compositor. Although, it is not really that necessary to install a whole desktop environment of such as some call it bloated or whatever, you can still use a system configured with window manager only environment such as i3, bspwm, xmonad, and dwm, etc. the limit is your imagination.\
-\
+>
 Also referenced from Wikipedia:\
-\
+
 > Linux was originally developed for personal computers based on the Intel x86 architecture, but has since been ported to more platforms than any other operating system. Because of the dominance of Android on smartphones, Linux also has the largest installed base of all general-purpose operating systems. Although it is used by only around 2.3 percent of desktop computers, the Chromebook, which runs the Linux kernel-based Chrome OS, dominates the US K–12 education market and represents nearly 20 percent of sub-$300 notebook sales in the US. Linux is the leading operating system on servers (over 96.4% of the top 1 million web servers' operating systems are Linux), leads other big iron systems such as mainframe computers, and is the only OS used on TOP500 supercomputers (since November 2017, having gradually eliminated all competitors).\
-\
+>
 > Linux also runs on embedded systems, i.e. devices whose operating system is typically built into the firmware and is highly tailored to the system. This includes routers, automation controls, smart home technology (like Google Nest), televisions (Samsung and LG Smart TVs use Tizen and WebOS, respectively), automobiles (for example, Tesla, Audi, Mercedes-Benz, Hyundai, and Toyota all rely on Linux), digital video recorders, video game consoles, and smartwatches. The Falcon 9's and the Dragon 2's avionics use a customized version of Linux.\
-\
+>
 > 90% of all cloud infrastructure is powered by Linux including supercomputers and cloud providers. 74% of smartphones in the world are Linux-based.\
-\
+>
 You can find more information about Linux [here](https://en.wikipedia.org/wiki/Linux).
 
 ## Overview: Distributions
