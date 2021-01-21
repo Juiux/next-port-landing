@@ -47,29 +47,4 @@ Debian is one of the oldest Linux distributions. Debian is developed by the comm
 ![Gentoo](https://upload.wikimedia.org/wikipedia/commons/1/11/Gentoo12.0.jpg)
 Gentoo is a Linux distribution meant for advanced users. Unlike every other Linux distributions mentioned above that uses precompiled binary packages, Gentoo compiles the source code locally according to the user's preferences and is often optimized for the specific type of computer. Although, precompiled binaries are still available for some larger packages without available source code. It uses Portage as its package management system that is designed to be modular, portable, easy to maintain, and flexible. Google's Chromium OS is known to be based from Gentoo Linux. Gentoo uses a rolling release method in which users only need to update regularly, whenever they want (and having a free time since compiling sometimes takes forever in a slower machine) to get the latest bleeding edge software to date. Gentoo has its own respectable [Gentoo Wiki](https://wiki.gentoo.org/) and [Gentoo Forums](https://forums.gentoo.org/).
 
-## Overview: Package Management
-Different from Windows that use executables to install or run programs or applications, Linux embraces the use of package managers. In Windows, you go search the application installer executable from the web and sometimes had to choose and go to steps of downloading the executable and then finding the file and installing the application by running the said executable. In Linux however, you can do it by just a single line of command typed from the command line interface, provided you know the name of package, and then package manager will do the job of downloading and installing it for you. Simple, right?  
-So, there's many package managers available in different types of Linux distributions. The most notable are the following:
-### 1.  DPKG
-DPKG is a package management system for Debian distributions and its derivatives. It is used to install, remove, store, and provide information about <strong>.deb</strong> packages.  
-
-Example for DPKG commands include:
-```
-# dpkg -i <package-name>.deb    # To install a package
-# dpkg -r <package-name>        # To remove a package
-# dpkg -p <package-name>        # To remove a package along with its config files
-# dpkg -l                       # To list packages, to list specific packages add a <package-name> after the option
-# dpkg -s <package-name>        # To check if the package is installed or not
-# dpkg -L <package-name>        # To check installed package location
-# dpkg -help                    # To show more information about dpkg and all its commands
-```
-It is a low-level tool and there are front-end tools that help users to obtain packages from remote repositories and/or handle complex package relations and these include:
-#### APT (Advanced Packaging Tool)
-Front end for DPKG. Users of Debian or its derivatives should be familiar with this package management tool.  
-
-Example for APT commands include:
-```
-$ sudo apt install <package-name>   # To install a package
-$ sudo apt remove <package-name>    # To remove a package
-```
-Page is under construction.
+That's it for this post. In the next post, we will continue it with overviewing different types of package management in Linux. Stay tuned and stay healthy. 
