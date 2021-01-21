@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linux: Intro
+title: Linux | Intro
 ---
 
 ## Prologue
