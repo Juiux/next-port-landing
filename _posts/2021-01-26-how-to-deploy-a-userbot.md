@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: Userbot 101 | How to Deploy
 ---
 
