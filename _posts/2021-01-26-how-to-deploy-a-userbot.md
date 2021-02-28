@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Userbot 101 | How to Deploy
+title: "Userbot 101 | How to Deploy"
+category: misc
 ---
 
 # Introduction

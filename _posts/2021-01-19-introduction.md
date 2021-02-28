@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Introduction
+title: "Introduction"
+category: intro
 ---
 
 ## A Simple Story
@@ -8,7 +9,6 @@ title: Introduction
 A few days ago, I was curious if whether it will be fun to make a site in which I could do some blog stuffs.
 So I made a site to host my blog posts and now here we are.
 This site is powered by Jekyll and hosted on Github.
-The theme is Dark Poole. [Check it out if you want to](https://github.com/andrewhwanpark/dark-poole).
 
 ## About Jekyll
 
