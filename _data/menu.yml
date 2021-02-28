@@ -4,9 +4,14 @@
 entries:
   - title: info
     entries:
-      - title: All hail the lappland
-      - title: github account
+      - title: github
         url: https://github.com/irvanmalik48
+      - title: instagram
+        url: https://instagram.com/irvann48_
+      - title: telegram channel
+        url: https://t.me/lapprealm
+      - title: telegram account
+        url: https://t.me/irvanmalik48
 
   - title: all posts
     post_list:
