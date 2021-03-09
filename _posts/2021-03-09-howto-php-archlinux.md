@@ -53,12 +53,12 @@ Further informations can be referred from [Arch Wiki MariaDB page](https://wiki.
 ## Configuring PHP
 PHP is a widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.  
 The main PHP configuration file is well documented and located at `/etc/php/php.ini`.
-In order to make PHP work with MariaDB, uncomment the following lines in `/etc/php/php.ini`:
+In order to make PHP work with MariaDB, uncomment the following lines in `/etc/php/php.ini`:  
 ```
 extension=iconv
 extension=pdo_mysql
 extension=mysqli
-```
+```  
 > Note: the extension `iconv` is to be uncommented to avoid an error in PHP8 regarding the extension itself.  
 Further informations can be reffered from [Arch Wiki PHP page](https://wiki.archlinux.org/index.php/PHP).
 
