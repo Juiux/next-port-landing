@@ -126,7 +126,7 @@ sudo chmod 750 /usr/share/webapps/phpMyAdmin/config
 ``` 
 $cfg['blowfish_secret'] = 'your-passphrase-here';
 ```
-5. In `/usr/share/webapps/phpMyAdmin/config.inc.php`, uncomment (remove the leading "//"s), and change them correspondingly to the ones you set in MariaDB configuration (`your-name` and `your-pass`): 
+5. In `/usr/share/webapps/phpMyAdmin/config.inc.php`, uncomment and change them correspondingly to the ones you set in MariaDB configuration (`your-name` and `your-pass`):  
 ``` 
 /* User used to manipulate with storage */
 // $cfg['Servers'][$i]['controlhost'] = 'my-host';
