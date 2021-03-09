@@ -88,8 +88,7 @@ For further readings, refer to [Arch Wiki Apache page](https://wiki.archlinux.or
 
 ## Configuring phpMyAdmin
 1. Create the Apache configuration file:  
-```
-sudo echo 'Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
+```sudo echo 'Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
 <Directory "/usr/share/webapps/phpMyAdmin">
     DirectoryIndex index.php
     AllowOverride All
@@ -98,22 +97,16 @@ sudo echo 'Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
 </Directory>' > /etc/httpd/conf/extra/phpmyadmin.conf
 ```  
 2. Include the file in `/etc/httpd/conf/httpd.conf`:  
-```
-Include conf/extra/phpmyadmin.conf
-```  
+```Include conf/extra/phpmyadmin.conf```  
 3. To allow the usage of the phpMyAdmin setup script (e.g. http://localhost/phpmyadmin/setup), make sure `/usr/share/webapps/phpMyAdmin` is writable for the http user:  
-```
-sudo mkdir /usr/share/webapps/phpMyAdmin/config
+```sudo mkdir /usr/share/webapps/phpMyAdmin/config
 sudo chown http:http /usr/share/webapps/phpMyAdmin/config
 sudo chmod 750 /usr/share/webapps/phpMyAdmin/config
 ```  
 4. Add blowfish_secret passphrase (You can search a generator for one) in `/usr/share/webapps/phpMyAdmin/config.inc.php`:  
-```
-$cfg['blowfish_secret'] = 'your-passphrase-here';
-```  
+```$cfg['blowfish_secret'] = 'your-passphrase-here';```  
 5. In `/usr/share/webapps/phpMyAdmin/config.inc.php`, uncomment (remove the leading "//"s), and change them correspondingly to the ones you set in MariaDB configuration (`your-name` and `your-pass`):  
-```
-/* User used to manipulate with storage */
+```/* User used to manipulate with storage */
 // $cfg['Servers'][$i]['controlhost'] = 'my-host';
 // $cfg['Servers'][$i]['controlport'] = '3306';
 $cfg['Servers'][$i]['controluser'] = 'your-name';
@@ -140,13 +133,11 @@ $cfg['Servers'][$i]['savedsearches'] = 'pma__savedsearches';
 $cfg['Servers'][$i]['central_columns'] = 'pma__central_columns';
 $cfg['Servers'][$i]['designer_settings'] = 'pma__designer_settings';
 $cfg['Servers'][$i]['export_templates'] = 'pma__export_templates';
-```
-6. Execute `mysql -u root -p < /usr/share/webapps/phpMyAdmin/sql/create_tables.sql` in the command line to create the required tables.
-7. Remove temporary configuration directory once configuration is done:
-```
-sudo rm -r /usr/share/webapps/phpMyAdmin/config
 ```  
-7. Restart the `httpd.service` again just for additional measures.  
+6. Execute `mysql -u root -p < /usr/share/webapps/phpMyAdmin/sql/create_tables.sql` in the command line to create the required tables.
+7. Remove temporary configuration directory once configuration is done:  
+```sudo rm -r /usr/share/webapps/phpMyAdmin/config```  
+8. Restart the `httpd.service` again just for additional measures.  
 For further readings, refer to [Arch Wiki phpMyAdmin page](https://wiki.archlinux.org/index.php/PhpMyAdmin).
 
 # Finishing
