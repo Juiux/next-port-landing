@@ -101,16 +101,17 @@ Include conf/extra/php_module.conf
 For further readings, refer to [Arch Wiki Apache page](https://wiki.archlinux.org/index.php/Apache_HTTP_Server).
 
 ## Configuring phpMyAdmin
-1. Create the Apache configuration file:  
+1. Create the Apache configuration file in `/etc/httpd/conf/extra/phpmyadmin.conf`:  
 ``` 
-sudo echo 'Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
-<Directory "/usr/share/webapps/phpMyAdmin">
+Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
+< Directory "/usr/share/webapps/phpMyAdmin">
     DirectoryIndex index.php
     AllowOverride All
     Options FollowSymlinks
     Require all granted
-</Directory>' > /etc/httpd/conf/extra/phpmyadmin.conf
+< /Directory>
 ```
+> Note: Remove the space before Directory and /Directory.
 2. Include the file in `/etc/httpd/conf/httpd.conf`:  
 ``` 
 Include conf/extra/phpmyadmin.conf
