@@ -133,7 +133,8 @@ $cfg['blowfish_secret'] = 'your-passphrase-here';
 // $cfg['Servers'][$i]['controlport'] = '3306';
 $cfg['Servers'][$i]['controluser'] = 'your-name';
 $cfg['Servers'][$i]['controlpass'] = 'your-pass';
-
+```  
+``` 
 /* Storage database and tables */
 $cfg['Servers'][$i]['pmadb'] = 'phpmyadmin';
 $cfg['Servers'][$i]['bookmarktable'] = 'pma__bookmark';
