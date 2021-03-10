@@ -104,12 +104,12 @@ For further readings, refer to [Arch Wiki Apache page](https://wiki.archlinux.or
 1. Create the Apache configuration file in `/etc/httpd/conf/extra/phpmyadmin.conf`:  
 ``` 
 Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
-\<Directory "/usr/share/webapps/phpMyAdmin">
+&lt;Directory "/usr/share/webapps/phpMyAdmin"&gt;
     DirectoryIndex index.php
     AllowOverride All
     Options FollowSymlinks
     Require all granted
-\</Directory>
+&lt;/Directory&gt;
 ```
 2. Include the file in `/etc/httpd/conf/httpd.conf`:  
 ``` 
