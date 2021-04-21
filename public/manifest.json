@@ -1,0 +1,12 @@
+{
+  "short_name": "IrvanMA",
+  "name": "IrvanMA",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone"
+}
