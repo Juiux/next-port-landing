@@ -11,13 +11,10 @@ export default function Blog(props) {
           <p className="lead mb-3">Do what you want and do it well.</p>
           <div className="btn-group btn-group-lg" role="group">
             <a className="btn btn-dark" href="https://github.com/irvanmalik48">
-              <i className="fab fa-github"></i>
-            </a>
-            <a className="btn btn-dark" href="https://instagram.com/irvann48_">
-              <i className="fab fa-instagram"></i>
+              <i className="fab fa-github me-2"></i> Github
             </a>
             <a className="btn btn-dark" href="https://t.me/irvanmalik48">
-              <i className="fab fa-telegram"></i>
+              <i className="fab fa-telegram me-2"></i> Telegram
             </a>
           </div>
         </div>
@@ -47,11 +44,13 @@ export default function Blog(props) {
                   </th>
                   <td className="pt-3 pb-3" colSpan="2">
                     <Link href={"/posts/" + post.slug}>
-                      <a>{post.title}</a>
+                      <a className="text-white">{post.title}</a>
                     </Link>
                   </td>
                   <td className="pt-3 pb-3" colSpan="3">
-                    <p className="m-0">{post.desc}</p>
+                    <Link href={"/posts/" + post.slug}>
+                      <a className="text-white">{post.desc}</a>
+                    </Link>
                   </td>
                 </tr>
               );
