@@ -11,10 +11,10 @@ export default function Blog(props) {
           <p className="lead mb-3">Do what you want and do it well.</p>
           <div className="btn-group btn-group-lg" role="group">
             <a className="btn btn-dark" href="https://github.com/irvanmalik48">
-              <i className="fab fa-github me-2"></i> Github
+              Github
             </a>
             <a className="btn btn-dark" href="https://t.me/irvanmalik48">
-              <i className="fab fa-telegram me-2"></i> Telegram
+              Telegram
             </a>
           </div>
         </div>
