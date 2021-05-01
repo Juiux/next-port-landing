@@ -23,24 +23,35 @@ export default function Blog(props) {
         </div>
       </section>
       <section className="container mt-3" style={{ marginBottom: "100px" }}>
-        <table className="table table-striped table-borderless rounded-3">
+        <p className="h4 mb-3 mt-4 text-center">Posts</p>
+        <table className="table align-middle table-striped table-borderless table-hover rounded-3">
           <thead>
             <tr>
-              <th itemScope="col">Post Title</th>
-              <th itemScope="col">Date</th>
+              <th scope="col" colSpan="1">
+                Date
+              </th>
+              <th scope="col" colSpan="2">
+                Title
+              </th>
+              <th scope="col" colSpan="3">
+                Description
+              </th>
             </tr>
           </thead>
           <tbody>
             {props.posts.map(function (post, idx) {
               return (
                 <tr key={idx}>
-                  <td className="pt-3 pb-3">
+                  <th scope="row" colSpan="1">
+                    {post.date}
+                  </th>
+                  <td className="pt-3 pb-3" colSpan="2">
                     <Link href={"/posts/" + post.slug}>
                       <a>{post.title}</a>
                     </Link>
                   </td>
-                  <td className="pt-3 pb-3">
-                    <p className="m-0">{post.date}</p>
+                  <td className="pt-3 pb-3" colSpan="3">
+                    <p className="m-0">{post.desc}</p>
                   </td>
                 </tr>
               );

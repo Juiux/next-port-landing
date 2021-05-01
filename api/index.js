@@ -13,6 +13,7 @@ export async function getAllPosts() {
       slug: post.replace(".md", ""),
       title: meta.data.title,
       date: meta.data.date,
+      desc: meta.data.desc,
     });
   }
   return posts;
@@ -25,6 +26,7 @@ export async function getPostBySlug(slug) {
   return {
     title: meta.data.title,
     date: meta.data.date,
+    desc: meta.data.desc,
     content: content,
   };
 }

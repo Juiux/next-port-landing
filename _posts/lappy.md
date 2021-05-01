@@ -1,6 +1,7 @@
 ---
 title: "Lappy.js"
 date: "01-05-2021"
+desc: "Summary of Lappy.js"
 ---
 
 ## <p class="text-center">Introduction</p>
