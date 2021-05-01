@@ -1,26 +1,15 @@
-/* 
-const withPWA = require("next-pwa");
+import withPWA from "next-pwa";
 
-module.exports = withPWA({
+export default withPWA({
   pwa: {
     dest: "public",
     mode: "production",
   },
 });
-*/
 
-module.exports = {
-  target: "serverless",
-  webpack: function (config) {
-    config.module.rules.push({ test: /\.md$/, use: "raw-loader" });
-    config.module.rules.push({ test: /\.yml$/, use: "raw-loader" });
-    config.module.rules.push({
-      pwa: {
-        dest: "public",
-        mode: "production",
-      },
-      use: "next-pwa",
-    })
-    return config;
-  },
-};
+export const target = "serverless";
+export function webpack(config) {
+  config.module.rules.push({ test: /\.md$/, use: "raw-loader" });
+  config.module.rules.push({ test: /\.yml$/, use: "raw-loader" });
+  return config;
+}
