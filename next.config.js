@@ -7,13 +7,6 @@ module.exports = withPWA({
 });
 
 module.exports = {
-  i18n: {
-    locales: ['en-US'],
-    defaultLocale: 'en-US',
-  }
-}
-
-module.exports = {
   target: "serverless",
   webpack: function (config) {
     config.module.rules.push({ test: /\.md$/, use: "raw-loader" });

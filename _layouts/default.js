@@ -4,7 +4,7 @@ import Footer from "@includes/footer";
 
 export default function DefaultLayout(props) {
   return (
-    <main>
+    <html lang="en-US">
       <Head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -60,6 +60,6 @@ export default function DefaultLayout(props) {
       <Header />
       {props.children}
       <Footer />
-    </main>
+    </html>
   );
 }
