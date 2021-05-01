@@ -9,14 +9,15 @@ export default function Blog(props) {
         <div className="container">
           <p className="display-4 mb-0">Irvan Malik Azantha</p>
           <p className="lead mb-3">Do what you want and do it well.</p>
-          <div className="btn-group" role="group">
+          <div className="btn-group btn-group-lg" role="group">
             <a className="btn btn-dark" href="https://github.com/irvanmalik48">
-              <i className="fab fa-github me-2"></i>
-              Github
+              <i className="fab fa-github"></i>
             </a>
             <a className="btn btn-dark" href="https://instagram.com/irvann48_">
-              <i className="fab fa-instagram me-2"></i>
-              Instagram
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a className="btn btn-dark" href="https://t.me/irvanmalik48">
+              <i className="fab fa-telegram"></i>
             </a>
           </div>
         </div>
