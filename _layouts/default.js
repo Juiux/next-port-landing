@@ -9,7 +9,7 @@ export default function DefaultLayout(props) {
         <title>{props.title}</title>
         <meta name="description" content={props.description} />
         <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css"
           rel="stylesheet"
         />
         <link
