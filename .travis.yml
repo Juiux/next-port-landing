@@ -8,6 +8,7 @@ script:
   - npm run build
   - npm run export
   - touch out/.nojekyll
+  - echo "irvanma.live" > out/CNAME
 deploy:
   provider: pages
   skip_cleanup: true
