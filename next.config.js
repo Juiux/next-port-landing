@@ -1,12 +1,3 @@
-const withPWA = require("next-pwa");
-
-module.exports = withPWA({
-  pwa: {
-    dest: "public",
-    mode: "production",
-  },
-});
-
 module.exports = {
   target: "serverless",
   webpack: function (config) {
