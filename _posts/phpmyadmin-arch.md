@@ -1,6 +1,6 @@
 ---
 title: "phpMyAdmin Arch Install"
-date: "02-04-2021"
+date: "02-05-2021"
 desc: "Setup phpMyAdmin manually on Arch."
 ---
 
