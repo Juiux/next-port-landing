@@ -11,40 +11,43 @@ A Telegram userbot is basically something that can help you manage stuffs here a
 # Setting Up
 
 1. API Hash and API ID
-    - Login to [my.telegram.org](https://my.telegram.org) with your Telegram account.
-    - Go to **API Development Tools**, fill out the form for creating an app. You'll get the required API Hash and API ID there.
-    > Note: Nothing really matters, fill in anything that you want.
+
+   - Login to [my.telegram.org](https://my.telegram.org) with your Telegram account.
+   - Go to **API Development Tools**, fill out the form for creating an app. You'll get the required API Hash and API ID there.
+     > Note: Nothing really matters, fill in anything that you want.
 
 2. Generate a session string
-    - Go to [here](http://sessiongen.irvanmalik48.repl.run/) and click on run button on top.
-    - Enter the API Hash and API ID you've got from the previous step.
-    - Enter your phone number with country code (example: +62896xxxxxxxx).
-    - Follow further instructions then check your **Saved Messages** in Telegram, there will be your session string.
-    > Note: Don't share your session string to anyone, anywhere, anytime. Imagine a key to your house, then imagine if it's in someone's hand.
+
+   - Go to [here](http://sessiongen.irvanmalik48.repl.run/) and click on run button on top.
+   - Enter the API Hash and API ID you've got from the previous step.
+   - Enter your phone number with country code (example: +62896xxxxxxxx).
+   - Follow further instructions then check your **Saved Messages** in Telegram, there will be your session string.
+     > Note: Don't share your session string to anyone, anywhere, anytime. Imagine a key to your house, then imagine if it's in someone's hand.
 
 3. Get BOTLOG_CHATID (Optional but recommended)
-    - Create a group with you and add @MissRose_bot to your group.
-    - Type `/id` and send it to the group. Rose will give you the group chat ID.
-    > Note: Don't leave out the - in there. It is essential.
+
+   - Create a group with you and add @MissRose_bot to your group.
+   - Type `/id` and send it to the group. Rose will give you the group chat ID.
+     > Note: Don't leave out the - in there. It is essential.
 
 4. Get Heroku API key
-    - Make a Heroku account [here](https://signup.heroku.com).
-    - Head [here](https://dashboard.heroku.com/account) and get your Heroku API key.
-    > Note: Heroku gives you free 550 hours of usage. Enter in your billing info to receive another free 450 hours.
+   - Make a Heroku account [here](https://signup.heroku.com).
+   - Head [here](https://dashboard.heroku.com/account) and get your Heroku API key.
+     > Note: Heroku gives you free 550 hours of usage. Enter in your billing info to receive another free 450 hours.
 
 # Deploying
 
 1. Head to Lappbot's Github repo [here](https://github.com/irvanmalik48/Lappbot) or [use this link](https://heroku.com/deploy?template=https://github.com/irvanmalik48/Lappbot/tree/master) to directly deploy it to Heroku.
 2. Fill your app name and choose which region is closest to your location.
 3. Fill in the form with everything you got from previous section. Also read through the options of configuration and add/change them according to your own needs.
-    > Note: You can change the values anytime you want later on.
+   > Note: You can change the values anytime you want later on.
 4. Leave the logging options as they are (It's enabled by default).
 5. Click on **Deploy App** option at the bottom of the page.
 6. Click on the **View** button once it's successfully deployed.
 7. Navigate to the **Resources** tab, click the pencil icon, and turn the worker on if it's not enabled yet.
 8. Click on **More** button on the top right, and then click on **View logs**.
 9. If it prints `Congratulations, the bot is up and running! Send .help in any chat for more info.`, then everything's good.
-    > You can send `.help` in any chat for more info. If you want info on specific module, send `.help` followed by the name of module listed in the `.help` section you've opened before.
+   > You can send `.help` in any chat for more info. If you want info on specific module, send `.help` followed by the name of module listed in the `.help` section you've opened before.
 
 # Updates
 

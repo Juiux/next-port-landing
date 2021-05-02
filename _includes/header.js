@@ -6,7 +6,7 @@ export default function Header() {
           IrvanMA's Lair
         </a>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler p-0"
           type="button"
           data-mdb-toggle="collapse"
           data-mdb-target="#navbarSupportedContent"
@@ -14,9 +14,7 @@ export default function Header() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <p className="btn btn-dark shadow-0 m-0">
-            . . .
-          </p>
+          <p className="btn btn-dark shadow-0 m-0 p-2">. . .</p>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
