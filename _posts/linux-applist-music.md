@@ -1,6 +1,6 @@
 ---
 title: "Linux App List: Music"
-date: "02-05-2021"
+date: "03-05-2021"
 desc: "Collection of music apps for linux."
 ---
 # Abstract
