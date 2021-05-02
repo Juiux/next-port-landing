@@ -5,4 +5,5 @@ module.exports = {
     config.module.rules.push({ test: /\.yml$/, use: "raw-loader" });
     return config;
   },
+  compress: "true",
 };
