@@ -1,4 +1,6 @@
-module.exports = {
+const withPWA = require('next-pwa')
+
+module.exports = withPWA({
   target: "serverless",
   webpack: function (config) {
     config.module.rules.push({ test: /\.md$/, use: "raw-loader" });
@@ -6,4 +8,7 @@ module.exports = {
     return config;
   },
   compress: true,
-};
+  pwa: {
+    dest: "public",
+  },
+});
