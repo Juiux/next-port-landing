@@ -18,7 +18,7 @@ export default function DefaultLayout(props) {
         />
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.dark.min.css"
-          rel="stylesheet"
+          rel="subresource"
         />
         <link rel="manifest" href="/manifest.json" />
         <link
