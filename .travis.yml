@@ -1,11 +1,16 @@
 language: node_js
 node_js:
   - 16
+addons:
+  chrome: stable
 cache:
   directories:
     - node_modules
+before_install:
+  - npm install -g @lhci/cli@0.7.x
 script:
   - npm run build
+  - lhci autorun
   - npm run export
   - touch out/.nojekyll
   - echo "irvanma.live" > out/CNAME
