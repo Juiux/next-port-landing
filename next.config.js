@@ -1,4 +1,5 @@
 const withPWA = require("next-pwa");
+const webpack = require("webpack");
 
 module.exports = withPWA({
   target: "serverless",
