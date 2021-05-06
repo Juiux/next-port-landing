@@ -2,10 +2,8 @@ const withPWA = require("next-pwa");
 
 module.exports = withPWA({
   target: "serverless",
-  webpack: function (config) {
-    config.module.rules.push({ test: /\.md$/, use: "raw-loader" });
-    config.module.rules.push({ test: /\.yml$/, use: "raw-loader" });
-    return config;
+  future: {
+    webpack5: true,
   },
   compress: true,
   optimization: {
