@@ -1,37 +1,53 @@
+import fs from "fs";
+import path from "path";
 import matter from "gray-matter";
-import marked from "marked";
-import yaml from "js-yaml";
+import remark from "remark";
+import html from "remark-html";
 
-export async function getAllPosts() {
-  const context = require.context("../_posts", false, /\.md$/);
-  const posts = [];
-  for (const key of context.keys()) {
-    const post = key.slice(2);
-    const content = await import(`../_posts/${post}`);
-    const meta = matter(content.default);
-    posts.push({
-      slug: post.replace(".md", ""),
-      title: meta.data.title,
-      date: meta.data.date,
-      desc: meta.data.desc,
-    });
-  }
-  return posts;
+const postsDirectory = path.join(process.cwd(), "posts")
+
+export function getSortedPostsData() {
+  const fileNames = fs.readdirSync(postsDirectory);
+  const allPostsData = fileNames.map((fileName) => {
+    const id = fileName.replace(/\.md$/, "");
+    const fullPath = path.join(postsDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, "utf-8");
+    const matterResult = matter(fileContents);
+    return {
+      id,
+      ...matterResult.data,
+    }
+  });
+  return allPostsData.sort((a, b) => {
+    if (a.date < b.date) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
 }
 
-export async function getPostBySlug(slug) {
-  const fileContent = await import(`../_posts/${slug}.md`);
-  const meta = matter(fileContent.default);
-  const content = marked(meta.content);
+export function getAllPostIds() {
+  const fileNames = fs.readdirSync(postsDirectory);
+  return fileNames.map((fileName) => {
+    return {
+      params: {
+        id: fileName.replace(/\.md$/, ""),
+      },
+    };
+  });
+}
+
+export async function getPostData(id) {
+  const fullPath = path.join(postsDirectory, `${id}.md`);
+  const fileContents = fs.readFileSync(fullPath, "utf-8");
+  const matterResult = matter(fileContents);
+  const processedContent = await remark()
+    .use(html).process(matterResult.content);
+  const contentHtml = processedContent.toString();
   return {
-    title: meta.data.title,
-    date: meta.data.date,
-    desc: meta.data.desc,
-    content: content,
+    id,
+    contentHtml,
+    ...matterResult.data,
   };
-}
-
-export async function getConfig() {
-  const config = await import(`../config.yml`);
-  return yaml.safeLoad(config.default);
 }
