@@ -1,10 +1,10 @@
-import DefaultLayout from "@layouts/default";
+import DefaultLayout from "../layouts/default";
 import Link from "next/link";
-import { getConfig, getAllPosts } from "@api";
+import { getSortedPostsData } from "../api/index";
 
-export default function Blog(props) {
+export default function Blog( {allPostsData} ) {
   return (
-    <DefaultLayout title={props.title} description={props.description}>
+    <DefaultLayout title="IrvanMA's Lair" description="Do what you want and do it well.">
       <section className="bg-info text-dark pt-5 pb-5">
         <div className="container">
           <p className="display-4 mb-0">Irvan Malik Azantha</p>
@@ -34,27 +34,25 @@ export default function Blog(props) {
             </tr>
           </thead>
           <tbody>
-            {props.posts.map(function (post, idx) {
-              return (
-                <tr key={idx}>
-                  <td scope="col" className="pt-3 pb-3">
-                    <Link href={"/posts/" + post.slug}>
-                      <a className="text-white">{idx}</a>
-                    </Link>
-                  </td>
-                  <td scope="col" className="pt-3 pb-3">
-                    <Link href={"/posts/" + post.slug}>
-                      <a className="text-white">{post.title}</a>
-                    </Link>
-                  </td>
-                  <td scope="col" className="pt-3 pb-3">
-                    <Link href={"/posts/" + post.slug}>
-                      <a className="text-white">{post.desc}</a>
-                    </Link>
-                  </td>
-                </tr>
-              );
-            })}
+            {allPostsData.map(({ id, title, desc }, index) => (
+              <tr key={index}>
+                <td scope="col" className="pt-3 pb-3">
+                  <Link href={`/posts/${id}`}>
+                    <a className="text-white">{index}</a>
+                  </Link>
+                </td>
+                <td scope="col" className="pt-3 pb-3">
+                  <Link href={`/posts/${id}`}>
+                    <a className="text-white">{title}</a>
+                  </Link>
+                </td>
+                <td scope="col" className="pt-3 pb-3">
+                  <Link href={`/posts/${id}`}>
+                    <a className="text-white">{desc}</a>
+                  </Link>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </section>
@@ -63,13 +61,10 @@ export default function Blog(props) {
 }
 
 export async function getStaticProps() {
-  const config = await getConfig();
-  const allPosts = await getAllPosts();
+  const allPostsData = getSortedPostsData();
   return {
     props: {
-      posts: allPosts,
-      title: config.title,
-      description: config.description,
+      allPostsData,
     },
   };
 }
