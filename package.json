@@ -23,8 +23,5 @@
     "remark-parse": "^9.0.0",
     "remark-rehype": "^8.1.0",
     "unified": "^7.1.0"
-  },
-  "devDependencies": {
-    "node-loader": "^2.0.0"
   }
 }
