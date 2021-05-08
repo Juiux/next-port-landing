@@ -20,6 +20,10 @@ export default function DefaultLayout(props) {
           href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.dark.min.css"
           rel="preconnect stylesheet"
         />
+        <link
+          href="/styles/syntax-highlighting.css"
+          rel="stylesheet"
+        />
         <link rel="manifest" href="/manifest.json" />
         <link
           href="/icon-192x192.png"

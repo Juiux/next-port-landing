@@ -32,13 +32,13 @@ To setup phpmyadmin in Arch Linux, follow these steps:
 
 1. Install the `phpmyadmin` package:
 
-```
+```none
 sudo pacman -S phpmyadmin
 ```
 
 2. Install the required packages:
 
-```
+```none
 sudo pacman -S php php-apache apache mariadb
 ```
 
@@ -50,25 +50,25 @@ MariaDB is a reliable, high performance and full-featured database server which 
 
 1. To start configuring, run this command:
 
-```
+```none
 sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 ```
 
 2. Then enable and start `mariadb.service` by issuing this command:
 
-```
+```none
 sudo systemctl enable --now mariadb.service
 ```
 
 3. Log in as root user on the MySQL server by using the following command:
 
-```
+```none
 sudo mysql -u root -p
 ```
 
 > Note: Default root user has no password. Press enter to continue. 4. Issue the command to create a user and grant the privileges:
 
-```
+```sql
 MariaDB> CREATE USER 'your-name'@'localhost' IDENTIFIED BY 'your-pass';
 MariaDB> GRANT ALL PRIVILEGES ON *.* TO 'your-name'@'localhost';
 MariaDB> FLUSH PRIVILEGES;
@@ -84,7 +84,7 @@ PHP is a widely-used general-purpose scripting language that is especially suite
 The main PHP configuration file is well documented and located at `/etc/php/php.ini`.
 In order to make PHP work with MariaDB, uncomment the following lines in `/etc/php/php.ini`:
 
-```
+```php
 extension=iconv
 extension=pdo_mysql
 extension=mysqli
@@ -102,13 +102,13 @@ To configure Apache to work with PHP, we'll be using the `libphp` method:
 
 1. Comment the line in `/etc/httpd/conf/httpd.conf`:
 
-```
+```php
 #LoadModule mpm_event_module modules/mod_mpm_event.so
 ```
 
 2. Uncomment the line:
 
-```
+```php
 LoadModule mpm_prefork_module modules/mod_mpm_prefork.so
 ```
 
@@ -116,14 +116,14 @@ LoadModule mpm_prefork_module modules/mod_mpm_prefork.so
 
 - Place this at the end of the `LoadModule` list:
 
-```
+```php
 LoadModule php_module modules/libphp.so
 AddHandler php-script .php
 ```
 
 - Place this at the end of the `Include` list:
 
-```
+```php
 Include conf/extra/php_module.conf
 ```
 
@@ -135,7 +135,7 @@ Include conf/extra/php_module.conf
 
 1. Create the Apache configuration file in `/etc/httpd/conf/extra/phpmyadmin.conf`:
 
-```
+```php
 Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
 < Directory "/usr/share/webapps/phpMyAdmin">
     DirectoryIndex index.php
@@ -147,13 +147,13 @@ Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
 
 > Note: Remove the space before Directory and /Directory. 2. Include the file in `/etc/httpd/conf/httpd.conf`:
 
-```
+```php
 Include conf/extra/phpmyadmin.conf
 ```
 
 3. To allow the usage of the phpMyAdmin setup script (e.g. http://localhost/phpmyadmin/setup), make sure `/usr/share/webapps/phpMyAdmin` is writable for the http user:
 
-```
+```none
 sudo mkdir /usr/share/webapps/phpMyAdmin/config
 sudo chown http:http /usr/share/webapps/phpMyAdmin/config
 sudo chmod 750 /usr/share/webapps/phpMyAdmin/config
@@ -161,13 +161,13 @@ sudo chmod 750 /usr/share/webapps/phpMyAdmin/config
 
 4. Add blowfish_secret passphrase (You can search a generator for one) in `/usr/share/webapps/phpMyAdmin/config.inc.php`:
 
-```
+```php
 $cfg['blowfish_secret'] = 'your-passphrase-here';
 ```
 
 5. In `/usr/share/webapps/phpMyAdmin/config.inc.php`, uncomment and change them correspondingly to the ones you set in MariaDB configuration (`your-name` and `your-pass`):
 
-```
+```php
 /* User used to manipulate with storage */
 // $cfg['Servers'][$i]['controlhost'] = 'my-host';
 // $cfg['Servers'][$i]['controlport'] = '3306';
@@ -175,7 +175,7 @@ $cfg['Servers'][$i]['controluser'] = 'your-name';
 $cfg['Servers'][$i]['controlpass'] = 'your-pass';
 ```
 
-```
+```php
 /* Storage database and tables */
 $cfg['Servers'][$i]['pmadb'] = 'phpmyadmin';
 $cfg['Servers'][$i]['bookmarktable'] = 'pma__bookmark';
@@ -202,7 +202,7 @@ $cfg['Servers'][$i]['export_templates'] = 'pma__export_templates';
 6. Execute `mysql -u root -p < /usr/share/webapps/phpMyAdmin/sql/create_tables.sql` in the command line to create the required tables.
 7. Remove temporary configuration directory once configuration is done:
 
-```
+```none
 sudo rm -r /usr/share/webapps/phpMyAdmin/config
 ```
 
