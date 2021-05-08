@@ -13,6 +13,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "canvas": "^2.7.0",
     "gray-matter": "^4.0.3",
     "next": "^10.2.0",
     "next-pwa": "^5.2.21",
