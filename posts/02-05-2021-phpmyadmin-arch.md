@@ -32,13 +32,13 @@ To setup phpmyadmin in Arch Linux, follow these steps:
 
 1. Install the `phpmyadmin` package:
 
-```none
+```md
 sudo pacman -S phpmyadmin
 ```
 
 2. Install the required packages:
 
-```none
+```md
 sudo pacman -S php php-apache apache mariadb
 ```
 
@@ -50,19 +50,19 @@ MariaDB is a reliable, high performance and full-featured database server which 
 
 1. To start configuring, run this command:
 
-```none
+```md
 sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 ```
 
 2. Then enable and start `mariadb.service` by issuing this command:
 
-```none
+```md
 sudo systemctl enable --now mariadb.service
 ```
 
 3. Log in as root user on the MySQL server by using the following command:
 
-```none
+```md
 sudo mysql -u root -p
 ```
 
@@ -153,7 +153,7 @@ Include conf/extra/phpmyadmin.conf
 
 3. To allow the usage of the phpMyAdmin setup script (e.g. http://localhost/phpmyadmin/setup), make sure `/usr/share/webapps/phpMyAdmin` is writable for the http user:
 
-```none
+```md
 sudo mkdir /usr/share/webapps/phpMyAdmin/config
 sudo chown http:http /usr/share/webapps/phpMyAdmin/config
 sudo chmod 750 /usr/share/webapps/phpMyAdmin/config
@@ -202,7 +202,7 @@ $cfg['Servers'][$i]['export_templates'] = 'pma__export_templates';
 6. Execute `mysql -u root -p < /usr/share/webapps/phpMyAdmin/sql/create_tables.sql` in the command line to create the required tables.
 7. Remove temporary configuration directory once configuration is done:
 
-```none
+```md
 sudo rm -r /usr/share/webapps/phpMyAdmin/config
 ```
 
