@@ -200,3 +200,12 @@ pre[class*="language-"] {
 .token.variable {
 	color: #ff6666;
 }
+
+img[alt$="-img"]{
+	width: 100%;
+	max-width: 1080px;
+	height: auto;
+	border-radius: 8px;
+	display: block;
+	margin: 0 auto;
+}

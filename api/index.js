@@ -46,10 +46,10 @@ export async function getPostData(id) {
   const fileContents = fs.readFileSync(fullPath, "utf-8");
   const matterResult = matter(fileContents);
   const processedContent = await unified()
-    .use(stringify)
     .use(parser)
     .use(r2r)
     .use(rprism)
+    .use(stringify)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
   return {
