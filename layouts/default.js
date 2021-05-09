@@ -26,30 +26,30 @@ export default function DefaultLayout(props) {
         />
         <link rel="manifest" href="/manifest.json" />
         <link
-          href="/icon-192x192.png"
+          href="icons/icon-192x192.png"
           rel="icon"
           type="image/png"
           sizes="192x192"
         />
         <link
-          href="/icon-256x256.png"
+          href="icons/icon-256x256.png"
           rel="icon"
           type="image/png"
           sizes="256x256"
         />
         <link
-          href="/icon-384x384.png"
+          href="icons/icon-384x384.png"
           rel="icon"
           type="image/png"
           sizes="384x384"
         />
         <link
-          href="/icon-512x512.png"
+          href="icons/icon-512x512.png"
           rel="icon"
           type="image/png"
           sizes="512x512"
         />
-        <link rel="apple-touch-icon" href="/apple-icon.png"></link>
+        <link rel="apple-touch-icon" href="icons/apple-icon.png"></link>
         <meta name="theme-color" content="#39C0ED" />
       </Head>
       <body>
