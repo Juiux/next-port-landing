@@ -7,16 +7,19 @@ export default function Blog( {allPostsData} ) {
     <DefaultLayout title="IrvanMA's Lair" description="Do what you want and do it well.">
       <section className="bg-info text-dark pt-5 pb-5">
         <div className="container">
-          <p className="display-4 mb-0 mt-0">Irvan Malik Azantha</p>
-          <p className="lead mb-3 mt-0">Do what you want and do it well.</p>
-          <div className="btn-group btn-group-lg" role="group">
-            <a className="btn btn-dark" href="https://github.com/irvanmalik48">
-              Github
-            </a>
-            <a className="btn btn-dark" href="https://t.me/irvanmalik48">
-              Telegram
-            </a>
-          </div>
+          <p className="display-4 mb-0 mt-0 text-center text-md-start">Irvan Malik Azantha</p>
+          <p className="lead mb-3 mt-0 text-center text-md-start">Do what you want and do it well.</p>
+          <p className="m-0 text-center text-md-start">
+            <div className="btn-group btn-group-lg" role="group">
+              <a className="btn btn-dark" href="https://github.com/irvanmalik48">
+                Github
+              </a>
+              <a className="btn btn-dark" href="https://t.me/irvanmalik48">
+                Telegram
+              </a>
+            </div>
+          </p>
+          
         </div>
       </section>
       <article className="container mt-3">
