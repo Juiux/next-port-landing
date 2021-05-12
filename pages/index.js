@@ -7,8 +7,8 @@ export default function Blog( {allPostsData} ) {
     <DefaultLayout title="IrvanMA's Lair" description="Do what you want and do it well.">
       <section className="bg-info text-dark pt-5 pb-5">
         <div className="container">
-          <p className="display-4 mb-0">Irvan Malik Azantha</p>
-          <p className="lead mb-3">Do what you want and do it well.</p>
+          <p className="display-4 mb-0 mt-0">Irvan Malik Azantha</p>
+          <p className="lead mb-3 mt-0">Do what you want and do it well.</p>
           <div className="btn-group btn-group-lg" role="group">
             <a className="btn btn-dark" href="https://github.com/irvanmalik48">
               Github
@@ -19,7 +19,19 @@ export default function Blog( {allPostsData} ) {
           </div>
         </div>
       </section>
-      <section className="container mt-3" style={{ marginBottom: "100px" }}>
+      <article className="container mt-3">
+        <p className="h4 mb-3 mt-4 text-center">Description</p>
+        <blockquote>
+          Keep it simple, stupid.
+        </blockquote>
+        <p>
+        Hello, my name's Irvan Malik Azantha. I'm a 18 y'o boy currently studying on Universitas Sriwijaya
+        (English: University of Sriwijaya). I live in Palembang, Indonesia (very nice city, you should check
+        it out). I'm a highly enthusiastic person with subtle interest in open source projects and keen on
+        learning new things. Also likes to watch anime, play games, and have hugs and cuddles (lmao).
+        </p>
+      </article>
+      <section className="container mt-3 mb-5">
         <p className="h4 mb-3 mt-4 text-center">Posts</p>
         <table className="table align-middle table-striped table-borderless table-hover hover-shadow rounded-3">
           <thead>

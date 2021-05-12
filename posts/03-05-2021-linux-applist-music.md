@@ -9,7 +9,6 @@ desc: "Collection of music apps for linux."
 Music is a thing we always hear to. It always accompanies us when we're happy, sad, angry, or just insert anything emotional here cause it's still makes sense. It also accompanies us when running our beloved Linux desktops, too. Okay so I want to share some music apps that I think is nice and excellent.
 
 ### 1. Audacious
----
 
 ![audacious-img](/linux/applist/music/audacious.png)
 
@@ -26,7 +25,6 @@ sudo pacman -Syu audacious
 ```
 
 ### 2. cmus
----
 
 ![cmus-img](/linux/applist/music/cmus.png)
 
@@ -42,7 +40,6 @@ sudo pacman -Syu cmus
 ```
 
 ### 3. Museeks
----
 
 ![museeks-img](/linux/applist/music/museeks.png)
 
@@ -59,7 +56,6 @@ yay -Syu museeks-bin
 ```
 
 ### 4. Musique
----
 
 ![musique-img](/linux/applist/music/musique.png)
 
@@ -75,7 +71,6 @@ yay -Syu musique-bin
 ```
 
 ### 5. QMMP
----
 
 ![qmmp-img](/linux/applist/music/qmmp.png)
 
