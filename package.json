@@ -22,6 +22,6 @@
     "rehype-stringify": "^8.0.0",
     "remark-parse": "^9.0.0",
     "remark-rehype": "^8.1.0",
-    "unified": "^7.1.0"
+    "unified": "^9.2.1"
   }
 }
