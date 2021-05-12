@@ -21,7 +21,7 @@ export default function DefaultLayout(props) {
           rel="preconnect stylesheet"
         />
         <link
-          href="/styles/syntax-highlighting.css"
+          href="/styles/global.css"
           rel="stylesheet"
         />
         <link rel="manifest" href="/manifest.json" />
