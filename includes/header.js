@@ -2,8 +2,10 @@ export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
       <div className="container">
-        <a className="navbar-brand m-0 p-0" href="/">
-          IrvanMA's Lair
+        <a className="navbar-brand m-0 p-0 font-monospace fs-6" href="/">
+          <span className="text-info">&#123;</span>
+          irvanma
+          <span className="text-info">&#125;</span>
         </a>
         <button
           className="navbar-toggler p-0"
