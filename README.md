@@ -1,4 +1,5 @@
 ## My Website
+![CodeQL Analysis](https://github.com/irvanmalik48/irvanmalik48.github.io/actions/workflows/codeql-analysis.yml/badge.svg)
 [![Build Status](https://travis-ci.com/irvanmalik48/irvanmalik48.github.io.svg?branch=main)](https://travis-ci.com/irvanmalik48/irvanmalik48.github.io)
 ### Summary
 Basically my website. Nothing so special about it.
