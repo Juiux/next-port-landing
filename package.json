@@ -15,6 +15,7 @@
   "dependencies": {
     "@mapbox/rehype-prism": "^0.6.0",
     "gray-matter": "^4.0.3",
+    "mdb-ui-kit": "^3.5.1",
     "next": "^10.2.0",
     "next-pwa": "^5.2.21",
     "react": "^17.0.2",
