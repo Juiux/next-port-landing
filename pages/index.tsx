@@ -2,7 +2,7 @@ import DefaultLayout from "../layouts/default";
 import Link from "next/link";
 import { getSortedPostsData } from "../api/index";
 
-export default function Blog( {allPostsData} ) {
+export default function Blog( {allPostsData}: any ) {
   return (
     <DefaultLayout title="IrvanMA's Lair" description="Do what you want and do it well.">
       <section className="bg-info text-dark pt-5 pb-5">
@@ -49,7 +49,7 @@ export default function Blog( {allPostsData} ) {
             </tr>
           </thead>
           <tbody>
-            {allPostsData.map(({ id, title, desc }, index) => (
+            {allPostsData.map(({ id, title, desc }: any, index: any) => (
               <tr key={index}>
                 <td scope="col" className="pt-3 pb-3">
                   <Link href={`/posts/${id}`}>

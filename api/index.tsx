@@ -2,10 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import unified from "unified";
-import stringify from "rehype-stringify";
-import parser from "remark-parse";
-import r2r from "remark-rehype";
-import rprism from "@mapbox/rehype-prism";
 
 const postsDirectory = path.join(process.cwd(), "posts")
 
@@ -21,8 +17,8 @@ export function getSortedPostsData() {
       ...matterResult.data,
     }
   });
-  return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
+  return allPostsData.sort((a: any, b: any) => {
+    if (a['date'] < b['date']) {
       return 1;
     } else {
       return -1;
@@ -41,15 +37,15 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(id) {
+export async function getPostData(id: any) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf-8");
   const matterResult = matter(fileContents);
   const processedContent = await unified()
-    .use(parser)
-    .use(r2r)
-    .use(rprism)
-    .use(stringify)
+    .use(require("remark-parse"))
+    .use(require("remark-rehype"))
+    .use(require("@mapbox/rehype-prism"))
+    .use(require("rehype-stringify"))
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
   return {

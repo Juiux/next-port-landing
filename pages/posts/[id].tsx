@@ -1,7 +1,7 @@
 import PostLayout from "../../layouts/post";
 import { getAllPostIds, getPostData } from "../../api/index";
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: any) {
   const postData = await getPostData(params.id);
   return {
     props: {
@@ -18,7 +18,7 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Post({ postData }) {
+export default function Post({ postData }: any) {
   return (
     <PostLayout title={postData.title} date={postData.date} content={postData.contentHtml} />
   );

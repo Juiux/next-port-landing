@@ -1,7 +1,7 @@
 import DefaultLayout from "./default";
 import Head from "next/head";
 
-export default function PostLayout(props) {
+export default function PostLayout(props: any) {
   return (
     <DefaultLayout>
       <Head>

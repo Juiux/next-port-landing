@@ -2,7 +2,7 @@ import Head from "next/head";
 import Header from "../includes/header";
 import Footer from "../includes/footer";
 
-export default function DefaultLayout(props) {
+export default function DefaultLayout(props: any) {
   return (
     <html lang="en-US">
       <Head>
@@ -49,7 +49,7 @@ export default function DefaultLayout(props) {
         <main>{props.children}</main>
         <script
           type="text/javascript"
-          src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
+          src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js?"
         ></script>
         <Footer />
       </body>
