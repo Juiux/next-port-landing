@@ -1,6 +1,6 @@
 ---
 title: "Introduction"
-date: "PINNED"
+date: 02-05-2021
 desc: "Author's introduction."
 ---
 

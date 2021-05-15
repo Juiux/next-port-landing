@@ -1,6 +1,6 @@
 ---
-title: "Userbot 101 : How to Deploy"
-date: "02-05-2021"
+title: "Userbot: How to Deploy"
+date: 02-05-2021
 desc: "Deploy your own userbot."
 ---
 
