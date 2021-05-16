@@ -36,40 +36,34 @@ export default function Blog( {allPostsData}: any ) {
       </article>
       <section className="container mt-3 mb-5">
         <p className="h4 mb-3 mt-4 text-center">Posts</p>
-        <table className="table align-middle table-striped table-borderless table-hover hover-shadow rounded-3">
-          <thead>
-            <tr>
-              <th scope="col" style={{ width: "4%" }}>
-                #
-              </th>
-              <th scope="col" style={{ width: "30%" }}>
-                Title
-              </th>
-              <th scope="col">Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {allPostsData.map(({ id, title, desc }: any, index: any) => (
-              <tr key={index}>
-                <td scope="col" className="pt-3 pb-3">
-                  <Link href={`/posts/${id}`}>
-                    <a className="text-white">{index}</a>
-                  </Link>
-                </td>
-                <td scope="col" className="pt-3 pb-3">
-                  <Link href={`/posts/${id}`}>
-                    <a className="text-white">{title}</a>
-                  </Link>
-                </td>
-                <td scope="col" className="pt-3 pb-3">
-                  <Link href={`/posts/${id}`}>
-                    <a className="text-white">{desc}</a>
-                  </Link>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div className="row gx-3 gy-3">
+          {allPostsData.map(({ id, title, date, tag, desc }: any, index: any) => (
+            <div className="col-12 col-sm-6">
+              <Link href={`/posts/${id}`}>
+                <a className="text-white">
+                  <div key={index} className="card hover-shadow rounded-3 h-100">
+                    <div className="card-header h6">
+                      <p className="mt-2 mb-2">
+                        {title}
+                      </p>
+                    </div>
+                    <div className="card-body">
+                      <p className="card-text m-0">
+                        {desc}
+                      </p>
+                    </div>
+                    <div className="card-footer text-muted d-flex flex-row justify-content-between align-items-center">
+                      {date}
+                      <span className="badge bg-dark text-end">
+                        {tag}
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </Link>
+            </div>
+          ))}
+        </div>
       </section>
     </DefaultLayout>
   );

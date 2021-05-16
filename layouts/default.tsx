@@ -49,7 +49,7 @@ export default function DefaultLayout(props: any) {
         <main>{props.children}</main>
         <script
           type="text/javascript"
-          src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js?"
+          src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
         ></script>
         <Footer />
       </body>
