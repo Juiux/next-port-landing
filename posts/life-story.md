@@ -53,6 +53,6 @@ I now see the world and life in general with a more positive view. I retain back
 1. Isles of Mambo and other stories - Alok Karkera
 2. Words of Wisdom - Erik Pevernagie
 3. Nuns and Soldiers - Iris Murdoch
-4. Wayne Gerrard Trotman's wonderful works of art.
-5. My own life.
+4. Wayne Gerrard Trotman's wonderful works of art
+5. My own life
 
