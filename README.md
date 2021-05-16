@@ -1,5 +1,4 @@
 ## My Website
-[![Build Status](https://travis-ci.com/irvanmalik48/irvanmalik48.github.io.svg?branch=main)](https://travis-ci.com/irvanmalik48/irvanmalik48.github.io)
 ### Summary
 Basically my website. Nothing so special about it.
 - Made from Next.js, fully PWA compliant.
