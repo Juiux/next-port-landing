@@ -2,6 +2,7 @@
 title: "Linux: phpMyAdmin Arch Install"
 date: "02-05-2021"
 desc: "Setup phpMyAdmin manually on Arch."
+tag: "linux"
 ---
 
 # Introduction
