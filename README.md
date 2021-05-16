@@ -8,7 +8,7 @@ Basically my website. Nothing so special about it.
 ### Using as Template
 1. Clone the repository:
 ```
-git clone https://github.com/irvanmalik48/irvanmalik48.github.io blog
+git clone https://github.com/irvanmalik48/blog blog
 ```
 2. Modify template using your beloved text-editor.
 > Clue: footer and header are in /includes, post and default layouts are in /layouts.
