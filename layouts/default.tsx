@@ -42,17 +42,6 @@ export default function DefaultLayout(props: any) {
           sizes="512x512"
         />
         <link rel="apple-touch-icon" href="icons/apple-icon.png"></link>
-        <script
-          async
-          src="https://comments.app/js/widget.js?3"
-          data-comments-app-website="q2w0K4md" 
-          data-limit="5" 
-          data-color="39C0ED" 
-          data-dark="1"
-          data-dark-color="303030"
-          page-id={props.id}
-        >
-        </script>
         <meta name="theme-color" content="#39C0ED" />
       </Head>
       <body>
