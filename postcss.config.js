@@ -22,7 +22,7 @@ module.exports = {
           "./includes/**/*.{js,jsx,ts,tsx}",
         ],
         defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
-        safelist: ["html", "body", /hr$/, /code$/],
+        safelist: ["html", "body", "hr", ":root", "code"],
       },
     ],
   ],
