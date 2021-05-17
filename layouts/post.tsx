@@ -15,6 +15,15 @@ export default function PostLayout(props: any) {
           </div>
         </section>
         <div dangerouslySetInnerHTML={{ __html: props.content }} />
+        <script 
+          src="https://comments.app/js/widget.js?3"
+          data-comments-app-website="q2w0K4md" 
+          data-limit="5" 
+          data-color="39C0ED" 
+          data-dark="1"
+          data-dark-color="303030"
+        >
+        </script>
       </article>
     </DefaultLayout>
   );
