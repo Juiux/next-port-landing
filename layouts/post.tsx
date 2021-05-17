@@ -23,6 +23,7 @@ export default function PostLayout(props: any) {
           data-color="39C0ED" 
           data-dark="1"
           data-dark-color="303030"
+          page-id={props.id}
         >
         </script>
       </article>
