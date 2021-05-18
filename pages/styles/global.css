@@ -1,4 +1,3 @@
-/* purgecss start ignore */
 code[class*="language-"],
 pre[class*="language-"] {
   text-align: left;
@@ -263,4 +262,3 @@ blockquote {
   padding-left: 1em;
   border-left: 0.2em solid #89ddff;
 }
-/* purgecss end ignore */

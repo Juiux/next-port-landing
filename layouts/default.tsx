@@ -16,6 +16,10 @@ export default function DefaultLayout(props: any) {
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           rel="preconnect stylesheet"
         />
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css"
+          rel="preconnect stylesheet"
+        />
         <link rel="manifest" href="/manifest.json" />
         <link
           href="icons/icon-192x192.png"
