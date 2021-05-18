@@ -17,7 +17,7 @@ export default function DefaultLayout(props: any) {
           rel="preconnect stylesheet"
         />
         <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.dark.min.css"
           rel="preconnect stylesheet"
         />
         <link rel="manifest" href="/manifest.json" />
