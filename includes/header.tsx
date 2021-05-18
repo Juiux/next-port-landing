@@ -1,3 +1,5 @@
+import { Menu } from "react-feather";
+
 export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
@@ -16,7 +18,9 @@ export default function Header() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <p className="btn btn-dark shadow-0 m-0 p-2">. . .</p>
+          <div className="btn fs-6 btn-dark pe-2 ps-2 pt-1 pb-1 m-0 shadow-0">
+            <Menu />
+          </div>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mt-0">
@@ -27,7 +31,7 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Download CV
+                CV
               </a>
             </li>
           </ul>

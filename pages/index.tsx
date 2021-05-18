@@ -1,23 +1,23 @@
 import DefaultLayout from "../layouts/default";
 import Link from "next/link";
 import { getSortedPostsData } from "../api/index";
+import { GitBranch } from "react-feather";
 
 export default function Blog( {allPostsData}: any ) {
   return (
     <DefaultLayout title="IrvanMA's Lair" description="Do what you want and do it well.">
       <section className="bg-info text-dark pt-5 pb-5">
         <div className="container">
-          <p className="display-4 mb-0 mt-0 text-center text-md-start">Irvan Malik Azantha</p>
-          <p className="lead mb-3 mt-0 text-center text-md-start">Do what you want and do it well.</p>
-          <p className="m-0 text-center text-md-start">
-            <div className="btn-group btn-group-lg" role="group">
-              <a className="btn btn-dark" href="https://github.com/irvanmalik48">
-                Github
-              </a>
-              <a className="btn btn-dark" href="https://t.me/irvanmalik48">
-                Telegram
-              </a>
-            </div>
+          <p className="display-5 mb-0 mt-3 text-center">
+            Irvan Malik Azantha
+          </p>
+          <p className="lead mb-3 mt-0 text-center">
+            Do what you want and do it well.
+          </p>
+          <p className="text-center">
+            <a href="https://github.com/irvanmalik48/blog" className="btn btn-dark mb-2 justify-content-center align-items-center d-inline-flex">
+              <GitBranch className="me-2"/>GitHub Repository
+            </a>
           </p>
           
         </div>
@@ -38,10 +38,10 @@ export default function Blog( {allPostsData}: any ) {
         <p className="h4 mb-3 mt-4 text-center">Posts</p>
         <div className="row gx-3 gy-3">
           {allPostsData.map(({ id, title, date, tag, desc }: any, index: any) => (
-            <div className="col-12 col-sm-6">
+            <div key={index} className="col-12 col-sm-6">
               <Link href={`/posts/${id}`}>
                 <a className="text-white">
-                  <div key={index} className="card hover-shadow rounded-3 h-100">
+                  <div className="card hover-shadow rounded-3 h-100">
                     <div className="card-header h6">
                       <p className="mt-2 mb-2">
                         {title}

@@ -1,9 +1,28 @@
+import { GitHub, Facebook, MessageSquare, Mail, Linkedin } from "react-feather";
+
 export default function Footer() {
   return (
     <footer className="bg-dark text-center text-lg-start">
-      <div className="text-center p-3">
-        Powered by <a href="https://nextjs.org/">Next.js</a> and{" "}
-        <a href="https://vercel.com/">Vercel</a>
+      <div className="text-center p-3 text-white-50">
+        <p className="fs-1 px-2 mt-0 mb-2">
+          <a href="https://github.com/irvanmalik48" className="text-white ripple px-3">
+            <GitHub />
+          </a>
+          <a href="https://facebook.com/irvanmalik48" className="text-white ripple px-3">
+            <Facebook />
+          </a>
+          <a href="https://t.me/irvanmalik48" className="text-white ripple px-3">
+            <MessageSquare />
+          </a>
+          <a href="https://www.linkedin.com/in/irvanmalik48/" className="text-white ripple px-3">
+            <Linkedin />
+          </a>
+          <a href="mailto:me@irvanma.live" className="text-white ripple px-3">
+            <Mail />
+          </a>
+        </p>
+        Powered by <a href="https://nextjs.org/" className="link-info">Next.js</a> and{" "}
+        <a href="https://vercel.com/" className="link-info">Vercel</a>
         <br />
         Copyright © 2021 Irvan Malik Azantha
       </div>
