@@ -52,7 +52,7 @@ export default function Blog( {allPostsData}: any ) {
                         {desc}
                       </p>
                     </div>
-                    <div className="card-footer text-white-50 d-flex flex-row justify-content-between align-items-center">
+                    <div className="card-footer d-flex flex-row justify-content-between align-items-center" style={{color: "#BDBDBD"}}>
                       {date}
                       <span className="badge bg-dark text-end">
                         {tag}
