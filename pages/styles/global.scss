@@ -173,58 +173,54 @@ p {
   margin-left: 0;
   margin-right: 0;
 }
-h1 {
+@mixin headers {
   display: block;
-  font-size: 2em;
-  margin-top: 0.67em;
-  margin-bottom: 0.67em;
   margin-left: 0;
   margin-right: 0;
   font-weight: 700;
 }
-h2 {
+@mixin lists {
   display: block;
-  font-size: 1.5em;
-  margin-top: 0.83em;
-  margin-bottom: 0.83em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: 700;
-}
-h3 {
-  display: block;
-  font-size: 1.17em;
   margin-top: 1em;
   margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
-  font-weight: 700;
+  padding-left: 40px;
+}
+h1 {
+  @include headers();
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+}
+h2 {
+  @include headers();
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+}
+h3 {
+  @include headers();
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 h4 {
-  display: block;
+  @include headers();
   margin-top: 1.33em;
   margin-bottom: 1.33em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: 700;
 }
 h5 {
-  display: block;
+  @include headers();
   font-size: 0.83em;
   margin-top: 1.67em;
   margin-bottom: 1.67em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: 700;
 }
 h6 {
-  display: block;
+  @include headers();
   font-size: 0.67em;
   margin-top: 2.33em;
   margin-bottom: 2.33em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: 700;
 }
 h1::after,
 h2::after,
@@ -237,22 +233,12 @@ h3::after {
   margin-top: 12px;
 }
 ol {
-  display: block;
+  @include lists();
   list-style-type: decimal;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 40px;
 }
 ul {
-  display: block;
+  @include lists();
   list-style-type: disc;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 40px;
 }
 li {
   display: list-item;
