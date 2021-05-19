@@ -12,9 +12,9 @@ export default function DefaultLayout(props: any) {
         <meta name="description" content={props.description} />
         <meta name="keywords" content="lapprealm" />
         <title>{props.title}</title>
-        <link
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-          rel="preconnect stylesheet"
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+          rel="preconnect stylesheet" 
         />
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.dark.min.css"
