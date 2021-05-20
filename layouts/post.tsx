@@ -1,5 +1,6 @@
 import DefaultLayout from "./default";
 import Head from "next/head";
+import Comments from "./comments";
 
 export default function PostLayout(props: any) {
   return (
@@ -16,17 +17,7 @@ export default function PostLayout(props: any) {
         </section>
         <div dangerouslySetInnerHTML={{ __html: props.content }} />
         <h1>Comments</h1>
-        <script 
-          src="https://utteranc.es/client.js"
-          /*
-          // @ts-ignore */
-          repo="irvanmalik48/blog"
-          issue-term="pathname"
-          theme="github-dark"
-          crossorigin="anonymous"
-          async
-        >
-        </script>
+        <Comments />
       </article>
     </DefaultLayout>
   );
