@@ -28,9 +28,7 @@ export default function Blog( {allPostsData}: any ) {
           Keep it simple, stupid.
         </blockquote>
         <p>
-        Hello, my name's Irvan Malik Azantha. I'm a 18 y'o boy currently studying on Universitas Sriwijaya
-        (English: University of Sriwijaya). I live in Palembang, Indonesia (very nice city, you should check
-        it out). I'm a highly enthusiastic person with subtle interest in open source projects and keen on
+        Hello, my name's Irvan Malik Azantha. I'm a 18 y'o boy currently studying on Universitas Sriwijaya. I live in Palembang, Indonesia. I'm a highly enthusiastic person with subtle interest in open source projects and keen on
         learning new things. Also likes to watch anime, play games, and have hugs and cuddles (lmao).
         </p>
       </article>
