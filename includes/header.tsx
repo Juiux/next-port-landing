@@ -2,7 +2,7 @@ import { Menu } from "react-feather";
 
 export default function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <nav className="navbar navbar-expand-lg navbar-dark navbar-bg-dark sticky-top shadow">
       <div className="container">
         <a className="navbar-brand m-0 p-0 font-monospace fs-6" href="/">
           <span className="text-info">&#123;</span>

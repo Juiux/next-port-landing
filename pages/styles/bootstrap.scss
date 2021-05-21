@@ -1,0 +1,126 @@
+// CORE FUNCTIONS
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/functions';
+@import '~mdb-ui-kit/src/scss/free/functions';
+
+// CORE VARIABLES
+@import './variables';
+@import '~mdb-ui-kit/src/scss/free/variables';
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/variables';
+
+// BOOTSTRAP CORE
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/mixins';
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/utilities';
+
+// BOOTSTRAP CORE COMPONENTS
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/root';
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/reboot';
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/type';
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/images';
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/containers';
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/grid';
+
+// BOOTSTRAP COMPONENTS
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/buttons';
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/transitions';
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/nav';
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/navbar';
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/card';
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/badge';
+
+// Helpers
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/helpers';
+
+// Utilities
+@import '~mdb-ui-kit/src/scss/free/utilities';
+@import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/utilities/api';
+
+// MDB CORE
+@import '~mdb-ui-kit/src/scss/free/mixins';
+
+// MDB CORE COMPONENTS
+@import '~mdb-ui-kit/src/scss/free/root';
+@import '~mdb-ui-kit/src/scss/free/reboot';
+@import '~mdb-ui-kit/src/scss/free/type';
+@import '~mdb-ui-kit/src/scss/free/colors';
+@import '~mdb-ui-kit/src/scss/free/shadows';
+@import '~mdb-ui-kit/src/scss/free/flag';
+@import '~mdb-ui-kit/src/scss/free/images';
+
+// MDB COMPONENTS
+@import '~mdb-ui-kit/src/scss/free/buttons';
+@import '~mdb-ui-kit/src/scss/free/nav';
+@import '~mdb-ui-kit/src/scss/free/navbar';
+@import '~mdb-ui-kit/src/scss/free/card';
+@import '~mdb-ui-kit/src/scss/free/badge';
+@import '~mdb-ui-kit/src/scss/free/ripple';
+
+// Dark it out
+
+body {
+    background-color: #262626;
+    color: white;
+}
+
+.card {
+    background-color: #333;
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  width: 100%;
+  padding-right: var(--mdb-gutter-x, 0.75rem);
+  padding-left: var(--mdb-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 840px;
+  }
+}
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 840px;
+  }
+}
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 840px;
+  }
+}
+.navbar-bg-dark {
+    background-color: #262626EA;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
