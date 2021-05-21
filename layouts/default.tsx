@@ -11,6 +11,11 @@ export default function DefaultLayout(props: any) {
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <meta name="description" content={props.description} />
         <meta name="keywords" content="lapprealm" />
+        <meta property="og:url" content="https://irvanma.live" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={props.title} />
+        <meta property="og:description" content={props.description} />
+        <meta property="og:image" content="/lp/lp.jpg" />
         <title>{props.title}</title>
         <link rel="manifest" href="/manifest.json" />
         <link
