@@ -1,5 +1,5 @@
 ---
-title: "GitHub: Hosting in GitHub Pages"
+title: "Hosting a Static Web in GitHub Pages"
 date: 16-05-2021
 desc: "How to host a website in GitHub Pages for newbies."
 tag: "github"

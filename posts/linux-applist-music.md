@@ -1,5 +1,5 @@
 ---
-title: "Linux: Music App List"
+title: "Linux Music App List"
 date: 03-05-2021
 desc: "Collection of music apps for linux."
 tag: "linux"
