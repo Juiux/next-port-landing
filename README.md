@@ -13,5 +13,7 @@ git clone https://github.com/irvanmalik48/blog blog
 2. Modify template using your beloved text-editor.
 > Clue: footer and header are in /includes, post and default layouts are in /layouts.
 3. Start blogging. (and don't forget to delete my markdowns, or no)
+
+Run `npm run dev` to preview the site.
 ### License
 [MIT](https://raw.githubusercontent.com/irvanmalik48/irvanmalik48.github.io/main/LICENSE)
