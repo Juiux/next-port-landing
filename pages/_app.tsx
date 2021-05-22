@@ -1,4 +1,3 @@
-import "./styles/fonts.scss";
 import "./styles/bootstrap.scss";
 import "./styles/global.scss";
 
