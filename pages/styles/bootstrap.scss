@@ -1,3 +1,6 @@
+// FONTS
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
 // CORE FUNCTIONS
 @import '~mdb-ui-kit/src/scss/bootstrap-rtl-fix/functions';
 @import '~mdb-ui-kit/src/scss/free/functions';
@@ -54,73 +57,5 @@
 @import '~mdb-ui-kit/src/scss/free/badge';
 @import '~mdb-ui-kit/src/scss/free/ripple';
 
-// Dark it out
-
-body {
-    background-color: #262626;
-    color: white;
-}
-
-.card {
-    background-color: #333;
-}
-
-.container,
-.container-fluid,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl,
-.container-xxl {
-  width: 100%;
-  padding-right: var(--mdb-gutter-x, 0.75rem);
-  padding-left: var(--mdb-gutter-x, 0.75rem);
-  margin-right: auto;
-  margin-left: auto;
-}
-@media (min-width: 576px) {
-  .container,
-  .container-sm {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container,
-  .container-md,
-  .container-sm {
-    max-width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm {
-    max-width: 840px;
-  }
-}
-@media (min-width: 1200px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl {
-    max-width: 840px;
-  }
-}
-@media (min-width: 1400px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl,
-  .container-xxl {
-    max-width: 840px;
-  }
-}
-.navbar-bg-dark {
-    background-color: #262626EA;
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-}
-
+// CUSTOM STYLING
+@import './customs';
