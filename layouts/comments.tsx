@@ -16,7 +16,7 @@ export default class Comments extends Component {
         scriptEl.setAttribute("repo", "irvanmalik48/blog");
         scriptEl.setAttribute("label", "Comments")
         scriptEl.setAttribute("issue-term", "pathname");
-        scriptEl.setAttribute("theme", "github-dark");
+        scriptEl.setAttribute("theme", "photon-dark");
         this.commentBox.current.appendChild(scriptEl);
     }
 
