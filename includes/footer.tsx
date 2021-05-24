@@ -25,6 +25,20 @@ export default function Footer() {
         <a href="https://vercel.com/" className="link-info">Vercel</a>
         <br />
         Copyright © 2021 Irvan Malik Azantha
+        <br />
+        <a 
+          href="https://github.com/irvanmalik48/blog/blob/main/CODE_OF_CONDUCT.md"
+          className="link-info"
+        >
+          Code of Conduct
+        </a>
+        {" | "}
+        <a 
+          href="https://github.com/irvanmalik48/blog/blob/main/PRIVACY_POLICY.md"
+          className="link-info"
+        >
+          Privacy Policy
+        </a>
       </div>
     </footer>
   );
