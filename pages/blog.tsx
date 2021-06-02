@@ -1,39 +1,21 @@
 import DefaultLayout from "../layouts/default";
 import Link from "next/link";
-import { getSortedPostsDataWithLimit } from "../api/index";
-import { GitBranch } from "react-feather";
+import { getSortedPostsData } from "../api/index";
 
 export default function Blog( {allPostsData}: any ) {
   return (
     <DefaultLayout title="IrvanMA's Lair" description="Do what you want and do it well.">
-      <section className="bg-info text-dark pt-5 pb-5">
+      <article className="bg-info text-dark pt-5 pb-5">
         <div className="container">
           <p className="display-5 mb-0 mt-3 text-center">
-            Irvan Malik Azantha
+            Blog Posts
           </p>
           <p className="lead mb-3 mt-0 text-center">
-            Do what you want and do it well.
+            All that I've written to date.
           </p>
-          <p className="text-center">
-            <a href="https://github.com/irvanmalik48/blog" className="btn btn-dark mb-2 justify-content-center align-items-center d-inline-flex">
-              <GitBranch className="me-2"/>GitHub Repository
-            </a>
-          </p>
-          
         </div>
-      </section>
-      <article className="container mt-3">
-        <p className="h4 mb-3 mt-4 text-center">Description</p>
-        <blockquote>
-          Keep it simple, stupid.
-        </blockquote>
-        <p>
-        Hello, my name's Irvan Malik Azantha. I'm a 18 y'o boy currently studying on Universitas Sriwijaya. I live in Palembang, Indonesia. I'm a highly enthusiastic person with subtle interest in open source projects and keen on
-        learning new things. Also likes to watch anime, play games, and have hugs and cuddles (lmao).
-        </p>
       </article>
-      <section className="container mt-3 mb-5">
-        <p className="h4 mb-3 mt-4 text-center">Posts</p>
+      <section className="container mt-4 mb-5">
         <div className="row gx-3 gy-3">
           {allPostsData.map(({ id, title, date, tag, desc }: any, index: any) => (
             <div key={index} className="col-12 col-sm-6">
@@ -62,20 +44,13 @@ export default function Blog( {allPostsData}: any ) {
             </div>
           ))}
         </div>
-        <p className="mb-3 mt-4 text-center">
-          <Link href={`blog`}>
-            <a className="btn btn-outline-info">
-              More posts
-            </a>
-          </Link>
-        </p>
       </section>
     </DefaultLayout>
   );
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsDataWithLimit();
+  const allPostsData = getSortedPostsData();
   return {
     props: {
       allPostsData,
