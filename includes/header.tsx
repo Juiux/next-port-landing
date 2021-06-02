@@ -1,4 +1,5 @@
 import { Menu } from "react-feather";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -28,6 +29,13 @@ export default function Header() {
               <a className="nav-link" href="/">
                 Home
               </a>
+            </li>
+            <li className="nav-item">
+              <Link href={`blog`}>
+                <a className="nav-link" href="/">
+                  Blog
+                </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
