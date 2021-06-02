@@ -32,7 +32,7 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <Link href={`blog`}>
-                <a className="nav-link" href="/">
+                <a className="nav-link">
                   Blog
                 </a>
               </Link>
