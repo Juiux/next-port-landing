@@ -14,52 +14,56 @@ I have always wanted to have a fully functional blog with comments. There was on
 ## Normal way
 
 So the normal way involves you in coming to [their website](https://utteranc.es), clicking this and that, and putting the script tag it generated into the page you want. Well, this is the code snippet if you're a lazy person just to even click the hyperlink:
+
 ```js
-<script src="https://utteranc.es/client.js"
-        repo="username/repo-name"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
+<script
+  src="https://utteranc.es/client.js"
+  repo="username/repo-name"
+  issue-term="pathname"
+  theme="github-light"
+  crossorigin="anonymous"
+  async
+></script>
 ```
+
 The way Utterances work is by injecting an iframe to your site through that script tag. This way works in Next.js? No, it won't lmao. But don't worry, there's a way.
 
 ## Next.js way (and probably other React frameworks)
 
 So in React land (or so may I call it that way because I have no other fancy names to sell for), you need to reference a div tag for the script tag to actually inject its iframe. For that, I created a new Typescript file (I use Typescript for my blog) named `comments.tsx` inside the layouts folder of my blog. Here's how I configured the file:
+
 ```ts
 import React, { Component } from "react";
 
 export default class Comments extends Component {
-    commentBox: React.RefObject<any>;
+  commentBox: React.RefObject<any>;
 
-    constructor(props: any) {
-        super(props);
-        this.commentBox = React.createRef();
-    }
+  constructor(props: any) {
+    super(props);
+    this.commentBox = React.createRef();
+  }
 
-    componentDidMount() {
-        let scriptEl: any = document.createElement("script");
-        scriptEl.setAttribute("src", "https://utteranc.es/client.js");
-        scriptEl.setAttribute("crossorigin", "anonymous");
-        scriptEl.setAttribute("async", true);
-        scriptEl.setAttribute("repo", "irvanmalik48/blog");
-        scriptEl.setAttribute("label", "Comments")
-        scriptEl.setAttribute("issue-term", "pathname");
-        scriptEl.setAttribute("theme", "github-dark");
-        this.commentBox.current.appendChild(scriptEl);
-    }
+  componentDidMount() {
+    let scriptEl: any = document.createElement("script");
+    scriptEl.setAttribute("src", "https://utteranc.es/client.js");
+    scriptEl.setAttribute("crossorigin", "anonymous");
+    scriptEl.setAttribute("async", true);
+    scriptEl.setAttribute("repo", "irvanmalik48/blog");
+    scriptEl.setAttribute("label", "Comments");
+    scriptEl.setAttribute("issue-term", "pathname");
+    scriptEl.setAttribute("theme", "github-dark");
+    this.commentBox.current.appendChild(scriptEl);
+  }
 
-    render() {
-        return (
-            <div ref={this.commentBox}></div>
-        );
-    }
+  render() {
+    return <div ref={this.commentBox}></div>;
+  }
 }
 ```
+
 So the explanation here is that this class creates a reference for how the Utterances script is injected. And yeah, that's it.  
 After that, I need to put this component in my post layout which is easy. The only thing I have to do is to import the component class and use it somewhere inside the layout. So here's my post layout file:
+
 ```ts
 import DefaultLayout from "./default";
 import Head from "next/head";
@@ -86,6 +90,7 @@ export default function PostLayout(props: any) {
   );
 }
 ```
+
 As you can see, I put mine just below the main post content. By the way, feel free to check [this blog repository](https://github.com/irvanmalik48/blog) if you want.
 
 # Wrapping Up

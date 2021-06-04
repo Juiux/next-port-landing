@@ -19,6 +19,6 @@ This blog is using Next.js framework as its base. If you want to copy the templa
 Few summaries about Next.js:
 
 1. Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed.
-2. Next.js is licensed under MIT License.  
+2. Next.js is licensed under MIT License.
 
 > For CSS stylings, I use MDBootstrap. It's Bootstrap but with Material Design applied. Cool right? Grab them at [their official website](https://mdbootstrap.com/) and for more informations and documentations.

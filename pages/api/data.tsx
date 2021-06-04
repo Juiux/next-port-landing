@@ -3,7 +3,12 @@ import Redis from "ioredis";
 const redis = new Redis(process.env.REDIS_URL);
 
 export default async (
-  req: any, res: { status: (arg0: number) => { (): any; new(): any; json: { (arg0: any): any; new(): any; }; }; }
+  req: any,
+  res: {
+    status: (
+      arg0: number
+    ) => { (): any; new (): any; json: { (arg0: any): any; new (): any } };
+  }
 ) => {
   let cache: any = await redis.get("cache");
   cache = JSON.parse(cache);
@@ -18,10 +23,7 @@ export default async (
     return fetch("https://coronavirus-19-api.herokuapp.com/countries")
       .then((r) => r.json())
       .then((data) => {
-        data.sort(function (
-          a: { country: string },
-          b: { country: string }
-        ) {
+        data.sort(function (a: { country: string }, b: { country: string }) {
           return b.country > a.country ? -1 : 1;
         });
         result.data = data;

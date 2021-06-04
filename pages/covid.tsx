@@ -1,7 +1,7 @@
 import useSWR from "swr";
 import DefaultLayout from "../layouts/default";
 
-const fetcher: any = (url: RequestInfo) => fetch(url).then(res => res.json());
+const fetcher: any = (url: RequestInfo) => fetch(url).then((res) => res.json());
 
 export default function Covid() {
   function refresh(e: any) {
@@ -12,26 +12,22 @@ export default function Covid() {
   const { data, error } = useSWR("api/data", fetcher);
   let itemsRender;
   if (data?.data) {
-      itemsRender = data?.data?.map((item: any) => (
-        <div className="col-12 col-sm-6">
-          <div className="card hover-shadow rounded-3 h-100">
-            <div className="card-header h6">
-              <p className="mt-2 mb-2">{item.country}</p>
-            </div>
-            <div className="card-body">
-              <p className="card-text m-0">Cases: {item.cases}</p>
-              <p className="card-text m-0">Deaths: {item.deaths}</p>
-              <p className="card-text m-0">
-                Today Cases: {item.todayCases}
-              </p>
-              <p className="card-text m-0">
-                Today Deaths: {item.todayDeaths}
-              </p>
-              <p className="card-text m-0">Recovered: {item.recovered}</p>
-            </div>
+    itemsRender = data?.data?.map((item: any) => (
+      <div className="col-12 col-sm-6">
+        <div className="card hover-shadow rounded-3 h-100">
+          <div className="card-header h6">
+            <p className="mt-2 mb-2">{item.country}</p>
+          </div>
+          <div className="card-body">
+            <p className="card-text m-0">Cases: {item.cases}</p>
+            <p className="card-text m-0">Deaths: {item.deaths}</p>
+            <p className="card-text m-0">Today Cases: {item.todayCases}</p>
+            <p className="card-text m-0">Today Deaths: {item.todayDeaths}</p>
+            <p className="card-text m-0">Recovered: {item.recovered}</p>
           </div>
         </div>
-      ));
+      </div>
+    ));
   }
   return (
     <DefaultLayout
@@ -47,9 +43,7 @@ export default function Covid() {
         </div>
       </article>
       <section className="container mt-4 mb-5">
-        <div className="row gx-3 gy-3">
-          {itemsRender}
-        </div>
+        <div className="row gx-3 gy-3">{itemsRender}</div>
       </section>
     </DefaultLayout>
   );

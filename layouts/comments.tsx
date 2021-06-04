@@ -1,28 +1,26 @@
 import React, { Component } from "react";
 
 export default class Comments extends Component {
-    commentBox: React.RefObject<any>;
+  box: React.RefObject<any>;
 
-    constructor(props: any) {
-        super(props);
-        this.commentBox = React.createRef();
-    }
+  constructor(props: any) {
+    super(props);
+    this.box = React.createRef();
+  }
 
-    componentDidMount() {
-        let scriptEl: any = document.createElement("script");
-        scriptEl.setAttribute("src", "https://utteranc.es/client.js");
-        scriptEl.setAttribute("crossorigin", "anonymous");
-        scriptEl.setAttribute("async", true);
-        scriptEl.setAttribute("repo", "irvanmalik48/blog");
-        scriptEl.setAttribute("label", "Comments")
-        scriptEl.setAttribute("issue-term", "pathname");
-        scriptEl.setAttribute("theme", "photon-dark");
-        this.commentBox.current.appendChild(scriptEl);
-    }
+  componentDidMount() {
+    let element: any = document.createElement("script");
+    element.setAttribute("src", "https://utteranc.es/client.js");
+    element.setAttribute("crossorigin", "anonymous");
+    element.setAttribute("async", true);
+    element.setAttribute("repo", "irvanmalik48/blog");
+    element.setAttribute("label", "Comments");
+    element.setAttribute("issue-term", "pathname");
+    element.setAttribute("theme", "photon-dark");
+    this.box.current.appendChild(element);
+  }
 
-    render() {
-        return (
-            <div ref={this.commentBox}></div>
-        );
-    }
+  render() {
+    return <div ref={this.box}></div>;
+  }
 }

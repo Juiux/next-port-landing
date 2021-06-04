@@ -17,10 +17,13 @@ Who doesn't know of Audacious? Audacious is an open source media player that’s
 I myself personally use Audacious as my music player because of its low RAM consumption and simply does what I want from a music player. Really recommend using this.
 
 Ubuntu:
+
 ```md
 sudo apt-get install audacious audacious-plugins
 ```
+
 Arch:
+
 ```md
 sudo pacman -Syu audacious
 ```
@@ -32,10 +35,13 @@ sudo pacman -Syu audacious
 Well, this one does a different approach and rather unique. `cmus` is a small, fast, and powerful console music player for Unix-like operating systems. As you might have observed, `cmus` is devoid of any GUI tools and is basically a command-line media player. I used it for a while tho sometimes in the past and I'm quite satisfied with it.
 
 Ubuntu:
+
 ```md
 sudo apt-get install cmus
 ```
+
 Arch:
+
 ```md
 sudo pacman -Syu cmus
 ```
@@ -47,11 +53,14 @@ sudo pacman -Syu cmus
 Museeks is another cross-platform simple and clean audio player that is lean on advanced features but still provides the simplicity in playing your music and creating playlists. This is by far the simplest of all the audio players in terms of features and functionality. Not quite in an idea to use it tho since it's an Electron app but its sleek and simple UI does make it one of the most recommended music player I would list.
 
 Ubuntu:
+
 ```md
 wget https://github.com/martpie/museeks/releases/download/0.11.5/museeks-amd64.deb
 sudo apt update && sudo apt install ./museeks-amd64.deb
 ```
+
 Arch (AUR):
+
 ```md
 yay -Syu museeks-bin
 ```
@@ -63,10 +72,13 @@ yay -Syu museeks-bin
 Musique is a music player built for speed, simplicity and style. It is written in C++ using the Qt framework. What I really like about this music player is that `(1.)` it uses Qt and `(2.)` it fetches your music album art and lyrics which is really useful. But I do get a long first start up tho since it checks the Music folder I use. Still highly recommend tho.
 
 Ubuntu:
+
 ```md
 sudo apt-get install musique
 ```
+
 Arch (AUR):
+
 ```md
 yay -Syu musique-bin
 ```
@@ -78,15 +90,19 @@ yay -Syu musique-bin
 This music player reminds me of my old days using Winamp. The interface is so similar to Winamp. It is written in C++ using the Qt widget toolkit for the user interface. It is the only audio player not featuring a database that uses the Qt library. It is themeable and low on resource usage. Pretty neat, ain't it? A little fun fact for you all that by supporting Winamp (Classic) skin files, QMMP can easily be configured to look exactly the same as Winamp 2.x.
 
 Ubuntu:
+
 ```md
 sudo add-apt-repository ppa:forkotov02/ppa
 sudo apt-get update
 sudo apt-get install qmmp qmmp-plugin-pack
 ```
+
 Arch:
+
 ```md
 sudo pacman -Syu qmmp
 ```
+
 # Wrapping Up
 
 This page might get more apps to get into and be covered. But there you have it for now. As always, thank you for your attention. Have a nice music experience!

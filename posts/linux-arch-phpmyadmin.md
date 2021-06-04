@@ -125,7 +125,7 @@ AddHandler php-script .php
 - Place this at the end of the `Include` list:
 
 ```php
-Include conf/extra/php_module.conf
+include conf / extra / php_module . conf;
 ```
 
 - Restart `httpd.service` by issuing `sudo systemctl restart httpd.service` command.
@@ -149,7 +149,7 @@ Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
 > Note: Remove the space before Directory and /Directory. 2. Include the file in `/etc/httpd/conf/httpd.conf`:
 
 ```php
-Include conf/extra/phpmyadmin.conf
+include conf / extra / phpmyadmin . conf;
 ```
 
 3. To allow the usage of the phpMyAdmin setup script (e.g. http://localhost/phpmyadmin/setup), make sure `/usr/share/webapps/phpMyAdmin` is writable for the http user:
@@ -163,7 +163,7 @@ sudo chmod 750 /usr/share/webapps/phpMyAdmin/config
 4. Add blowfish_secret passphrase (You can search a generator for one) in `/usr/share/webapps/phpMyAdmin/config.inc.php`:
 
 ```php
-$cfg['blowfish_secret'] = 'your-passphrase-here';
+$cfg["blowfish_secret"] = "your-passphrase-here";
 ```
 
 5. In `/usr/share/webapps/phpMyAdmin/config.inc.php`, uncomment and change them correspondingly to the ones you set in MariaDB configuration (`your-name` and `your-pass`):
@@ -172,32 +172,32 @@ $cfg['blowfish_secret'] = 'your-passphrase-here';
 /* User used to manipulate with storage */
 // $cfg['Servers'][$i]['controlhost'] = 'my-host';
 // $cfg['Servers'][$i]['controlport'] = '3306';
-$cfg['Servers'][$i]['controluser'] = 'your-name';
-$cfg['Servers'][$i]['controlpass'] = 'your-pass';
+$cfg["Servers"][$i]["controluser"] = "your-name";
+$cfg["Servers"][$i]["controlpass"] = "your-pass";
 ```
 
 ```php
 /* Storage database and tables */
-$cfg['Servers'][$i]['pmadb'] = 'phpmyadmin';
-$cfg['Servers'][$i]['bookmarktable'] = 'pma__bookmark';
-$cfg['Servers'][$i]['relation'] = 'pma__relation';
-$cfg['Servers'][$i]['table_info'] = 'pma__table_info';
-$cfg['Servers'][$i]['table_coords'] = 'pma__table_coords';
-$cfg['Servers'][$i]['pdf_pages'] = 'pma__pdf_pages';
-$cfg['Servers'][$i]['column_info'] = 'pma__column_info';
-$cfg['Servers'][$i]['history'] = 'pma__history';
-$cfg['Servers'][$i]['table_uiprefs'] = 'pma__table_uiprefs';
-$cfg['Servers'][$i]['tracking'] = 'pma__tracking';
-$cfg['Servers'][$i]['userconfig'] = 'pma__userconfig';
-$cfg['Servers'][$i]['recent'] = 'pma__recent';
-$cfg['Servers'][$i]['favorite'] = 'pma__favorite';
-$cfg['Servers'][$i]['users'] = 'pma__users';
-$cfg['Servers'][$i]['usergroups'] = 'pma__usergroups';
-$cfg['Servers'][$i]['navigationhiding'] = 'pma__navigationhiding';
-$cfg['Servers'][$i]['savedsearches'] = 'pma__savedsearches';
-$cfg['Servers'][$i]['central_columns'] = 'pma__central_columns';
-$cfg['Servers'][$i]['designer_settings'] = 'pma__designer_settings';
-$cfg['Servers'][$i]['export_templates'] = 'pma__export_templates';
+$cfg["Servers"][$i]["pmadb"] = "phpmyadmin";
+$cfg["Servers"][$i]["bookmarktable"] = "pma__bookmark";
+$cfg["Servers"][$i]["relation"] = "pma__relation";
+$cfg["Servers"][$i]["table_info"] = "pma__table_info";
+$cfg["Servers"][$i]["table_coords"] = "pma__table_coords";
+$cfg["Servers"][$i]["pdf_pages"] = "pma__pdf_pages";
+$cfg["Servers"][$i]["column_info"] = "pma__column_info";
+$cfg["Servers"][$i]["history"] = "pma__history";
+$cfg["Servers"][$i]["table_uiprefs"] = "pma__table_uiprefs";
+$cfg["Servers"][$i]["tracking"] = "pma__tracking";
+$cfg["Servers"][$i]["userconfig"] = "pma__userconfig";
+$cfg["Servers"][$i]["recent"] = "pma__recent";
+$cfg["Servers"][$i]["favorite"] = "pma__favorite";
+$cfg["Servers"][$i]["users"] = "pma__users";
+$cfg["Servers"][$i]["usergroups"] = "pma__usergroups";
+$cfg["Servers"][$i]["navigationhiding"] = "pma__navigationhiding";
+$cfg["Servers"][$i]["savedsearches"] = "pma__savedsearches";
+$cfg["Servers"][$i]["central_columns"] = "pma__central_columns";
+$cfg["Servers"][$i]["designer_settings"] = "pma__designer_settings";
+$cfg["Servers"][$i]["export_templates"] = "pma__export_templates";
 ```
 
 6. Execute `mysql -u root -p < /usr/share/webapps/phpMyAdmin/sql/create_tables.sql` in the command line to create the required tables.
