@@ -10,6 +10,28 @@ export default function Covid() {
   }
 
   const { data, error } = useSWR("api/data", fetcher);
+  if (error) {
+    <div className="col-12 text-white">
+      <div className="d-flex align-items-center">
+        <strong>Error!</strong>
+      </div>
+    </div>
+  }
+  if (!data) {
+    return (
+      <DefaultLayout
+        title="COVID-19 Tracker"
+        description="Track COVID-19 cases worldwide."
+      >
+      <div className="container text-white" style={{width: "100vw", height: "100vh"}}>
+        <div className="text-center">
+          <div className="loadingspin" role="status" aria-hidden="true"></div>
+        </div>
+      </div>
+      </DefaultLayout>
+      
+    )
+  }
   let itemsRender;
   if (data?.data) {
     itemsRender = data?.data?.map((item: any) => (
