@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import unified from "unified";
 
-const postsDirectory = path.join(process.cwd(), "posts")
+const postsDirectory = path.join(process.cwd(), "posts");
 
 export function getSortedPostsData() {
   const fileNames = fs.readdirSync(postsDirectory);
@@ -15,7 +15,7 @@ export function getSortedPostsData() {
     return {
       id,
       ...matterResult.data,
-    }
+    };
   });
   return sortPostData(allPostsData);
 }
@@ -30,14 +30,14 @@ export function getSortedPostsDataWithLimit() {
     return {
       id,
       ...matterResult.data,
-    }
+    };
   });
   return sortPostDataWithLimit(allPostsData);
 }
 
-export function sortPostData(allPostsData: any) {
+export function sortPostData(allPostsData: any[]) {
   return allPostsData.sort((a: any, b: any) => {
-    if (a['date'] < b['date']) {
+    if (a["date"] < b["date"]) {
       return 1;
     } else {
       return -1;
@@ -45,14 +45,16 @@ export function sortPostData(allPostsData: any) {
   });
 }
 
-export function sortPostDataWithLimit(allPostsData: any) {
-  return allPostsData.sort((a: any, b: any) => {
-    if (a['date'] < b['date']) {
-      return 1;
-    } else {
-      return -1;
-    }
-  }).slice(0, 4);
+export function sortPostDataWithLimit(allPostsData: any[]) {
+  return allPostsData
+    .sort((a: any, b: any) => {
+      if (a["date"] < b["date"]) {
+        return 1;
+      } else {
+        return -1;
+      }
+    })
+    .slice(0, 4);
 }
 
 export function getAllPostIds() {
@@ -66,7 +68,7 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(id: string) {
+export async function getPostData(id: any) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf-8");
   const matterResult = matter(fileContents);
