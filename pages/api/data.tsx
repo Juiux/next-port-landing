@@ -1,6 +1,6 @@
 import Redis from "ioredis";
 
-let redis = new Redis(process.env.REDIS_URL);
+const redis = new Redis(process.env.REDIS_URL);
 
 export default async (
   req: any, res: { status: (arg0: number) => { (): any; new(): any; json: { (arg0: any): any; new(): any; }; }; }
