@@ -11,7 +11,9 @@ export default function Covid() {
 
   const { data, error } = useSWR("api/data", fetcher);
   let itemsRender;
+  // @ts-ignore
   if (data.data) {
+      // @ts-ignore
       itemsRender = data.data.map((item: any) => (
         <div className="col-12 col-sm-6">
           <div className="card hover-shadow rounded-3 h-100">
