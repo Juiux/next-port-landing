@@ -9,7 +9,7 @@ export default function Covid() {
     window.location.reload();
   }
 
-  const { data, error } = useSWR("api/covid", fetcher);
+  const { data, error } = useSWR("api/data", fetcher);
   let itemsRender;
   if (data.data) {
       itemsRender = data.data.map((item: any) => (
