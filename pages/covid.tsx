@@ -1,7 +1,7 @@
 import useSWR from "swr";
 import DefaultLayout from "../layouts/default";
 
-const fetcher = (url: RequestInfo) => fetch(url).then(res => res.json());
+const fetcher: any = (url: RequestInfo) => fetch(url).then(res => res.json());
 
 export default function Covid() {
   function refresh(e: any) {
@@ -11,10 +11,8 @@ export default function Covid() {
 
   const { data, error } = useSWR("api/data", fetcher);
   let itemsRender;
-  // @ts-ignore
-  if (data.data) {
-      // @ts-ignore
-      itemsRender = data.data.map((item: any) => (
+  if (data?.data) {
+      itemsRender = data?.data?.map((item: any) => (
         <div className="col-12 col-sm-6">
           <div className="card hover-shadow rounded-3 h-100">
             <div className="card-header h6">
