@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cache": "mv scripts/data.tsx scripts/data.js && node scripts/data.js",
-    "convert": "mv scripts/data.js scripts/data.tsx",
-    "dev": "npm run cache && next",
+    "dev": "next",
     "build": "npm run cache && next build"
   },
   "keywords": [],
