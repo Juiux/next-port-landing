@@ -15,7 +15,7 @@ export default function Covid() {
       <div className="d-flex align-items-center">
         <strong>Error!</strong>
       </div>
-    </div>
+    </div>;
   }
   if (!data) {
     return (
@@ -23,14 +23,16 @@ export default function Covid() {
         title="COVID-19 Tracker"
         description="Track COVID-19 cases worldwide."
       >
-      <div className="container text-white" style={{width: "100vw", height: "100vh"}}>
-        <div className="text-center">
-          <div className="loadingspin" role="status" aria-hidden="true"></div>
+        <div
+          className="container text-white"
+          style={{ width: "100vw", height: "100vh" }}
+        >
+          <div className="text-center">
+            <div className="loadingspin" role="status" aria-hidden="true"></div>
+          </div>
         </div>
-      </div>
       </DefaultLayout>
-      
-    )
+    );
   }
   let itemsRender;
   if (data?.data) {

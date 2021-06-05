@@ -3,7 +3,7 @@ import Redis from "ioredis";
 const redis = new Redis(process.env.REDIS_URL);
 
 export default async (
-  req: any,
+  _req: any,
   res: {
     status: (
       arg0: number
