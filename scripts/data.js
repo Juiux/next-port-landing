@@ -20,11 +20,11 @@ function getPosts() {
 
 const fileContents = `export const posts = ${getPosts()}`;
 try {
-  fs.readdirSync("cache");
+  fs.readdirSync("public/cache");
 } catch (e) {
-  fs.mkdirSync("cache");
+  fs.mkdirSync("public/cache");
 }
-fs.writeFile("cache/data.tsx", fileContents, function (err) {
+fs.writeFile("public/cache/data.tsx", fileContents, function (err) {
   if (err) return console.log(err);
   console.log("post cached.");
 });
