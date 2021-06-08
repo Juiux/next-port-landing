@@ -24,6 +24,7 @@
 
 // BOOTSTRAP COMPONENTS
 @import "~mdb-ui-kit/src/scss/bootstrap-rtl-fix/buttons";
+@import "~mdb-ui-kit/src/scss/bootstrap-rtl-fix/forms";
 @import "~mdb-ui-kit/src/scss/bootstrap-rtl-fix/transitions";
 @import "~mdb-ui-kit/src/scss/bootstrap-rtl-fix/nav";
 @import "~mdb-ui-kit/src/scss/bootstrap-rtl-fix/navbar";
@@ -39,6 +40,10 @@
 
 // MDB CORE
 @import "~mdb-ui-kit/src/scss/free/mixins";
+
+// MDB FORMS
+@import "~mdb-ui-kit/src/scss/free/forms/form-control";
+@import "~mdb-ui-kit/src/scss/free/forms/input-group";
 
 // MDB CORE COMPONENTS
 @import "~mdb-ui-kit/src/scss/free/root";
