@@ -2,7 +2,7 @@ import { getSortedPostsData } from "../../api";
 
 const posts =
   process.env.NODE_ENV === "production"
-    ? require("../../public/cache/data").posts
+    ? require("../../cache/data").posts
     : getSortedPostsData();
 
 export default (
