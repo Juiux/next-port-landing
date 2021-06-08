@@ -1,4 +1,9 @@
-import { posts } from "../../cache/data";
+import { getSortedPostsData } from "../../api";
+
+const posts =
+  process.env.NODE_ENV === "production"
+    ? require("../../cache/data").posts
+    : getSortedPostsData();
 
 export default (
   req: { query: { q: string } },
@@ -15,5 +20,5 @@ export default (
     : [];
   res.statusCode = 200;
   res.setHeader("content-type", "application/json");
-  res.end(JSON.stringify({ results: [] }));
+  res.end(JSON.stringify({ results }));
 };
