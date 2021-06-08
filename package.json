@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cache": "mv scripts/data.tsx scripts/data.js && node scripts/data.js",
+    "cache": "node scripts/data.js",
     "dev": "next",
     "build": "npm run cache && next build"
   },
