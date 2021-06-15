@@ -36,11 +36,6 @@ export default function Header() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href={`covid`}>
-                <a className="nav-link">COVID</a>
-              </Link>
-            </li>
-            <li className="nav-item">
               <a className="nav-link" href="#">
                 CV
               </a>
