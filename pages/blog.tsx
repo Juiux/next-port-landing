@@ -1,5 +1,4 @@
 import DefaultLayout from "../layouts/default";
-import Search from "../layouts/search";
 import Link from "next/link";
 import { getSortedPostsData } from "../api/index";
 
@@ -13,13 +12,12 @@ export default function Blog({ allPostsData }: any) {
         <div className="container">
           <p className="display-5 mb-0 mt-3 text-center">Blog Posts</p>
           <p className="lead mb-3 mt-0 text-center">
-            All that I've written to date.
+            All that I&apos;ve written to date.
           </p>
         </div>
       </article>
-      <section className="container mt-4 mb-5">
-        <Search />
-        <div className="row mt-4 gx-3 gy-3">
+      <section className="container mb-5">
+        <div className="row mt-2 gx-3 gy-3">
           <p className="col-12 text-center h5 mt-3 mb-3 m-0">All Posts</p>
           {allPostsData.map(
             ({ id, title, date, tag, desc }: any, index: any) => (

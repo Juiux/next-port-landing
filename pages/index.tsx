@@ -1,6 +1,6 @@
 import DefaultLayout from "../layouts/default";
 import Link from "next/link";
-import { getSortedPostsDataWithLimit } from "../api/index";
+import { getSortedPostsData } from "../api/index";
 import { GitBranch } from "react-feather";
 
 export default function Blog({ allPostsData }: any) {
@@ -30,8 +30,8 @@ export default function Blog({ allPostsData }: any) {
         <p className="h4 mb-3 mt-4 text-center">Description</p>
         <blockquote>Keep it simple, stupid.</blockquote>
         <p>
-          Hello, my name's Irvan Malik Azantha. I'm a 18 y'o boy currently
-          studying on Universitas Sriwijaya. I live in Palembang, Indonesia. I'm
+          Hello, my name&apos;s Irvan Malik Azantha. I&apos;m a 18 y&apos;o boy currently
+          studying on Universitas Sriwijaya. I live in Palembang, Indonesia. I&apos;m
           a highly enthusiastic person with subtle interest in open source
           projects and keen on learning new things. Also likes to watch anime,
           play games, and have hugs and cuddles (lmao).
@@ -77,7 +77,7 @@ export default function Blog({ allPostsData }: any) {
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsDataWithLimit();
+  const allPostsData = getSortedPostsData().splice(0, 4);
   return {
     props: {
       allPostsData,
