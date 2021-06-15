@@ -14,25 +14,15 @@ export function getSortedPostsData() {
     const matterResult = matter(fileContents);
     return {
       id,
-      ...matterResult.data,
+      ...(matterResult.data as {
+        title: string,
+        date: any,
+        desc: string,
+        tag: string,
+      }),
     };
   });
   return sortPostData(allPostsData);
-}
-
-export function getSortedPostsDataWithLimit() {
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
-    const id = fileName.replace(/\.md$/, "");
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf-8");
-    const matterResult = matter(fileContents);
-    return {
-      id,
-      ...matterResult.data,
-    };
-  });
-  return sortPostDataWithLimit(allPostsData);
 }
 
 export function sortPostData(allPostsData: any[]) {
@@ -43,18 +33,6 @@ export function sortPostData(allPostsData: any[]) {
       return -1;
     }
   });
-}
-
-export function sortPostDataWithLimit(allPostsData: any[]) {
-  return allPostsData
-    .sort((a: any, b: any) => {
-      if (a["date"] < b["date"]) {
-        return 1;
-      } else {
-        return -1;
-      }
-    })
-    .slice(0, 4);
 }
 
 export function getAllPostIds() {
