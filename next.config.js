@@ -3,9 +3,7 @@ const runtimeCaching = require("next-pwa/cache");
 
 module.exports = withPWA({
   target: "serverless",
-  future: {
-    webpack5: true,
-  },
+  webpack5: true,
   compress: true,
   optimization: {
     minimize: true,
