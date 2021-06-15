@@ -15,10 +15,10 @@ export function getSortedPostsData() {
     return {
       id,
       ...(matterResult.data as {
-        title: string,
-        date: any,
-        desc: string,
-        tag: string,
+        title: string;
+        date: any;
+        desc: string;
+        tag: string;
       }),
     };
   });

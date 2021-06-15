@@ -30,11 +30,11 @@ export default function Blog({ allPostsData }: any) {
         <p className="h4 mb-3 mt-4 text-center">Description</p>
         <blockquote>Keep it simple, stupid.</blockquote>
         <p>
-          Hello, my name&apos;s Irvan Malik Azantha. I&apos;m a 18 y&apos;o boy currently
-          studying on Universitas Sriwijaya. I live in Palembang, Indonesia. I&apos;m
-          a highly enthusiastic person with subtle interest in open source
-          projects and keen on learning new things. Also likes to watch anime,
-          play games, and have hugs and cuddles (lmao).
+          Hello, my name&apos;s Irvan Malik Azantha. I&apos;m a 18 y&apos;o boy
+          currently studying on Universitas Sriwijaya. I live in Palembang,
+          Indonesia. I&apos;m a highly enthusiastic person with subtle interest
+          in open source projects and keen on learning new things. Also likes to
+          watch anime, play games, and have hugs and cuddles (lmao).
         </p>
       </article>
       <section className="container mt-3 mb-5">
