@@ -79,7 +79,7 @@ body {
   transition: all ease-in-out 250ms;
   animation: 250ms fadeOut;
   &:hover {
-    background-color: $primary;
+    background-color: $info;
     color: #303030;
   }
 }
