@@ -68,124 +68,53 @@ body {
   backdrop-filter: blur(4px);
 }
 
-.loadingspin,
-.loadingspin:before,
-.loadingspin:after {
-  border-radius: 50%;
-  width: 1.5em;
-  height: 1.5em;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation: load7 1.8s infinite ease-in-out;
-  animation: load7 1.8s infinite ease-in-out;
-}
-.loadingspin {
-  color: #ffffff;
-  font-size: 10px;
+.scroll-cursor {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
+  bottom: 20px;
+  right: 20px;
+  padding: 1rem;
+  background-color: #30303060;
+  backdrop-filter: blur(8px);
+  color: white;
+  transition: all ease-in-out 250ms;
+  animation: 250ms fadeOut;
+  &:hover {
+    background-color: $primary;
+    color: #303030;
+  }
 }
-.loadingspin:before,
-.loadingspin:after {
-  content: "";
-  position: absolute;
-  top: 0;
+
+.transitioning {
+  animation: 250ms fadeIn;
+  -o-animation: 250ms fadeIn;
+  -moz-animation: 250ms fadeIn;
+  -webkit-animation: 250ms fadeIn;
 }
-.loadingspin:before {
-  left: -3.5em;
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
+
+.leaving {
+  visibility: hidden;
+  animation: 250ms fadeOut;
+  -o-animation: 250ms fadeOut;
+  -moz-animation: 250ms fadeOut;
+  -webkit-animation: 250ms fadeOut;
 }
-.loadingspin:after {
-  left: 3.5em;
-}
-@-webkit-keyframes load7 {
-  0%,
-  80%,
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
   100% {
-    box-shadow: 0 2.5em 0 -1.3em;
-  }
-  40% {
-    box-shadow: 0 2.5em 0 0;
+    visibility: visible;
+    opacity: 1;
   }
 }
-@keyframes load7 {
-  0%,
-  80%,
+
+@keyframes fadeOut {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
   100% {
-    box-shadow: 0 2.5em 0 -1.3em;
-  }
-  40% {
-    box-shadow: 0 2.5em 0 0;
-  }
-}
-
-// input text
-.form-group {
-  position: relative;
-  padding: 15px 0 0;
-  margin-top: 10px;
-  width: 50%;
-}
-
-.form-field {
-  font-family: Roboto;
-  width: 100%;
-  border: 0;
-  border-bottom: 2px solid #939393;
-  outline: 0;
-  font-size: 14px;
-  color: $white;
-  padding: 7px 0;
-  background: transparent;
-  font-weight: 700;
-  transition: border-color 0.2s;
-
-  &::placeholder {
-    color: transparent;
-  }
-
-  &:placeholder-shown ~ .form-label {
-    font-size: 14px;
-    cursor: text;
-    top: 20px;
-    font-weight: 700;
-  }
-}
-
-.form-label {
-  position: absolute;
-  top: 0;
-  display: block;
-  transition: 0.2s;
-  font-size: 14px;
-  color: #939393;
-}
-
-.form-field:focus {
-  ~ .form-label {
-    position: absolute;
-    top: 0;
-    display: block;
-    transition: 0.2s;
-    font-size: 14px;
-    color: $info;
-    font-weight: 700;
-  }
-  padding-bottom: 6px;
-  font-weight: 700;
-  border-width: 3px;
-  border-color: $info;
-}
-.form-field {
-  &:required,
-  &:invalid {
-    box-shadow: none;
+    opacity: 0;
   }
 }

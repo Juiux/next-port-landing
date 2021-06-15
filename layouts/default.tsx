@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../includes/header";
 import Footer from "../includes/footer";
+import Scroll from "../components/stt";
 
 export default function DefaultLayout(props: any) {
   return (
@@ -53,6 +54,7 @@ export default function DefaultLayout(props: any) {
           src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
         ></script>
         <Footer />
+        <Scroll />
       </body>
     </html>
   );
