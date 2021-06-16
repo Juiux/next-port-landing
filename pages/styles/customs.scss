@@ -1,12 +1,12 @@
 // Dark it out
 
 body {
-  background-color: #262626;
-  color: white;
+  background-color: $dark;
+  color: $light;
 }
 
 .card {
-  background-color: #333;
+  background-color: $card;
 }
 
 .container,
@@ -63,7 +63,7 @@ body {
   }
 }
 .navbar-bg-dark {
-  background-color: #262626ea;
+  background-color: $nav;
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
@@ -80,7 +80,7 @@ body {
   animation: 250ms fadeOut;
   &:hover {
     background-color: $info;
-    color: #303030;
+    color: $card;
   }
 }
 
