@@ -129,3 +129,20 @@ body {
   width: 100vw;
   height: 90vh;
 }
+
+.toc-item {
+  list-style: disc;
+}
+
+.toc-level-1 {
+  padding-left: 1.4rem;
+}
+
+.toc-level-2,
+.toc-level-3,
+.toc-level-4,
+.toc-level-5,
+.toc-level-6 {
+  margin-top: 0;
+  padding-left: 1.4rem;
+}
