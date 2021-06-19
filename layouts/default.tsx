@@ -17,6 +17,10 @@ export default function DefaultLayout(props: any) {
         <meta property="og:title" content={props.title} />
         <meta property="og:description" content={props.description} />
         <meta property="og:image" content="/lp/lp.jpg" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="IrvanMA's Lair" />
+        <meta name="theme-color" content="#66CCCC" />
         <title>{props.title}</title>
         <link rel="manifest" href="/manifest.json" />
         <link
@@ -44,7 +48,6 @@ export default function DefaultLayout(props: any) {
           sizes="512x512"
         />
         <link rel="apple-touch-icon" href="icons/apple-icon.png"></link>
-        <meta name="theme-color" content="#39C0ED" />
       </Head>
       <body>
         <Header />
