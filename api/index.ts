@@ -5,6 +5,45 @@ import unified from "unified";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
+export function cacheManifest() {
+  const fileNames = fs.readdirSync(postsDirectory);
+  const allPostsData = fileNames.map((fileName) => {
+    const id = fileName.replace(/\.md$/, "");
+    const fullPath = path.join(postsDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, "utf-8");
+    const matterResult = matter(fileContents);
+    return {
+      id,
+      ...(matterResult.data as {
+        title: string;
+        date: any;
+        desc: string;
+        tag: string;
+      }),
+    };
+  });
+  return `export const posts = ${JSON.stringify(allPostsData)}`
+}
+
+export function makeCacheManifest() {
+  try {
+    fs.readdirSync('cache');
+  }
+  catch (e) {
+    fs.mkdirSync('cache');
+  }
+  fs.writeFile(
+    "cache/data.tsx",
+    cacheManifest(),
+    function (err) {
+      if (err) {
+        return console.log(err);
+      }
+      console.log("post cached.")
+    }
+  );
+}
+
 export function getSortedPostsData() {
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
