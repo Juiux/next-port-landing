@@ -8,7 +8,7 @@ try {
   posts = getSortedPostsData();
 }
 
-export default (
+const take = (
   req: { query: { q: any } },
   res: {
     statusCode: number;
@@ -25,3 +25,5 @@ export default (
   res.setHeader("Content-Type", "application/json");
   res.end(JSON.stringify({ results }));
 };
+
+export default take;
