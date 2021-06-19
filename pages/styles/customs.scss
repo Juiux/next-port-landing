@@ -118,3 +118,14 @@ body {
     opacity: 0;
   }
 }
+
+.offline-container {
+  display: flex;
+  z-index: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark;
+  width: 100vw;
+  height: 90vh;
+}
