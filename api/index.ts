@@ -52,27 +52,25 @@ export async function getPostData(id: any) {
   const prism = require("@mapbox/rehype-prism");
   const stringify = require("rehype-stringify");
   const raw = require("rehype-raw");
-  const sanitize = require("rehype-sanitize");
+  const slug = require("rehype-slug");
+  const toc = require("rehype-toc");
+
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf-8");
   const matterResult = matter(fileContents);
   const processedContent = await unified()
     .use(parse)
     .use(r2r, {allowDangerousHtml: true})
+    .use(slug)
+    .use(toc, {
+      nav: false,
+      cssClasses: {
+        link: "link-info",
+      }
+    })
     .use(raw)
     .use(prism)
     .use(stringify)
-    .use(sanitize, {
-      attributes: {
-        img: ["src", "alt"],
-        a: ["href"],
-        "*": [
-          "className",
-          "id",
-          "htmlFor",
-        ],
-      }
-    })
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
   return {
