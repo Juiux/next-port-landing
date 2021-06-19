@@ -15,6 +15,7 @@ export default function PostLayout(props: any) {
             <p className="lead mb-0 text-muted">{props.date}</p>
           </div>
         </section>
+        <h1>Table of Contents</h1>
         <div dangerouslySetInnerHTML={{ __html: props.content }} />
         <h1>Comments</h1>
         <Comments />
