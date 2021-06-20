@@ -11,8 +11,15 @@ const take = (
   }
 ) => {
   const results = req.query.q
-    ? posts.filter((post: { title: string }) =>
-        post.title.toLowerCase().includes(req.query.q)
+    ? posts.filter((
+        post: {
+          title: string,
+          date: any,
+          tag: string,
+        }) => {
+          post.title?.toLowerCase().includes(req.query.q);
+          post.tag?.toLowerCase().includes(req.query.q);
+        }
       )
     : [];
   res.statusCode = 200;
