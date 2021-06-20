@@ -1,12 +1,6 @@
-import { getSortedPostsData, makeCacheManifest } from "../../api";
+import { getSortedPostsData } from "../../api";
 
-let posts: any[];
-try {
-  makeCacheManifest();
-  posts = require("../../cache/data");
-} catch (e) {
-  posts = getSortedPostsData();
-}
+const posts = getSortedPostsData();
 
 const take = (
   req: { query: { q: any } },
