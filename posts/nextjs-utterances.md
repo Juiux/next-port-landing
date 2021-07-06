@@ -1,6 +1,6 @@
 ---
 title: "How to Use Utterances on Next.js"
-date: 22-05-2021
+date: "2021-05-22"
 desc: "The correct way of implementing Utterances on Next.js."
 tag: "javascript"
 ---

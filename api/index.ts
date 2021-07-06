@@ -16,7 +16,7 @@ export function getSortedPostsData() {
       id,
       ...(matterResult.data as {
         title: string;
-        date: any;
+        date: Date;
         desc: string;
         tag: string;
       }),
@@ -78,7 +78,7 @@ export async function getPostData(id: any) {
     contentHtml,
     ...(matterResult.data as {
       title: string;
-      date: any;
+      date: Date;
       desc: string;
       tag: string;
     }),

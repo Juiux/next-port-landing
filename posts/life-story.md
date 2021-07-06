@@ -1,6 +1,6 @@
 ---
 title: "A Story"
-date: 14-05-2021
+date: "2021-05-14"
 desc: "A story of life and personality."
 tag: "life"
 ---

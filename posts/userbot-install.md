@@ -1,6 +1,6 @@
 ---
 title: "How to Deploy a Telegram Userbot"
-date: 02-05-2021
+date: "2021-05-02"
 desc: "Deploy your own userbot."
 tag: "userbot"
 ---
