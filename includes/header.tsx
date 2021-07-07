@@ -1,24 +1,9 @@
 import { Menu } from "react-feather";
 import Link from "next/link";
 
-if (typeof window !== "undefined") {
-  let scrollPosPrev = window.pageYOffset;
-  window.onscroll = function() {
-    let scrollPosCur = window.pageYOffset;
-    if (scrollPosPrev > scrollPosCur) {
-      document.getElementById("navigation-bar")?.setAttribute("style", "top: 0;");
-    } else {
-      document.getElementById("navigation-bar")?.setAttribute("style", "top: -80px;");
-    }
-    scrollPosPrev = scrollPosCur;
-  }
-}
-
-
-
 export default function Header() {
   return (
-    <nav id="navigation-bar" className="navbar navbar-expand-lg navbar-dark navbar-bg-dark sticky-top shadow">
+    <nav className="navbar navbar-expand-lg navbar-dark navbar-bg-dark sticky-top shadow">
       <div className="container">
         <a className="navbar-brand m-0 p-0 font-monospace fs-6" href="/">
           <span className="text-info">&#123;</span>
