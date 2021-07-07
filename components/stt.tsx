@@ -15,7 +15,7 @@ export default function Scroll() {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
   return (
-    <a href="#">
+    <a href="#" aria-label="Back to top">
       {!isVisible && (
         <div className="scroll-cursor leaving rounded-3">
           <div>
