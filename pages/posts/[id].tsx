@@ -24,6 +24,7 @@ export default function Post({ postData }: any) {
       title = {postData.title}
       date = {postData.date}
       tag = {postData.tag}
+      description = {postData.desc}
       content = {postData.contentHtml}
     />
   );

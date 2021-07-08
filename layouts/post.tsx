@@ -7,6 +7,9 @@ export default function PostLayout(props: any) {
     <DefaultLayout>
       <Head>
         <meta name="keywords" content={props.tag} />
+        <meta name="description" content={props.description} />
+        <meta property="og:title" content={props.title} />
+        <meta property="og:description" content={props.description} />
         <title>{props.title}</title>
       </Head>
       <article className="container mt-3" style={{ marginBottom: "100px" }}>
