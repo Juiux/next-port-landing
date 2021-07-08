@@ -6,6 +6,7 @@ export default function PostLayout(props: any) {
   return (
     <DefaultLayout>
       <Head>
+        <meta name="keywords" content={props.tag} />
         <title>{props.title}</title>
       </Head>
       <article className="container mt-3" style={{ marginBottom: "100px" }}>

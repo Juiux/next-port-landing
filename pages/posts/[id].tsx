@@ -23,6 +23,7 @@ export default function Post({ postData }: any) {
     <PostLayout
       title = {postData.title}
       date = {postData.date}
+      tag = {postData.tag}
       content = {postData.contentHtml}
     />
   );
