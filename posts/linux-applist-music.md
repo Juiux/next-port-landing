@@ -18,13 +18,13 @@ I myself personally use Audacious as my music player because of its low RAM cons
 
 Ubuntu:
 
-```md
+```markdown
 sudo apt-get install audacious audacious-plugins
 ```
 
 Arch:
 
-```md
+```markdown
 sudo pacman -Syu audacious
 ```
 
@@ -36,13 +36,13 @@ Well, this one does a different approach and rather unique. `cmus` is a small, f
 
 Ubuntu:
 
-```md
+```markdown
 sudo apt-get install cmus
 ```
 
 Arch:
 
-```md
+```markdown
 sudo pacman -Syu cmus
 ```
 
@@ -54,14 +54,14 @@ Museeks is another cross-platform simple and clean audio player that is lean on 
 
 Ubuntu:
 
-```md
+```markdown
 wget https://github.com/martpie/museeks/releases/download/0.11.5/museeks-amd64.deb
 sudo apt update && sudo apt install ./museeks-amd64.deb
 ```
 
 Arch (AUR):
 
-```md
+```markdown
 yay -Syu museeks-bin
 ```
 
@@ -73,13 +73,13 @@ Musique is a music player built for speed, simplicity and style. It is written i
 
 Ubuntu:
 
-```md
+```markdown
 sudo apt-get install musique
 ```
 
 Arch (AUR):
 
-```md
+```markdown
 yay -Syu musique-bin
 ```
 
@@ -91,7 +91,7 @@ This music player reminds me of my old days using Winamp. The interface is so si
 
 Ubuntu:
 
-```md
+```markdown
 sudo add-apt-repository ppa:forkotov02/ppa
 sudo apt-get update
 sudo apt-get install qmmp qmmp-plugin-pack
@@ -99,7 +99,7 @@ sudo apt-get install qmmp qmmp-plugin-pack
 
 Arch:
 
-```md
+```markdown
 sudo pacman -Syu qmmp
 ```
 

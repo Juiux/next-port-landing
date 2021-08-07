@@ -61,25 +61,25 @@ iwctl
 
 First, if you do not know your wireless device name, list all Wi-Fi devices:
 
-```md
+```markdown
 [iwd]# device list
 ```
 
 Then, to scan for networks:
 
-```md
+```markdown
 [iwd]# station *device* scan
 ```
 
 You can then list all available networks:
 
-```md
+```markdown
 [iwd]# station *device* get-networks
 ```
 
 Finally, to connect to a network:
 
-```md
+```markdown
 [iwd]# station *device* connect *SSID*
 ```
 
