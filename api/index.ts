@@ -7,6 +7,8 @@ import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
+import rehypePrism from "@mapbox/rehype-prism";
+import rehypeToc from "rehype-toc";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
@@ -55,8 +57,6 @@ export async function getPostData(id: any) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf-8");
   const matterResult = matter(fileContents);
-  const rehypePrism = require("@mapbox/rehype-prism");
-  const rehypeToc = require("rehype-toc");
   const processedContent = await unified()
     .use(remarkParse)
     .use(remarkRehype, {allowDangerousHtml: true})
