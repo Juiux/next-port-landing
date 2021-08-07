@@ -1,7 +1,12 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import unified from "unified";
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
+import rehypeRaw from "rehype-raw";
+import rehypeSlug from "rehype-slug";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
@@ -47,30 +52,24 @@ export function getAllPostIds() {
 }
 
 export async function getPostData(id: any) {
-  const parse = require("remark-parse");
-  const r2r = require("remark-rehype");
-  const prism = require("@mapbox/rehype-prism");
-  const stringify = require("rehype-stringify");
-  const raw = require("rehype-raw");
-  const slug = require("rehype-slug");
-  const toc = require("rehype-toc");
-
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf-8");
   const matterResult = matter(fileContents);
+  const rehypePrism = require("@mapbox/rehype-prism");
+  const rehypeToc = require("rehype-toc");
   const processedContent = await unified()
-    .use(parse)
-    .use(r2r, {allowDangerousHtml: true})
-    .use(slug)
-    .use(toc, {
+    .use(remarkParse)
+    .use(remarkRehype, {allowDangerousHtml: true})
+    .use(rehypeSlug)
+    .use(rehypeToc, {
       nav: false,
       cssClasses: {
         link: "link-info",
       }
     })
-    .use(raw)
-    .use(prism)
-    .use(stringify)
+    .use(rehypeRaw)
+    .use(rehypePrism)
+    .use(rehypeStringify)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
   return {
