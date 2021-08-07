@@ -13,7 +13,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@mapbox/rehype-prism": "^0.7.0",
     "gray-matter": "^4.0.3",
     "mdb-ui-kit": "^3.9.0",
     "next": "^11.0.1",
