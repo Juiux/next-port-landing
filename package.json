@@ -1,6 +1,6 @@
 {
   "name": "irvanma.live",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,24 +15,25 @@
   "dependencies": {
     "gray-matter": "^4.0.3",
     "mdb-ui-kit": "^3.9.0",
-    "next": "^11.0.1",
-    "next-pwa": "^5.2.23",
+    "next": "^11.1.2",
+    "next-pwa": "^5.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-feather": "^2.0.9",
-    "rehype-raw": "^6.0.0",
+    "rehype-prism-plus": "^0.1.0",
+    "rehype-raw": "^6.1.0",
     "rehype-slug": "^5.0.0",
-    "rehype-stringify": "^9.0.1",
+    "rehype-stringify": "^9.0.2",
     "rehype-toc": "^3.0.2",
     "remark-parse": "^10.0.0",
     "remark-rehype": "^9.0.0",
-    "sass": "^1.35.2",
+    "sass": "^1.39.0",
     "unified": "^10.1.0"
   },
   "devDependencies": {
-    "@types/react": "^17.0.14",
-    "eslint": "^7.30.0",
-    "eslint-config-next": "^11.0.1",
-    "typescript": "^4.3.5"
+    "@types/react": "^17.0.20",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.1.2",
+    "typescript": "^4.4.2"
   }
 }
