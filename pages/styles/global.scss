@@ -1,5 +1,5 @@
 code[class*="language-"],
-pre[class*="language-"] {
+pre {
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -19,14 +19,14 @@ pre[class*="language-"] {
 }
 code[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection,
-pre[class*="language-"]::-moz-selection {
+pre ::-moz-selection,
+pre::-moz-selection {
   background: #202020;
 }
 code[class*="language-"] ::selection,
 code[class*="language-"]::selection,
-pre[class*="language-"] ::selection,
-pre[class*="language-"]::selection {
+pre ::selection,
+pre::selection {
   background: #202020;
 }
 :not(pre) > code[class*="language-"] {
@@ -34,7 +34,7 @@ pre[class*="language-"]::selection {
   border-radius: 0.2em;
   padding: 0.1em;
 }
-pre[class*="language-"] {
+pre {
   overflow: auto;
   position: relative;
   margin: 0.5em 0;
