@@ -26,7 +26,7 @@ Even tho I'll show you how-to, Arch Wiki itself has substantial informations reg
 
 ## Preparing installation medium
 
-At this step, I assume you already have the Arch ISO and know how to burn ISO files to USB. Now, burn the ISO to your USB using Etcher, Rufus, or any tools that you like. I recommend Ventoy as you only need to copy the ISO to your flashdisk.  
+At this step, I assume you already have the Arch ISO and know how to burn ISO files to USB. Now, burn the ISO to your USB using Etcher, Rufus, or any tools that you like. I recommend Ventoy as you only need to copy the ISO to your flashdisk.
 
 Make sure to shrink your Windows partition and then create 3 empty partitions from Windows Partition Manager (or something like that idk) consisting of:
 
@@ -36,7 +36,7 @@ Make sure to shrink your Windows partition and then create 3 empty partitions fr
 
 ## Keymapping (Optional)
 
-> Note: If you use standard QWERTY layout, skip this step.  
+> Note: If you use standard QWERTY layout, skip this step.
 
 Check the list of keymaps available using:
 
@@ -68,19 +68,19 @@ First, if you do not know your wireless device name, list all Wi-Fi devices:
 Then, to scan for networks:
 
 ```markdown
-[iwd]# station *device* scan
+[iwd]# station _device_ scan
 ```
 
 You can then list all available networks:
 
 ```markdown
-[iwd]# station *device* get-networks
+[iwd]# station _device_ get-networks
 ```
 
 Finally, to connect to a network:
 
 ```markdown
-[iwd]# station *device* connect *SSID*
+[iwd]# station _device_ connect _SSID_
 ```
 
 You can check your network by just:
@@ -252,7 +252,7 @@ Before you set up timezone, you might want to check which timezones are availabl
 timedatectl list-timezones
 ```
 
-> Press 'q' to quit the list.  
+> Press 'q' to quit the list.
 
 Now set up your timezone by using:
 
@@ -300,7 +300,7 @@ echo LANG=en_US.UTF-8 >> /etc/locale.conf
 
 ### Setting keymap
 
-> Note: This is only if you use keymaps other than the standard QWERTY.  
+> Note: This is only if you use keymaps other than the standard QWERTY.
 
 ```bash
 echo KEYMAP=[keymap] >> /etc/vconsole.conf

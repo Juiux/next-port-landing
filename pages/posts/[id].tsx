@@ -21,11 +21,11 @@ export async function getStaticPaths() {
 export default function Post({ postData }: any) {
   return (
     <PostLayout
-      title = {postData.title}
-      date = {postData.date}
-      tag = {postData.tag}
-      description = {postData.desc}
-      content = {postData.contentHtml}
+      title={postData.title}
+      date={postData.date}
+      tag={postData.tag}
+      description={postData.desc}
+      content={postData.contentHtml}
     />
   );
 }

@@ -59,13 +59,13 @@ export async function getPostData(id: any) {
   const matterResult = matter(fileContents);
   const processedContent = await unified()
     .use(remarkParse)
-    .use(remarkRehype, {allowDangerousHtml: true})
+    .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeSlug)
     .use(rehypeToc, {
       nav: false,
       cssClasses: {
         link: "link-info",
-      }
+      },
     })
     .use(rehypeRaw)
     .use(rehypePrism)
