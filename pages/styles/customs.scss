@@ -146,3 +146,14 @@ body {
   margin-top: 0;
   padding-left: 1.4rem;
 }
+
+.floatcard {
+  background-color: $dark;
+  @media (min-width: 992px) {
+    margin-top: -45vh;
+  }
+}
+
+.floatcard-no-mt {
+  background-color: $dark;
+}
