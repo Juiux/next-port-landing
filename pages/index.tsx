@@ -9,18 +9,18 @@ export default function Blog({ allPostsData }: any) {
       title="IrvanMA's Lair"
       description="Do what you want and do it well."
     >
-      <section className="bg-info text-dark pt-5 pb-5">
+      <section className="bg-info text-dark pt-2 pb-5">
         <div className="container pt-5">
-          <p className="pt-5 display-5 mb-0 mt-3 text-center">
+          <p className="pt-3 display-5 mb-0 mt-3 text-center">
             Irvan Malik Azantha
           </p>
           <p className="lead mb-3 mt-0 text-center">
             Do what you want and do it well.
           </p>
-          <p className="text-center mb-5">
+          <p className="text-center">
             <a
               href="https://github.com/irvanmalik48/blog"
-              className="btn btn-dark mb-5 justify-content-center align-items-center d-inline-flex"
+              className="btn btn-dark mb-2 justify-content-center align-items-center d-inline-flex"
             >
               <GitBranch className="me-2" />
               GitHub Repository
@@ -57,10 +57,10 @@ export default function Blog({ allPostsData }: any) {
           fill="#66cccc"
         ></path>
       </svg>
-      <article className="container">
-        <p className="h4 mb-3 text-center">Description</p>
+      <article className="container card floatcard px-4 pt-2 pb-4">
+        <p className="h4 mb-4 text-center mt-3">Description</p>
         <blockquote>Keep it simple, stupid.</blockquote>
-        <p>
+        <p className="m-0 p-0">
           Hello, my name&apos;s Irvan Malik Azantha. I&apos;m a 18 y&apos;o boy
           currently studying on Universitas Sriwijaya. I live in Palembang,
           Indonesia. I&apos;m a highly enthusiastic person with subtle interest
@@ -68,8 +68,8 @@ export default function Blog({ allPostsData }: any) {
           watch anime, play games, and have hugs and cuddles (lmao).
         </p>
       </article>
-      <section className="container mt-3 mb-5">
-        <p className="h4 mb-3 mt-4 text-center">Posts</p>
+      <section className="container mt-3 mb-5 card floatcard-no-mt px-3 pb-4">
+        <p className="h4 mb-4 mt-4 text-center">Posts</p>
         <div className="row gx-3 gy-3">
           {allPostsData.map(
             ({ id, title, date, tag, desc }: any, index: any) => (
@@ -97,7 +97,7 @@ export default function Blog({ allPostsData }: any) {
             )
           )}
         </div>
-        <p className="mb-3 mt-4 text-center">
+        <p className="mb-2 mt-4 text-center">
           <Link href={`blog`}>
             <a className="btn btn-outline-info">More posts</a>
           </Link>
