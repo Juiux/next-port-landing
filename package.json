@@ -1,7 +1,7 @@
 {
   "name": "irvanma.live",
   "version": "2.0.0",
-  "description": "",
+  "description": "A website (lmao)",
   "main": "index.js",
   "scripts": {
     "lint": "next lint",
@@ -10,7 +10,7 @@
     "build": "next build"
   },
   "keywords": [],
-  "author": "",
+  "author": "Irvan Malik",
   "license": "MIT",
   "dependencies": {
     "gray-matter": "^4.0.3",
