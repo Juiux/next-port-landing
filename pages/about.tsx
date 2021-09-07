@@ -61,32 +61,32 @@ export default function About() {
         <p className="m-0 p-0">
           Javascript is the butter and bread for web development. I first learned
           Javascript when experimenting to create better looking website with complex
-          animations and stuffs like that idk I'm a dumb designer back then. Now mainly
+          animations and stuffs like that idk I&apos;m a dumb designer back then. Now mainly
           uses Javascript to develop front-end applications and web designs.
         </p>
         <h3>Typescript</h3>
         <p className="m-0 p-0">
           Typescript is Javascript but with type-checking. It is very robust and helps
           you with great developer experience it offers. I use this in addition with Javascript
-          since it has all Javascript syntaxes and more so I don't have a hard time adapting to
+          since it has all Javascript syntaxes and more so I don&apos;t have a hard time adapting to
           it.
         </p>
         <h3>HTML</h3>
         <p className="m-0 p-0">
-          HTML is, well, you know it. I don't even have to explain it anymore. This shit
+          HTML is, well, you know it. I don&apos;t even have to explain it anymore. This shit
           been around since the dawn of internet and is the easiest shit to learn and implement.
-          Heck you'll found this language literally everywhere across the internet. I don't even
+          Heck you&apos;ll found this language literally everywhere across the internet. I don&apos;t even
           know why I wrote this.
         </p>
         <h3>CSS</h3>
         <p className="m-0 p-0">
           As a front-end guy, I do specialize in using CSS to create beautiful and modern styles.
-          Even tho, I'm still a noob at that (lmao). Well, let's say that this is just a stylesheet
+          Even tho, I&apos;m still a noob at that (lmao). Well, let&apos;s say that this is just a stylesheet
           where wildest of imagination happens.
         </p>
         <h3>PHP</h3>
         <p className="m-0 p-0">
-          Uhh, this is painful. I don't want to explain it.
+          Uhh, this is painful. I don&apos;t want to explain it.
         </p>
       </section>
       <section className="container mt-3 mb-5 card floatcard-no-mt px-4 pb-4">
