@@ -50,6 +50,25 @@ export default function About() {
         </p>
       </article>
       <section className="container mt-3 mb-5 card floatcard-no-mt px-4 pb-4">
+        <p className="h4 mb-4 mt-4 text-center">
+          Stuffs I Like
+        </p>
+        <ul className="list-group">
+          <li className="list-group-item">
+            Anime (this is obvious)
+          </li>
+          <li className="list-group-item">
+            Telegram (this is also obvious)
+          </li>
+          <li className="list-group-item">
+            Technology (this is really obvious)
+          </li>
+          <li className="list-group-item">
+            Just being weeb (why do I even write this?)
+          </li>
+        </ul>
+      </section>
+      <section className="container mt-3 mb-5 card floatcard-no-mt px-4 pb-4">
         <p className="h4 mb-4 mt-4 text-center">Languages</p>
         <h3>Java</h3>
         <p className="m-0 p-0">
