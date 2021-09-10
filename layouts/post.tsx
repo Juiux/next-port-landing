@@ -12,18 +12,20 @@ export default function PostLayout(props: any) {
         <meta property="og:description" content={props.description} />
         <title>{props.title}</title>
       </Head>
-      <article className="container mt-3" style={{ marginBottom: "100px" }}>
+      <div className="container mt-3" style={{ marginBottom: "100px" }}>
         <section className="m-0 text-center pt-5 pb-5">
           <div className="container">
             <p className="display-4 mb-0">{props.title}</p>
             <p className="lead mb-0 text-muted">{props.date}</p>
           </div>
         </section>
-        <h1>Table of Contents</h1>
-        <div dangerouslySetInnerHTML={{ __html: props.content }} />
-        <h1>Comments</h1>
-        <Comments />
-      </article>
+        <article className="container card px-4 pb-4 floatcard-no-mt">
+          <h1>Table of Contents</h1>
+          <div dangerouslySetInnerHTML={{ __html: props.content }} />
+          <h1>Comments</h1>
+          <Comments />
+        </article>
+      </div>
     </DefaultLayout>
   );
 }
