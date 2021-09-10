@@ -49,7 +49,7 @@ export default function DefaultLayout(props: any) {
         />
         <link rel="apple-touch-icon" href="icons/apple-icon.png"></link>
       </Head>
-      <body>
+      <body className="parallax">
         <Header />
         <main>{props.children}</main>
         <script
