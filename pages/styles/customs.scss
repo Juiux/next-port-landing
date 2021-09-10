@@ -1,7 +1,7 @@
 // Dark it out
 
 body {
-  background-color: $dark;
+  background-color: #00000000;
   color: $light;
 }
 
@@ -159,7 +159,19 @@ body {
 }
 
 .parallax {
-  background-image: url("../../public/bg/bg.svg");
-  background-size: 100%;
-  background-repeat: repeat-y;
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax::before {
+  content: '';
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("../../public/bg/bg.svg") no-repeat center center;
+  background-size: cover;
+  will-change: transform;
+  z-index: -1;
 }

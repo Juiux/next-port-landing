@@ -49,15 +49,17 @@ export default function DefaultLayout(props: any) {
         />
         <link rel="apple-touch-icon" href="icons/apple-icon.png"></link>
       </Head>
-      <body className="parallax">
+      <body>
         <Header />
-        <main>{props.children}</main>
-        <script
-          type="text/javascript"
-          src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
-        ></script>
-        <Footer />
-        <Scroll />
+        <div className="parallax">
+          <main>{props.children}</main>
+          <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
+          ></script>
+          <Footer />
+          <Scroll />
+        </div>
       </body>
     </html>
   );
