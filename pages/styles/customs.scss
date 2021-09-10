@@ -160,6 +160,7 @@ body {
 
 .parallax {
   background-image: url("../../public/bg/bg.svg");
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
