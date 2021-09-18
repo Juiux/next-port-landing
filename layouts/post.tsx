@@ -14,6 +14,10 @@ export default function PostLayout(props: any) {
         <meta property="og:title" content={props.title} />
         <meta property="og:description" content={props.description} />
         <meta property="og:image" content={staticallyLink} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={staticallyLink} />
+        <meta name="twitter:title" content={props.title} />
+        <meta name="twitter:description" content={props.description} />
         <title>{props.title}</title>
       </Head>
       <div className="container mt-3" style={{ marginBottom: "100px" }}>

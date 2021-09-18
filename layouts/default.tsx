@@ -17,6 +17,10 @@ export default function DefaultLayout(props: any) {
         <meta property="og:title" content={props.title} />
         <meta property="og:description" content={props.description} />
         <meta property="og:image" content="https://irvanma.live/lp/lp.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://irvanma.live/lp/lp.jpg" />
+        <meta name="twitter:title" content={props.title} />
+        <meta name="twitter:description" content={props.description} />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="IrvanMA's Lair" />
