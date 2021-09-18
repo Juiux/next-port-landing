@@ -12,7 +12,7 @@ const securityHeaders = [
 ];
 
 module.exports = withPWA({
-  target: "serverless",
+  target: "serverlesss",
   webpack5: true,
   compress: true,
   reactStrictMode: true,
