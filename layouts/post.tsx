@@ -4,7 +4,7 @@ import Comments from "../components/comments";
 
 export default function PostLayout(props: any) {
   let staticallyLink: string =
-    "https://cdn.statically.io/og/theme=dark/" + props.title;
+    "https://cdn.statically.io/og/theme=dark/" + props.title + ".jpg";
 
   return (
     <DefaultLayout>
