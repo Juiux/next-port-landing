@@ -4,7 +4,11 @@ import Comments from "../components/comments";
 
 export default function PostLayout(props: any) {
   let staticallyLink: string =
-    "https://cdn.statically.io/og/theme=dark/" + props.title + ".jpg";
+    "https://banners.beyondco.de/" +
+    props.title +
+    ".png?theme=dark&packageManager=&packageName=&pattern=texture&style=style_1&description=" +
+    props.description +
+    "&md=0&showWatermark=0&fontSize=100px&images=paper-airplane&widths=auto&heights=auto";
 
   return (
     <DefaultLayout>
