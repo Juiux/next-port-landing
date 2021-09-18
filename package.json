@@ -7,7 +7,7 @@
     "lint": "next lint",
     "dev": "next",
     "start": "next start",
-    "migrate": "sass-migrator --migrate-deps division node_modules/mdb-ui-kit/*/*/*.scss",
+    "migrate": "npx sass-migrator --migrate-deps division node_modules/mdb-ui-kit/*/*/*.scss",
     "build": "npm run migrate && next build"
   },
   "keywords": [],
