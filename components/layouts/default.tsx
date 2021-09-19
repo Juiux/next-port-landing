@@ -1,11 +1,12 @@
 import Head from "next/head";
-import Header from "../header";
+import Navbar from "../navbar";
 import Footer from "../footer";
 import Scroll from "../stt";
+import Script from "next/script";
 
 export default function DefaultLayout(props: any) {
   return (
-    <html lang="en-US">
+    <>
       <Head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -52,19 +53,21 @@ export default function DefaultLayout(props: any) {
           sizes="512x512"
         />
         <link rel="apple-touch-icon" href="icons/apple-icon.png"></link>
+
       </Head>
-      <body>
-        <Header />
+      <div>
+        <Navbar />
         <div className="parallax">
           <main>{props.children}</main>
-          <script
-            type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
-          ></script>
           <Footer />
           <Scroll />
+          <Script
+            defer
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
+          ></Script>
         </div>
-      </body>
-    </html>
+      </div>
+    </>
   );
 }
