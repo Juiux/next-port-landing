@@ -1,15 +1,17 @@
 import { Menu } from "react-feather";
 import Link from "next/link";
 
-export default function Header() {
+export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark navbar-bg-dark sticky-top shadow">
       <div className="container">
-        <a className="navbar-brand m-0 p-0 font-monospace fs-6" href="/">
-          <span className="text-info">&#123;</span>
-          irvanma
-          <span className="text-info">&#125;</span>
-        </a>
+        <Link href="/">
+          <a className="navbar-brand m-0 p-0 font-monospace fs-6" aria-label="Home">
+            <span className="text-info">&#123;</span>
+            irvanma
+            <span className="text-info">&#125;</span>
+          </a>
+        </Link>
         <button
           className="navbar-toggler p-0"
           type="button"
