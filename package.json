@@ -8,12 +8,14 @@
     "dev": "next",
     "start": "next start",
     "migrate": "npx sass-migrator --migrate-deps division node_modules/mdb-ui-kit/*/*/*.scss",
-    "build": "npm run migrate && next build"
+    "build": "npm run migrate && next build",
+    "analyze": "ANALYZE=true next build"
   },
   "keywords": [],
   "author": "Irvan Malik",
   "license": "MIT",
   "dependencies": {
+    "@next/bundle-analyzer": "^11.1.2",
     "gray-matter": "^4.0.3",
     "mdb-ui-kit": "^3.9.0",
     "next": "^11.1.2",
