@@ -26,24 +26,32 @@ export default function Header() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mt-0">
             <li className="nav-item">
-              <a className="nav-link" href="/">
-                Home
-              </a>
+              <Link href="/">
+                <a className="nav-link" aria-label="Homepage">
+                  Home
+                </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/blog">
-                Blog
-              </a>
+              <Link href="/blog">
+                <a className="nav-link" aria-label="Blog Page">
+                  Blog
+                </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                CV
-              </a>
+              <Link href="#">
+                <a className="nav-link" aria-label="Download CV">
+                  CV
+                </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/about">
-                About
-              </a>
+              <Link href="/about">
+                <a className="nav-link" aria-label="About Page">
+                  About
+                </a>
+              </Link>
             </li>
           </ul>
         </div>
