@@ -10,7 +10,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeToc from "rehype-toc";
 import rehypePrism from "rehype-prism-plus";
 
-const postsDirectory = path.join(process.cwd(), "posts");
+const postsDirectory = path.join(process.cwd(), "posts", "projects");
 
 export function getSortedPostsData() {
   const fileNames = fs.readdirSync(postsDirectory);
