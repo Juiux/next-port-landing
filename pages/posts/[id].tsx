@@ -1,24 +1,25 @@
-import PostLayout from "../../layouts/post";
-import { getAllPostIds, getPostData } from "../../api/index";
+import PostLayout from "../../components/layouts/post";
+import { getAllPostIds, getPostData } from "../../api/blog/index";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
-export async function getStaticProps({ params }: any) {
+export const getStaticProps: GetStaticProps = async ({ params }: any) => {
   const postData = await getPostData(params.id);
   return {
     props: {
       postData,
     },
   };
-}
+};
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPostIds();
   return {
     paths,
     fallback: false,
   };
-}
+};
 
-export default function Post({ postData }: any) {
+const Post: NextPage = ({ postData }: any) => {
   return (
     <PostLayout
       title={postData.title}
@@ -28,4 +29,6 @@ export default function Post({ postData }: any) {
       content={postData.contentHtml}
     />
   );
-}
+};
+
+export default Post;

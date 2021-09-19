@@ -1,6 +1,7 @@
-import DefaultLayout from "../layouts/default";
+import { NextPage } from "next";
+import DefaultLayout from "../components/layouts/default";
 
-export default function About() {
+const About: NextPage = () => {
   return (
     <DefaultLayout title="About" description="Stuffs about me.">
       <article className="bg-info text-dark pt-5 pb-5">
@@ -138,4 +139,6 @@ export default function About() {
       </section>
     </DefaultLayout>
   );
-}
+};
+
+export default About;

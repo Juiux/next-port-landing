@@ -1,9 +1,10 @@
-import DefaultLayout from "../layouts/default";
+import DefaultLayout from "../components/layouts/default";
 import Link from "next/link";
-import { getSortedPostsData } from "../api/index";
+import { getSortedPostsData } from "../api/blog/index";
 import { GitBranch } from "react-feather";
+import { GetStaticProps, NextPage } from "next";
 
-export default function Blog({ allPostsData }: any) {
+const Index: NextPage = ({ allPostsData }: any) => {
   return (
     <DefaultLayout
       title="IrvanMA's Lair"
@@ -105,13 +106,15 @@ export default function Blog({ allPostsData }: any) {
       </section>
     </DefaultLayout>
   );
-}
+};
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData().splice(0, 4);
   return {
     props: {
       allPostsData,
     },
   };
-}
+};
+
+export default Index;

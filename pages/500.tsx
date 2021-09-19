@@ -1,6 +1,7 @@
-import DefaultLayout from "../layouts/default";
+import { NextPage } from "next";
+import DefaultLayout from "../components/layouts/default";
 
-export default function Index() {
+const Index: NextPage = () => {
   return (
     <DefaultLayout title="500" description="Internal server error.">
       <section className="offline-container">
@@ -9,4 +10,6 @@ export default function Index() {
       </section>
     </DefaultLayout>
   );
-}
+};
+
+export default Index;
