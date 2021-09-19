@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Header from "../includes/header";
-import Footer from "../includes/footer";
-import Scroll from "../components/stt";
+import Header from "../header";
+import Footer from "../footer";
+import Scroll from "../stt";
 
 export default function DefaultLayout(props: any) {
   return (

@@ -1,6 +1,6 @@
 import DefaultLayout from "./default";
 import Head from "next/head";
-import Comments from "../components/comments";
+import Comments from "../comments";
 
 export default function PostLayout(props: any) {
   let staticallyLink: string =
