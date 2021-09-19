@@ -17,6 +17,7 @@ git clone https://github.com/irvanmalik48/blog blog
 ```
 
 2. Modify template using your beloved text-editor.
+
    > Clue: everything is in the `components` folder.
 
 3. Start blogging. (and don't forget to delete my markdowns, or no)
