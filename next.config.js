@@ -3,7 +3,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 const withPWA = require("next-pwa");
 const runtimeCaching = require("next-pwa/cache");
-const securityHeaders = [
+const custHeaders = [
   {
     key: "X-DNS-Prefetch-Control",
     value: "on",
@@ -12,13 +12,11 @@ const securityHeaders = [
     key: "X-XSS-Protection",
     value: "1; mode=block",
   },
-];
-const brotliHeaders = [
   {
     key: "Accept-Encoding",
     value: "br",
-  }
-]
+  },
+];
 
 module.exports = withBundleAnalyzer(withPWA({
   target: "serverless",
@@ -59,10 +57,7 @@ module.exports = withBundleAnalyzer(withPWA({
     return [
       {
         source: "/(.*)",
-        headers: [
-          securityHeaders,
-          brotliHeaders,
-        ],
+        headers: custHeaders,
       },
     ];
   },
