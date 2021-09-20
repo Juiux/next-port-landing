@@ -52,7 +52,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
           {allPostsData.map(
             ({ id, title, date, tag, desc }: any, index: any) => (
               <div key={index} className="col-12 col-sm-6">
-                <Link href={`/posts/${id}`}>
+                <Link href={`/posts/blog/${id}`}>
                   <a className="text-white">
                     <div className="card hover-shadow rounded-3 h-100">
                       <div className="card-header h6">
