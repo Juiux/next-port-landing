@@ -1,5 +1,5 @@
-import PostLayout from "../../components/layouts/post";
-import { getAllPostIds, getPostData } from "../../api/blog/index";
+import PostLayout from "../../../components/layouts/post";
+import { getAllPostIds, getPostData } from "../../../api/projects/index";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 export const getStaticProps: GetStaticProps = async ({ params }: any) => {
