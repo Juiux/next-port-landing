@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import DefaultLayout from "../components/layouts/default";
 
-const About: NextPage = () => {
+const Jadwal: NextPage = () => {
   return (
     <DefaultLayout title="Jadwal Mata Kuliah IF Unsri 3 REG" description="Duh.">
       <article className="bg-info text-dark pt-5 pb-5">
@@ -80,4 +80,4 @@ const About: NextPage = () => {
   );
 };
 
-export default About;
+export default Jadwal;
