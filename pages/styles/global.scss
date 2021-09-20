@@ -17,8 +17,10 @@ pre {
   hyphens: none;
   border-radius: 5px;
 
-  &::-moz-selection, & ::-moz-selection,
-  &::selection, & ::selection {
+  &::-moz-selection,
+  & ::-moz-selection,
+  &::selection,
+  & ::selection {
     background: #202020;
   }
 }
@@ -233,7 +235,9 @@ h6 {
   margin-bottom: 2.33em;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   &::after {
     display: block;
     content: "";

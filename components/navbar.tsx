@@ -6,7 +6,10 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark navbar-bg-dark sticky-top shadow">
       <div className="container">
         <Link href="/">
-          <a className="navbar-brand m-0 p-0 font-monospace fs-6" aria-label="Home">
+          <a
+            className="navbar-brand m-0 p-0 font-monospace fs-6"
+            aria-label="Home"
+          >
             <span className="text-info">&#123;</span>
             irvanma
             <span className="text-info">&#125;</span>

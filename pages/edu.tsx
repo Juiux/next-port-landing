@@ -43,28 +43,43 @@ const Jadwal: NextPage = () => {
         <p className="h4 mb-4 text-center mt-3">Description</p>
         <blockquote>Apes together strong.</blockquote>
         <p className="m-0 p-0">
-          This is a webpage containing list of daily lectures from my prod.
-          I don&apos;t know why but I have a tendency to actually make stuffs like this.
+          This is a webpage containing list of daily lectures from my prod. I
+          don&apos;t know why but I have a tendency to actually make stuffs like
+          this.
         </p>
       </article>
       <section className="container mt-3 mb-5 card floatcard-no-mt px-4 pb-4">
         <p className="h4 mb-4 mt-4 text-center">The List</p>
         <h2>Senin</h2>
         <ul className="list-group">
-          <li className="list-group-item">Algoritma dan Pemrograman III (08:00 - 10:30)</li>
-          <li className="list-group-item">Pemrograman Web II (10:30 - 13:30)</li>
+          <li className="list-group-item">
+            Algoritma dan Pemrograman III (08:00 - 10:30)
+          </li>
+          <li className="list-group-item">
+            Pemrograman Web II (10:30 - 13:30)
+          </li>
         </ul>
         <h2>Selasa</h2>
         <ul className="list-group">
-          <li className="list-group-item">Praktikum Struktur Data (08:00 - 10:30)</li>
-          <li className="list-group-item">Probabilitas dan Statistika (10:30 - 13:30)</li>
-          <li className="list-group-item">Praktikum Algoritma dan Pemrograman III (13:30 - 15:30)</li>
+          <li className="list-group-item">
+            Praktikum Struktur Data (08:00 - 10:30)
+          </li>
+          <li className="list-group-item">
+            Probabilitas dan Statistika (10:30 - 13:30)
+          </li>
+          <li className="list-group-item">
+            Praktikum Algoritma dan Pemrograman III (13:30 - 15:30)
+          </li>
         </ul>
         <h2>Rabu</h2>
         <ul className="list-group">
           <li className="list-group-item">Basis Data (08:00 - 10:30)</li>
-          <li className="list-group-item">Praktikum Basis Data (10:30 - 13:30)</li>
-          <li className="list-group-item">Struktur Diskrit II (13:30 - 15:30)</li>
+          <li className="list-group-item">
+            Praktikum Basis Data (10:30 - 13:30)
+          </li>
+          <li className="list-group-item">
+            Struktur Diskrit II (13:30 - 15:30)
+          </li>
         </ul>
         <h2>Kamis</h2>
         <ul className="list-group">
@@ -72,7 +87,9 @@ const Jadwal: NextPage = () => {
         </ul>
         <h2>Jum&apos;at</h2>
         <ul className="list-group">
-          <li className="list-group-item">Sistem Informasi (13:30 - selesai)</li>
+          <li className="list-group-item">
+            Sistem Informasi (13:30 - selesai)
+          </li>
         </ul>
         <blockquote>Note: Daftar dapat berubah.</blockquote>
       </section>

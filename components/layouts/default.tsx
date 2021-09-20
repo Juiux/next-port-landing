@@ -53,7 +53,6 @@ export default function DefaultLayout(props: any) {
           sizes="512x512"
         />
         <link rel="apple-touch-icon" href="icons/apple-icon.png"></link>
-
       </Head>
       <div>
         <Navbar />
