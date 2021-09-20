@@ -1,53 +1,70 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
 <url>
-<loc>https://www.irvanma.live/</loc>
-<lastmod>2021-07-08T08:32:23+00:00</lastmod>
-<priority>1.00</priority>
+  <loc>https://www.irvanma.live/</loc>
+  <lastmod>2021-09-20T17:48:42+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-<loc>https://www.irvanma.live/blog</loc>
-<lastmod>2021-07-08T08:32:23+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.irvanma.live/blog</loc>
+  <lastmod>2021-09-20T17:48:42+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.irvanma.live/posts/arch-linux-btrfs</loc>
-<lastmod>2021-07-08T08:32:23+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.irvanma.live/about</loc>
+  <lastmod>2021-09-20T17:48:42+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.irvanma.live/posts/nextjs-utterances</loc>
-<lastmod>2021-07-08T08:32:23+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.irvanma.live/posts/blog/6th-of-april</loc>
+  <lastmod>2021-09-20T17:48:42+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.irvanma.live/posts/github-pages-tutorial</loc>
-<lastmod>2021-07-08T08:32:23+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.irvanma.live/posts/blog/arch-linux-btrfs</loc>
+  <lastmod>2021-09-20T17:48:42+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.irvanma.live/posts/life-story</loc>
-<lastmod>2021-07-08T08:32:23+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.irvanma.live/posts/blog/nextjs-utterances</loc>
+  <lastmod>2021-09-20T17:48:42+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.irvanma.live/posts/linux-applist-music</loc>
-<lastmod>2021-07-08T08:32:23+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://www.irvanma.live/posts/blog/github-pages-tutorial</loc>
+  <lastmod>2021-09-20T17:48:42+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.irvanma.live/posts/userbot-install</loc>
-<lastmod>2021-07-08T08:32:23+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://www.irvanma.live/posts/blog/life-story</loc>
+  <lastmod>2021-09-20T17:48:42+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://www.irvanma.live/posts/linux-arch-phpmyadmin</loc>
-<lastmod>2021-07-08T08:32:23+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://www.irvanma.live/posts/blog/linux-applist-music</loc>
+  <lastmod>2021-09-20T17:48:42+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://www.irvanma.live/posts/introduction</loc>
-<lastmod>2021-07-08T08:32:23+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://www.irvanma.live/posts/blog/userbot-install</loc>
+  <lastmod>2021-09-20T17:48:42+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
+<url>
+  <loc>https://www.irvanma.live/posts/blog/linux-arch-phpmyadmin</loc>
+  <lastmod>2021-09-20T17:48:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.irvanma.live/posts/blog/introduction</loc>
+  <lastmod>2021-09-20T17:48:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
