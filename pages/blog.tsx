@@ -81,7 +81,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData().splice(0, 4);
+  const allPostsData = getSortedPostsData();
   return {
     props: {
       allPostsData,
