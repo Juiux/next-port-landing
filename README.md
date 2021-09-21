@@ -24,6 +24,14 @@ git clone https://github.com/irvanmalik48/blog blog
 
 Run `npm run dev` to preview the site.
 
+### TODO List
+
+- [ ] Add AMP support.
+- [ ] Add Telegram Instant View support.
+- [ ] Add search bar for posts. (MIGHT CHANGE)
+- [ ] Dynamically generate sitemap.
+- [ ] Add projects section.
+
 ### License
 
 [MIT](https://raw.githubusercontent.com/irvanmalik48/irvanmalik48.github.io/main/LICENSE)
