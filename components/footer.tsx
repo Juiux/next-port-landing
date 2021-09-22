@@ -1,4 +1,4 @@
-import { GitHub, Facebook, MessageSquare, Mail, Linkedin } from "react-feather";
+import { GitHub, Facebook, MessageSquare, Mail, Linkedin, Instagram } from "react-feather";
 
 export default function Footer() {
   return (
@@ -8,35 +8,42 @@ export default function Footer() {
           <a
             aria-label="GitHub"
             href="https://github.com/irvanmalik48"
-            className="text-white ripple px-3"
+            className="text-white ripple px-lg-3 px-2"
           >
             <GitHub />
           </a>
           <a
             aria-label="Facebook"
             href="https://facebook.com/irvanmalik48"
-            className="text-white ripple px-3"
+            className="text-white ripple px-lg-3 px-2"
           >
             <Facebook />
           </a>
           <a
+            aria-label="Facebook"
+            href="https://instagram.com/irvann48_"
+            className="text-white ripple px-lg-3 px-2"
+          >
+            <Instagram />
+          </a>
+          <a
             aria-label="Telegram"
             href="https://t.me/irvanmalik48"
-            className="text-white ripple px-3"
+            className="text-white ripple px-lg-3 px-2"
           >
             <MessageSquare />
           </a>
           <a
             aria-label="Linkedin"
             href="https://www.linkedin.com/in/irvanmalik48/"
-            className="text-white ripple px-3"
+            className="text-white ripple px-lg-3 px-2"
           >
             <Linkedin />
           </a>
           <a
             aria-label="Email"
             href="mailto:me@irvanma.live"
-            className="text-white ripple px-3"
+            className="text-white ripple px-lg-3 px-2"
           >
             <Mail />
           </a>
