@@ -1,7 +1,7 @@
 ---
 title: "Arch Linux Secure Boot Tutorial"
 date: "2021-09-23"
-desc: "Configure Secure Boot on Arch Linux"
+desc: "Configure Secure Boot on Arch Linux."
 tag: "linux"
 ---
 
@@ -22,11 +22,11 @@ Install `efitools` package as it will be needed throughout the tutorial. You als
 ### Backup all old stuffs
 
 ```bash
-$ mkdir -p SB/old && cd SB
-$ efi-readvar -v PK -o old_PK.esl
-$ efi-readvar -v KEK -o old_KEK.esl
-$ efi-readvar -v db -o old_db.esl
-$ efi-readvar -v dbx -o old_dbx.esl
+mkdir -p SB/old && cd SB
+efi-readvar -v PK -o old_PK.esl
+efi-readvar -v KEK -o old_KEK.esl
+efi-readvar -v db -o old_db.esl
+efi-readvar -v dbx -o old_dbx.esl
 ```
 
 ### Create your own keys
