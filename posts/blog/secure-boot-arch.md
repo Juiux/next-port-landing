@@ -113,6 +113,8 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 > Change your-esp to, well, your esp path.
 
+See [references](#references) for more info.
+
 ### Signing EFI binaries
 
 ```bash
@@ -213,3 +215,8 @@ After all the hassles, you might want to get into your firmware settings and ena
 # Verdict
 
 Well, no more words to say. Enjoy playing Valorant if you have Windows 11 installed!
+
+# References
+
+- <https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot> - Unified Extensible Firmware Interface/Secure Boot - Arch Wiki
+- <https://www.mail-archive.com/bug-grub@gnu.org/msg17028.html> - [bug #60211] error: verification requested but nobody cares | Reported by Giancarlo Razzolini - bug-grub - The Mail Archive
