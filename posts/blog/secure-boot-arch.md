@@ -83,9 +83,10 @@ sign-efi-sig-list -g "$(< GUID.txt)" -k KEK.key -c KEK.crt db db.esl db.auth
 
 This is useful when you're dualbooting Windows.
 
-Download this stuffs and copy it to the SB folder we made previously
-[Microsoft Windows Production PCA 2011 for Windows](https://www.microsoft.com/pkiops/certs/MicWinProPCA2011_2011-10-19.crt)
-[Microsoft Corporation UEFI CA 2011 for third-party binaries like UEFI drivers, option ROMs etc.](https://www.microsoft.com/pkiops/certs/MicCorUEFCA2011_2011-06-27.crt)
+Download this stuffs and copy it to the SB folder we made previously:
+
+- [Microsoft Windows Production PCA 2011 for Windows](https://www.microsoft.com/pkiops/certs/MicWinProPCA2011_2011-10-19.crt)
+- [Microsoft Corporation UEFI CA 2011 for third-party binaries like UEFI drivers, option ROMs etc.](https://www.microsoft.com/pkiops/certs/MicCorUEFCA2011_2011-06-27.crt)
 
 Create EFI Signature Lists from Microsoft's DER format certificates using Microsoft's GUID (`77fa9abd-0359-4d32-bd60-28f4e78f784b`) and combine them in one file for simplicity:
 
