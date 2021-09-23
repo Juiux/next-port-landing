@@ -1,4 +1,11 @@
-import { GitHub, Facebook, MessageSquare, Mail, Linkedin, Instagram } from "react-feather";
+import {
+  GitHub,
+  Facebook,
+  MessageSquare,
+  Mail,
+  Linkedin,
+  Instagram,
+} from "react-feather";
 
 export default function Footer() {
   return (
