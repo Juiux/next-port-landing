@@ -3,13 +3,6 @@ import Head from "next/head";
 import Comments from "../comments";
 
 export default function PostLayout(props: any) {
-  let staticallyLink: string =
-    "https://banners.beyondco.de/" +
-    props.title +
-    ".png?theme=dark&packageManager=&packageName=&pattern=texture&style=style_1&description=" +
-    props.description +
-    "&md=0&showWatermark=0&fontSize=100px&images=paper-airplane&widths=auto&heights=auto";
-
   return (
     <DefaultLayout>
       <Head>
@@ -17,11 +10,11 @@ export default function PostLayout(props: any) {
         <meta name="description" content={props.description} />
         <meta property="og:title" content={props.title} />
         <meta property="og:description" content={props.description} />
-        <meta property="og:image" content={staticallyLink} />
+        <meta property="og:image" content="https://irvanma.live/lp/lp.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={staticallyLink} />
         <meta name="twitter:title" content={props.title} />
         <meta name="twitter:description" content={props.description} />
+        <meta name="twitter:image" content="https://irvanma.live/lp/lp.jpg" />
         <title>{props.title}</title>
       </Head>
       <div className="container mt-3" style={{ marginBottom: "100px" }}>
