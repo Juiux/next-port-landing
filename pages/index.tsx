@@ -64,9 +64,7 @@ const Index: NextPage = ({ allPostsData }: any) => {
         <p className="m-0 p-0">
           Hello, my name&apos;s Irvan Malik Azantha. I&apos;m a 18 y&apos;o boy
           currently studying on Universitas Sriwijaya. I live in Palembang,
-          Indonesia. I&apos;m a highly enthusiastic person with subtle interest
-          in open source projects and keen on learning new things. Also likes to
-          watch anime, play games, and have hugs and cuddles (lmao).
+          Indonesia. Give glory for the chaos!
         </p>
       </article>
       <section className="container mt-3 mb-5 card floatcard-no-mt px-3 pb-4">
