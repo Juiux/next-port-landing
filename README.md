@@ -6,6 +6,7 @@ Basically my website. Nothing so special about it.
 
 - Made from Next.js, fully PWA compliant.
 - Using stripped down customized MDBootstrap.
+- Small bundle sizes (40KB-ish).
 - Not gore.
 
 ### Using as Template
@@ -23,14 +24,6 @@ git clone https://github.com/irvanmalik48/blog blog
 3. Start blogging. (and don't forget to delete my markdowns, or no)
 
 Run `npm run dev` to preview the site.
-
-### TODO List
-
-- [ ] Add AMP support.
-- [ ] Add Telegram Instant View support.
-- [ ] Add search bar for posts. (MIGHT CHANGE)
-- [ ] Dynamically generate sitemap.
-- [ ] Add projects section.
 
 ### License
 
