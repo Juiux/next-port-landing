@@ -47,7 +47,8 @@ const About: NextPage = () => {
           currently studying on Universitas Sriwijaya. I live in Palembang,
           Indonesia. I&apos;m a highly enthusiastic person with subtle interest
           in open source projects and keen on learning new things. Also likes to
-          watch anime, play games, and have hugs and cuddles (lmao).
+          watch anime, play games, and have hugs and cuddles (lmao). Give glory
+          for the chaos!
         </p>
       </article>
       <section className="container mt-3 card floatcard-no-mt px-4 pb-4">
