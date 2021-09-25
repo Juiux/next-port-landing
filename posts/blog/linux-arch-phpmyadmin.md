@@ -8,6 +8,7 @@ tag: "linux"
 # Abstract
 
 This is just a tutorial on how to do a LAMP stack manually on Arch Linux. Without further talks, let's cut into this.
+
 # Setting Up
 
 Install the required packages:
@@ -131,7 +132,7 @@ Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
 include conf/extra/phpmyadmin.conf;
 ```
 
-3. To allow the usage of the phpMyAdmin setup script (e.g. http://localhost/phpmyadmin/setup), make sure `/usr/share/webapps/phpMyAdmin` is writable for the http user:
+3. To allow the usage of the phpMyAdmin setup script (e.g. <http://localhost/phpmyadmin/setup>), make sure `/usr/share/webapps/phpMyAdmin` is writable for the http user:
 
 ```bash
 sudo mkdir /usr/share/webapps/phpMyAdmin/config
@@ -189,9 +190,9 @@ sudo rm -r /usr/share/webapps/phpMyAdmin/config
 
 # Finishing
 
-Open http://localhost/phpmyadmin/index.php and login to see if everything works well.
+Open <http://localhost/phpmyadmin/index.php> and login to see if everything works well.
 
 # Sources
 
-1. Arch Wiki. https://wiki.archlinux.org/.
-2. Wikipedia. https://en.wikipedia.org/.
+1. Arch Wiki. <https://wiki.archlinux.org/>.
+2. Wikipedia. <https://en.wikipedia.org/>.
