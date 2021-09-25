@@ -14,7 +14,7 @@ const custHeaders = [
   },
   {
     key: "Accept-Encoding",
-    value: ["br", "gzip"],
+    value: "br",
   },
 ];
 
