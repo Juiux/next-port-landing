@@ -36,27 +36,27 @@ So in React land (or so may I call it that way because I have no other fancy nam
 import React, { Component } from "react";
 
 export default class Comments extends Component {
-  commentBox: React.RefObject<any>;
+  box: React.RefObject<any>;
 
   constructor(props: any) {
     super(props);
-    this.commentBox = React.createRef();
+    this.box = React.createRef();
   }
 
   componentDidMount() {
-    let scriptEl: any = document.createElement("script");
-    scriptEl.setAttribute("src", "https://utteranc.es/client.js");
-    scriptEl.setAttribute("crossorigin", "anonymous");
-    scriptEl.setAttribute("async", true);
-    scriptEl.setAttribute("repo", "irvanmalik48/blog");
-    scriptEl.setAttribute("label", "Comments");
-    scriptEl.setAttribute("issue-term", "pathname");
-    scriptEl.setAttribute("theme", "github-dark");
-    this.commentBox.current.appendChild(scriptEl);
+    let element: any = document.createElement("script");
+    element.setAttribute("src", "https://utteranc.es/client.js");
+    element.setAttribute("crossorigin", "anonymous");
+    element.setAttribute("async", true);
+    element.setAttribute("repo", "irvanmalik48/blog");
+    element.setAttribute("label", "Comments");
+    element.setAttribute("issue-term", "pathname");
+    element.setAttribute("theme", "photon-dark");
+    this.box.current.appendChild(element);
   }
 
   render() {
-    return <div ref={this.commentBox}></div>;
+    return <div ref={this.box}></div>;
   }
 }
 ```
@@ -67,28 +67,41 @@ After that, I need to put this component in my post layout which is easy. The on
 ```ts
 import DefaultLayout from "./default";
 import Head from "next/head";
-import Comments from "./comments"; /* Import it */
+import Comments from "../comments";
 
 export default function PostLayout(props: any) {
   return (
     <DefaultLayout>
       <Head>
+        <meta name="keywords" content={props.tag} />
+        <meta name="description" content={props.description} />
+        <meta property="og:title" content={props.title} />
+        <meta property="og:description" content={props.description} />
+        <meta property="og:image" content="https://irvanma.live/lp/lp.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={props.title} />
+        <meta name="twitter:description" content={props.description} />
+        <meta name="twitter:image" content="https://irvanma.live/lp/lp.jpg" />
         <title>{props.title}</title>
       </Head>
-      <article className="container mt-3" style={{ marginBottom: "100px" }}>
+      <div className="container mt-3" style={{ marginBottom: "100px" }}>
         <section className="m-0 text-center pt-5 pb-5">
           <div className="container">
             <p className="display-4 mb-0">{props.title}</p>
             <p className="lead mb-0 text-muted">{props.date}</p>
           </div>
         </section>
-        <div dangerouslySetInnerHTML={{ __html: props.content }} />
-        <h1>Comments</h1>
-        <Comments /> /* This is where I put it */
-      </article>
+        <article className="container card px-4 pb-4 floatcard-no-mt">
+          <h1>Table of Contents</h1>
+          <div dangerouslySetInnerHTML={{ __html: props.content }} />
+          <h1>Comments</h1>
+          <Comments /> /* This is where I put it */
+        </article>
+      </div>
     </DefaultLayout>
   );
 }
+
 ```
 
 As you can see, I put mine just below the main post content. By the way, feel free to check [this blog repository](https://github.com/irvanmalik48/blog) if you want.
