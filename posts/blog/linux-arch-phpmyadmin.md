@@ -40,7 +40,9 @@ sudo systemctl enable --now mariadb.service
 sudo mysql -u root -p
 ```
 
-> Note: Default root user has no password. Press enter to continue. 4. Issue the command to create a user and grant the privileges:
+> Note: Default root user has no password. Press enter to continue.
+
+4. Issue the command to create a user and grant the privileges:
 
 ```sql
 MariaDB> CREATE USER 'your-name'@'localhost' IDENTIFIED BY 'your-pass';
@@ -86,7 +88,9 @@ To configure Apache to work with PHP, we'll be using the `libphp` method:
 LoadModule mpm_prefork_module modules/mod_mpm_prefork.so
 ```
 
-> Note: The above is required, because libphp.so included with the package does not work with mod_mpm_event, but will only work mod_mpm_prefork instead. 3. To enable PHP, add these lines to `/etc/httpd/conf/httpd.conf`:
+> Note: The above is required, because libphp.so included with the package does not work with mod_mpm_event, but will only work mod_mpm_prefork instead.
+
+3. To enable PHP, add these lines to `/etc/httpd/conf/httpd.conf`:
 
 - Place this at the end of the `LoadModule` list:
 
@@ -120,8 +124,6 @@ Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
     Require all granted
 </Directory>
 ```
-
-> Note: Remove the space before Directory and /Directory.
 
 2. Include the file in `/etc/httpd/conf/httpd.conf`:
 
