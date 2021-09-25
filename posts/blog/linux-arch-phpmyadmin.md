@@ -1,46 +1,19 @@
 ---
-title: "Arch phpMyAdmin Manual Setup"
-date: "2021-05-02"
-desc: "Setup phpMyAdmin manually on Arch."
+title: "Arch Apache, MySQL, and PMA Manual Setup"
+date: "2021-09-25"
+desc: "Setup Apache, MySQL, and phpMyAdmin manually on Arch."
 tag: "linux"
 ---
 
-# Introduction
+# Abstract
 
-phpMyAdmin is a free and open source administration tool for MySQL and MariaDB. As a portable web application written primarily in PHP, it has become one of the most popular MySQL administration tools, especially for web hosting services.
-
-# Features
-
-Features provided includes:
-
-1. Web Interface;
-2. MySQL and MariaDB database management;
-3. Import data from CSV, JSON, and SQL;
-4. Export data to various formats: CSV, SQL, XML, JSON, PDF (via the TCPDF library), ISO/IEC 26300 - OpenDocument Text and Spreadsheet, Word, Excel, LaTeX, SQL, and others;
-5. Administering multiple servers;
-6. Creating PDF graphics of the database layout;
-7. Creating complex queries using query-by-example (QBE);
-8. Searching globally in a database or a subset of it;
-9. Transforming stored data into any format using a set of predefined functions, like displaying BLOB-data as image or download-link;
-10. Live charts to monitor MySQL server activity like connections, processes, CPU/memory usage, etc.;
-11. Network traffic to the SQL server;
-12. Working with different operating systems like Windows, Linux, OS/2, BSD, Unix (such as Sun Solaris, AIX) and others.; and
-13. Make complex SQL queries easier.
-
+This is just a tutorial on how to do a LAMP stack manually on Arch Linux. Without further talks, let's cut into this.
 # Setting Up
 
-To setup phpmyadmin in Arch Linux, follow these steps:
-
-1. Install the `phpmyadmin` package:
+Install the required packages:
 
 ```markdown
-sudo pacman -S phpmyadmin
-```
-
-2. Install the required packages:
-
-```markdown
-sudo pacman -S php php-apache apache mariadb
+sudo pacman -S php php-apache phpmyadmin apache mariadb
 ```
 
 > Note: You can find old versions of PHP in AUR
@@ -134,22 +107,26 @@ include conf / extra / php_module . conf;
 
 ## Configuring phpMyAdmin
 
+phpMyAdmin is a free and open source administration tool for MySQL and MariaDB. As a portable web application written primarily in PHP, it has become one of the most popular MySQL administration tools, especially for web hosting services.
+
 1. Create the Apache configuration file in `/etc/httpd/conf/extra/phpmyadmin.conf`:
 
 ```php
 Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
-< Directory "/usr/share/webapps/phpMyAdmin">
+<Directory "/usr/share/webapps/phpMyAdmin">
     DirectoryIndex index.php
     AllowOverride All
     Options FollowSymlinks
     Require all granted
-< /Directory>
+</Directory>
 ```
 
-> Note: Remove the space before Directory and /Directory. 2. Include the file in `/etc/httpd/conf/httpd.conf`:
+> Note: Remove the space before Directory and /Directory.
+
+2. Include the file in `/etc/httpd/conf/httpd.conf`:
 
 ```php
-include conf / extra / phpmyadmin . conf;
+include conf/extra/phpmyadmin.conf;
 ```
 
 3. To allow the usage of the phpMyAdmin setup script (e.g. http://localhost/phpmyadmin/setup), make sure `/usr/share/webapps/phpMyAdmin` is writable for the http user:
