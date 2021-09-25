@@ -120,7 +120,7 @@ GitHub Pages will use Jekyll to build your site by default. If you want to use a
 
 So that's it on how to host your website on GitHub using GitHub Pages. And then you might ask, what's next?
 Well, you can add more pages to your site by creating more new files. Each file will be available on your site in the same directory structure as your publishing source.  
-For example, if the publishing source for your project site is the `main` branch, and you create a new file called /about/contact-us.md on the `main` branch, the file will be available at https://your-username.github.io/about/contact-us.html.  
+For example, if the publishing source for your project site is the `main` branch, and you create a new file called /about/contact-us.md on the `main` branch, the file will be available at <https://your-username.github.io/about/contact-us.html>.  
 You can also add a theme to customize your site’s look and feel. To customize your site even more, you can use Jekyll, a static site generator with built-in support for GitHub Pages.
 
 # References

@@ -79,7 +79,7 @@ cert-to-efi-sig-list -g "$(< GUID.txt)" db.crt db.esl
 sign-efi-sig-list -g "$(< GUID.txt)" -k KEK.key -c KEK.crt db db.esl db.auth
 ```
 
-### Optional: Adding Microsoft keys.
+### Optional: Adding Microsoft keys
 
 This is useful when you're dualbooting Windows.
 

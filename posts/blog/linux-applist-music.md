@@ -9,7 +9,7 @@ tag: "linux"
 
 Music is a thing we always hear to. It always accompanies us when we're happy, sad, angry, or just insert anything emotional here cause it's still makes sense. It also accompanies us when running our beloved Linux desktops, too. Okay so I want to share some music apps that I think is nice and excellent.
 
-### 1. Audacious
+## Audacious
 
 ![audacious-img](/linux/applist/music/audacious.webp)
 
@@ -18,17 +18,17 @@ I myself personally use Audacious as my music player because of its low RAM cons
 
 Ubuntu:
 
-```markdown
+```bash
 sudo apt-get install audacious audacious-plugins
 ```
 
 Arch:
 
-```markdown
+```bash
 sudo pacman -Syu audacious
 ```
 
-### 2. cmus
+## cmus
 
 ![cmus-img](/linux/applist/music/cmus.webp)
 
@@ -36,17 +36,17 @@ Well, this one does a different approach and rather unique. `cmus` is a small, f
 
 Ubuntu:
 
-```markdown
+```bash
 sudo apt-get install cmus
 ```
 
 Arch:
 
-```markdown
+```bash
 sudo pacman -Syu cmus
 ```
 
-### 3. Museeks
+## Museeks
 
 ![museeks-img](/linux/applist/music/museeks.webp)
 
@@ -54,18 +54,18 @@ Museeks is another cross-platform simple and clean audio player that is lean on 
 
 Ubuntu:
 
-```markdown
+```bash
 wget https://github.com/martpie/museeks/releases/download/0.11.5/museeks-amd64.deb
 sudo apt update && sudo apt install ./museeks-amd64.deb
 ```
 
 Arch (AUR):
 
-```markdown
+```bash
 yay -Syu museeks-bin
 ```
 
-### 4. Musique
+## Musique
 
 ![musique-img](/linux/applist/music/musique.webp)
 
@@ -73,17 +73,17 @@ Musique is a music player built for speed, simplicity and style. It is written i
 
 Ubuntu:
 
-```markdown
+```bash
 sudo apt-get install musique
 ```
 
 Arch (AUR):
 
-```markdown
+```bash
 yay -Syu musique-bin
 ```
 
-### 5. QMMP
+## QMMP
 
 ![qmmp-img](/linux/applist/music/qmmp.webp)
 
@@ -91,7 +91,7 @@ This music player reminds me of my old days using Winamp. The interface is so si
 
 Ubuntu:
 
-```markdown
+```bash
 sudo add-apt-repository ppa:forkotov02/ppa
 sudo apt-get update
 sudo apt-get install qmmp qmmp-plugin-pack
@@ -99,7 +99,7 @@ sudo apt-get install qmmp qmmp-plugin-pack
 
 Arch:
 
-```markdown
+```bash
 sudo pacman -Syu qmmp
 ```
 
