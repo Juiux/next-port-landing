@@ -73,7 +73,7 @@ extension=mysqli
 ## Configuring Apache
 
 The Apache HTTP Server, or Apache for short, is a very popular web server, developed by the Apache Software Foundation.
-Apache configuration files are located in /etc/httpd/conf. The main configuration file is /etc/httpd/conf/httpd.conf, which includes various other configuration files. The default configuration file should be fine for a simple setup. By default, it will serve the directory /srv/http to anyone who visits your website.
+Apache configuration files are located in `/etc/httpd/conf`. The main configuration file is `/etc/httpd/conf/httpd.conf`, which includes various other configuration files. The default configuration file should be fine for a simple setup. By default, it will serve the directory `/srv/http` to anyone who visits your website.
 You can start Apache by running `sudo systemctl enable --now httpd.service`.
 To configure Apache to work with PHP, we'll be using the `libphp` method:
 
@@ -103,7 +103,7 @@ AddHandler php-script .php
 - Place this at the end of the `Include` list:
 
 ```php
-include conf / extra / php_module . conf;
+include conf/extra/php_module.conf;
 ```
 
 - Restart `httpd.service` by issuing `sudo systemctl restart httpd.service` command.
@@ -140,7 +140,7 @@ sudo chown http:http /usr/share/webapps/phpMyAdmin/config
 sudo chmod 750 /usr/share/webapps/phpMyAdmin/config
 ```
 
-4. Add blowfish_secret passphrase (You can search a generator for one) in `/usr/share/webapps/phpMyAdmin/config.inc.php`:
+4. Add `blowfish_secret` passphrase (You can search a generator for one) in `/usr/share/webapps/phpMyAdmin/config.inc.php`:
 
 ```php
 $cfg["blowfish_secret"] = "your-passphrase-here";
