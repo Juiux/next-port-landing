@@ -1,7 +1,7 @@
 ---
 title: "How to Deploy a Telegram Userbot"
 date: "2021-09-26"
-desc: "Deploy your own userbot."
+desc: "Deploy your own userbot with Heroku or locally."
 tag: "userbot"
 ---
 
@@ -44,7 +44,7 @@ The next step is to deploy it. There are 2 ways of deploying it:
 
 ## Heroku way
 
-1. Head to Lappbot's Github repo [here](https://github.com/BianSepang/WeebProject) or [use this link](https://heroku.com/deploy?template=https://github.com/BianSepang/WeebProject/tree/master) to directly deploy it to Heroku.
+1. Head to WeebProject's Github repo [here](https://github.com/BianSepang/WeebProject) or [use this link](https://heroku.com/deploy?template=https://github.com/BianSepang/WeebProject/tree/master) to directly deploy it to Heroku.
 2. Fill your app name and choose which region is closest to your location.
 3. Fill in the form with everything you got from previous section. Also read through the options of configuration and add/change them according to your own needs.
    > Note: You can change the values anytime you want later on.
