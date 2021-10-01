@@ -1,6 +1,6 @@
 import DefaultLayout from "../components/layouts/default";
 import Link from "next/link";
-import { getSortedPostsData } from "../api/blog/index";
+import { getSortedPostsData } from "../lib/blog/index";
 import { GetStaticProps, NextPage } from "next";
 import Search from "../components/search";
 import { useState } from "react";

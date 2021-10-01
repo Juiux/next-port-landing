@@ -83,7 +83,3 @@ export async function getPostData(id: any) {
     }),
   };
 }
-
-export async function stringifyPostData() {
-  return `export const cachedPosts = ${JSON.stringify(getSortedPostsData())}`;
-}
