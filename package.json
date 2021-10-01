@@ -8,7 +8,8 @@
     "dev": "next",
     "start": "next start",
     "migrate": "npx sass-migrator --migrate-deps division node_modules/mdb-ui-kit/*/*/*.scss",
-    "build": "npm run migrate && next build",
+    "pre-build": "npm run migrate && node ./cache/cache.js",
+    "build": "npm run pre-build && next build",
     "analyze": "ANALYZE=true next build"
   },
   "keywords": [],

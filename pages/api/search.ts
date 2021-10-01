@@ -1,18 +1,18 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { getSortedPostsData } from "./data";
+import { cachedPosts } from "../../cache/blog";
 
 type Data = {
   results: string[];
 };
 
-const blogPosts = getSortedPostsData();
+const blogPosts = cachedPosts;
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
   const results = req.query.q
-    ? blogPosts.filter((post) =>
+    ? blogPosts.filter((post: any) =>
         post.title.toLowerCase().includes(req.query.q.toString())
       )
     : blogPosts;
