@@ -30,7 +30,7 @@ function sortPostData(allPostsData) {
 }
 
 function stringifyPostData() {
-    return `export const cachedPosts = ${JSON.stringify(getSortedPostsData())}`;
+  return `export const cachedPosts = ${JSON.stringify(getSortedPostsData())}`;
 }
 
 function createBlogCache(filename) {
