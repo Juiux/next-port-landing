@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { getSortedPostsData } from "../../api/blog";
+import { getSortedPostsData } from "./data";
 
 type Data = {
   results: string[];
