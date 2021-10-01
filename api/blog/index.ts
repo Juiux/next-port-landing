@@ -83,3 +83,7 @@ export async function getPostData(id: any) {
     }),
   };
 }
+
+export async function stringifyPostData() {
+  return JSON.stringify(getSortedPostsData());
+}
