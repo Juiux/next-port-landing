@@ -101,7 +101,6 @@ export default function PostLayout(props: any) {
     </DefaultLayout>
   );
 }
-
 ```
 
 As you can see, I put mine just below the main post content. By the way, feel free to check [this blog repository](https://github.com/irvanmalik48/blog) if you want.
