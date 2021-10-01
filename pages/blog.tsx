@@ -2,8 +2,19 @@ import DefaultLayout from "../components/layouts/default";
 import Link from "next/link";
 import { getSortedPostsData } from "../api/blog/index";
 import { GetStaticProps, NextPage } from "next";
+import Search from "../components/search";
+import { useState } from "react";
 
 const Blog: NextPage = ({ allPostsData }: any) => {
+  const [searchActive, setSearchActive] = useState<boolean>(false);
+  const checkSearchStatus = (status: boolean) => {
+    if (status) {
+      setSearchActive(true);
+    } else {
+      setSearchActive(false);
+    }
+  };
+
   return (
     <DefaultLayout
       title="Blog Posts"
@@ -47,6 +58,9 @@ const Blog: NextPage = ({ allPostsData }: any) => {
         ></path>
       </svg>
       <section className="container mb-5 card px-3 pt-2 pb-4 floatcard">
+        <div className="row mt-2 gx-3 gy-3">
+          <Search onFocusHandler={(status) => checkSearchStatus(status)} />
+        </div>
         <div className="row mt-2 gx-3 gy-3">
           <p className="col-12 text-center h5 mt-3 mb-3 m-0">All Posts</p>
           {allPostsData.map(
