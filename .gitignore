@@ -4,3 +4,4 @@
 /.next
 npm-debug.log*
 .vercel
+.env.local
