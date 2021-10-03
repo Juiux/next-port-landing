@@ -11,7 +11,6 @@ export default class Comments extends Component {
   componentDidMount() {
     let element: HTMLScriptElement = document.createElement("script");
     element.setAttribute("src", "https://utteranc.es/client.js");
-    element.setAttribute("nonce", "ZnVjayB5b3U");
     element.setAttribute("crossorigin", "anonymous");
     element.setAttribute("async", "true");
     element.setAttribute("repo", "irvanmalik48/blog");
