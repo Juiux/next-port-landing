@@ -64,7 +64,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
         <div className="row mt-2 gx-3 gy-3">
           <p className="col-12 text-center h5 mt-3 mb-3 m-0">All Posts</p>
           {allPostsData.map(
-            ({ id, title, date, tag, desc }: any, index: any) => (
+            ({ id, title, date, tag, desc }: any, index: any): JSX.Element => (
               <div key={index} className="col-12 col-sm-6">
                 <Link href={`/posts/blog/${id}`}>
                   <a className="text-white">
@@ -80,7 +80,15 @@ const Blog: NextPage = ({ allPostsData }: any) => {
                         style={{ color: "#BDBDBD" }}
                       >
                         {date}
-                        <span className="badge bg-dark text-end">{tag}</span>
+                        <span className="text-end">
+                          {tag.map(
+                            (children: any, index: any): JSX.Element => (
+                              <span key={index} className="badge bg-dark ms-2">
+                                {children}
+                              </span>
+                            )
+                          )}
+                        </span>
                       </div>
                     </div>
                   </a>
