@@ -7,7 +7,7 @@ import {
   Instagram,
 } from "react-feather";
 
-export default function Footer() {
+export default function Footer(): JSX.Element {
   return (
     <footer className="bg-dark text-center text-lg-start text-white-50">
       <div className="text-center p-3">

@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { ArrowUp } from "react-feather";
 
-export default function Scroll() {
-  const [isVisible, setIsVisible] = useState(false);
+export default function Scroll(): JSX.Element {
+  const [isVisible, setIsVisible]: [boolean, Dispatch<SetStateAction<any>>] =
+    useState(false);
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 200) {
@@ -12,7 +13,7 @@ export default function Scroll() {
       }
     };
     window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    return (): void => window.removeEventListener("scroll", toggleVisibility);
   }, []);
   return (
     <a href="#" aria-label="Back to top">

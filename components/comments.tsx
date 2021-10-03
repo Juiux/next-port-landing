@@ -1,26 +1,26 @@
-import React, { Component } from "react";
+import { Component, createRef } from "react";
 
 export default class Comments extends Component {
-  box: React.RefObject<any>;
+  private box: React.RefObject<HTMLDivElement>;
 
-  constructor(props: any) {
+  constructor(props: {} | any) {
     super(props);
-    this.box = React.createRef();
+    this.box = createRef();
   }
 
   componentDidMount() {
-    let element: any = document.createElement("script");
+    let element: HTMLScriptElement = document.createElement("script");
     element.setAttribute("src", "https://utteranc.es/client.js");
     element.setAttribute("crossorigin", "anonymous");
-    element.setAttribute("async", true);
+    element.setAttribute("async", "true");
     element.setAttribute("repo", "irvanmalik48/blog");
     element.setAttribute("label", "Comments");
     element.setAttribute("issue-term", "pathname");
     element.setAttribute("theme", "photon-dark");
-    this.box.current.appendChild(element);
+    this.box?.current?.appendChild(element);
   }
 
-  render() {
+  render(): JSX.Element {
     return <div ref={this.box}></div>;
   }
 }

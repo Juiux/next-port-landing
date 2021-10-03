@@ -1,7 +1,7 @@
 import { Menu } from "react-feather";
 import Link from "next/link";
 
-export default function Navbar() {
+export default function Navbar(): JSX.Element {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark navbar-bg-dark sticky-top shadow">
       <div className="container">
