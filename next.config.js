@@ -13,8 +13,16 @@ const custHeaders = [
     value: "1; mode=block",
   },
   {
-    key: 'Content-Security-Policy',
-    value: "default-src 'self' https://*"
+    key: "Content-Security-Policy",
+    value: "default-src 'self' https://*",
+  },
+  {
+    key: "X-Content-Type-Options",
+    value: "nosniff",
+  },
+  {
+    key: "X-Frame-Options",
+    value: "DENY",
   },
   {
     key: "Accept-Encoding",
