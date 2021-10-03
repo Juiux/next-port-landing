@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navbar from "../navbar";
 import Footer from "../footer";
 import Script from "next/script";
+import Scroll from "../stt";
 
 export default function DefaultLayout(
   props:
@@ -66,6 +67,7 @@ export default function DefaultLayout(
         <div className="parallax">
           <main>{props.children}</main>
           <Footer />
+          <Scroll />
           <Script
             defer
             type="text/javascript"

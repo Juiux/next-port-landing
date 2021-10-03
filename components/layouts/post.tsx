@@ -1,7 +1,6 @@
 import DefaultLayout from "./default";
 import Head from "next/head";
 import Comments from "../comments";
-import Scroll from "../stt";
 
 export default function PostLayout(props: {
   tag: string | undefined;
@@ -38,7 +37,6 @@ export default function PostLayout(props: {
           <Comments />
         </article>
       </div>
-      <Scroll />
     </DefaultLayout>
   );
 }

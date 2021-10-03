@@ -13,8 +13,12 @@ const custHeaders = [
     value: "1; mode=block",
   },
   {
+    key: 'Content-Security-Policy',
+    value: "default-src 'self' https://*"
+  },
+  {
     key: "Accept-Encoding",
-    value: "br",
+    value: "br gzip",
   },
 ];
 
