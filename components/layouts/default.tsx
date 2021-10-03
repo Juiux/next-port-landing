@@ -4,7 +4,15 @@ import Footer from "../footer";
 import Scroll from "../stt";
 import Script from "next/script";
 
-export default function DefaultLayout(props: any) {
+export default function DefaultLayout(
+  props:
+    | {
+        description: string | undefined;
+        title: string | undefined;
+        children: any | undefined;
+      }
+    | any
+): JSX.Element {
   return (
     <>
       <Head>

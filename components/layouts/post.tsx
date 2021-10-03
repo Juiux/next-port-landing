@@ -2,7 +2,13 @@ import DefaultLayout from "./default";
 import Head from "next/head";
 import Comments from "../comments";
 
-export default function PostLayout(props: any) {
+export default function PostLayout(props: {
+  tag: string | undefined;
+  description: string | undefined;
+  title: string | undefined;
+  date: string | Date | undefined;
+  content: any;
+}): JSX.Element {
   return (
     <DefaultLayout>
       <Head>
