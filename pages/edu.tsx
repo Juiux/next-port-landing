@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import DefaultLayout from "../components/layouts/default";
 
-const Jadwal: NextPage = () => {
+const Jadwal: NextPage = (): JSX.Element => {
   return (
     <DefaultLayout title="Jadwal Mata Kuliah IF Unsri 3 REG" description="Duh.">
       <article className="bg-info text-dark pt-5 pb-5">

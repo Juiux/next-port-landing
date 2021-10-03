@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import DefaultLayout from "../components/layouts/default";
 
-const Index: NextPage = () => {
+const Index: NextPage = (): JSX.Element => {
   return (
     <DefaultLayout title="404" description="Page not found.">
       <section className="offline-container">

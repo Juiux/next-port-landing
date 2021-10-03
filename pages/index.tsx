@@ -4,7 +4,7 @@ import { getSortedPostsData } from "../lib/blog/index";
 import { GitBranch } from "react-feather";
 import { GetStaticProps, NextPage } from "next";
 
-const Index: NextPage = ({ allPostsData }: any) => {
+const Index: NextPage = ({ allPostsData }: any): JSX.Element => {
   return (
     <DefaultLayout
       title="IrvanMA's Lair"

@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import DefaultLayout from "../components/layouts/default";
 
-const Index: NextPage = () => {
+const Index: NextPage = (): JSX.Element => {
   return (
     <DefaultLayout title="500" description="Internal server error.">
       <section className="offline-container">
