@@ -2,7 +2,9 @@
 title: "Linux Music App List"
 date: "2021-05-03"
 desc: "Collection of music apps for linux."
-tag: "linux"
+tag:
+  - "linux"
+  - "music"
 ---
 
 # Abstract

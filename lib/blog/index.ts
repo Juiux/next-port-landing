@@ -50,13 +50,11 @@ export function getAllPostIds(): { params: { id: string } }[] {
   });
 }
 
-export async function getPostData(
-  id: any
-): Promise<{
+export async function getPostData(id: any): Promise<{
   title: string;
   date: Date;
   desc: string;
-  tag: string;
+  tag: string[];
   id: any;
   contentHtml: string;
 }> {

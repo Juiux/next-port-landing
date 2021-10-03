@@ -2,7 +2,11 @@
 title: "Arch Apache, MySQL, and PMA Manual Setup"
 date: "2021-09-25"
 desc: "Setup Apache, MySQL, and phpMyAdmin manually on Arch."
-tag: "linux"
+tag:
+  - "linux"
+  - "php"
+  - "mysql"
+  - "arch"
 ---
 
 # Abstract

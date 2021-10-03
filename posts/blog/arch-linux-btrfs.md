@@ -2,7 +2,10 @@
 title: "Arch Linux - Btrfs Installation (Dual Boot)"
 date: "2021-06-07"
 desc: "Arch Linux installation with btrfs filesystem dual booting with Windows."
-tag: "linux"
+tag:
+  - "linux"
+  - "arch"
+  - "btrfs"
 ---
 
 # Abstract

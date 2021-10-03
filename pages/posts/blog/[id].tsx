@@ -10,7 +10,7 @@ export const getStaticProps: GetStaticProps = async ({
       title: string;
       date: Date;
       desc: string;
-      tag: string;
+      tag: string[];
       id: any;
       contentHtml: string;
     };

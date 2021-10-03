@@ -2,7 +2,9 @@
 title: "A Story"
 date: "2021-05-14"
 desc: "A story of life and personality."
-tag: "life"
+tag:
+  - "life"
+  - "story"
 ---
 
 # Disclaimer
