@@ -2,7 +2,20 @@ import PostLayout from "../../../components/layouts/post";
 import { getAllPostIds, getPostData } from "../../../lib/projects/index";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
-export const getStaticProps: GetStaticProps = async ({ params }: any) => {
+export const getStaticProps: GetStaticProps = async ({
+  params,
+}: any): Promise<{
+  props: {
+    postData: {
+      title: string;
+      date: Date;
+      desc: string;
+      tag: string;
+      id: any;
+      contentHtml: string;
+    };
+  };
+}> => {
   const postData = await getPostData(params.id);
   return {
     props: {
@@ -11,7 +24,10 @@ export const getStaticProps: GetStaticProps = async ({ params }: any) => {
   };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async (): Promise<{
+  paths: { params: { id: string } }[];
+  fallback: false;
+}> => {
   const paths = getAllPostIds();
   return {
     paths,
@@ -19,7 +35,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-const Post: NextPage = ({ postData }: any) => {
+const Post: NextPage = ({ postData }: any): JSX.Element => {
   return (
     <PostLayout
       title={postData.title}
