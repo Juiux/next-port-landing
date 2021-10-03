@@ -9,30 +9,26 @@ import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
 import rehypeToc from "rehype-toc";
 import rehypePrism from "rehype-prism-plus";
+import { Post } from "../../interfaces/post";
 
 const postsDirectory = path.join(process.cwd(), "posts", "projects");
 
-export function getSortedPostsData() {
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
+export function getSortedPostsData(): any[] {
+  const fileNames: string[] = fs.readdirSync(postsDirectory);
+  const allPostsData: Post[] = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, "");
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf-8");
     const matterResult = matter(fileContents);
     return {
       id,
-      ...(matterResult.data as {
-        title: string;
-        date: Date;
-        desc: string;
-        tag: string;
-      }),
+      ...(matterResult.data as Post),
     };
   });
   return sortPostData(allPostsData);
 }
 
-export function sortPostData(allPostsData: any[]) {
+export function sortPostData(allPostsData: any[]): any[] {
   return allPostsData.sort((a: any, b: any) => {
     if (a["date"] < b["date"]) {
       return 1;
@@ -42,7 +38,7 @@ export function sortPostData(allPostsData: any[]) {
   });
 }
 
-export function getAllPostIds() {
+export function getAllPostIds(): { params: { id: string } }[] {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {
     return {
@@ -53,9 +49,18 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(id: any) {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf-8");
+export async function getPostData(
+  id: any
+): Promise<{
+  title: string;
+  date: Date;
+  desc: string;
+  tag: string;
+  id: any;
+  contentHtml: string;
+}> {
+  const fullPath: string = path.join(postsDirectory, `${id}.md`);
+  const fileContents: string = fs.readFileSync(fullPath, "utf-8");
   const matterResult = matter(fileContents);
   const processedContent = await unified()
     .use(remarkParse)
@@ -75,11 +80,6 @@ export async function getPostData(id: any) {
   return {
     id,
     contentHtml,
-    ...(matterResult.data as {
-      title: string;
-      date: Date;
-      desc: string;
-      tag: string;
-    }),
+    ...(matterResult.data as Post),
   };
 }
