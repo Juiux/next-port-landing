@@ -14,7 +14,7 @@ const custHeaders = [
   },
   {
     key: "Content-Security-Policy",
-    value: "default-src 'self' https://*; style-src https://*",
+    value: "default-src 'self' 'nonce-ZnVjayB5b3U' https://*",
   },
   {
     key: "X-Content-Type-Options",
