@@ -2,7 +2,9 @@
 title: "Introduction"
 date: "2021-05-02"
 desc: "Author's introduction."
-tag: "general"
+tag:
+  - "general"
+  - "intro"
 ---
 
 # Abstract

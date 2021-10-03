@@ -2,7 +2,9 @@
 title: "A Message"
 date: "2021-09-20"
 desc: "A message for that person I care the most."
-tag: "life"
+tag:
+  - "life"
+  - "story"
 ---
 
 # Disclaimer
