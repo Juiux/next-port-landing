@@ -1,15 +1,15 @@
-## My Website
-
-### Summary
+# My Website
 
 Basically my website. Nothing so special about it.
+
+## Features
 
 - Made from Next.js, fully PWA compliant.
 - Using stripped down customized MDBootstrap.
 - Small bundle sizes (40KB-ish).
 - Not gore.
 
-### Using as Template
+## Using as Template
 
 1. Clone the repository:
 
@@ -25,6 +25,10 @@ git clone https://github.com/irvanmalik48/blog blog
 
 Run `npm run dev` to preview the site.
 
-### License
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
 
 [MIT](https://raw.githubusercontent.com/irvanmalik48/irvanmalik48.github.io/main/LICENSE)
