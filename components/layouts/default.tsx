@@ -3,7 +3,7 @@ import Navbar from "../navbar";
 import Footer from "../footer";
 import Script from "next/script";
 import Scroll from "../stt";
-import Thumbnail from "../thumbnail";
+import { ThumbnailOG, ThumbnailTT } from "../thumbnail";
 
 export default function DefaultLayout(
   props:
@@ -33,8 +33,14 @@ export default function DefaultLayout(
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="IrvanMA's Lair" />
         <meta name="theme-color" content="#282828" />
-        <Thumbnail
+        <ThumbnailOG
           key="thumb"
+          title={props.title}
+          date={undefined}
+          tags={undefined}
+        />
+        <ThumbnailTT
+          key="tt"
           title={props.title}
           date={undefined}
           tags={undefined}

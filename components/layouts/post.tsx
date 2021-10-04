@@ -1,7 +1,7 @@
 import DefaultLayout from "./default";
 import Head from "next/head";
 import Comments from "../comments";
-import Thumbnail from "../thumbnail";
+import { ThumbnailOG, ThumbnailTT } from "../thumbnail";
 
 export default function PostLayout(props: {
   tag: string | undefined;
@@ -14,11 +14,17 @@ export default function PostLayout(props: {
     <DefaultLayout title={props.title} description={props.description}>
       <Head>
         <meta key="words" name="keywords" content={props.tag} />
-        <Thumbnail
+        <ThumbnailOG
           key="thumb"
           title={props.title}
           date={props.date}
           tags={props.tag}
+        />
+        <ThumbnailTT
+          key="tt"
+          title={props.title}
+          date={undefined}
+          tags={undefined}
         />
       </Head>
       <div className="container mt-3" style={{ marginBottom: "100px" }}>
