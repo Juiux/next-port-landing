@@ -11,7 +11,8 @@ export function Thumbnail(
           if (values != "") return `tags=${values}&`;
         });
 
-  const cleanedTags = processedTags.replaceAll(",", "");
+  const cleanedTags =
+    processedTags == "" ? "" : processedTags.replaceAll(",", "");
 
   const title = `title=${titleP}&`;
   const name = `name=Irvan%20Malik%20Azantha&`;
