@@ -14,7 +14,6 @@ export default function DefaultLayout(
       }
     | any
 ): JSX.Element {
-
   return (
     <>
       <Head>
@@ -34,7 +33,12 @@ export default function DefaultLayout(
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="IrvanMA's Lair" />
         <meta name="theme-color" content="#282828" />
-        <Thumbnail key="thumb" title={props.title} date={undefined} tags={undefined} />
+        <Thumbnail
+          key="thumb"
+          title={props.title}
+          date={undefined}
+          tags={undefined}
+        />
         <title>{props.title}</title>
         <link rel="manifest" href="/manifest.json" />
         <link

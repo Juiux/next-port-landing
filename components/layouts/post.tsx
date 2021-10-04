@@ -14,7 +14,12 @@ export default function PostLayout(props: {
     <DefaultLayout title={props.title} description={props.description}>
       <Head>
         <meta key="words" name="keywords" content={props.tag} />
-        <Thumbnail key="thumb" title={props.title} date={props.date} tags={props.tag} />
+        <Thumbnail
+          key="thumb"
+          title={props.title}
+          date={props.date}
+          tags={props.tag}
+        />
       </Head>
       <div className="container mt-3" style={{ marginBottom: "100px" }}>
         <section className="m-0 text-center pt-5 pb-5">
