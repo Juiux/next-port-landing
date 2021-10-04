@@ -3,6 +3,7 @@ import Navbar from "../navbar";
 import Footer from "../footer";
 import Script from "next/script";
 import Scroll from "../stt";
+import Thumbnail from "../thumbnail";
 
 export default function DefaultLayout(
   props:
@@ -13,7 +14,6 @@ export default function DefaultLayout(
       }
     | any
 ): JSX.Element {
-  const postThumbnail = `https://api.irvanma.live/api/index?q=${props.title}`;
 
   return (
     <>
@@ -22,20 +22,19 @@ export default function DefaultLayout(
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <meta name="description" content={props.description} />
-        <meta name="keywords" content="blog" />
+        <meta key="words" name="keywords" content="blog" />
         <meta property="og:url" content="https://irvanma.live" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={props.title} />
         <meta property="og:description" content={props.description} />
-        <meta property="og:image" content={postThumbnail} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={postThumbnail} />
         <meta name="twitter:title" content={props.title} />
         <meta name="twitter:description" content={props.description} />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="IrvanMA's Lair" />
         <meta name="theme-color" content="#282828" />
+        <Thumbnail key="thumb" title={props.title} date={undefined} tags={undefined} />
         <title>{props.title}</title>
         <link rel="manifest" href="/manifest.json" />
         <link
