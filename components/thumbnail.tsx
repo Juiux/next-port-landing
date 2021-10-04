@@ -12,7 +12,7 @@ export function Thumbnail(
         });
 
   const cleanedTags =
-    processedTags == "" ? "" : processedTags.replaceAll(",", "");
+    processedTags == "" ? "" : processedTags.replace(/,/g, "");
 
   const title = `title=${titleP}&`;
   const name = `name=Irvan%20Malik%20Azantha&`;
