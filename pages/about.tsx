@@ -3,7 +3,12 @@ import DefaultLayout from "../components/layouts/default";
 
 const About: NextPage = (): JSX.Element => {
   return (
-    <DefaultLayout title="About" description="Stuffs about me.">
+    <DefaultLayout
+      title="About"
+      description="Stuffs about me."
+      tag={undefined}
+      date={undefined}
+    >
       <article className="bg-info text-dark pt-5 pb-5">
         <div className="container">
           <p className="display-5 mb-0 mt-5 text-center">About Me</p>

@@ -3,7 +3,12 @@ import DefaultLayout from "../components/layouts/default";
 
 const Jadwal: NextPage = (): JSX.Element => {
   return (
-    <DefaultLayout title="Jadwal Mata Kuliah IF Unsri 3 REG" description="Duh.">
+    <DefaultLayout
+      title="Jadwal Mata Kuliah IF Unsri 3 REG"
+      description="Duh."
+      tag={undefined}
+      date={undefined}
+    >
       <article className="bg-info text-dark pt-5 pb-5">
         <div className="container">
           <p className="display-5 mb-0 mt-5 text-center">Jadwal Mata Kuliah</p>

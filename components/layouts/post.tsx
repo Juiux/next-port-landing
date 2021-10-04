@@ -1,31 +1,23 @@
 import DefaultLayout from "./default";
 import Head from "next/head";
 import Comments from "../comments";
-import { ThumbnailOG, ThumbnailTT } from "../thumbnail";
 
 export default function PostLayout(props: {
-  tag: string | undefined;
+  tag: any | string | undefined;
   description: string | undefined;
   title: string | undefined;
   date: string | Date | undefined;
   content: any;
 }): JSX.Element {
   return (
-    <DefaultLayout title={props.title} description={props.description}>
+    <DefaultLayout
+      title={props.title}
+      description={props.description}
+      tag={props.tag}
+      date={props.date}
+    >
       <Head>
         <meta key="words" name="keywords" content={props.tag} />
-        <ThumbnailOG
-          key="thumb"
-          title={props.title}
-          date={props.date}
-          tags={props.tag}
-        />
-        <ThumbnailTT
-          key="tt"
-          title={props.title}
-          date={undefined}
-          tags={undefined}
-        />
       </Head>
       <div className="container mt-3" style={{ marginBottom: "100px" }}>
         <section className="m-0 text-center pt-5 pb-5">

@@ -19,6 +19,8 @@ const Blog: NextPage = ({ allPostsData }: any) => {
     <DefaultLayout
       title="Blog Posts"
       description="All that I've written to date."
+      tag={undefined}
+      date={undefined}
     >
       <article className="bg-info text-dark pt-5 pb-5">
         <div className="container">

@@ -9,6 +9,8 @@ const Index: NextPage = ({ allPostsData }: any): JSX.Element => {
     <DefaultLayout
       title="IrvanMA's Lair"
       description="Do what you want and do it well."
+      tag={undefined}
+      date={undefined}
     >
       <section className="bg-info text-dark pt-2 pb-5">
         <div className="container pt-5">

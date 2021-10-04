@@ -3,13 +3,15 @@ import Navbar from "../navbar";
 import Footer from "../footer";
 import Script from "next/script";
 import Scroll from "../stt";
-import { ThumbnailOG, ThumbnailTT } from "../thumbnail";
+import { Thumbnail } from "../thumbnail";
 
 export default function DefaultLayout(
   props:
     | {
+        tag: any | string | undefined;
         description: string | undefined;
         title: string | undefined;
+        date: string | Date | undefined;
         children: any | undefined;
       }
     | any
@@ -26,25 +28,21 @@ export default function DefaultLayout(
         <meta property="og:type" content="website" />
         <meta property="og:title" content={props.title} />
         <meta property="og:description" content={props.description} />
+        <meta
+          property="og:image"
+          content={Thumbnail(props.title, props.date, props.tag)}
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={props.title} />
         <meta name="twitter:description" content={props.description} />
+        <meta
+          name="twitter:image"
+          content={Thumbnail(props.title, props.date, props.tag)}
+        />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="IrvanMA's Lair" />
         <meta name="theme-color" content="#282828" />
-        <ThumbnailOG
-          key="thumb"
-          title={props.title}
-          date={undefined}
-          tags={undefined}
-        />
-        <ThumbnailTT
-          key="tt"
-          title={props.title}
-          date={undefined}
-          tags={undefined}
-        />
         <title>{props.title}</title>
         <link rel="manifest" href="/manifest.json" />
         <link
