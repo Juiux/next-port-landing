@@ -9,6 +9,8 @@ export default function PostLayout(props: {
   date: string | Date | undefined;
   content: any;
 }): JSX.Element {
+  const postThumbnail = `https://api.irvanma.live/api/index?q=${props.title}`;
+
   return (
     <DefaultLayout>
       <Head>
@@ -16,11 +18,11 @@ export default function PostLayout(props: {
         <meta name="description" content={props.description} />
         <meta property="og:title" content={props.title} />
         <meta property="og:description" content={props.description} />
-        <meta property="og:image" content="https://irvanma.live/lp/lp.jpg" />
+        <meta property="og:image" content={postThumbnail} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={props.title} />
         <meta name="twitter:description" content={props.description} />
-        <meta name="twitter:image" content="https://irvanma.live/lp/lp.jpg" />
+        <meta name="twitter:image" content={postThumbnail} />
         <title>{props.title}</title>
       </Head>
       <div className="container mt-3" style={{ marginBottom: "100px" }}>

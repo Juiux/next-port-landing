@@ -13,6 +13,8 @@ export default function DefaultLayout(
       }
     | any
 ): JSX.Element {
+  const postThumbnail = `https://api.irvanma.live/api/index?q=${props.title}`;
+
   return (
     <>
       <Head>
@@ -25,9 +27,9 @@ export default function DefaultLayout(
         <meta property="og:type" content="website" />
         <meta property="og:title" content={props.title} />
         <meta property="og:description" content={props.description} />
-        <meta property="og:image" content="https://irvanma.live/lp/lp.jpg" />
+        <meta property="og:image" content={postThumbnail} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://irvanma.live/lp/lp.jpg" />
+        <meta name="twitter:image" content={postThumbnail} />
         <meta name="twitter:title" content={props.title} />
         <meta name="twitter:description" content={props.description} />
         <meta name="apple-mobile-web-app-capable" content="yes" />
