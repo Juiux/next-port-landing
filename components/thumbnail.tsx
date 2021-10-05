@@ -1,10 +1,10 @@
 export default function Thumbnail(
   titleP: string | undefined,
   dateP: string | Date | undefined,
-  tagsP: string | string[] | undefined
+  tagsP: any
 ): string {
   // check if tags are string / string[] / undefined
-  let processedTags: any = "";
+  let processedTags = "";
   if (tagsP == undefined) {
     processedTags = "";
   } else if (typeof tagsP === "string") {
