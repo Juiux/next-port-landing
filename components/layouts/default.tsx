@@ -3,7 +3,7 @@ import Navbar from "../navbar";
 import Footer from "../footer";
 import Script from "next/script";
 import Scroll from "../stt";
-import { Thumbnail } from "../thumbnail";
+import Thumbnail from "../thumbnail";
 
 export default function DefaultLayout(
   props:
