@@ -7,7 +7,7 @@ Basically my website. Nothing so special about it.
 - Made from Next.js, fully PWA compliant.
 - Using stripped down customized MDBootstrap.
 - Small bundle sizes (40KB-ish).
-- Not gore.
+- Automatically generated metadata images.
 
 ## Using as Template
 
@@ -28,6 +28,8 @@ Run `npm run dev` to preview the site.
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+See [CONTRIBUTING.md](https://github.com/irvanmalik48/blog/blob/main/CONTRIBUTING.md) for details on how to contribute.
 
 ## License
 
