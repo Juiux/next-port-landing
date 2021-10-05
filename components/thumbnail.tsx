@@ -1,7 +1,7 @@
 export default function Thumbnail(
   titleP: string | undefined,
   dateP: string | Date | undefined,
-  tagsP: any
+  tagsP: string | string[] | undefined
 ): string {
   // check if tags are string / string[] / undefined
   let processedTags = "";
@@ -10,7 +10,7 @@ export default function Thumbnail(
   } else if (typeof tagsP === "string") {
     processedTags = `tags=${tagsP}&`;
   } else {
-    processedTags = tagsP?.map((values: string): string | undefined => {
+    processedTags += tagsP?.map((values: string): string | undefined => {
       if (values != "") return `tags=${values}&`;
     });
     processedTags = processedTags.replace(/,/g, "");
