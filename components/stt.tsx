@@ -4,7 +4,7 @@ import { ArrowUp } from "react-feather";
 export default function Scroll(): JSX.Element {
   const [isVisible, setIsVisible]: [boolean, Dispatch<SetStateAction<any>>] =
     useState(false);
-  useEffect(() => {
+  useEffect((): (() => void) => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 200) {
         setIsVisible(true);
@@ -17,20 +17,32 @@ export default function Scroll(): JSX.Element {
   }, []);
   return (
     <a href="#" aria-label="Back to top">
-      {!isVisible && (
-        <div className="scroll-cursor leaving rounded-3">
-          <div>
-            <ArrowUp />
-          </div>
-        </div>
-      )}
-      {isVisible && (
-        <div className="scroll-cursor transitioning rounded-3 hover-shadow">
-          <div>
-            <ArrowUp />
-          </div>
-        </div>
-      )}
+      {notVisible(isVisible)}
+      {visible(isVisible)}
     </a>
+  );
+}
+
+function visible(isVisible: boolean) {
+  return (
+    isVisible && (
+      <div className="scroll-cursor transitioning rounded-3 hover-shadow">
+        <div>
+          <ArrowUp />
+        </div>
+      </div>
+    )
+  );
+}
+
+function notVisible(isVisible: boolean) {
+  return (
+    !isVisible && (
+      <div className="scroll-cursor leaving rounded-3">
+        <div>
+          <ArrowUp />
+        </div>
+      </div>
+    )
   );
 }
