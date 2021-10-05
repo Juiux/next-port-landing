@@ -8,7 +8,7 @@ export const getStaticProps: GetStaticProps = async ({
   props: {
     postData: {
       title: string;
-      date: Date;
+      date: Date | string;
       desc: string;
       tag: string[];
       id: any;

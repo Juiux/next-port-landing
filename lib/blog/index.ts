@@ -52,7 +52,7 @@ export function getAllPostIds(): { params: { id: string } }[] {
 
 export async function getPostData(id: any): Promise<{
   title: string;
-  date: Date;
+  date: Date | string;
   desc: string;
   tag: string[];
   id: any;

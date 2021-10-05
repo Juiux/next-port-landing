@@ -7,10 +7,13 @@ type Data = {
 
 const blogPosts = cachedPosts;
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-): void {
+export default function handler({
+  req,
+  res,
+}: {
+  req: NextApiRequest;
+  res: NextApiResponse<Data>;
+}): void {
   const results = req.query.q
     ? blogPosts.filter((post: any) =>
         post.title.toLowerCase().includes(req.query.q.toString())
