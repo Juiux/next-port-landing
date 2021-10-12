@@ -134,7 +134,7 @@ swapon /dev/nvme0n1p7
 For the root partition, we need to format it as btrfs:
 
 ```bash
-mkfs.btrfs /dev/nvme0n1p7
+mkfs.btrfs /dev/nvme0n1p8
 ```
 
 ## Mounting the partitions
@@ -176,12 +176,12 @@ umount /mnt
 Now to mount them:
 
 ```bash
-mount -o noatime,commit=120,compress=zstd,discard=async,space_cache,subvol=@ /dev/nvme0n1p8 /mnt
+mount -o noatime,commit=120,compress-force=zstd:7,discard=async,space_cache,subvol=@ /dev/nvme0n1p8 /mnt
 mkdir /mnt/{boot,home,var,opt,tmp,.snapshots} # You must create the folders before proceeding
-mount -o noatime,commit=120,compress=zstd,discard=async,space_cache,subvol=@home /dev/nvme0n1p8 /mnt/home
-mount -o noatime,commit=120,compress=zstd,discard=async,space_cache,subvol=@tmp /dev/nvme0n1p8 /mnt/tmp
-mount -o noatime,commit=120,compress=zstd,discard=async,space_cache,subvol=@opt /dev/nvme0n1p8 /mnt/opt
-mount -o noatime,commit=120,compress=zstd,discard=async,space_cache,subvol=@.snapshots /dev/nvme0n1p8 /mnt/.snapshots
+mount -o noatime,commit=120,compress-force=zstd:7,discard=async,space_cache,subvol=@home /dev/nvme0n1p8 /mnt/home
+mount -o noatime,commit=120,compress-force=zstd:7,discard=async,space_cache,subvol=@tmp /dev/nvme0n1p8 /mnt/tmp
+mount -o noatime,commit=120,compress-force=zstd:7,discard=async,space_cache,subvol=@opt /dev/nvme0n1p8 /mnt/opt
+mount -o noatime,commit=120,compress-force=zstd:7,discard=async,space_cache,subvol=@.snapshots /dev/nvme0n1p8 /mnt/.snapshots
 mount -o discard=async,subvol=@var /dev/nvme0n1p8 /mnt/var
 ```
 
@@ -189,7 +189,7 @@ A little review about the options:
 
 - noatime: No access time. Improves performance by not writing time when the file was accessed.
 - commit: Perodic interval (in seconds) in which data is synchronized to permanent storage.
-- compress: Choosing the algorithm for compress.
+- compress-force: Activating forced compression and choosing the algorithm for compression. (Believe me, this is good, no joke)
 - discard=async: Frees unused block from an SSD drive supporting the command. With discard=async, freed extents are not discarded immediately, but grouped together and trimmed later by a separate worker thread, improving commit latency. You can opt out of this if you use HDD.
 - space_cache: Enables kernel to know where block of free space is on a disk to enable it to write data immediately after file creation.
 - subvol: Choosing the subvolume to mount.
