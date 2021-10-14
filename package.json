@@ -37,7 +37,7 @@
     "rehype-toc": "^3.0.2",
     "remark-parse": "^10.0.0",
     "remark-rehype": "^10.0.0",
-    "sass": "^1.42.1",
+    "sass": "^1.43.2",
     "unified": "^10.1.0"
   },
   "devDependencies": {
