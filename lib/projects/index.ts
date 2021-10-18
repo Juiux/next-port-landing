@@ -9,7 +9,7 @@ import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
 import rehypeToc from "rehype-toc";
 import rehypePrism from "rehype-prism-plus";
-import { Post } from "../../interfaces/post";
+import { Post } from "../../interfaces/interfaces";
 
 const postsDirectory = path.join(process.cwd(), "posts", "projects");
 
