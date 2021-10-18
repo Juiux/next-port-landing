@@ -16,5 +16,5 @@ You can report issues by these following rules:
 3. Tell what you do and steps to reproduce it.
 4. Tell what behaviour/output you expect to have.
 5. Tell what behaviour/output you get.
-6. If too long, provide error logs in <https://kat.bin> or similiar services.
+6. If too long, provide error logs in <https://katb.in> or similiar services.
 7. Consider to be polite on your report.
