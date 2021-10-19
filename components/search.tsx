@@ -8,7 +8,10 @@ export default function Search({ onFocusHandler }: SearchProps): JSX.Element {
   const [active, setActive] = useState(false);
   const [results, setResults] = useState([]);
 
-  const searchEndpoint = (query: string): string => `/api/search?q=${query}`;
+  const searchEndpoint = (query: string): string => {
+    query = encodeURIComponent(query);
+    return `/api/search?q=${query}`;
+  };
 
   const onChange = useCallback((event: any): void => {
     const query = event.target.value;
