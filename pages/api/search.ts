@@ -1,23 +1,20 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { cachedPosts } from "../../cache/blog";
-
-type Data = {
-  results: string[];
-};
+import { Data } from "../../interfaces/types";
 
 const blogPosts = cachedPosts;
 
-function checker(query: string) {
+function checker(
+  query: string
+): { id: string; title: string; date: string; desc: string; tag: string[] }[] {
   query = decodeURIComponent(query).toLowerCase();
-  if (query.charAt(0) == '#') {
+  if (query.charAt(0) == "#") {
     query = query.replace("#", "");
-    return blogPosts.filter((post: any) =>
-      post.tag.toString().includes(query)
-    )
+    return blogPosts.filter((post: any) => post.tag.toString().includes(query));
   } else {
     return blogPosts.filter((post: any) =>
       post.title.toLowerCase().includes(query)
-    )
+    );
   }
 }
 
@@ -25,9 +22,7 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ): void {
-  const results = req.query.q
-    ? checker(req.query.q.toString())
-    : blogPosts;
+  const results = req.query.q ? checker(req.query.q.toString()) : blogPosts;
   res.statusCode = 200;
   res.setHeader("Content-Type", "application/json");
   res.end(JSON.stringify({ results }));

@@ -51,7 +51,7 @@ export default function Search({ onFocusHandler }: SearchProps): JSX.Element {
           className="search-term"
           onChange={onChange}
           onFocus={onFocus}
-          placeholder="Search posts..."
+          placeholder="Search posts... (use # to search for tag)"
           value={query}
         />
       </div>
