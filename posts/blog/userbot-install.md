@@ -3,8 +3,8 @@ title: "How to Deploy a Telegram Userbot"
 date: "2021-09-26"
 desc: "Deploy your own userbot with Heroku or locally."
 tag:
-  - "userbot"
   - "telegram"
+  - "userbot"
 ---
 
 # Introduction

@@ -3,8 +3,8 @@ title: "Arch Linux Secure Boot Tutorial"
 date: "2021-09-23"
 desc: "Configure Secure Boot on Arch Linux."
 tag:
-  - "linux"
   - "arch"
+  - "linux"
 ---
 
 # Abstract
