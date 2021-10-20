@@ -1,6 +1,6 @@
 export interface Post {
   title: string;
-  date: Date | string;
+  date: string;
   desc: string;
   tag: string[];
 }
