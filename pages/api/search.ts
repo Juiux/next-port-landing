@@ -1,12 +1,12 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { cachedPosts } from "../../cache/blog";
-import { Data } from "../../interfaces/types";
+import { Data, QueryResult } from "../../interfaces/types";
 
 const blogPosts = cachedPosts;
 
 function checker(
   query: string
-): { id: string; title: string; date: string; desc: string; tag: string[] }[] {
+): QueryResult[] {
   query = decodeURIComponent(query).toLowerCase();
   if (query.charAt(0) == "#") {
     query = query.replace("#", "");

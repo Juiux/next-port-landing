@@ -28,3 +28,11 @@ export type DefaultLayoutProps =
       children: any | undefined;
     }
   | any;
+
+export type QueryResult = {
+    id: string;
+    title: string;
+    date: string;
+    desc: string;
+    tag: string[];
+  };
