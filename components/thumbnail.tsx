@@ -17,18 +17,18 @@ export default function Thumbnail(
   }
 
   // encode special characters used in my post slug to HTML encoding UTF-8 format
-  const processedTitle = titleP == undefined ? "" : encodeURI(titleP);
-  const nameText = encodeURI("Irvan Malik Azantha");
-  const emailText = encodeURI("irvanmalik48@gmail.com");
-  const dateText = dateP == undefined ? encodeURI("-") : encodeURI(dateP);
+  const processedTitle = titleP == undefined ? "" : encodeURIComponent(titleP);
+  const nameText = encodeURIComponent("Irvan Malik Azantha");
+  const emailText = encodeURIComponent("irvanmalik48@gmail.com");
+  const dateText = dateP == undefined ? encodeURIComponent("-") : encodeURIComponent(dateP);
   const colorHex = "66CCCC";
 
   // process it
   const title = `title=${processedTitle}&`;
-  const name = `name=${nameText}`;
-  const email = `email=${emailText}`;
+  const name = `name=${nameText}&`;
+  const email = `email=${emailText}&`;
   const date = `date=${dateText}&`;
-  const color = `color=${colorHex}`;
+  const color = `color=${colorHex}&`;
   const tags = `${processedTags}`;
 
   const all = `https://api.irvanma.live/api/index?${title}${name}${email}${date}${color}${tags}`;
