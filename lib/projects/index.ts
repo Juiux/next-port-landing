@@ -10,6 +10,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeToc from "rehype-toc";
 import rehypePrism from "rehype-prism-plus";
 import { Post } from "../../interfaces/interfaces";
+import { PostData } from "../../interfaces/types";
 
 const postsDirectory = path.join(process.cwd(), "posts", "projects");
 
@@ -49,14 +50,7 @@ export function getAllPostIds(): { params: { id: string } }[] {
   });
 }
 
-export async function getPostData(id: any): Promise<{
-  title: string;
-  date: Date | string;
-  desc: string;
-  tag: string[];
-  id: any;
-  contentHtml: string;
-}> {
+export async function getPostData(id: any): Promise<PostData> {
   const fullPath: string = path.join(postsDirectory, `${id}.md`);
   const fileContents: string = fs.readFileSync(fullPath, "utf-8");
   const matterResult = matter(fileContents);
