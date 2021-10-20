@@ -1,6 +1,6 @@
 export default function Thumbnail(
   titleP: string | undefined,
-  dateP: string | Date | undefined,
+  dateP: string | undefined,
   tagsP: string | string[] | undefined
 ): string {
   // check if tags are string / string[] / undefined
@@ -17,14 +17,18 @@ export default function Thumbnail(
   }
 
   // encode special characters used in my post slug to HTML encoding UTF-8 format
-  const processedTitle = titleP?.replace(/,/g, "%2C")?.replace(/ /g, "%20");
+  const processedTitle = titleP == undefined ? "" : encodeURI(titleP);
+  const nameText = encodeURI("Irvan Malik Azantha");
+  const emailText = encodeURI("irvanmalik48@gmail.com");
+  const dateText = dateP == undefined ? encodeURI("-") : encodeURI(dateP);
+  const colorHex = "66CCCC";
 
   // process it
   const title = `title=${processedTitle}&`;
-  const name = `name=Irvan%20Malik%20Azantha&`;
-  const email = `email=%69%72%76%61%6E%6D%61%6C%69%6B%34%38%40%67%6D%61%69%6C%2E%63%6F%6D&`;
-  const date = dateP == undefined ? "" : `date=${dateP}&`;
-  const color = `color=66CCCC&`;
+  const name = `name=${nameText}`;
+  const email = `email=${emailText}`;
+  const date = `date=${dateText}&`;
+  const color = `color=${colorHex}`;
   const tags = `${processedTags}`;
 
   const all = `https://api.irvanma.live/api/index?${title}${name}${email}${date}${color}${tags}`;
