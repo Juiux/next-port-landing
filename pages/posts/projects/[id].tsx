@@ -1,19 +1,13 @@
 import PostLayout from "../../../components/layouts/post";
 import { getAllPostIds, getPostData } from "../../../lib/projects/index";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { PostData } from "../../../interfaces/types";
 
 export const getStaticProps: GetStaticProps = async ({
   params,
 }: any): Promise<{
   props: {
-    postData: {
-      title: string;
-      date: Date | string;
-      desc: string;
-      tag: string[];
-      id: any;
-      contentHtml: string;
-    };
+    postData: PostData;
   };
 }> => {
   const postData = await getPostData(params.id);
