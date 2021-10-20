@@ -1,14 +1,9 @@
 import DefaultLayout from "./default";
 import Head from "next/head";
 import Comments from "../comments";
+import { PostLayoutProps } from "../../interfaces/types";
 
-export default function PostLayout(props: {
-  tag: any | string | undefined;
-  description: string | undefined;
-  title: string | undefined;
-  date: string | Date | undefined;
-  content: any;
-}): JSX.Element {
+export default function PostLayout(props: PostLayoutProps): JSX.Element {
   return (
     <DefaultLayout
       title={props.title}
