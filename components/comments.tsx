@@ -8,7 +8,7 @@ export default class Comments extends Component {
     this.box = createRef();
   }
 
-  componentDidMount() {
+  componentDidMount(): void {
     let element: HTMLScriptElement = document.createElement("script");
     element.setAttribute("src", "https://utteranc.es/client.js");
     element.setAttribute("crossorigin", "anonymous");

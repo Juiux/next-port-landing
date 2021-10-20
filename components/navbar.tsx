@@ -27,7 +27,7 @@ export default function Navbar(): JSX.Element {
   );
 }
 
-function svgRender() {
+function svgRender(): JSX.Element {
   return (
     <Link href="/">
       <a className="navbar-brand m-0 p-0" aria-label="Home">
@@ -60,7 +60,7 @@ function svgRender() {
   );
 }
 
-function navLinks() {
+function navLinks(): JSX.Element {
   return (
     <ul className="navbar-nav ms-auto mt-0">
       <li className="nav-item">

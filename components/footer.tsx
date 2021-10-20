@@ -27,7 +27,7 @@ export default function Footer(): JSX.Element {
   );
 }
 
-function icons() {
+function icons(): JSX.Element {
   return (
     <p className="fs-1 px-2 mt-0 mb-2">
       <a

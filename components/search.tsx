@@ -8,12 +8,12 @@ export default function Search({ onFocusHandler }: SearchProps): JSX.Element {
   const [active, setActive] = useState(false);
   const [results, setResults] = useState([]);
 
-  const searchEndpoint = (query: string): string => {
+  const searchEndpoint: (query: string) => string = (query: string): string => {
     query = encodeURIComponent(query);
     return `/api/search?q=${query}`;
   };
 
-  const onChange = useCallback((event: any): void => {
+  const onChange: (event: any) => void = useCallback((event: any): void => {
     const query = event.target.value;
     setQuery(query);
     if (query.length) {
@@ -27,12 +27,12 @@ export default function Search({ onFocusHandler }: SearchProps): JSX.Element {
     }
   }, []);
 
-  const onFocus = (): void => {
+  const onFocus: () => void = (): void => {
     setActive(true);
     window.addEventListener("click", onClick);
   };
 
-  const onClick = useCallback((event: any): void => {
+  const onClick: (event: any) => void = useCallback((event: any): void => {
     onFocusHandler(true);
     if (searchRef.current && !searchRef.current.contains(event.target)) {
       setActive(false);

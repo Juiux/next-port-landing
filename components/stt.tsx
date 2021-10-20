@@ -5,7 +5,7 @@ export default function Scroll(): JSX.Element {
   const [isVisible, setIsVisible]: [boolean, Dispatch<SetStateAction<any>>] =
     useState(false);
   useEffect((): (() => void) => {
-    const toggleVisibility = () => {
+    const toggleVisibility: () => void = (): void => {
       if (window.pageYOffset > 200) {
         setIsVisible(true);
       } else {
@@ -23,7 +23,7 @@ export default function Scroll(): JSX.Element {
   );
 }
 
-function visible(isVisible: boolean) {
+function visible(isVisible: boolean): false | JSX.Element {
   return (
     isVisible && (
       <div className="scroll-cursor transitioning rounded-3 hover-shadow">
@@ -35,7 +35,7 @@ function visible(isVisible: boolean) {
   );
 }
 
-function notVisible(isVisible: boolean) {
+function notVisible(isVisible: boolean): false | JSX.Element {
   return (
     !isVisible && (
       <div className="scroll-cursor leaving rounded-3">
