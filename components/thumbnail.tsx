@@ -20,7 +20,8 @@ export default function Thumbnail(
   const processedTitle = titleP == undefined ? "" : encodeURIComponent(titleP);
   const nameText = encodeURIComponent("Irvan Malik Azantha");
   const emailText = encodeURIComponent("irvanmalik48@gmail.com");
-  const dateText = dateP == undefined ? encodeURIComponent("-") : encodeURIComponent(dateP);
+  const dateText =
+    dateP == undefined ? encodeURIComponent("-") : encodeURIComponent(dateP);
   const colorHex = "66CCCC";
 
   // process it

@@ -30,9 +30,9 @@ export type DefaultLayoutProps =
   | any;
 
 export type QueryResult = {
-    id: string;
-    title: string;
-    date: string;
-    desc: string;
-    tag: string[];
-  };
+  id: string;
+  title: string;
+  date: string;
+  desc: string;
+  tag: string[];
+};

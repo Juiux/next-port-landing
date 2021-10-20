@@ -4,9 +4,7 @@ import { Data, QueryResult } from "../../interfaces/types";
 
 const blogPosts = cachedPosts;
 
-function checker(
-  query: string
-): QueryResult[] {
+function checker(query: string): QueryResult[] {
   query = decodeURIComponent(query).toLowerCase();
   if (query.charAt(0) == "#") {
     query = query.replace("#", "");
