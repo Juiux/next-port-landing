@@ -21,7 +21,6 @@
   "author": "Irvan Malik",
   "license": "MIT",
   "dependencies": {
-    "@next/bundle-analyzer": "^11.1.2",
     "gray-matter": "^4.0.3",
     "mdb-ui-kit": "^3.9.0",
     "next": "^11.1.2",
@@ -41,6 +40,7 @@
     "unified": "^10.1.0"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^11.1.2",
     "@types/react": "^17.0.30",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.2",
