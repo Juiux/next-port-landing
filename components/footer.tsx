@@ -5,6 +5,7 @@ import {
   Mail,
   Linkedin,
   Instagram,
+  Twitter,
 } from "react-feather";
 
 export default function Footer(): JSX.Element {
@@ -45,11 +46,18 @@ function icons(): JSX.Element {
         <Facebook />
       </a>
       <a
-        aria-label="Facebook"
+        aria-label="Instagram"
         href="https://instagram.com/irvann48_"
         className="text-white ripple px-lg-3 px-2"
       >
         <Instagram />
+      </a>
+      <a
+        aria-label="Twitter"
+        href="https://twitter.com/irvanmalik48"
+        className="text-white ripple px-lg-3 px-2"
+      >
+        <Twitter />
       </a>
       <a
         aria-label="Telegram"
