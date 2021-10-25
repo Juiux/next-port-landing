@@ -4,6 +4,7 @@ import { getSortedPostsData } from "../lib/blog/index";
 import { GitBranch } from "react-feather";
 import { GetStaticProps, NextPage } from "next";
 import Waves from "../components/waves";
+import { Info, BookOpen } from "react-feather";
 
 const Index: NextPage = ({ allPostsData }: any): JSX.Element => {
   return (
@@ -34,7 +35,12 @@ const Index: NextPage = ({ allPostsData }: any): JSX.Element => {
       </section>
       <Waves />
       <article className="container card floatcard px-4 pt-2 pb-4">
-        <p className="h4 mb-4 text-center mt-3">Description</p>
+        <p className="h4 mb-4 mt-3 d-flex justify-content-between align-items-center">
+          <span>Description</span>
+          <span>
+            <Info />
+          </span>
+        </p>
         <blockquote>Keep it simple, stupid.</blockquote>
         <p className="m-0 p-0">
           Hello, my name&apos;s Irvan Malik Azantha. I&apos;m a 18 y&apos;o boy
@@ -43,7 +49,12 @@ const Index: NextPage = ({ allPostsData }: any): JSX.Element => {
         </p>
       </article>
       <section className="container mt-3 mb-5 card floatcard-no-mt px-3 pb-4">
-        <p className="h4 mb-4 mt-4 text-center">Posts</p>
+        <p className="h4 px-2 mb-4 mt-4 d-flex justify-content-between align-items-center">
+          <span>Posts</span>
+          <span>
+            <BookOpen />
+          </span>
+        </p>
         <div className="row gx-3 gy-3">
           {allPostsData.map(
             ({ id, title, date, tag, desc }: any, index: any): JSX.Element => (
