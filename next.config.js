@@ -29,7 +29,7 @@ const custHeaders = [
 
 module.exports = withPWA({
   target: "serverless",
-  basePath: "/",
+  basePath: "",
   compress: true,
   reactStrictMode: true,
   pwa: {
