@@ -61,7 +61,7 @@ const Index: NextPage = ({ allPostsData }: any): JSX.Element => {
               <div key={index} className="col-12 col-sm-6">
                 <Link href={`/posts/blog/${id}`}>
                   <a className="text-white">
-                    <div className="card hover-shadow rounded-3 h-100">
+                    <div className="card post hover-shadow rounded-3 h-100">
                       <div className="card-header h6">
                         <p className="mt-2 mb-2">{title}</p>
                       </div>
