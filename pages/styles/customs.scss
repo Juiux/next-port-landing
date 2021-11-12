@@ -7,34 +7,14 @@ body {
 
 .card {
   background-color: $card;
+  &.post {
+    transition: all ease-in-out 200ms;
+    &:hover {
+      background-color: $dark-3;
+    }
+  }
 }
 
-.container,
-.container-fluid,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl,
-.container-xxl {
-  width: 100%;
-  padding-right: var(--mdb-gutter-x, 0.75rem);
-  padding-left: var(--mdb-gutter-x, 0.75rem);
-  margin-right: auto;
-  margin-left: auto;
-}
-@media (min-width: 576px) {
-  .container,
-  .container-sm {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container,
-  .container-md,
-  .container-sm {
-    max-width: 720px;
-  }
-}
 @media (min-width: 992px) {
   .container,
   .container-lg,
@@ -73,15 +53,19 @@ body {
   bottom: 16px;
   right: 16px;
   padding: 0.7rem;
-  background-color: #30303060;
+  background-color: $dark-cur;
   backdrop-filter: blur(8px);
-  color: white;
+  color: $light;
   transition: all ease-in-out 250ms;
   animation: 250ms fadeOut;
   &:hover {
     background-color: $info;
     color: $card;
   }
+}
+
+.text-muted {
+  color: $light-1 !important;
 }
 
 .transitioning {
