@@ -107,7 +107,7 @@ AddHandler php-script .php
 - Place this at the end of the `Include` list:
 
 ```php
-Include conf/extra/php_module.conf
+include conf / extra / php_module . conf;
 ```
 
 - Restart `httpd.service` by issuing `sudo systemctl restart httpd.service` command.
@@ -133,7 +133,7 @@ Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
 2. Include the file in `/etc/httpd/conf/httpd.conf`:
 
 ```php
-Include conf/extra/phpmyadmin.conf
+include conf / extra / phpmyadmin . conf;
 ```
 
 3. To allow the usage of the phpMyAdmin setup script (e.g. <http://localhost/phpmyadmin/setup>), make sure `/usr/share/webapps/phpMyAdmin` is writable for the http user:
