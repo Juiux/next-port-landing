@@ -1,11 +1,34 @@
-$primary: #69c;
-$secondary: #c9c;
-$success: #9c9;
-$info: #6cc;
-$warning: #fc6;
-$danger: #f2777a;
-$light: #fff;
-$dark: #262626;
-$card: #333;
-$nav: #262626ea;
-$cur: #30303060;
+$dark-5: #7c869a;
+$dark-4: #4c566a;
+$dark-3: #434c5e;
+$dark-2: #3b4252;
+$dark-1: #2e3440;
+$dark-nav: #2e3440cc;
+$dark-cur: #3b4252cc;
+
+$light-3: #eceff4;
+$light-2: #e5e9f0;
+$light-1: #d8dee9;
+
+$frost-4: #8fbcbb;
+$frost-3: #88c0d0;
+$frost-2: #81a1c1;
+$frost-1: #5e81ac;
+
+$aurora-red: #bf616a;
+$aurora-orange: #d08770;
+$aurora-yellow: #ebcb8b;
+$aurora-green: #a3be8c;
+$aurora-purple: #b48ead;
+
+$primary: $frost-3;
+$secondary: $aurora-purple;
+$success: $aurora-green;
+$info: $frost-3;
+$warning: $aurora-yellow;
+$danger: $aurora-red;
+$light: $light-3;
+$dark: $dark-1;
+$card: $dark-2;
+$nav: $dark-nav;
+$cur: $dark-cur;
