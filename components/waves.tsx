@@ -7,11 +7,11 @@ export default function Waves(): JSX.Element {
     color4: string;
     color5: string;
   } = {
-    color1: "#66cccc",
-    color2: "#4cb2be",
-    color3: "#3798ae",
-    color4: "#297f9c",
-    color5: "#226688",
+    color1: "#88c0d0",
+    color2: "#78b1c8",
+    color3: "#6ca1c0",
+    color4: "#6391b7",
+    color5: "#5e81ac",
   };
 
   return (
