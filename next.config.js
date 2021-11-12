@@ -30,6 +30,7 @@ const custHeaders = [
 module.exports = withPWA({
   compress: true,
   reactStrictMode: true,
+  swcMinify: true,
   pwa: {
     dest: "public",
     disable: process.env.NODE_ENV === "development",
