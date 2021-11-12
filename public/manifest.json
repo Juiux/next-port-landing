@@ -1,8 +1,8 @@
 {
   "name": "irvanma.live",
   "short_name": "IrvanMA",
-  "theme_color": "#202020",
-  "background_color": "#303030",
+  "theme_color": "#2e3440",
+  "background_color": "#2e3440",
   "display": "minimal-ui",
   "scope": "/",
   "start_url": "/",
