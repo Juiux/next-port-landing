@@ -1,0 +1,3 @@
+*.tsx linguist-language=ts
+*.js linguist-language=ts
+*.jsx linguist-language=ts
