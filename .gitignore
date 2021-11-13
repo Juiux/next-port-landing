@@ -8,3 +8,5 @@ npm-debug.log*
 /public/sw.js
 /public/fallback-*
 /public/workbox-*
+/public/sitemap.xml
+/public/robots.txt
