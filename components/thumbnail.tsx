@@ -22,7 +22,7 @@ export default function Thumbnail(
   const emailText = encodeURIComponent("irvanmalik48@gmail.com");
   const dateText =
     dateP == undefined ? encodeURIComponent("-") : encodeURIComponent(dateP);
-  const colorHex = "66CCCC";
+  const colorHex = "88c0d0";
 
   // process it
   const title = `title=${processedTitle}&`;
