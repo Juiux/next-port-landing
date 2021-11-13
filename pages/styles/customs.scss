@@ -181,3 +181,8 @@ body {
   color: $light;
   background-color: $card;
 }
+
+::placeholder {
+  color: $dark-5;
+  opacity: 1;
+}
