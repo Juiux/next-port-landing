@@ -7,8 +7,8 @@
     "lint": "next lint",
     "dev": "next",
     "start": "next start",
-    "cache": "node ./cache/cache.js",
-    "build": "npm run cache && next build",
+    "prebuild": "node ./cache/cache.js",
+    "build": "next build",
     "postbuild": "next-sitemap"
   },
   "keywords": [
