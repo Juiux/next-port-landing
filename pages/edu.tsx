@@ -32,21 +32,41 @@ const Jadwal: NextPage = (): JSX.Element => {
         <ul className="list-group">
           <li className="list-group-item">
             Algoritma dan Pemrograman III (08:00 - 10:30)
+            {" "}
+            <a href="https://elearning211.unsri.ac.id/mod/attendance/view.php?id=153939">
+              (to attendance)
+            </a>
           </li>
           <li className="list-group-item">
             Pemrograman Web II (10:30 - 13:30)
+            {" "}
+            <a href="https://elearning211.unsri.ac.id/mod/attendance/view.php?id=18758">
+              (to attendance)
+            </a>
           </li>
         </ul>
         <h2>Selasa</h2>
         <ul className="list-group">
           <li className="list-group-item">
             Praktikum Struktur Data (08:00 - 10:30)
+            {" "}
+            <a href="https://elearning211.unsri.ac.id/mod/attendance/view.php?id=125397">
+              (to attendance)
+            </a>
           </li>
           <li className="list-group-item">
             Probabilitas dan Statistika (10:30 - 13:30)
+            {" "}
+            <a href="https://elearning211.unsri.ac.id/mod/attendance/view.php?id=125435">
+              (to attendance)
+            </a>
           </li>
           <li className="list-group-item">
             Praktikum Algoritma dan Pemrograman III (13:30 - 15:30)
+            {" "}
+            <a href="https://elearning211.unsri.ac.id/mod/attendance/view.php?id=154065">
+              (to attendance)
+            </a>
           </li>
         </ul>
         <h2>Rabu</h2>
@@ -57,16 +77,29 @@ const Jadwal: NextPage = (): JSX.Element => {
           </li>
           <li className="list-group-item">
             Struktur Diskrit II (13:30 - 15:30)
+            {" "}
+            <a href="https://elearning211.unsri.ac.id/mod/attendance/view.php?id=121110">
+              (to attendance)
+            </a>
           </li>
         </ul>
         <h2>Kamis</h2>
         <ul className="list-group">
-          <li className="list-group-item">Struktur Data (10:30 - 13:30)</li>
+          <li className="list-group-item">Struktur Data (10:30 - 13:30)
+          {" "}
+            <a href="https://elearning211.unsri.ac.id/mod/attendance/view.php?id=125389">
+              (to attendance)
+            </a>
+          </li>
         </ul>
         <h2>Jum&apos;at</h2>
         <ul className="list-group">
           <li className="list-group-item">
             Sistem Informasi (13:30 - selesai)
+            {" "}
+            <a href="https://classroom.google.com/u/0/c/Mzc5MTE4NDY3NTY2">
+              (to attendance)
+            </a>
           </li>
         </ul>
         <blockquote>Note: Daftar dapat berubah.</blockquote>
