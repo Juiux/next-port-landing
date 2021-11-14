@@ -1,7 +1,7 @@
 import DefaultLayout from "./default";
 import Head from "next/head";
-import Comments from "../comments";
 import { PostLayoutProps } from "../../interfaces/types";
+import { Giscus } from "@giscus/react";
 
 export default function PostLayout(props: PostLayoutProps): JSX.Element {
   return (
@@ -25,7 +25,16 @@ export default function PostLayout(props: PostLayoutProps): JSX.Element {
           <h1>Table of Contents</h1>
           <div dangerouslySetInnerHTML={{ __html: props.content }} />
           <h1>Comments</h1>
-          <Comments />
+          <Giscus
+            repo="irvanmalik48/blog"
+            repoId="MDEwOlJlcG9zaXRvcnkzMjQ5MTA0MTE="
+            category="Comments"
+            categoryId="DIC_kwDOE129S84B_1u5"
+            mapping="pathname"
+            reactionsEnabled="0"
+            emitMetadata="0"
+            theme="transparent_dark"
+          />
         </article>
       </div>
     </DefaultLayout>
