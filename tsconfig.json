@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "jsx": "preserve",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -13,7 +14,15 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "incremental": true
+    "incremental": true,
+    "paths": {
+      "@lib/*": ["lib/*"],
+      "@components/*": ["components/*"],
+      "@styles/*": ["pages/styles/*"],
+      "@interfaces/*": ["interfaces/*"],
+      "@cache/*": ["cache/*"],
+      "@layouts/*": ["components/layouts/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
   "exclude": ["node_modules", "**/*.js"]
