@@ -1,6 +1,6 @@
-import DefaultLayout from "./default";
+import DefaultLayout from "@layouts/default";
 import Head from "next/head";
-import { PostLayoutProps } from "../../interfaces/types";
+import { PostLayoutProps } from "@interfaces/types";
 import { Giscus } from "@giscus/react";
 
 export default function PostLayout(props: PostLayoutProps): JSX.Element {

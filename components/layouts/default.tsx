@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Navbar from "../navbar";
-import Footer from "../footer";
+import Navbar from "@components/navbar";
+import Footer from "@components/footer";
+import Scroll from "@components/stt";
 import Script from "next/script";
-import Scroll from "../stt";
-import Thumbnail from "../thumbnail";
-import { DefaultLayoutProps } from "../../interfaces/types";
+import Thumbnail from "@components/thumbnail";
+import { DefaultLayoutProps } from "@interfaces/types";
 
 export default function DefaultLayout(props: DefaultLayoutProps): JSX.Element {
   return (
