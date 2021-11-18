@@ -1,9 +1,9 @@
-import DefaultLayout from "../components/layouts/default";
+import DefaultLayout from "@layouts/default";
 import Link from "next/link";
-import { getSortedPostsData } from "../lib/blog/index";
+import { getSortedPostsData } from "@lib/blog/index";
 import { GitBranch } from "react-feather";
 import { GetStaticProps, NextPage } from "next";
-import Waves from "../components/waves";
+import Waves from "@components/waves";
 import { Info, BookOpen } from "react-feather";
 
 const Index: NextPage = ({ allPostsData }: any): JSX.Element => {

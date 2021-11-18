@@ -1,6 +1,6 @@
 import { NextPage } from "next";
-import DefaultLayout from "../components/layouts/default";
-import Waves from "../components/waves";
+import DefaultLayout from "@layouts/default";
+import Waves from "@components/waves";
 import { Info, Heart, Users, Code, Settings } from "react-feather";
 
 const About: NextPage = (): JSX.Element => {

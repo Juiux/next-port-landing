@@ -1,6 +1,6 @@
 import { NextPage } from "next";
-import DefaultLayout from "../components/layouts/default";
-import Waves from "../components/waves";
+import DefaultLayout from "@layouts/default";
+import Waves from "@components/waves";
 
 const Jadwal: NextPage = (): JSX.Element => {
   return (

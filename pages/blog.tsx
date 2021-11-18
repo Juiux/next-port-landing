@@ -1,10 +1,10 @@
-import DefaultLayout from "../components/layouts/default";
+import DefaultLayout from "@layouts/default";
 import Link from "next/link";
 import { GetStaticProps, NextPage } from "next";
 import { useState } from "react";
-import { getSortedPostsData } from "../lib/blog/index";
-import Search from "../components/search";
-import Waves from "../components/waves";
+import { getSortedPostsData } from "@lib/blog/index";
+import Search from "@components/search";
+import Waves from "@components/waves";
 
 const Blog: NextPage = ({ allPostsData }: any) => {
   const [searchActive, setSearchActive] = useState<boolean>(false);
