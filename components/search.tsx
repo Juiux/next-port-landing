@@ -1,6 +1,6 @@
 import { MutableRefObject, useCallback, useRef, useState } from "react";
 import Link from "next/link";
-import { SearchProps } from "../interfaces/interfaces";
+import { SearchProps } from "@interfaces/interfaces";
 
 export default function Search({ onFocusHandler }: SearchProps): JSX.Element {
   const searchRef: MutableRefObject<HTMLInputElement | null> = useRef(null);
