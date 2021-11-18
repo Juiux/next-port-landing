@@ -9,8 +9,8 @@ import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
 import rehypeToc from "rehype-toc";
 import rehypePrism from "rehype-prism-plus";
-import { Post } from "../../interfaces/interfaces";
-import { PostData } from "../../interfaces/types";
+import { Post } from "@interfaces/interfaces";
+import { PostData } from "@interfaces/types";
 
 const postsDirectory: string = path.join(process.cwd(), "posts", "blog");
 
