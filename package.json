@@ -38,7 +38,7 @@
     "remark-parse": "^10.0.0",
     "remark-rehype": "^10.0.0",
     "sass": "^1.43.4",
-    "unified": "^10.1.0"
+    "unified": "^10.1.1"
   },
   "devDependencies": {
     "@types/react": "^17.0.35",
