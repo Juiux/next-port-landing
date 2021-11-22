@@ -70,6 +70,9 @@ const About: NextPage = (): JSX.Element => {
           <li className="list-group-item">
             Contributor and Moderator at Wibutech
           </li>
+          <li className="list-group-item">
+            Member of Web Development Team at GDSC
+          </li>
           <li className="list-group-item">Staff at HMIF</li>
         </ul>
       </section>
