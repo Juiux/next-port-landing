@@ -39,7 +39,6 @@ module.exports = withPWA({
     fallbacks: {
       document: "/offline",
     },
-    buildExcludes: [/middleware-manifest\.json$/],
   },
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
