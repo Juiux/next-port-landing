@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { cachedPosts } from "@cache/blog";
+import { cachedPosts } from "@misc/blog";
 import { Data, QueryResult } from "@interfaces/types";
 
 const blogPosts = cachedPosts;
