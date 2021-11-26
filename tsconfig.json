@@ -20,7 +20,7 @@
       "@components/*": ["components/*"],
       "@styles/*": ["pages/styles/*"],
       "@interfaces/*": ["interfaces/*"],
-      "@cache/*": ["cache/*"],
+      "@misc/*": ["misc/*"],
       "@layouts/*": ["components/layouts/*"]
     }
   },
