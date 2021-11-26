@@ -9,7 +9,7 @@ Basically my website. Nothing so special about it.
 - Made from Next.js, fully PWA compliant.
 - Using stripped down customized MDBootstrap.
 - Small bundle sizes (40KB-ish).
-- Automatically generated metadata images.
+- Automatically generated metadata images and sitemap.
 
 ## Screenshots
 
