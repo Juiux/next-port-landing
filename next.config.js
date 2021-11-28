@@ -1,31 +1,35 @@
 const withPWA = require("next-pwa");
 const runtimeCaching = require("next-pwa/cache");
-const custHeaders = [
-  {
-    key: "X-DNS-Prefetch-Control",
-    value: "on",
-  },
-  {
-    key: "X-XSS-Protection",
-    value: "1; mode=block",
-  },
-  {
-    key: "Content-Security-Policy",
-    value: "default-src 'self' 'unsafe-inline' https://*",
-  },
-  {
-    key: "X-Content-Type-Options",
-    value: "nosniff",
-  },
-  {
-    key: "X-Frame-Options",
-    value: "DENY",
-  },
-  {
-    key: "Accept-Encoding",
-    value: "br gzip",
-  },
-];
+
+const custHeaders = {
+  source: "/(.*)",
+  headers: [
+    {
+      key: "X-DNS-Prefetch-Control",
+      value: "on",
+    },
+    {
+      key: "X-XSS-Protection",
+      value: "1; mode=block",
+    },
+    {
+      key: "Content-Security-Policy",
+      value: "default-src 'self' 'unsafe-inline' https://*",
+    },
+    {
+      key: "X-Content-Type-Options",
+      value: "nosniff",
+    },
+    {
+      key: "X-Frame-Options",
+      value: "DENY",
+    },
+    {
+      key: "Accept-Encoding",
+      value: "br gzip",
+    },
+  ],
+};
 
 module.exports = withPWA({
   compress: true,
@@ -51,11 +55,6 @@ module.exports = withPWA({
     return config;
   },
   async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: custHeaders,
-      },
-    ];
+    return [custHeaders];
   },
 });
