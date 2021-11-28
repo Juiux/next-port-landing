@@ -10,3 +10,4 @@ npm-debug.log*
 /public/workbox-*
 /public/sitemap.xml
 /public/robots.txt
+/public/rss.xml
