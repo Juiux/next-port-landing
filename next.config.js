@@ -43,6 +43,9 @@ module.exports = withPWA({
     fallbacks: {
       document: "/offline",
     },
+    publicExcludes: [
+      "!rss.xml"
+    ],
   },
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
