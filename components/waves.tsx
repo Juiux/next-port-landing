@@ -1,12 +1,8 @@
+import { WaveAccent } from "@interfaces/interfaces";
+
 export default function Waves(): JSX.Element {
   // accent variables, from darkest to brightest colors
-  const accents: {
-    color1: string;
-    color2: string;
-    color3: string;
-    color4: string;
-    color5: string;
-  } = {
+  const accents: WaveAccent = {
     color1: "#88c0d0",
     color2: "#78b1c8",
     color3: "#6ca1c0",
