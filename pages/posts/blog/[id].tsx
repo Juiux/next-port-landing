@@ -1,7 +1,9 @@
 import PostLayout from "@layouts/post";
-import { getAllPostIds, getPostData } from "@lib/blog/index";
+import { getAllPostIds, getPostData } from "@lib/index";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { PostData } from "@interfaces/types";
+
+const path = "blog";
 
 export const getStaticProps: GetStaticProps = async ({
   params,
@@ -10,7 +12,7 @@ export const getStaticProps: GetStaticProps = async ({
     postData: PostData;
   };
 }> => {
-  const postData = await getPostData(params.id);
+  const postData = await getPostData(path, params.id);
   return {
     props: {
       postData,
@@ -22,7 +24,7 @@ export const getStaticPaths: GetStaticPaths = async (): Promise<{
   paths: { params: { id: string } }[];
   fallback: false;
 }> => {
-  const paths = getAllPostIds();
+  const paths = getAllPostIds(path);
   return {
     paths,
     fallback: false,
