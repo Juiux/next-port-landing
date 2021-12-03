@@ -1,5 +1,5 @@
 import fs from "fs";
-import path from "path";
+import { join } from "path";
 import matter from "gray-matter";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
@@ -12,13 +12,17 @@ import rehypePrism from "rehype-prism-plus";
 import { Post } from "@interfaces/interfaces";
 import { PostData } from "@interfaces/types";
 
-const postsDirectory: string = path.join(process.cwd(), "posts", "blog");
+export function getPostsDirectory(path: string): string {
+  const postsDirectory: string = join(process.cwd(), "posts", path);
+  return postsDirectory;
+}
 
-export function getSortedPostsData(): any[] {
+export function getSortedPostsData(path: string): any[] {
+  const postsDirectory = getPostsDirectory(path);
   const fileNames: string[] = fs.readdirSync(postsDirectory);
   const allPostsData: Post[] = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, "");
-    const fullPath = path.join(postsDirectory, fileName);
+    const fullPath = join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf-8");
     const matterResult = matter(fileContents);
 
@@ -40,7 +44,8 @@ export function sortPostData(allPostsData: any[]): any[] {
   });
 }
 
-export function getAllPostIds(): { params: { id: string } }[] {
+export function getAllPostIds(path: string): { params: { id: string } }[] {
+  const postsDirectory = getPostsDirectory(path);
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {
     return {
@@ -51,8 +56,9 @@ export function getAllPostIds(): { params: { id: string } }[] {
   });
 }
 
-export async function getPostData(id: any): Promise<PostData> {
-  const fullPath: string = path.join(postsDirectory, `${id}.md`);
+export async function getPostData(path: string, id: any): Promise<PostData> {
+  const postsDirectory = getPostsDirectory(path);
+  const fullPath: string = join(postsDirectory, `${id}.md`);
   const fileContents: string = fs.readFileSync(fullPath, "utf-8");
   const matterResult = matter(fileContents);
   const processedContent = await unified()
