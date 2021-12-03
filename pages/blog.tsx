@@ -2,9 +2,11 @@ import DefaultLayout from "@layouts/default";
 import Link from "next/link";
 import { GetStaticProps, NextPage } from "next";
 import { useState } from "react";
-import { getSortedPostsData } from "@lib/blog/index";
+import { getSortedPostsData } from "@lib/index";
 import Search from "@components/search";
 import Waves from "@components/waves";
+
+const path = "blog";
 
 const Blog: NextPage = ({ allPostsData }: any) => {
   const [searchActive, setSearchActive] = useState<boolean>(false);
@@ -78,7 +80,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = getSortedPostsData(path);
   return {
     props: {
       allPostsData,
