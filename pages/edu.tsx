@@ -37,10 +37,7 @@ const Jadwal: NextPage = (): JSX.Element => {
             </a>
           </li>
           <li className="list-group-item">
-            Pemrograman Web II (10:30 - 13:30){" "}
-            <a href="https://elearning211.unsri.ac.id/mod/attendance/view.php?id=18758">
-              (to attendance)
-            </a>
+            <s>Pemrograman Web II (10:30 - 13:30)</s> (finished)
           </li>
         </ul>
         <h2>Selasa</h2>
@@ -52,10 +49,7 @@ const Jadwal: NextPage = (): JSX.Element => {
             </a>
           </li>
           <li className="list-group-item">
-            Probabilitas dan Statistika (10:30 - 13:30){" "}
-            <a href="https://elearning211.unsri.ac.id/mod/attendance/view.php?id=125435">
-              (to attendance)
-            </a>
+            <s>Probabilitas dan Statistika (10:30 - 13:30)</s> (finished)
           </li>
           <li className="list-group-item">
             Praktikum Algoritma dan Pemrograman III (13:30 - 15:30){" "}
@@ -71,10 +65,7 @@ const Jadwal: NextPage = (): JSX.Element => {
             Praktikum Basis Data (10:30 - 13:30)
           </li>
           <li className="list-group-item">
-            Struktur Diskrit II (13:30 - 15:30){" "}
-            <a href="https://elearning211.unsri.ac.id/mod/attendance/view.php?id=121110">
-              (to attendance)
-            </a>
+            <s>Struktur Diskrit II (13:30 - 15:30)</s> (finished)
           </li>
         </ul>
         <h2>Kamis</h2>
@@ -95,7 +86,6 @@ const Jadwal: NextPage = (): JSX.Element => {
             </a>
           </li>
         </ul>
-        <blockquote>Note: Daftar dapat berubah.</blockquote>
       </section>
     </DefaultLayout>
   );
