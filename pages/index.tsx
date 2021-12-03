@@ -1,10 +1,12 @@
 import DefaultLayout from "@layouts/default";
 import Link from "next/link";
-import { getSortedPostsData } from "@lib/blog/index";
+import { getSortedPostsData } from "@lib/index";
 import { GitBranch } from "react-feather";
 import { GetStaticProps, NextPage } from "next";
 import Waves from "@components/waves";
 import { Info, BookOpen } from "react-feather";
+
+const paths = ["blog"];
 
 const Index: NextPage = ({ allPostsData }: any): JSX.Element => {
   return (
@@ -101,7 +103,7 @@ const Index: NextPage = ({ allPostsData }: any): JSX.Element => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData().splice(0, 4);
+  const allPostsData = getSortedPostsData(paths[0]).splice(0, 4);
   return {
     props: {
       allPostsData,
