@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import DefaultLayout from "@layouts/default";
+import DefaultLayout from "src/components/layouts/default";
 
 const Index: NextPage = (): JSX.Element => {
   return (
