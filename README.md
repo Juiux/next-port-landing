@@ -11,11 +11,6 @@ Basically my website. Nothing so special about it.
 - Small bundle sizes (40KB-ish).
 - Automatically generated metadata images, sitemap, and RSS feed.
 
-## Screenshots
-
-![SS 1](https://github.com/irvanmalik48/blog/blob/main/repoimg/index.png)
-![SS 2](https://github.com/irvanmalik48/blog/blob/main/repoimg/post.png)
-
 ## Using as Template
 
 1. Clone the repository:
