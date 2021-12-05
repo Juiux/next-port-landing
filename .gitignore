@@ -1,5 +1,5 @@
 /node_modules
-/misc/blog.ts
+/src/misc/blog.ts
 /.vscode
 /.next
 npm-debug.log*
