@@ -35,4 +35,10 @@ export type QueryResult = {
   date: string;
   desc: string;
   tag: string[];
+} | {
+  id: string;
+  title?: undefined;
+  date?: undefined;
+  desc?: undefined;
+  tag?: undefined;
 };
