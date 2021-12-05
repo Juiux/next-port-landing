@@ -7,7 +7,7 @@
     "lint": "next lint",
     "dev": "next",
     "start": "next start",
-    "prebuild": "node ./misc/cache.js",
+    "prebuild": "node ./src/misc/cache.js",
     "build": "next build",
     "postbuild": "next-sitemap"
   },
