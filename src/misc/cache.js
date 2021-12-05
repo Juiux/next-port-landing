@@ -66,12 +66,16 @@ function stringifyPostData() {
 }
 
 function createBlogCache(filename) {
-  fs.writeFile(`./src/misc/${filename}.ts`, stringifyPostData(), function (err) {
-    if (err) {
-      console.log(err);
+  fs.writeFile(
+    `./src/misc/${filename}.ts`,
+    stringifyPostData(),
+    function (err) {
+      if (err) {
+        console.log(err);
+      }
+      console.log("Blog cache file written.");
     }
-    console.log("Blog cache file written.");
-  });
+  );
 }
 
 function createRss() {

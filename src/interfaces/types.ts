@@ -29,16 +29,18 @@ export type DefaultLayoutProps =
     }
   | any;
 
-export type QueryResult = {
-  id: string;
-  title: string;
-  date: string;
-  desc: string;
-  tag: string[];
-} | {
-  id: string;
-  title?: undefined;
-  date?: undefined;
-  desc?: undefined;
-  tag?: undefined;
-};
+export type QueryResult =
+  | {
+      id: string;
+      title: string;
+      date: string;
+      desc: string;
+      tag: string[];
+    }
+  | {
+      id: string;
+      title?: undefined;
+      date?: undefined;
+      desc?: undefined;
+      tag?: undefined;
+    };

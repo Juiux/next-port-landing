@@ -36,7 +36,10 @@ export default function PostLayout(props: PostLayoutProps): JSX.Element {
             theme="transparent_dark"
           />
           <p className="text-center mt-4 mb-1 pt-2 pb-0 py-2 my-0 text-nord-footer">
-            This post is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.O</a>
+            This post is licensed under{" "}
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+              CC BY-NC-SA 4.O
+            </a>
           </p>
         </article>
       </div>
