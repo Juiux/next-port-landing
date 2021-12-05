@@ -66,7 +66,7 @@ function stringifyPostData() {
 }
 
 function createBlogCache(filename) {
-  fs.writeFile(`./misc/${filename}.ts`, stringifyPostData(), function (err) {
+  fs.writeFile(`./src/misc/${filename}.ts`, stringifyPostData(), function (err) {
     if (err) {
       console.log(err);
     }
