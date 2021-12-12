@@ -31,10 +31,7 @@ const Jadwal: NextPage = (): JSX.Element => {
         <h2>Senin</h2>
         <ul className="list-group">
           <li className="list-group-item">
-            Algoritma dan Pemrograman III (08:00 - 10:30){" "}
-            <a href="https://elearning211.unsri.ac.id/mod/attendance/view.php?id=153939">
-              (to attendance)
-            </a>
+            <s>Algoritma dan Pemrograman III (08:00 - 10:30) </s>(finished)
           </li>
           <li className="list-group-item">
             <s>Pemrograman Web II (10:30 - 13:30)</s> (finished)
@@ -43,10 +40,7 @@ const Jadwal: NextPage = (): JSX.Element => {
         <h2>Selasa</h2>
         <ul className="list-group">
           <li className="list-group-item">
-            Praktikum Struktur Data (08:00 - 10:30){" "}
-            <a href="https://elearning211.unsri.ac.id/mod/attendance/view.php?id=125397">
-              (to attendance)
-            </a>
+            <s>Praktikum Struktur Data (08:00 - 10:30) </s>(finished)
           </li>
           <li className="list-group-item">
             <s>Probabilitas dan Statistika (10:30 - 13:30)</s> (finished)
@@ -71,19 +65,13 @@ const Jadwal: NextPage = (): JSX.Element => {
         <h2>Kamis</h2>
         <ul className="list-group">
           <li className="list-group-item">
-            Struktur Data (10:30 - 13:30){" "}
-            <a href="https://elearning211.unsri.ac.id/mod/attendance/view.php?id=125389">
-              (to attendance)
-            </a>
+            <s>Struktur Data (10:30 - 13:30) </s>(finished)
           </li>
         </ul>
         <h2>Jum&apos;at</h2>
         <ul className="list-group">
           <li className="list-group-item">
-            Sistem Informasi (13:30 - selesai){" "}
-            <a href="https://classroom.google.com/u/0/c/Mzc5MTE4NDY3NTY2">
-              (to attendance)
-            </a>
+            <s>Sistem Informasi (13:30 - selesai) </s>(finished)
           </li>
         </ul>
       </section>
