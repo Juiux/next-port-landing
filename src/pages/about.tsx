@@ -73,7 +73,6 @@ const About: NextPage = (): JSX.Element => {
           <li className="list-group-item">
             Member of Web Development Team at GDSC
           </li>
-          <li className="list-group-item">Staff at HMIF</li>
         </ul>
       </section>
       <section className="container mt-3 card floatcard-no-mt px-4 pb-4">
