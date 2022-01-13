@@ -23,7 +23,7 @@
     "@giscus/react": "^1.0.1",
     "gray-matter": "^4.0.3",
     "mdb-ui-kit": "^3.10.0",
-    "next": "^12.0.7",
+    "next": "^12.0.8",
     "next-pwa": "^5.4.4",
     "next-sitemap": "^1.6.203",
     "preact": "^10.6.4",
