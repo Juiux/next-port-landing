@@ -25,15 +25,12 @@ module.exports = {
         yellnord: "#EBCB8B",
       },
       backgroundImage: {
-        "hero-pattern": "url('/others/topography.svg')"
+        "hero-pattern": "url('/others/topography.svg')",
       },
       gridTemplateColumns: {
         root: "auto auto auto",
       },
     },
   },
-  plugins: [
-    require("tailwindcss-ripple")(),
-    require('tailwind-scrollbar'),
-  ],
+  plugins: [require("tailwindcss-ripple")(), require("tailwind-scrollbar")],
 };

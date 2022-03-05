@@ -159,7 +159,6 @@ body {
     @apply h-screen box-border flex flex-col overflow-y-auto px-3 lg:px-16 py-4 md:cust-scb bg-hero-pattern;
   }
 
-
   img[alt$="-img"] {
     @apply w-full md:max-w-[1080px] h-auto rounded-md block md:mx-auto;
   }

@@ -26,12 +26,12 @@ const Home: NextPage = ({ allPostsData }: any) => {
           <p>Keep it simple, stupid.</p>
         </blockquote>
         <p>
-          Hello, my name&apos;s Irvan Malik Azantha. I&apos;m a 18 y&apos;o boy currently
-          studying on Universitas Sriwijaya. I live in Palembang, Indonesia. I&apos;m
-          a highly enthusiastic person with subtle interest in open source
-          projects and keen on learning new things. Also likes to watch anime,
-          play games, and have hugs and cuddles (lmao). Give glory for the
-          chaos!
+          Hello, my name&apos;s Irvan Malik Azantha. I&apos;m a 18 y&apos;o boy
+          currently studying on Universitas Sriwijaya. I live in Palembang,
+          Indonesia. I&apos;m a highly enthusiastic person with subtle interest
+          in open source projects and keen on learning new things. Also likes to
+          watch anime, play games, and have hugs and cuddles (lmao). Give glory
+          for the chaos!
         </p>
       </div>
       <div className="postcard flex flex-col">
