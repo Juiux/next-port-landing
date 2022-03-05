@@ -1,8 +1,7 @@
 import { MutableRefObject, useCallback, useRef, useState } from "react";
-import { MoreHorizontal } from "react-feather";
-import Selectables from "./selectables";
+import { CardSelectables } from "./selectables";
 
-export default function Search({ onFocusHandler }: any) {
+export default function BlogSearch({ onFocusHandler }: any) {
   const searchRef: MutableRefObject<HTMLInputElement | null> = useRef(null);
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(false);
@@ -47,8 +46,8 @@ export default function Search({ onFocusHandler }: any) {
     <>
       <input
         type="text"
-        name="search"
-        id="search"
+        name="bsearch"
+        id="bsearch"
         onChange={onChange}
         onFocus={onFocus}
         className="sidebar-section selectable-section text-sm"
@@ -65,22 +64,19 @@ function show(active: boolean, results: any) {
     active &&
     results.length > 0 && (
       <>
-        <p className="sidebar-section bg-sbdark uppercase text-lg font-bold z-10">
-          SEARCHED POSTS
-        </p>
-        {results.map(({ id, title, date, tag, desc }: any, index: any) => (
-          <div className="w-full cursor-pointer" key={index}>
-            <Selectables
-              id={id}
-              title={title}
-              date={date}
-              tag={tag}
-              desc={desc}
-            />
-          </div>
-        ))}
-        <div className="sidebar-section flex bg-dark justify-center items-center">
-          <MoreHorizontal />
+        <h1>Search Results</h1>
+        <div className="mx-5 my-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+          {results.map(({ id, title, date, tag, desc }: any, index: any) => (
+            <div className="w-full cursor-pointer self-stretch" key={index}>
+              <CardSelectables
+                id={id}
+                title={title}
+                date={date}
+                tag={tag}
+                desc={desc}
+              />
+            </div>
+          ))}
         </div>
       </>
     )
