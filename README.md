@@ -1,7 +1,5 @@
 # My Website
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/2ea4a30ec9534fe5bca58e7668d5fe00)](https://www.codacy.com/gh/irvanmalik48/blog/dashboard?utm_source=github.com&utm_medium=referral&utm_content=irvanmalik48/blog&utm_campaign=Badge_Grade)
-
 Basically my website. Nothing so special about it.
 
 ## Features
