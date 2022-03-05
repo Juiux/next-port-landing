@@ -7,7 +7,7 @@ Basically my website. Nothing so special about it.
 ## Features
 
 - Made from Next.js, fully PWA compliant.
-- Using stripped down customized MDBootstrap.
+- Using TailwindCSS.
 - Small bundle sizes (40KB-ish).
 - Automatically generated metadata images, sitemap, and RSS feed.
 
