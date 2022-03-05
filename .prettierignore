@@ -1,5 +1,3 @@
 .next
-node_modules
-/public/sw.js
-/public/fallback-*
-/public/workbox-*
+.node_modules
+public/*

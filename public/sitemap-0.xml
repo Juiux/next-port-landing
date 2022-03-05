@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://irvanma.live</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-03-05T12:44:31.428Z</lastmod></url>
+<url><loc>https://irvanma.live/blog</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-03-05T12:44:31.429Z</lastmod></url>
+<url><loc>https://irvanma.live/posts/6th-of-april</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-03-05T12:44:31.429Z</lastmod></url>
+<url><loc>https://irvanma.live/posts/arch-linux-btrfs</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-03-05T12:44:31.429Z</lastmod></url>
+<url><loc>https://irvanma.live/posts/changing-to-giscus</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-03-05T12:44:31.429Z</lastmod></url>
+<url><loc>https://irvanma.live/posts/github-pages-tutorial</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-03-05T12:44:31.429Z</lastmod></url>
+<url><loc>https://irvanma.live/posts/introduction</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-03-05T12:44:31.429Z</lastmod></url>
+<url><loc>https://irvanma.live/posts/life-story</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-03-05T12:44:31.429Z</lastmod></url>
+<url><loc>https://irvanma.live/posts/linux-applist-music</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-03-05T12:44:31.429Z</lastmod></url>
+<url><loc>https://irvanma.live/posts/linux-arch-phpmyadmin</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-03-05T12:44:31.429Z</lastmod></url>
+<url><loc>https://irvanma.live/posts/music-i-made</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-03-05T12:44:31.429Z</lastmod></url>
+<url><loc>https://irvanma.live/posts/nextjs-utterances</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-03-05T12:44:31.429Z</lastmod></url>
+<url><loc>https://irvanma.live/posts/secure-boot-arch</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-03-05T12:44:31.429Z</lastmod></url>
+<url><loc>https://irvanma.live/posts/self-healing-rant</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-03-05T12:44:31.429Z</lastmod></url>
+<url><loc>https://irvanma.live/posts/userbot-install</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-03-05T12:44:31.429Z</lastmod></url>
+</urlset>

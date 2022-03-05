@@ -1,38 +1,34 @@
-# My Website
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/2ea4a30ec9534fe5bca58e7668d5fe00)](https://www.codacy.com/gh/irvanmalik48/blog/dashboard?utm_source=github.com&utm_medium=referral&utm_content=irvanmalik48/blog&utm_campaign=Badge_Grade)
+## Getting Started
 
-Basically my website. Nothing so special about it.
-
-## Features
-
-- Made from Next.js, fully PWA compliant.
-- Using stripped down customized MDBootstrap.
-- Small bundle sizes (40KB-ish).
-- Automatically generated metadata images, sitemap, and RSS feed.
-
-## Using as Template
-
-1. Clone the repository:
+First, run the development server:
 
 ```bash
-git clone https://github.com/irvanmalik48/blog blog
+npm run dev
+# or
+yarn dev
 ```
 
-2. Modify template using your beloved text-editor.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-   > Clue: everything is in the `components` folder.
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-3. Start blogging. (and don't forget to delete my markdowns, or no)
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-Run `npm run dev` to preview the site.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Contributing
+## Learn More
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+To learn more about Next.js, take a look at the following resources:
 
-See [CONTRIBUTING.md](https://github.com/irvanmalik48/blog/blob/main/CONTRIBUTING.md) for details on how to contribute.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## License
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-[MIT](https://raw.githubusercontent.com/irvanmalik48/irvanmalik48.github.io/main/LICENSE)
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

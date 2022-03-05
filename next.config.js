@@ -1,5 +1,7 @@
+/** @type {import('next').NextConfig} */
 const withPWA = require("next-pwa");
 const runtimeCaching = require("next-pwa/cache");
+const withPreact = require("next-plugin-preact");
 
 const custHeaders = {
   source: "/(.*)",
@@ -31,7 +33,7 @@ const custHeaders = {
   ],
 };
 
-module.exports = withPWA({
+const nextConfig = {
   compress: true,
   reactStrictMode: true,
   swcMinify: true,
@@ -45,17 +47,12 @@ module.exports = withPWA({
     },
     publicExcludes: ["!rss.xml"],
   },
-  webpack: (config, { dev, isServer }) => {
-    if (!dev && !isServer) {
-      Object.assign(config.resolve.alias, {
-        react: "preact/compat",
-        "react-dom/test-utils": "preact/test-utils",
-        "react-dom": "preact/compat",
-      });
-    }
-    return config;
-  },
   async headers() {
     return [custHeaders];
   },
-});
+  images: {
+    domains: ["github.com", "avatars.githubusercontent.com"],
+  },
+};
+
+module.exports = withPWA(withPreact(nextConfig));
