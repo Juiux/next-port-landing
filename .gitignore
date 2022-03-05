@@ -43,5 +43,6 @@ yarn-error.log*
 /public/fallback-*
 /public/workbox-*
 /public/sitemap.xml
+/public/sitemap-*
 /public/robots.txt
 /public/rss.xml
