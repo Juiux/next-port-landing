@@ -1,6 +1,6 @@
 import { GetStaticProps, NextPage } from "next";
+import BlogSearch from "../components/blogsearch";
 import Default from "../components/default";
-import Search from "../components/search";
 import { CardSelectables } from "../components/selectables";
 import { getSortedPostsData } from "../lib";
 
@@ -18,8 +18,8 @@ const Blog: NextPage = ({ allPostsData }: any) => {
         All that I have written currently.
       </p>
       <div className="postcard flex flex-col">
+        <BlogSearch />
         <h1>Posts</h1>
-        <Search />
         <div className="mx-5 my-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
           {allPostsData.map(
             ({ id, title, date, tag, desc }: any, index: any) => {

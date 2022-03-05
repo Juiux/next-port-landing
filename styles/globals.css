@@ -109,7 +109,7 @@ body {
   h4,
   h5,
   h6 {
-    @apply sidebar-section font-bold border-t first:border-t-0 last:border-b-0;
+    @apply sidebar-section font-bold border-t first:border-t-0 first:rounded-t-md last:border-b-0;
   }
 
   h1 {
@@ -128,6 +128,14 @@ body {
   h5,
   h6 {
     @apply text-base;
+  }
+
+  #bsearch {
+    @apply rounded-t-md;
+  }
+
+  #bsearch + h1 {
+    @apply border-t-0;
   }
 
   a {
