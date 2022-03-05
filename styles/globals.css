@@ -44,7 +44,7 @@ body {
   }
 
   .navhr {
-    @apply bg-bgdark border-2 border-accent rounded-full mx-5 my-0.5;
+    @apply bg-accent border-2 border-accent rounded-full mx-5 my-0.5;
   }
 
   .gitprofile {
