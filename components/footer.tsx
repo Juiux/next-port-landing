@@ -29,8 +29,8 @@ export default function Footer() {
           <Icon.Mail />
         </a>
       </div>
-      <p className="mt-4">Powered by Next.js and Vercel</p>
-      <p>Copyright © 2021 Irvan Malik Azantha</p>
+      <p className="mt-4 text-sm">Powered by Next.js and Vercel</p>
+      <p className="text-sm">Copyright © 2021 Irvan Malik Azantha</p>
     </footer>
   );
 }
