@@ -65,9 +65,7 @@ function show(active: boolean, results: any) {
     active &&
     results.length > 0 && (
       <>
-        <p className="sidebar-header">
-          SEARCHED POSTS
-        </p>
+        <p className="sidebar-header">SEARCHED POSTS</p>
         {results.map(({ id, title, date, tag, desc }: any, index: any) => (
           <div className="w-full cursor-pointer" key={index}>
             <Selectables
