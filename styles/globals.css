@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap');
+
 *,
 *::before,
 *::after {
@@ -101,6 +104,10 @@ body {
 
   .postcard + .postcard {
     @apply mt-0;
+  }
+
+  .sidebar-header {
+    @apply sidebar-section bg-sbdark uppercase text-lg font-bold z-10;
   }
 
   h1,
