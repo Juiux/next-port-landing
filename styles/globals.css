@@ -42,7 +42,7 @@ body {
   }
 
   .nav {
-    @apply sticky top-0 z-50 overflow-y-clip h-screen w-16 m-0 flex flex-none flex-col bg-navdark
+    @apply sticky top-0 z-50 overflow-y-clip h-screen w-16 m-0 hidden md:flex md:flex-none md:flex-col bg-navdark
     text-textnav shadow-lg pt-2 border-r border-borders;
   }
 
@@ -199,6 +199,18 @@ body {
     @apply bg-transparent border border-borders rounded-md bg-sbdark hover:bg-accent
     hover:text-bgdark active:bg-accent transition-all duration-300 ease-linear px-3 py-2
     text-xs w-fit font-bold;
+  }
+
+  .bottombar {
+    @apply sticky bottom-0 p-3 bg-sbdark flex flex-row w-full justify-around items-center md:hidden border-t border-borders;
+  }
+
+  .bottomitems {
+    @apply flex flex-col justify-center items-center transition-all ease-linear duration-300 opacity-60 active:opacity-100 hover:opacity-100 gap-1 text-xs;
+  }
+
+  .stt-bottom {
+    @apply rounded-full p-3 bg-accent text-sbdark transition-all ease-linear duration-300 active:bg-yellnord hover:bg-yellnord;
   }
 }
 
