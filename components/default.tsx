@@ -1,4 +1,5 @@
 import Head from "next/head";
+import BottomBar from "./bottombar";
 import Footer from "./footer";
 import Navbar from "./navbar";
 import Sidebar from "./sidebar";
@@ -68,6 +69,7 @@ export default function Default(props: any) {
           <Footer />
         </article>
       </main>
+      <BottomBar />
     </>
   );
 }
