@@ -7,15 +7,12 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      "sans": ["'Inter'", "ui-sans-serif", "sans-serif"],
-      "mono": ["'Source Code Pro'", "monospace"],
+      sans: ["'Inter'", "ui-sans-serif", "sans-serif"],
+      mono: ["'Source Code Pro'", "monospace"],
     },
     ripple: (theme) => ({
       colors: theme("colors"),
     }),
-    variants: {
-      scrollbar: ["border"],
-    },
     extend: {
       colors: {
         bgdark: "#232731",
