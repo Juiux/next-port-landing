@@ -35,30 +35,30 @@ export default function Default(props: any) {
         <title>{props.title}</title>
         <link rel="manifest" href="/manifest.json" />
         <link
-          href="icons/icon-192x192.png"
+          href="/icons/icon-192x192.png"
           rel="icon"
           type="image/png"
           sizes="192x192"
         />
         <link
-          href="icons/icon-256x256.png"
+          href="/icons/icon-256x256.png"
           rel="icon"
           type="image/png"
           sizes="256x256"
         />
         <link
-          href="icons/icon-384x384.png"
+          href="/icons/icon-384x384.png"
           rel="icon"
           type="image/png"
           sizes="384x384"
         />
         <link
-          href="icons/icon-512x512.png"
+          href="/icons/icon-512x512.png"
           rel="icon"
           type="image/png"
           sizes="512x512"
         />
-        <link rel="apple-touch-icon" href="icons/apple-icon.png"></link>
+        <link rel="apple-touch-icon" href="/icons/apple-icon.png"></link>
       </Head>
       <main className="root-grid">
         <Navbar />
