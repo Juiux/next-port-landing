@@ -41,6 +41,13 @@ const nextConfig = {
     fallbacks: {
       document: "/offline",
     },
+    buildExcludes: [
+      /middleware-manifest\.json$/,
+      /_middleware\.js$/,
+      /_middleware\.js\.map$/,
+      /middleware-runtime\.js$/,
+      /server\/pages\/_middleware\.js$/,
+    ],
     publicExcludes: ["!rss.xml"],
   },
   async headers() {
