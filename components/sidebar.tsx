@@ -4,7 +4,7 @@ import Selectables from "./selectables";
 export default function Sidebar(props: any) {
   return (
     <div className={"sidebar " + props.className}>
-      <p className="sidebar-section sticky top-0 bg-sbdark uppercase text-lg font-bold z-10">
+      <p className="sidebar-header sticky top-0">
         BLOG POSTS
       </p>
       <Search />

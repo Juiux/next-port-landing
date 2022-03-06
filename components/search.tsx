@@ -65,7 +65,7 @@ function show(active: boolean, results: any) {
     active &&
     results.length > 0 && (
       <>
-        <p className="sidebar-section bg-sbdark uppercase text-lg font-bold z-10">
+        <p className="sidebar-header">
           SEARCHED POSTS
         </p>
         {results.map(({ id, title, date, tag, desc }: any, index: any) => (
