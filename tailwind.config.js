@@ -6,6 +6,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      "sans": ["'Inter'", "ui-sans-serif", "sans-serif"],
+      "mono": ["'Source Code Pro'", "monospace"],
+    },
     ripple: (theme) => ({
       colors: theme("colors"),
     }),
