@@ -139,11 +139,11 @@ body {
   }
 
   a {
-    @apply text-accent hover:text-yellnord transition-all duration-100 ease-linear;
+    @apply text-accent hover:text-yellnord transition-all duration-100 ease-linear break-words;
   }
 
   code {
-    @apply text-sm text-yellnord;
+    @apply text-sm text-yellnord break-words;
   }
 
   strong,
