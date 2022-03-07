@@ -36,7 +36,7 @@ export default function Search({ onFocusHandler }: any) {
       setResults([]);
       window.removeEventListener("click", onClick);
     }
-  }, []);
+  }, [onFocusHandler]);
 
   const onFocus = () => {
     setActive(true);

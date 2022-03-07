@@ -35,7 +35,7 @@ export default function BlogSearch({ onFocusHandler }: any) {
       setResults([]);
       window.removeEventListener("click", onClick);
     }
-  }, []);
+  }, [onFocusHandler]);
 
   const onFocus = () => {
     setActive(true);
