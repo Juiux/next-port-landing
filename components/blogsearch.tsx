@@ -26,16 +26,19 @@ export default function BlogSearch({ onFocusHandler }: any) {
     }
   }, []);
 
-  const onClick = useCallback((event: any) => {
-    onFocusHandler(true);
-    if (searchRef.current && !searchRef.current.contains(event.target)) {
-      setActive(false);
-      onFocusHandler(false);
-      setQuery("");
-      setResults([]);
-      window.removeEventListener("click", onClick);
-    }
-  }, [onFocusHandler]);
+  const onClick = useCallback(
+    (event: any) => {
+      onFocusHandler(true);
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
+        setActive(false);
+        onFocusHandler(false);
+        setQuery("");
+        setResults([]);
+        window.removeEventListener("click", onClick);
+      }
+    },
+    [onFocusHandler]
+  );
 
   const onFocus = () => {
     setActive(true);
