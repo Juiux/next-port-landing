@@ -6,7 +6,7 @@ Basically my website. Nothing so special about it.
 
 - Made from Next.js, fully PWA compliant.
 - Using TailwindCSS.
-- Small bundle sizes (40KB-ish).
+- ~~Small bundle sizes (40KB-ish).~~ (Currently not that optimized. Will mitigate later.)
 - Automatically generated metadata images, sitemap, and RSS feed.
 
 ## Using as Template
