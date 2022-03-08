@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const withPWA = require("next-pwa");
 const runtimeCaching = require("next-pwa/cache");
-const withPreact = require("next-plugin-preact");
 
 const custHeaders = {
   source: "/(.*)",
@@ -41,13 +40,6 @@ const nextConfig = {
     fallbacks: {
       document: "/offline",
     },
-    buildExcludes: [
-      /middleware-manifest\.json$/,
-      /_middleware\.js$/,
-      /_middleware\.js\.map$/,
-      /middleware-runtime\.js$/,
-      /server\/pages\/_middleware\.js$/,
-    ],
     publicExcludes: ["!rss.xml"],
   },
   async headers() {
@@ -58,4 +50,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withPWA(withPreact(nextConfig));
+module.exports = withPWA(nextConfig);
