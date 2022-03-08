@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 
 export default function Navbar(props: any) {
-  const {theme, setTheme} = useTheme();
+  const { theme, setTheme } = useTheme();
   return (
     <nav className={"nav " + props.className}>
       <NavIconNext icon={<Icon.Home />} text="Home" href="/" />
@@ -23,7 +23,9 @@ export default function Navbar(props: any) {
       />
       <NavIcon icon={<Icon.FileText />} text="CV" href="#" />
       <NavIconNext icon={<Icon.Info />} text="About" href="/about" />
-      <DarkToggle action={() => setTheme(theme === "dark"? "light" : "dark")}/>
+      <DarkToggle
+        action={() => setTheme(theme === "dark" ? "light" : "dark")}
+      />
       <GitProfile />
     </nav>
   );
@@ -39,7 +41,12 @@ const NavIconNext = ({ icon, text, href, add }: any) => (
 );
 
 const NavIcon = ({ icon, text, href, add }: any) => (
-  <a href={href} className={"navicon group " + add} onClick={handleClick}>
+  <a
+    aria-label={text}
+    href={href}
+    className={"navicon group " + add}
+    onClick={handleClick}
+  >
     {icon}
     <span className="navtooltip group-hover:scale-100">{text}</span>
   </a>
@@ -53,15 +60,11 @@ const DarkToggle = ({ action, add }: any) => (
 );
 
 const ToggleIcon = () => {
-  const {theme, setTheme} = useTheme();
+  const { theme, setTheme } = useTheme();
   if (theme == "dark") {
-    return (
-      <Icon.Sun />
-    );
+    return <Icon.Sun />;
   } else {
-    return (
-      <Icon.Moon />
-    );
+    return <Icon.Moon />;
   }
 };
 
