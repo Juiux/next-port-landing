@@ -59,7 +59,7 @@ const DarkToggle = ({ action, add }: any) => (
   </button>
 );
 
-const ToggleIcon = () => {
+export const ToggleIcon = () => {
   const { theme, setTheme } = useTheme();
   if (theme == "dark") {
     return <Icon.Sun />;
