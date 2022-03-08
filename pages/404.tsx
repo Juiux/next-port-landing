@@ -18,7 +18,7 @@ const PageNotFound: NextPage = ({ allPostsData }: any) => {
         Oops! Page not found.
       </p>
       <p className="text-center text-accentlight dark:text-accent mt-0 mb-10">
-        Looks like the page you're looking for doesn't exist.
+        Looks like the page you&apos;re looking for doesn&apos;t exist.
       </p>
     </Default>
   );
