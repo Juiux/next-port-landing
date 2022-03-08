@@ -16,7 +16,7 @@
 }
 
 body {
-  @apply bg-bgdark text-textnav;
+  @apply bg-bglight dark:bg-bgdark text-textlight dark:text-textnav;
 }
 
 @layer components {
@@ -25,53 +25,55 @@ body {
   }
 
   .cust-scb {
-    @apply scrollbar-thin scrollbar-track-bgdark scrollbar-thumb-accent;
+    @apply scrollbar-thin scrollbar-track-bglight scrollbar-thumb-accentlight dark:scrollbar-track-bgdark dark:scrollbar-thumb-accent;
   }
 
   .navicon {
     @apply relative flex items-center justify-center h-12 w-12 my-2 mx-auto 
-    bg-bgdark text-textnav hover:bg-accent hover:text-navdark 
+    dark:bg-bgdark dark:text-textnav dark:hover:bg-accent dark:hover:text-navdark 
+    bg-sblight text-textlight hover:bg-accentlight hover:text-navlight 
     hover:rounded-xl rounded-3xl transition-all duration-300 ease-linear
     cursor-pointer shadow-lg;
   }
 
   .navtooltip {
-    @apply absolute w-auto px-4 py-2 m-2 min-w-max left-14 rounded-md shadow-lg shadow-bgdark
-    text-white bg-navdark text-xs font-bold transition-all
-    duration-100 scale-0 origin-left uppercase border border-borders;
+    @apply absolute w-auto px-4 py-2 m-2 min-w-max left-14 rounded-md shadow-lg dark:shadow-bgdark
+    text-textlight bg-navlight dark:text-textnav dark:bg-navdark text-xs font-bold transition-all
+    duration-100 scale-0 origin-left uppercase border dark:border-borders border-borderslight;
   }
 
   .nav {
-    @apply sticky top-0 z-50 overflow-y-clip h-screen w-16 m-0 hidden md:flex md:flex-none md:flex-col bg-navdark
-    text-textnav shadow-lg pt-2 border-r border-borders;
+    @apply sticky top-0 z-50 overflow-y-clip h-screen w-16 m-0 hidden md:flex md:flex-none md:flex-col 
+    bg-navlight text-textlight dark:bg-navdark dark:text-textnav shadow-lg pt-2 border-r border-borderslight
+    dark:border-borders;
   }
 
   .navhr {
-    @apply bg-accent border-2 border-accent rounded-full mx-5 my-0.5;
+    @apply bg-accentlight dark:bg-accent border-2 border-accentlight dark:border-accent rounded-full mx-5 my-0.5;
   }
 
   .gitprofile {
     @apply mt-auto flex flex-col justify-center align-middle translate-y-16 hover:translate-y-0 
-    transition-all duration-300 bg-bgdark;
+    transition-all duration-300 bg-bglight shadow-inner dark:shadow-none dark:bg-bgdark;
   }
 
   .gitchevron {
-    @apply relative flex items-center justify-center h-12 w-12 my-2 mx-auto bg-bgdark text-textnav 
-    group-hover:translate-y-0 hover:bg-bgdark hover:text-textnav transition-all duration-300 
-    ease-linear cursor-pointer shadow-lg;
+    @apply relative flex items-center justify-center h-12 w-12 my-2 mx-auto dark:bg-bgdark dark:text-textnav 
+    group-hover:translate-y-0 dark:hover:bg-bgdark dark:hover:text-textnav transition-all duration-300 
+    ease-linear cursor-pointer shadow-lg hover:bg-bglight hover:text-textlight bg-bglight text-textlight rounded-full;
   }
 
   .sidebar {
-    @apply sticky hidden top-0 w-80 h-screen bg-sbdark z-0 overflow-y-auto md:flex md:flex-col 
-    items-center justify-start border-r border-borders md:cust-scb;
+    @apply sticky hidden top-0 w-80 h-screen bg-sblight dark:bg-sbdark z-0 overflow-y-auto md:flex md:flex-col 
+    items-center justify-start border-r border-borderslight dark:border-borders md:cust-scb;
   }
 
   .sidebar-section {
-    @apply px-5 py-3 border-b bg-sbdark border-borders w-full outline-none;
+    @apply px-5 py-3 border-b bg-sblight dark:bg-sbdark border-borderslight text-textlight dark:text-textnav dark:border-borders w-full outline-none;
   }
 
   .selectable-section {
-    @apply hover:bg-navdark active:bg-ripdark transition-all duration-300 ease-linear;
+    @apply hover:bg-navlight active:bg-riplight dark:hover:bg-navdark dark:active:bg-ripdark transition-all duration-300 ease-linear;
   }
 
   .tagsbs {
@@ -79,7 +81,7 @@ body {
   }
 
   .tagsb {
-    @apply inline-block text-xs px-1 py-0.5 mr-2 mb-1 bg-borders rounded-md;
+    @apply inline-block text-xs px-1 py-0.5 mr-2 mb-1 bg-borderslight dark:bg-borders rounded-md;
   }
 
   .card-section .tagsbs {
@@ -95,7 +97,7 @@ body {
   }
 
   .postcard {
-    @apply w-full my-10 bg-sbdark rounded-md border border-borders text-textnav;
+    @apply w-full my-10 bg-sblight dark:bg-sbdark rounded-md border border-borderslight dark:border-borders text-textlight dark:text-textnav;
   }
 
   .postcard p {
@@ -107,7 +109,7 @@ body {
   }
 
   .sidebar-header {
-    @apply sidebar-section bg-sbdark uppercase text-lg font-bold z-10;
+    @apply sidebar-section bg-sblight dark:bg-sbdark uppercase text-lg font-bold z-10;
   }
 
   h1,
@@ -146,7 +148,7 @@ body {
   }
 
   a {
-    @apply text-accent hover:text-yellnord transition-all duration-100 ease-linear break-words;
+    @apply text-accentlight dark:text-accent hover:text-rednord dark:hover:text-yellnord transition-all duration-100 ease-linear break-words;
   }
 
   code {
@@ -171,7 +173,7 @@ body {
   }
 
   .mainsect {
-    @apply h-screen box-border flex flex-col overflow-y-auto px-3 lg:px-16 py-4 md:cust-scb bg-hero-pattern;
+    @apply h-screen box-border flex flex-col overflow-y-auto px-3 lg:px-16 py-4 md:cust-scb bg-hero-pattern-light dark:bg-hero-pattern;
   }
 
   img[alt$="-img"] {
@@ -179,7 +181,7 @@ body {
   }
 
   blockquote {
-    @apply border-l-8 border-l-accent bg-bgdark;
+    @apply border-l-8 border-l-accentlight bg-bglight dark:border-l-accent dark:bg-bgdark;
   }
 
   hr {
@@ -187,22 +189,23 @@ body {
   }
 
   .footer {
-    @apply w-full text-center text-fttext pb-3 pt-7 px-5;
+    @apply w-full text-center text-fttextl dark:text-fttext pb-3 pt-7 px-5;
   }
 
   .card-section {
-    @apply border border-borders rounded-md bg-sbdark hover:bg-navdark
-    active:bg-ripdark transition-all duration-300 ease-linear;
+    @apply border border-borderslight dark:border-borders rounded-md bg-sblight hover:bg-navlight active:bg-riplight 
+    dark:bg-sbdark dark:hover:bg-navdark dark:active:bg-ripdark transition-all duration-300 ease-linear;
   }
 
   .btn {
-    @apply bg-transparent border border-borders rounded-md bg-sbdark hover:bg-accent
-    hover:text-bgdark active:bg-accent transition-all duration-300 ease-linear px-3 py-2
-    text-xs w-fit font-bold;
+    @apply bg-transparent border border-borderslight dark:border-borders rounded-md bg-sblight hover:bg-accentlight hover:text-bglight
+    dark:bg-sbdark dark:hover:bg-accent dark:hover:text-bgdark dark:active:bg-accent transition-all duration-300 ease-linear px-3 py-2
+    active:bg-accentlight text-xs w-fit font-bold;
   }
 
   .bottombar {
-    @apply sticky bottom-0 p-3 bg-sbdark flex flex-row w-full justify-around items-center md:hidden border-t border-borders;
+    @apply sticky bottom-0 p-3 bg-sblight dark:bg-sbdark flex flex-row w-full justify-around items-center md:hidden border-t 
+    border-borderslight dark:border-borders;
   }
 
   .bottomitems {
