@@ -12,7 +12,8 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        "btmbar": "0 -1px 6px 0 rgb(0 0 0 / 0.05), 0 -1px 3px -1px rgb(0 0 0 / 0.05)"
+        btmbar:
+          "0 -1px 6px 0 rgb(0 0 0 / 0.05), 0 -1px 3px -1px rgb(0 0 0 / 0.05)",
       },
       colors: {
         bgdark: "#232731",

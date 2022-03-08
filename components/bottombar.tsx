@@ -27,11 +27,17 @@ export default function BottomBar() {
           <p>About</p>
         </a>
       </Link>
-      <button className="bottomitems anchor" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+      <button
+        className="bottomitems anchor"
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      >
         <ToggleIcon />
         <p>Theme</p>
       </button>
-      <button className="justify-self-center stt-bottom w-fit" onClick={handleClick}>
+      <button
+        className="justify-self-center stt-bottom w-fit"
+        onClick={handleClick}
+      >
         <Icons.ChevronsUp />
       </button>
     </nav>

@@ -147,7 +147,8 @@ body {
     @apply border-t-0;
   }
 
-  a, .anchor {
+  a,
+  .anchor {
     @apply text-accentlight dark:text-accent hover:text-rednord dark:hover:text-yellnord transition-all duration-100 ease-linear break-words;
   }
 
