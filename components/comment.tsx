@@ -2,8 +2,8 @@ import { Giscus } from "@giscus/react";
 import { useTheme } from "next-themes";
 
 export default function Comment() {
-  const {theme, setTheme} = useTheme();
-  
+  const { theme, setTheme } = useTheme();
+
   return (
     <div className="p-5">
       <Giscus
