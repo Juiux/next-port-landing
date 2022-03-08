@@ -17,7 +17,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
       <p className="text-3xl text-center font-bold mt-12">
         Irvan Malik Azantha
       </p>
-      <p className="text-center text-accent mt-0">
+      <p className="text-center text-accentlight dark:text-accent mt-0">
         Do what you want and do it well.
       </p>
       <div className="postcard">

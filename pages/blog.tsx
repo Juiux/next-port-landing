@@ -14,7 +14,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
       allPostsData={allPostsData}
     >
       <p className="text-3xl text-center font-bold mt-12">Blog Posts</p>
-      <p className="text-center text-accent mt-0">
+      <p className="text-center text-accentlight dark:text-accent mt-0">
         All that I have written currently.
       </p>
       <div className="postcard flex flex-col">
