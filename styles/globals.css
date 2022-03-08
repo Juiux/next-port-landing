@@ -147,7 +147,7 @@ body {
     @apply border-t-0;
   }
 
-  a {
+  a, .anchor {
     @apply text-accentlight dark:text-accent hover:text-rednord dark:hover:text-yellnord transition-all duration-100 ease-linear break-words;
   }
 
@@ -208,8 +208,8 @@ body {
   }
 
   .bottombar {
-    @apply sticky bottom-0 p-3 bg-sblight dark:bg-sbdark flex flex-row w-full justify-around items-center md:hidden border-t 
-    border-borderslight dark:border-borders;
+    @apply sticky bottom-0 p-3 bg-sblight dark:bg-sbdark grid grid-cols-5 w-full items-center md:hidden border-t 
+    border-borderslight dark:border-borders shadow-btmbar dark:shadow-none;
   }
 
   .bottomitems {
@@ -217,7 +217,8 @@ body {
   }
 
   .stt-bottom {
-    @apply rounded-full p-3 bg-accent text-sbdark transition-all ease-linear duration-300 active:bg-yellnord hover:bg-yellnord;
+    @apply rounded-full p-3 dark:bg-accent dark:text-sbdark transition-all ease-linear duration-300 dark:active:bg-yellnord dark:hover:bg-yellnord
+    bg-accentlight text-sblight active:bg-rednord hover:bg-rednord;
   }
 }
 
