@@ -17,7 +17,7 @@
     "next": "^12.1.0",
     "next-plugin-preact": "^3.0.6",
     "next-pwa": "^5.4.5",
-    "next-sitemap": "^2.5.4",
+    "next-sitemap": "^2.5.7",
     "preact": "^10.6.6",
     "preact-render-to-string": "^5.1.20",
     "react": "npm:@preact/compat@^17.0.3",
