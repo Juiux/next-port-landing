@@ -5,8 +5,8 @@ import { getSortedPostsData } from "../lib";
 const PageNotFound: NextPage = ({ allPostsData }: any) => {
   return (
     <Default
-      title="IrvanMA's Lair"
-      desc="Do what you want and do it well."
+      title="404"
+      desc="This is a 404 page."
       tag={undefined}
       date={undefined}
       allPostsData={allPostsData}
