@@ -21,7 +21,7 @@ body {
 
 @layer components {
   .root-grid {
-    @apply w-screen grid grid-cols-root;
+    @apply w-screen md:grid gap-0 md:grid-cols-root;
   }
 
   .cust-scb {
