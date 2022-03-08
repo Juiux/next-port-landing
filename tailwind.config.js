@@ -10,9 +10,6 @@ module.exports = {
       sans: ["'Inter'", "ui-sans-serif", "sans-serif"],
       mono: ["'Source Code Pro'", "monospace"],
     },
-    ripple: (theme) => ({
-      colors: theme("colors"),
-    }),
     extend: {
       colors: {
         bgdark: "#232731",
@@ -43,5 +40,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-ripple")(), require("tailwind-scrollbar")],
+  plugins: [require("tailwind-scrollbar")],
 };
