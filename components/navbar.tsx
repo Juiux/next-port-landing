@@ -48,7 +48,7 @@ const NavIcon = ({ icon, text, href, add }: any) => (
 const DarkToggle = ({ action, add }: any) => (
   <button className={"navicon group " + add} onClick={action}>
     <ToggleIcon />
-    <span className="navtooltip group-hover:scale-100">{TextGen}</span>
+    <span className="navtooltip group-hover:scale-100">Switch Theme</span>
   </button>
 );
 
@@ -83,8 +83,3 @@ const GitProfile = () => (
     </div>
   </a>
 );
-
-const TextGen = () => {
-  const {theme, setTheme} = useTheme();
-  return (theme === "dark"? "Light Mode" : "Dark Mode");
-}
