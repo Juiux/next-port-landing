@@ -40,7 +40,7 @@ module.exports = {
         "hero-pattern-light": "url('/others/topography-light.svg')",
       },
       gridTemplateColumns: {
-        root: "auto auto auto",
+        root: "min-content min-content auto",
       },
     },
   },
