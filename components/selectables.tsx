@@ -11,7 +11,7 @@ export default function Selectables(props: any) {
   return (
     <Link href={`/posts/${props.id}`} passHref>
       <button
-        className="sidebar-section w-full selectable-section ripple-bg-ripdark text-left"
+        className="sidebar-section w-full selectable-section text-left"
         onClick={handleClick}
       >
         <p className="font-semibold">{props.title}</p>
@@ -33,7 +33,7 @@ export function CardSelectables(props: any) {
   return (
     <Link href={`/posts/${props.id}`} passHref>
       <button
-        className="card-section w-full ripple-bg-ripdark text-left flex flex-col h-full"
+        className="card-section w-full text-left flex flex-col h-full"
         onClick={handleClick}
       >
         <p className="font-semibold">{props.title}</p>

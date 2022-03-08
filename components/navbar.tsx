@@ -2,8 +2,10 @@ import Link from "next/link";
 import * as Icon from "react-feather";
 import { handleClick } from "./selectables";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 export default function Navbar(props: any) {
+  const {theme, setTheme} = useTheme();
   return (
     <nav className={"nav " + props.className}>
       <NavIconNext icon={<Icon.Home />} text="Home" href="/" />
@@ -21,6 +23,7 @@ export default function Navbar(props: any) {
       />
       <NavIcon icon={<Icon.FileText />} text="CV" href="#" />
       <NavIconNext icon={<Icon.Info />} text="About" href="/about" />
+      <DarkToggle action={() => setTheme(theme === "dark"? "light" : "dark")}/>
       <GitProfile />
     </nav>
   );
@@ -42,6 +45,26 @@ const NavIcon = ({ icon, text, href, add }: any) => (
   </a>
 );
 
+const DarkToggle = ({ action, add }: any) => (
+  <button className={"navicon group " + add} onClick={action}>
+    <ToggleIcon />
+    <span className="navtooltip group-hover:scale-100">{textGen()}</span>
+  </button>
+);
+
+const ToggleIcon = () => {
+  const {theme, setTheme} = useTheme();
+  if (theme == "dark") {
+    return (
+      <Icon.Sun />
+    );
+  } else {
+    return (
+      <Icon.Moon />
+    );
+  }
+};
+
 const GitProfile = () => (
   <a href="https://github.com/irvanmalik48" className="gitprofile group">
     <div className="navhr mt-3"></div>
@@ -50,7 +73,7 @@ const GitProfile = () => (
         src="https://github.com/irvanmalik48.png?size=400"
         sizes="400"
         layout="fill"
-        className="navicon opacity-75 group-hover:rounded-xl group-hover:opacity-100"
+        className="navicon brightness-75 group-hover:brightness-100 group-hover:rounded-xl"
         alt="profile picture"
       />
       <span className="navtooltip group-hover:scale-100">Github Profile</span>
@@ -60,3 +83,8 @@ const GitProfile = () => (
     </div>
   </a>
 );
+
+const textGen = () => {
+  const {theme, setTheme} = useTheme();
+  return (theme === "dark"? "Light Mode" : "Dark Mode");
+}

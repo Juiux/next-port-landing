@@ -1,6 +1,9 @@
 import { Giscus } from "@giscus/react";
+import { useTheme } from "next-themes";
 
 export default function Comment() {
+  const {theme, setTheme} = useTheme();
+  
   return (
     <div className="p-5">
       <Giscus
@@ -11,7 +14,7 @@ export default function Comment() {
         mapping="pathname"
         reactionsEnabled="0"
         emitMetadata="0"
-        theme="transparent_dark"
+        theme={"transparent_" + theme}
       />
     </div>
   );

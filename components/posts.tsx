@@ -14,10 +14,10 @@ export default function PostLayout(props: any) {
       <Head>
         <meta key="words" name="keywords" content={props.tag} />
       </Head>
-      <p className="text-center text-textnav font-bold text-[2rem] mt-12">
+      <p className="text-center text-textlight dark:text-textnav font-bold text-[2rem] mt-12">
         {props.title}
       </p>
-      <p className="text-center text-accent mt-0">{props.date}</p>
+      <p className="text-center text-accentlight dark:text-accent mt-0">{props.date}</p>
       <div className="postcard">
         <h1>Table of Contents</h1>
         <div dangerouslySetInnerHTML={{ __html: props.content }} />
