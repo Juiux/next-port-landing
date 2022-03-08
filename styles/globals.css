@@ -152,7 +152,11 @@ body {
   }
 
   code {
-    @apply text-sm text-yellnord break-words;
+    @apply text-sm text-rednord dark:text-yellnord break-words;
+  }
+
+  pre code {
+    @apply text-yellnord;
   }
 
   strong,
