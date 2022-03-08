@@ -12,7 +12,7 @@ const PageNotFound: NextPage = ({ allPostsData }: any) => {
       allPostsData={allPostsData}
     >
       <p className="text-8xl text-center font-bold mt-12 text-rednord dark:text-yellnord">
-        404  
+        404
       </p>
       <p className="text-3xl text-center font-bold mt-2">
         Oops! Page not found.
