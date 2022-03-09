@@ -14,12 +14,18 @@ const Home: NextPage = ({ allPostsData }: any) => {
       date={undefined}
       allPostsData={allPostsData}
     >
-      <p className="text-3xl text-center font-bold mt-12">
-        Irvan Malik Azantha
-      </p>
-      <p className="text-center text-accentlight dark:text-accent mt-0">
-        Do what you want and do it well.
-      </p>
+      <div className="flex flex-col md:flex-row gap-2 mt-12 justify-center items-center">
+        <div className="lapp-logo"></div>
+        <div className="flex flex-col gap-0">
+          <p className="text-3xl text-center md:text-left font-bold">
+            Irvan Malik Azantha
+          </p>
+          <p className="text-accentlight text-center md:text-left dark:text-accent mt-0">
+            Do what you want and do it well.
+          </p>
+        </div>
+      </div>
+      
       <div className="postcard">
         <h1>Description</h1>
         <blockquote>
