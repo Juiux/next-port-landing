@@ -221,6 +221,10 @@ body {
     @apply rounded-full p-3 dark:bg-accent dark:text-sbdark transition-all ease-linear duration-300 dark:active:bg-yellnord dark:hover:bg-yellnord
     bg-accentlight text-sblight active:bg-rednord hover:bg-rednord;
   }
+
+  .lapp-logo {
+    @apply bg-hero-logo-light dark:bg-hero-logo w-[250px] h-[250px] md:w-[100px] md:h-[100px];
+  }
 }
 
 /* Everything listed below won't work with Tailwind stylings */
