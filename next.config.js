@@ -34,12 +34,15 @@ const nextConfig = {
   swcMinify: true,
   pwa: {
     dest: "public",
+    register: true,
+    mode: "production",
     disable: process.env.NODE_ENV === "development",
     dynamicStartUrl: false,
     runtimeCaching,
     fallbacks: {
       document: "/offline",
     },
+    buildExcludes: [/middleware-manifest.json$/],
     publicExcludes: ["!rss.xml", "!robots.txt", "!sitemap.xml", "!sitemap-0.xml"],
   },
   async headers() {
