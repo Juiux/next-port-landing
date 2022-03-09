@@ -40,7 +40,7 @@ const nextConfig = {
     fallbacks: {
       document: "/offline",
     },
-    publicExcludes: ["!rss.xml"],
+    publicExcludes: ["!rss.xml", "!robots.txt", "!sitemap"],
   },
   async headers() {
     return [custHeaders];

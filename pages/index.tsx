@@ -25,7 +25,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
           </p>
         </div>
       </div>
-      
+
       <div className="postcard">
         <h1>Description</h1>
         <blockquote>
