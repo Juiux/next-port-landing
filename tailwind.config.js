@@ -38,6 +38,8 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/others/topography.svg')",
         "hero-pattern-light": "url('/others/topography-light.svg')",
+        "hero-logo": "url('/others/hero-logo.svg')",
+        "hero-logo-light": "url('/others/hero-logo-light.svg')",
       },
       gridTemplateColumns: {
         root: "min-content min-content auto",
