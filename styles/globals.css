@@ -157,7 +157,7 @@ body {
   }
 
   pre code {
-    @apply text-yellnord;
+    @apply text-yellnord cust-scb;
   }
 
   strong,
@@ -187,6 +187,10 @@ body {
 
   blockquote {
     @apply border-l-8 border-l-accentlight bg-bglight dark:border-l-accent dark:bg-bgdark;
+  }
+
+  li blockquote {
+    @apply border border-l-8 border-borderslight border-l-accentlight dark:border-borders dark:border-l-accent w-fit mb-2 bg-bglight dark:bg-bgdark rounded-md mt-2; 
   }
 
   hr {
