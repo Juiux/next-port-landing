@@ -25,6 +25,13 @@ export default function PostLayout(props: any) {
         <div dangerouslySetInnerHTML={{ __html: props.content }} />
         <h1>Comments</h1>
         <Comment />
+        <p className="text-center mt-2 text-sm">
+          All posts in this blog are licensed under{" "}
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            CC BY-NC-SA 4.O
+          </a>
+          {" "}unless specified otherwise.
+        </p>
       </div>
     </Default>
   );
