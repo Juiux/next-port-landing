@@ -50,3 +50,28 @@ export function CardSelectables(props: any) {
     </Link>
   );
 }
+
+export function CardEduSelectables(props: any) {
+  return (
+    <a
+      aria-label={props.title}
+      href={props.href}
+      className="card-section w-full text-left flex flex-col h-full text-textlight dark:text-textnav hover:text-textlight dark:hover:text-textnav"
+    >
+      <p className="font-semibold">{props.title}</p>
+      <p className="text-sm opacity-60 z-0">
+        {props.day}, {props.time}
+      </p>
+      <p className="text-sm z-0">Dosen Pengajar:</p>
+      <ul className="mt-0">
+        {props.lect.map((e: any, index: any) => {
+          return (
+            <li className="text-sm" key={index}>
+              {e}
+            </li>
+          );
+        })}
+      </ul>
+    </a>
+  );
+}
