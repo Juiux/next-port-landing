@@ -7,8 +7,8 @@ import { getSortedPostsData } from "../lib";
 const Blog: NextPage = ({ allPostsData }: any) => {
   return (
     <Default
-      title="IrvanMA's Lair"
-      desc="Do what you want and do it well."
+      title="Blog Posts"
+      desc="All that I have written currently."
       tag={undefined}
       date={undefined}
       allPostsData={allPostsData}

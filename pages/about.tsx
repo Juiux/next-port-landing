@@ -85,7 +85,9 @@ const About: NextPage = ({ allPostsData }: any) => {
         <ul>
           <li>SoC : Qualcomm Snapdragon 625</li>
           <li>RAM : LPDDR4 4GB</li>
-          <li>Storage : Internal eMMC 64GB + External Class 10 SanDisk eMMC 32GB</li>
+          <li>
+            Storage : Internal eMMC 64GB + External Class 10 SanDisk eMMC 32GB
+          </li>
           <li>Display : IPS LCD 1080x2160 (18:9)</li>
           <li>OS : ArrowOS (Android 12)</li>
         </ul>
