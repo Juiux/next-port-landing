@@ -35,7 +35,7 @@ const Edu: NextPage = ({ allPostsData, allEduData }: any) => {
         <EduSelectable data={allEduData} day="Rabu" />
         <h2>Kamis</h2>
         <EduSelectable data={allEduData} day="Kamis" />
-        <h2>Jum'at</h2>
+        <h2>Jum&apos;at</h2>
         <EduSelectable data={allEduData} day="Jum'at" />
       </div>
     </Default>
