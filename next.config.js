@@ -43,7 +43,12 @@ const nextConfig = {
       document: "/offline",
     },
     buildExcludes: [/middleware-manifest.json$/],
-    publicExcludes: ["!rss.xml", "!robots.txt", "!sitemap.xml", "!sitemap-0.xml"],
+    publicExcludes: [
+      "!rss.xml",
+      "!robots.txt",
+      "!sitemap.xml",
+      "!sitemap-0.xml",
+    ],
   },
   async headers() {
     return [custHeaders];
