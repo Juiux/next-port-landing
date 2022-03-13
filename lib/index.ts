@@ -50,11 +50,7 @@ export function getSortedPostsData(path: string): any[] {
 
 export function sortPostData(allPostsData: any[]): any[] {
   return allPostsData.sort((a: any, b: any) => {
-    if (a["date"] < b["date"]) {
-      return 1;
-    } else {
-      return -1;
-    }
+    return a["date"] < b["date"] ? 1 : -1;
   });
 }
 
