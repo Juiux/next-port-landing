@@ -29,8 +29,8 @@ export default function PostLayout(props: any) {
           All posts in this blog are licensed under{" "}
           <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
             CC BY-NC-SA 4.O
-          </a>
-          {" "}unless specified otherwise.
+          </a>{" "}
+          unless specified otherwise.
         </p>
       </div>
     </Default>

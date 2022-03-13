@@ -41,12 +41,7 @@ const NavIconNext = ({ icon, text, href, add }: any) => (
 );
 
 const NavIcon = ({ icon, text, href, add }: any) => (
-  <a
-    aria-label={text}
-    href={href}
-    className={"navicon group " + add}
-    onClick={handleClick}
-  >
+  <a aria-label={text} href={href} className={"navicon group " + add}>
     {icon}
     <span className="navtooltip group-hover:scale-100">{text}</span>
   </a>
