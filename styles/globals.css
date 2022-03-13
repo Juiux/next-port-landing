@@ -190,7 +190,7 @@ body {
   }
 
   li blockquote {
-    @apply border border-l-8 border-borderslight border-l-accentlight dark:border-borders dark:border-l-accent w-fit mb-2 bg-bglight dark:bg-bgdark rounded-md mt-2; 
+    @apply border border-l-8 border-borderslight border-l-accentlight dark:border-borders dark:border-l-accent w-fit mb-2 bg-bglight dark:bg-bgdark rounded-md mt-2;
   }
 
   hr {
