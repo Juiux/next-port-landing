@@ -9,14 +9,138 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
+  @apply box-border m-0 p-0 scroll-smooth;
 }
 
 body {
   @apply bg-bglight dark:bg-bgdark text-textlight dark:text-textnav;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply sidebar-section font-bold border-t first:border-t-0 first:rounded-t-md last:border-b-0;
+}
+
+h1 {
+  @apply text-2xl;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+h3 {
+  @apply text-lg;
+}
+
+h4,
+h5,
+h6 {
+  @apply text-base;
+}
+
+code {
+  @apply text-sm text-rednord dark:text-yellnord break-words;
+}
+
+pre code {
+  @apply text-yellnord cust-scb;
+}
+
+strong,
+b {
+  @apply font-bold;
+}
+
+ol {
+  @apply list-decimal px-5 mx-5 my-3;
+}
+
+ul {
+  @apply list-disc px-5 mx-5 my-3;
+}
+
+p + ol {
+  @apply my-0 mb-3;
+}
+
+img[alt$="-img"] {
+  @apply w-full md:max-w-[1080px] h-auto rounded-md block md:mx-auto;
+}
+
+blockquote {
+  @apply border-l-8 border-l-accentlight bg-bglight dark:border-l-accent dark:bg-bgdark;
+}
+
+li blockquote {
+  @apply border border-l-8 border-borderslight border-l-accentlight dark:border-borders dark:border-l-accent w-fit mb-2 bg-bglight dark:bg-bgdark rounded-md mt-2;
+}
+
+hr {
+  @apply border-[0.5px] border-borders;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  @apply text-token-light-unstyled dark:text-token-unstyled bg-none font-mono text-left whitespace-pre break-normal leading-normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*="language-"],
+pre {
+  @apply py-4 px-5 text-sm m-5 overflow-auto rounded-md border border-borderslight dark:border-borders;
+}
+
+p + pre,
+ol + pre,
+ul + pre,
+p + pre[class*="language-"],
+ol + pre[class*="language-"],
+ul + pre[class*="language-"] {
+  @apply my-3 mx-5;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"],
+pre {
+  @apply bg-bglight dark:bg-bgdark;
+}
+
+:not(pre) > code[class*="language-"] {
+  @apply p-[0.1rem] rounded-md whitespace-normal;
+}
+
+.toc-item {
+  list-style: disc;
+}
+
+.toc-level-1 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  margin: 0.75rem 1.25rem;
+}
+
+.toc-level-2,
+.toc-level-3,
+.toc-level-4,
+.toc-level-5,
+.toc-level-6 {
+  margin-top: 0;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 @layer components {
@@ -33,7 +157,7 @@ body {
     dark:bg-bgdark dark:text-textnav dark:hover:bg-accent dark:hover:text-navdark 
     bg-sblight text-textlight hover:bg-accentlight hover:text-navlight 
     hover:rounded-xl rounded-3xl transition-all duration-300 ease-linear
-    cursor-pointer shadow-lg;
+    cursor-pointer shadow-md;
   }
 
   .navtooltip {
@@ -112,33 +236,6 @@ body {
     @apply sidebar-section bg-sblight dark:bg-sbdark uppercase text-lg font-bold z-10;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply sidebar-section font-bold border-t first:border-t-0 first:rounded-t-md last:border-b-0;
-  }
-
-  h1 {
-    @apply text-2xl;
-  }
-
-  h2 {
-    @apply text-xl;
-  }
-
-  h3 {
-    @apply text-lg;
-  }
-
-  h4,
-  h5,
-  h6 {
-    @apply text-base;
-  }
-
   #bsearch {
     @apply rounded-t-md;
   }
@@ -152,49 +249,8 @@ body {
     @apply text-accentlight dark:text-accent hover:text-rednord dark:hover:text-yellnord transition-all duration-100 ease-linear break-words;
   }
 
-  code {
-    @apply text-sm text-rednord dark:text-yellnord break-words;
-  }
-
-  pre code {
-    @apply text-yellnord cust-scb;
-  }
-
-  strong,
-  b {
-    @apply font-bold;
-  }
-
-  ol {
-    @apply list-decimal px-5 mx-5 my-3;
-  }
-
-  ul {
-    @apply list-disc px-5 mx-5 my-3;
-  }
-
-  p + ol {
-    @apply my-0 mb-3;
-  }
-
   .mainsect {
     @apply h-screen box-border flex flex-col overflow-y-auto px-3 lg:px-16 py-4 md:cust-scb bg-hero-pattern-light dark:bg-hero-pattern;
-  }
-
-  img[alt$="-img"] {
-    @apply w-full md:max-w-[1080px] h-auto rounded-md block md:mx-auto;
-  }
-
-  blockquote {
-    @apply border-l-8 border-l-accentlight bg-bglight dark:border-l-accent dark:bg-bgdark;
-  }
-
-  li blockquote {
-    @apply border border-l-8 border-borderslight border-l-accentlight dark:border-borders dark:border-l-accent w-fit mb-2 bg-bglight dark:bg-bgdark rounded-md mt-2;
-  }
-
-  hr {
-    @apply border-[0.5px] border-borders;
   }
 
   .footer {
@@ -229,156 +285,82 @@ body {
   .lapp-logo {
     @apply bg-hero-logo-light dark:bg-hero-logo w-[250px] h-[250px] md:w-[100px] md:h-[100px];
   }
-}
 
-/* Everything listed below won't work with Tailwind stylings */
-.toc-item {
-  list-style: disc;
-}
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    @apply text-token-light-comment dark:text-token-comment;
+  }
 
-.toc-level-1 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  margin: 0.75rem 1.25rem;
-}
+  .token.punctuation {
+    @apply text-token-light-defaultacc dark:text-token-defaultacc;
+  }
 
-.toc-level-2,
-.toc-level-3,
-.toc-level-4,
-.toc-level-5,
-.toc-level-6 {
-  margin-top: 0;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
+  .namespace {
+    @apply opacity-70;
+  }
 
-code[class*="language-"],
-pre[class*="language-"] {
-  color: #f8f8f2;
-  background: none;
-  font-family: "Source Code Pro", monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
+  .token.property,
+  .token.tag,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    @apply text-token-light-defaultacc dark:text-token-defaultacc;
+  }
 
-/* Code blocks */
-pre[class*="language-"],
-pre {
-  padding: 1rem 1.25rem;
-  font-size: 0.875rem;
-  margin: 1.25rem;
-  overflow: auto;
-  border-radius: 0.375rem;
-  border: solid 1px #434c5e;
-}
+  .token.number {
+    @apply text-token-light-num dark:text-token-num;
+  }
 
-p + pre,
-ol + pre,
-ul + pre,
-p + pre[class*="language-"],
-ol + pre[class*="language-"],
-ul + pre[class*="language-"] {
-  margin: 0.75rem 1.25rem;
-}
+  .token.boolean {
+    @apply text-token-light-defaultacc dark:text-token-defaultacc;
+  }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"],
-pre {
-  background: #232731;
-}
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    @apply text-token-light-selector dark:text-token-selector;
+  }
 
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-  padding: 0.1rem;
-  border-radius: 0.3rem;
-  white-space: normal;
-}
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string,
+  .token.variable {
+    @apply text-token-light-defaultacc dark:text-token-defaultacc;
+  }
 
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: #636f88;
-}
+  .token.atrule,
+  .token.attr-value,
+  .token.function,
+  .token.class-name {
+    @apply text-token-light-function dark:text-token-function;
+  }
 
-.token.punctuation {
-  color: #81a1c1;
-}
+  .token.keyword {
+    @apply text-token-light-defaultacc dark:text-token-defaultacc;
+  }
 
-.namespace {
-  opacity: 0.7;
-}
+  .token.regex,
+  .token.important {
+    @apply text-token-light-important dark:text-token-important;
+  }
 
-.token.property,
-.token.tag,
-.token.constant,
-.token.symbol,
-.token.deleted {
-  color: #81a1c1;
-}
+  .token.important,
+  .token.bold {
+    @apply font-bold;
+  }
 
-.token.number {
-  color: #b48ead;
-}
+  .token.italic {
+    @apply italic;
+  }
 
-.token.boolean {
-  color: #81a1c1;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-  color: #a3be8c;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string,
-.token.variable {
-  color: #81a1c1;
-}
-
-.token.atrule,
-.token.attr-value,
-.token.function,
-.token.class-name {
-  color: #88c0d0;
-}
-
-.token.keyword {
-  color: #81a1c1;
-}
-
-.token.regex,
-.token.important {
-  color: #ebcb8b;
-}
-
-.token.important,
-.token.bold {
-  font-weight: bold;
-}
-
-.token.italic {
-  font-style: italic;
-}
-
-.token.entity {
-  cursor: help;
+  .token.entity {
+    @apply cursor-help;
+  }
 }
