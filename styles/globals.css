@@ -48,7 +48,7 @@ code {
 }
 
 pre code {
-  @apply text-yellnord cust-scb;
+  @apply text-token-light-unstyled dark:text-token-unstyled cust-scb;
 }
 
 strong,
