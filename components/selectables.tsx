@@ -11,11 +11,11 @@ export default function Selectables(props: any) {
   return (
     <Link href={`/posts/${props.id}`} passHref>
       <button
-        className="sidebar-section w-full selectable-section text-left"
+        className="sidebar-section selectable-section w-full text-left"
         onClick={handleClick}
       >
         <p className="font-semibold">{props.title}</p>
-        <p className="text-sm opacity-60 z-0">{props.date}</p>
+        <p className="z-0 text-sm opacity-60">{props.date}</p>
         <p className="mt-1 mb-2 text-sm">{props.desc}</p>
         <div className="tagsbs">
           {props.tag.map((children: any, index: any) => (
@@ -33,11 +33,11 @@ export function CardSelectables(props: any) {
   return (
     <Link href={`/posts/${props.id}`} passHref>
       <button
-        className="card-section w-full text-left flex flex-col h-full"
+        className="card-section flex h-full w-full flex-col text-left"
         onClick={handleClick}
       >
         <p className="font-semibold">{props.title}</p>
-        <p className="text-sm opacity-60 z-0">{props.date}</p>
+        <p className="z-0 text-sm opacity-60">{props.date}</p>
         <p className="mt-1 mb-2 text-sm">{props.desc}</p>
         <div className="tagsbs mt-auto">
           {props.tag.map((children: any, index: any) => (
@@ -56,13 +56,13 @@ export function CardEduSelectables(props: any) {
     <a
       aria-label={props.title}
       href={props.href}
-      className="card-section w-full text-left flex flex-col h-full text-textlight dark:text-textnav hover:text-textlight dark:hover:text-textnav"
+      className="card-section flex h-full w-full flex-col text-left text-textlight hover:text-textlight dark:text-textnav dark:hover:text-textnav"
     >
       <p className="font-semibold">{props.title}</p>
-      <p className="text-sm opacity-60 z-0">
+      <p className="z-0 text-sm opacity-60">
         {props.day}, {props.time}
       </p>
-      <p className="text-sm z-0">Dosen Pengajar:</p>
+      <p className="z-0 text-sm">Dosen Pengajar:</p>
       <ul className="mt-0">
         {props.lect.map((e: any, index: any) => {
           return (

@@ -71,7 +71,7 @@ const GitProfile = () => (
         src="https://github.com/irvanmalik48.png?size=400"
         sizes="400"
         layout="fill"
-        className="navicon brightness-75 group-hover:brightness-100 group-hover:rounded-xl"
+        className="navicon brightness-75 group-hover:rounded-xl group-hover:brightness-100"
         alt="profile picture"
       />
       <span className="navtooltip group-hover:scale-100">Github Profile</span>

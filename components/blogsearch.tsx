@@ -68,7 +68,7 @@ function show(active: boolean, results: any) {
     results.length > 0 && (
       <>
         <h1>Search Results</h1>
-        <div className="mx-5 my-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+        <div className="mx-5 my-5 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
           {results.map(({ id, title, date, tag, desc }: any, index: any) => (
             <div className="w-full cursor-pointer self-stretch" key={index}>
               <CardSelectables

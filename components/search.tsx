@@ -80,7 +80,7 @@ function show(active: boolean, results: any) {
             />
           </div>
         ))}
-        <div className="sidebar-section flex bg-dark justify-center items-center">
+        <div className="sidebar-section bg-dark flex items-center justify-center">
           <MoreHorizontal />
         </div>
       </>

@@ -35,7 +35,7 @@ export default function BottomBar() {
         <p>Theme</p>
       </button>
       <button
-        className="justify-self-center stt-bottom w-fit"
+        className="stt-bottom w-fit justify-self-center"
         onClick={handleClick}
       >
         <Icons.ChevronsUp />
