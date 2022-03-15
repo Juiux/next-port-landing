@@ -92,13 +92,13 @@ export default function PostLayout(props: PostLayoutProps): JSX.Element {
         <meta key="words" name="keywords" content={props.tag} />
       </Head>
       <div className="container mt-3" style={{ marginBottom: "100px" }}>
-        <section className="m-0 text-center pt-5 pb-5">
+        <section className="m-0 pt-5 pb-5 text-center">
           <div className="container">
             <p className="display-4 mb-0">{props.title}</p>
-            <p className="lead mb-0 text-muted">{props.date}</p>
+            <p className="lead text-muted mb-0">{props.date}</p>
           </div>
         </section>
-        <article className="container card px-4 pb-4 floatcard-no-mt">
+        <article className="card floatcard-no-mt container px-4 pb-4">
           <h1>Table of Contents</h1>
           <div dangerouslySetInnerHTML={{ __html: props.content }} />
           <h1>Comments</h1>
