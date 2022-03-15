@@ -32,7 +32,12 @@ export default function Default(props: any) {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="IrvanMA's Lair" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="msapplication-TileColor" content="#282828" />
+        <meta name="msapplication-tap-highlight" content="no" />
         <meta name="theme-color" content="#282828" />
+        <meta name="format-detection" content="telephone=no" />
+
         <title>{props.title}</title>
         <link rel="manifest" href="/manifest.json" />
         <link
