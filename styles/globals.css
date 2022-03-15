@@ -9,11 +9,11 @@
 *,
 *::before,
 *::after {
-  @apply box-border m-0 p-0 scroll-smooth;
+  @apply m-0 box-border scroll-smooth p-0;
 }
 
 body {
-  @apply bg-bglight dark:bg-bgdark text-textlight dark:text-textnav;
+  @apply bg-bglight text-textlight dark:bg-bgdark dark:text-textnav;
 }
 
 h1,
@@ -22,7 +22,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply sidebar-section font-bold border-t first:border-t-0 first:rounded-t-md last:border-b-0;
+  @apply sidebar-section border-t font-bold first:rounded-t-md first:border-t-0 last:border-b-0;
 }
 
 h1 {
@@ -44,11 +44,11 @@ h6 {
 }
 
 code {
-  @apply text-sm text-rednord dark:text-yellnord break-words;
+  @apply break-words text-sm text-rednord dark:text-yellnord;
 }
 
 pre code {
-  @apply text-token-light-unstyled dark:text-token-unstyled cust-scb;
+  @apply cust-scb text-token-light-unstyled dark:text-token-unstyled;
 }
 
 strong,
@@ -57,11 +57,11 @@ b {
 }
 
 ol {
-  @apply list-decimal px-5 mx-5 my-3;
+  @apply mx-5 my-3 list-decimal px-5;
 }
 
 ul {
-  @apply list-disc px-5 mx-5 my-3;
+  @apply mx-5 my-3 list-disc px-5;
 }
 
 p + ol {
@@ -69,7 +69,7 @@ p + ol {
 }
 
 img[alt$="-img"] {
-  @apply w-full md:max-w-[1080px] h-auto rounded-md block md:mx-auto;
+  @apply block h-auto w-full rounded-md md:mx-auto md:max-w-[1080px];
 }
 
 blockquote {
@@ -77,7 +77,7 @@ blockquote {
 }
 
 li blockquote {
-  @apply border border-l-8 border-borderslight border-l-accentlight dark:border-borders dark:border-l-accent w-fit mb-2 bg-bglight dark:bg-bgdark rounded-md mt-2;
+  @apply mb-2 mt-2 w-fit rounded-md border border-l-8 border-borderslight border-l-accentlight bg-bglight dark:border-borders dark:border-l-accent dark:bg-bgdark;
 }
 
 hr {
@@ -86,7 +86,7 @@ hr {
 
 code[class*="language-"],
 pre[class*="language-"] {
-  @apply text-token-light-unstyled dark:text-token-unstyled bg-none font-mono text-left whitespace-pre break-normal leading-normal;
+  @apply whitespace-pre break-normal bg-none text-left font-mono leading-normal text-token-light-unstyled dark:text-token-unstyled;
   word-spacing: normal;
   word-wrap: normal;
   line-height: 1.5;
@@ -101,7 +101,7 @@ pre[class*="language-"] {
 
 pre[class*="language-"],
 pre {
-  @apply py-4 px-5 text-sm m-5 overflow-auto rounded-md border border-borderslight dark:border-borders;
+  @apply m-5 overflow-auto rounded-md border border-borderslight py-4 px-5 text-sm dark:border-borders;
 }
 
 p + pre,
@@ -120,7 +120,7 @@ pre {
 }
 
 :not(pre) > code[class*="language-"] {
-  @apply p-[0.1rem] rounded-md whitespace-normal;
+  @apply whitespace-normal rounded-md p-[0.1rem];
 }
 
 .toc-item {
@@ -145,59 +145,64 @@ pre {
 
 @layer components {
   .root-grid {
-    @apply w-screen md:grid gap-0 md:grid-cols-root;
+    @apply w-screen gap-0 md:grid md:grid-cols-root;
   }
 
   .cust-scb {
-    @apply scrollbar-thin scrollbar-track-bglight scrollbar-thumb-accentlight dark:scrollbar-track-bgdark dark:scrollbar-thumb-accent;
+    @apply scrollbar-thin scrollbar-track-bglight scrollbar-thumb-accentlight
+    dark:scrollbar-track-bgdark dark:scrollbar-thumb-accent;
   }
 
   .navicon {
-    @apply relative flex items-center justify-center h-12 w-12 my-2 mx-auto 
-    dark:bg-bgdark dark:text-textnav dark:hover:bg-accent dark:hover:text-navdark 
-    bg-sblight text-textlight hover:bg-accentlight hover:text-navlight 
-    hover:rounded-xl rounded-3xl transition-all duration-300 ease-linear
-    cursor-pointer shadow-md;
+    @apply relative my-2 mx-auto flex h-12 w-12 cursor-pointer items-center 
+    justify-center rounded-3xl bg-sblight text-textlight 
+    shadow-md transition-all duration-300 ease-linear 
+    hover:rounded-xl hover:bg-accentlight hover:text-navlight dark:bg-bgdark dark:text-textnav
+    dark:hover:bg-accent dark:hover:text-navdark;
   }
 
   .navtooltip {
-    @apply absolute w-auto px-4 py-2 m-2 min-w-max left-14 rounded-md shadow-lg dark:shadow-bgdark
-    text-textlight bg-navlight dark:text-textnav dark:bg-navdark text-xs font-bold transition-all
-    duration-100 scale-0 origin-left uppercase border dark:border-borders border-borderslight;
+    @apply absolute left-14 m-2 w-auto min-w-max origin-left scale-0 rounded-md border border-borderslight
+    bg-navlight px-4 py-2 text-xs font-bold uppercase text-textlight
+    shadow-lg transition-all duration-100 dark:border-borders dark:bg-navdark dark:text-textnav 
+    dark:shadow-bgdark;
   }
 
   .nav {
-    @apply sticky top-0 z-50 overflow-y-clip h-screen w-16 m-0 hidden md:flex md:flex-none md:flex-col 
-    bg-navlight text-textlight dark:bg-navdark dark:text-textnav shadow-lg pt-2 border-r border-borderslight
-    dark:border-borders;
+    @apply sticky top-0 z-50 m-0 hidden h-screen w-16 overflow-y-clip border-r border-borderslight bg-navlight 
+    pt-2 text-textlight shadow-lg dark:border-borders dark:bg-navdark dark:text-textnav md:flex md:flex-none
+    md:flex-col;
   }
 
   .navhr {
-    @apply bg-accentlight dark:bg-accent border-2 border-accentlight dark:border-accent rounded-full mx-5 my-0.5;
+    @apply mx-5 my-0.5 rounded-full border-2 border-accentlight bg-accentlight dark:border-accent dark:bg-accent;
   }
 
   .gitprofile {
-    @apply mt-auto flex flex-col justify-center align-middle translate-y-16 hover:translate-y-0 
-    transition-all duration-300 bg-bglight shadow-inner dark:shadow-none dark:bg-bgdark;
+    @apply mt-auto flex translate-y-16 flex-col justify-center bg-bglight align-middle 
+    shadow-inner transition-all duration-300 hover:translate-y-0 dark:bg-bgdark dark:shadow-none;
   }
 
   .gitchevron {
-    @apply relative flex items-center justify-center h-12 w-12 my-2 mx-auto dark:bg-bgdark dark:text-textnav 
-    group-hover:translate-y-0 dark:hover:bg-bgdark dark:hover:text-textnav transition-all duration-300 
-    ease-linear cursor-pointer shadow-lg hover:bg-bglight hover:text-textlight bg-bglight text-textlight rounded-full;
+    @apply relative my-2 mx-auto flex h-12 w-12 cursor-pointer items-center justify-center rounded-full 
+    bg-bglight text-textlight shadow-lg transition-all duration-300 
+    ease-linear group-hover:translate-y-0 hover:bg-bglight hover:text-textlight dark:bg-bgdark
+    dark:text-textnav dark:hover:bg-bgdark dark:hover:text-textnav;
   }
 
   .sidebar {
-    @apply sticky hidden top-0 w-80 h-screen bg-sblight dark:bg-sbdark z-0 overflow-y-auto md:flex md:flex-col 
-    items-center justify-start border-r border-borderslight dark:border-borders md:cust-scb;
+    @apply md:cust-scb sticky top-0 z-0 hidden h-screen w-80 items-center justify-start overflow-y-auto border-r 
+    border-borderslight bg-sblight dark:border-borders dark:bg-sbdark md:flex md:flex-col;
   }
 
   .sidebar-section {
-    @apply px-5 py-3 border-b bg-sblight dark:bg-sbdark border-borderslight text-textlight dark:text-textnav dark:border-borders w-full outline-none;
+    @apply w-full border-b border-borderslight bg-sblight px-5 py-3 text-textlight outline-none
+    dark:border-borders dark:bg-sbdark dark:text-textnav;
   }
 
   .selectable-section {
-    @apply hover:bg-navlight active:bg-riplight dark:hover:bg-navdark dark:active:bg-ripdark transition-all duration-300 ease-linear;
+    @apply transition-all duration-300 ease-linear active:bg-riplight hover:bg-navlight
+    dark:active:bg-ripdark dark:hover:bg-navdark;
   }
 
   .tagsbs {
@@ -205,7 +210,7 @@ pre {
   }
 
   .tagsb {
-    @apply inline-block text-xs px-1 py-0.5 mr-2 mb-1 bg-borderslight dark:bg-borders rounded-md;
+    @apply mr-2 mb-1 inline-block rounded-md bg-borderslight px-1 py-0.5 text-xs dark:bg-borders;
   }
 
   .card-section .tagsbs {
@@ -221,7 +226,8 @@ pre {
   }
 
   .postcard {
-    @apply w-full my-10 bg-sblight dark:bg-sbdark rounded-md border border-borderslight dark:border-borders text-textlight dark:text-textnav;
+    @apply my-10 w-full rounded-md border border-borderslight bg-sblight text-textlight 
+    dark:border-borders dark:bg-sbdark dark:text-textnav;
   }
 
   .postcard p {
@@ -233,7 +239,7 @@ pre {
   }
 
   .sidebar-header {
-    @apply sidebar-section bg-sblight dark:bg-sbdark uppercase text-lg font-bold z-10;
+    @apply sidebar-section z-10 bg-sblight text-lg font-bold uppercase dark:bg-sbdark;
   }
 
   #bsearch {
@@ -246,44 +252,50 @@ pre {
 
   a,
   .anchor {
-    @apply text-accentlight dark:text-accent hover:text-rednord dark:hover:text-yellnord transition-all duration-100 ease-linear break-words;
+    @apply break-words text-accentlight transition-all duration-100 ease-linear 
+    hover:text-rednord dark:text-accent dark:hover:text-yellnord;
   }
 
   .mainsect {
-    @apply h-screen box-border flex flex-col overflow-y-auto px-3 lg:px-16 py-4 md:cust-scb bg-hero-pattern-light dark:bg-hero-pattern;
+    @apply md:cust-scb box-border flex h-screen flex-col overflow-y-auto bg-hero-pattern-light 
+    px-3 py-4 dark:bg-hero-pattern lg:px-16;
   }
 
   .footer {
-    @apply w-full text-center text-fttextl dark:text-fttext pb-3 pt-7 px-5;
+    @apply w-full px-5 pb-3 pt-7 text-center text-fttextl dark:text-fttext;
   }
 
   .card-section {
-    @apply border border-borderslight dark:border-borders rounded-md bg-sblight hover:bg-navlight active:bg-riplight 
-    dark:bg-sbdark dark:hover:bg-navdark dark:active:bg-ripdark transition-all duration-300 ease-linear;
+    @apply rounded-md border border-borderslight bg-sblight transition-all duration-300 ease-linear 
+    active:bg-riplight hover:bg-navlight dark:border-borders dark:bg-sbdark dark:active:bg-ripdark 
+    dark:hover:bg-navdark;
   }
 
   .btn {
-    @apply bg-transparent border border-borderslight dark:border-borders rounded-md bg-sblight hover:bg-accentlight hover:text-bglight
-    dark:bg-sbdark dark:hover:bg-accent dark:hover:text-bgdark dark:active:bg-accent transition-all duration-300 ease-linear px-3 py-2
-    active:bg-accentlight text-xs w-fit font-bold;
+    @apply w-fit rounded-md border border-borderslight bg-transparent bg-sblight px-3 py-2
+    text-xs font-bold transition-all duration-300 ease-linear active:bg-accentlight hover:bg-accentlight
+    hover:text-bglight dark:border-borders dark:bg-sbdark dark:active:bg-accent dark:hover:bg-accent 
+    dark:hover:text-bgdark;
   }
 
   .bottombar {
-    @apply sticky bottom-0 p-3 bg-sblight dark:bg-sbdark grid grid-cols-5 w-full items-center md:hidden border-t 
-    border-borderslight dark:border-borders shadow-btmbar dark:shadow-none;
+    @apply sticky bottom-0 grid w-full grid-cols-5 items-center border-t border-borderslight
+    bg-sblight p-3 shadow-btmbar dark:border-borders dark:bg-sbdark dark:shadow-none md:hidden;
   }
 
   .bottomitems {
-    @apply flex flex-col justify-center items-center transition-all ease-linear duration-300 opacity-60 active:opacity-100 hover:opacity-100 gap-1 text-xs;
+    @apply flex flex-col items-center justify-center gap-1 text-xs opacity-60 transition-all
+    duration-300 ease-linear active:opacity-100 hover:opacity-100;
   }
 
   .stt-bottom {
-    @apply rounded-full p-3 dark:bg-accent dark:text-sbdark transition-all ease-linear duration-300 dark:active:bg-yellnord dark:hover:bg-yellnord
-    bg-accentlight text-sblight active:bg-rednord hover:bg-rednord;
+    @apply rounded-full bg-accentlight p-3 text-sblight transition-all duration-300 ease-linear
+    active:bg-rednord hover:bg-rednord dark:bg-accent dark:text-sbdark dark:active:bg-yellnord
+    dark:hover:bg-yellnord;
   }
 
   .lapp-logo {
-    @apply bg-hero-logo-light dark:bg-hero-logo w-[250px] h-[250px] md:w-[100px] md:h-[100px];
+    @apply h-[250px] w-[250px] bg-hero-logo-light dark:bg-hero-logo md:h-[100px] md:w-[100px];
   }
 
   .token.comment,
