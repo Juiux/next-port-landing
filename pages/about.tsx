@@ -11,8 +11,8 @@ const About: NextPage = ({ allPostsData }: any) => {
       date={undefined}
       allPostsData={allPostsData}
     >
-      <p className="text-3xl text-center font-bold mt-12">About Me</p>
-      <p className="text-center text-accentlight dark:text-accent mt-0 mb-10">
+      <p className="mt-12 text-center text-3xl font-bold">About Me</p>
+      <p className="mt-0 mb-10 text-center text-accentlight dark:text-accent">
         Who I am until now.
       </p>
       <div className="postcard">

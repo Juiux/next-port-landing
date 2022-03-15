@@ -14,13 +14,13 @@ const Home: NextPage = ({ allPostsData }: any) => {
       date={undefined}
       allPostsData={allPostsData}
     >
-      <div className="flex flex-col md:flex-row gap-2 mt-12 justify-center items-center">
+      <div className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
         <div className="lapp-logo"></div>
         <div className="flex flex-col gap-0">
-          <p className="text-3xl text-center md:text-left font-bold">
+          <p className="text-center text-3xl font-bold md:text-left">
             Irvan Malik Azantha
           </p>
-          <p className="text-accentlight text-center md:text-left dark:text-accent mt-0">
+          <p className="mt-0 text-center text-accentlight dark:text-accent md:text-left">
             Do what you want and do it well.
           </p>
         </div>
@@ -45,7 +45,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
         <blockquote>
           <p>Recent 4 posts that I have written currently</p>
         </blockquote>
-        <div className="mx-5 my-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+        <div className="mx-5 my-5 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
           {allPostsData
             .slice(0, 4)
             .map(({ id, title, date, tag, desc }: any, index: any) => {
@@ -63,7 +63,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
             })}
         </div>
         <Link href={"/blog"} passHref>
-          <button className="btn flex justify-center text-sm items-center gap-2 cursor-pointer mb-5 mx-5 self-center justify-self-center">
+          <button className="btn mx-5 mb-5 flex cursor-pointer items-center justify-center gap-2 self-center justify-self-center text-sm">
             <span className="ml-1.5">SEE MORE</span>
             <Icons.ChevronsRight className="inline" />
           </button>

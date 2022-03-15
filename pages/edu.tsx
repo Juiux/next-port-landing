@@ -13,10 +13,10 @@ const Edu: NextPage = ({ allPostsData, allEduData }: any) => {
       date={undefined}
       allPostsData={allPostsData}
     >
-      <p className="text-3xl text-center font-bold mt-12">
+      <p className="mt-12 text-center text-3xl font-bold">
         Jadwal Kuliah IF 4 REG B
       </p>
-      <p className="text-center text-accentlight dark:text-accent mt-0">
+      <p className="mt-0 text-center text-accentlight dark:text-accent">
         Apes together strong.
       </p>
       <div className="postcard flex flex-col">
@@ -57,7 +57,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 function EduSelectable(props: any) {
   return (
-    <div className="mx-5 my-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+    <div className="mx-5 my-5 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
       {props.data
         .filter((e: any) => e.day == props.day && e.mkstat == "ongoing")
         .map(({ title, day, time, lect, href, mkstat }: any, index: any) => {

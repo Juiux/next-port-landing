@@ -13,14 +13,14 @@ const Blog: NextPage = ({ allPostsData }: any) => {
       date={undefined}
       allPostsData={allPostsData}
     >
-      <p className="text-3xl text-center font-bold mt-12">Blog Posts</p>
-      <p className="text-center text-accentlight dark:text-accent mt-0">
+      <p className="mt-12 text-center text-3xl font-bold">Blog Posts</p>
+      <p className="mt-0 text-center text-accentlight dark:text-accent">
         All that I have written currently.
       </p>
       <div className="postcard flex flex-col">
         <BlogSearch />
         <h1>Posts</h1>
-        <div className="mx-5 my-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+        <div className="mx-5 my-5 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
           {allPostsData.map(
             ({ id, title, date, tag, desc }: any, index: any) => {
               return (
