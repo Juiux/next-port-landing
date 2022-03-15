@@ -4,7 +4,6 @@
   "theme_color": "#2e3440",
   "background_color": "#2e3440",
   "display": "minimal-ui",
-  "scope": "/",
   "start_url": "/",
   "icons": [
     {
