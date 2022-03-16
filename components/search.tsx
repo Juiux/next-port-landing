@@ -66,7 +66,8 @@ export default function Search({ onFocusHandler }: any) {
 function show(active: boolean, results: any) {
   return (
     active &&
-    results.length > 0 && (
+    results.length > 0 &&
+    results !== undefined && (
       <>
         <p className="sidebar-header">SEARCHED POSTS</p>
         {results.map(({ id, title, date, tag, desc }: any, index: any) => (
