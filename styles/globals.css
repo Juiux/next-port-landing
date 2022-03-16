@@ -284,7 +284,8 @@ li ol {
 
   .bottombar {
     @apply sticky bottom-0 grid w-full grid-cols-5 items-center border-t border-borderslight
-    bg-sblight p-3 shadow-btmbar dark:border-borders dark:bg-sbdark dark:shadow-none md:hidden;
+    bg-sblight p-3 shadow-btmbar dark:border-borders dark:bg-sbdark dark:shadow-none md:hidden
+    support-blur:bg-sblighttp support-blur:dark:bg-sbdarktp support-blur:backdrop-blur-sm;
   }
 
   .bottomitems {
