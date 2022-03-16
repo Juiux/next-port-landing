@@ -1,4 +1,4 @@
-const plugin = require('tailwindcss/plugin');
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   mode: "jit",
@@ -70,8 +70,11 @@ module.exports = {
   },
   plugins: [
     require("tailwind-scrollbar"),
-    plugin(function({ addVariant }) {
-      addVariant("support-blur", "@supports ((-webkit-backdrop-filter: blur(4px)) or (backdrop-filter: blur(4px)))");
-    })
+    plugin(function ({ addVariant }) {
+      addVariant(
+        "support-blur",
+        "@supports ((-webkit-backdrop-filter: blur(4px)) or (backdrop-filter: blur(4px)))"
+      );
+    }),
   ],
 };
