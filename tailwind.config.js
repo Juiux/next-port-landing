@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   mode: "jit",
   darkMode: "class",
@@ -21,6 +23,7 @@ module.exports = {
         ripdark: "hsl(222, 17%, 32%)",
         fttext: "hsl(222, 17%, 60%)",
         sbdark: "#272C37",
+        sbdarktp: "#272C37CC",
         textnav: "#E5E9F0",
         accent: "#88C0D0",
         borders: "#434C5E",
@@ -30,6 +33,7 @@ module.exports = {
         riplight: "hsl(220, 27%, 97%)",
         fttextl: "hsl(222, 17%, 32%)",
         sblight: "hsl(220, 27%, 93%)",
+        sblighttp: "hsla(220, 27%, 93%, 0.8)",
         textlight: "#232731",
         accentlight: "#5E81AC",
         borderslight: "hsl(220, 27%, 85%)",
@@ -64,5 +68,10 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwind-scrollbar")],
+  plugins: [
+    require("tailwind-scrollbar"),
+    plugin(function({ addVariant }) {
+      addVariant("support-blur", "@supports ((-webkit-backdrop-filter: blur(4px)) or (backdrop-filter: blur(4px)))");
+    })
+  ],
 };
