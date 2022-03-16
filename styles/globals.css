@@ -123,6 +123,10 @@ pre {
   @apply whitespace-normal rounded-md p-[0.1rem];
 }
 
+li ol {
+  @apply my-0;
+}
+
 .toc-item {
   list-style: disc;
 }
