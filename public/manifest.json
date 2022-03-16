@@ -453,6 +453,36 @@
     {
       "src": "/icons/ios/1024.png",
       "sizes": "1024x1024"
+    },
+    {
+      "src": "/icons/maskable/maskable-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/maskable/maskable-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/maskable/maskable-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/maskable/maskable-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/maskable/maskable-512x512.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
