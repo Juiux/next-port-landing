@@ -8,6 +8,8 @@ function checker(query: string) {
   if (query.charAt(0) == "#") {
     query = query.replace("#", "");
     return blogPosts.filter((post: any) => post.tag.toString().includes(query));
+  } else if (query == "") {
+    return undefined;
   } else {
     return blogPosts.filter((post: any) =>
       post.title.toLowerCase().includes(query)
