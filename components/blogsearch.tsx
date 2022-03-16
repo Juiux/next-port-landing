@@ -65,7 +65,8 @@ export default function BlogSearch({ onFocusHandler }: any) {
 function show(active: boolean, results: any) {
   return (
     active &&
-    results.length > 0 && (
+    results.length > 0 &&
+    results !== undefined && (
       <>
         <h1>Search Results</h1>
         <div className="mx-5 my-5 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
