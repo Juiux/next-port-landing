@@ -480,7 +480,7 @@
     },
     {
       "src": "/icons/maskable/maskable-512x512.png",
-      "sizes": "128x128",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
