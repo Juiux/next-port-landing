@@ -41,4 +41,4 @@ Tailwind breakpoint sizes are just... magnificent. Yeah, I'm out of word to desc
 
 # Verdict
 
-I am very happy that I ever meet Tailwind and ever took a time to learn it. It is a worthwhile and highly useful experience but that doesn't stop right there. As you might know, humans are greed in nature, So, I will still keep learning this stuff and improve my skills on it. I'm still pretty much dumb about anything about this. There's so much to learn, so much to achieve, so much to improve, so much to fix. And that's not a bad thing at all because I got time to kill my time (damn). There's still so much to learn. Yeah, and thanks for reading this post. Until then, folks!
+I am very happy that I ever meet Tailwind and ever took a time to learn it. It is a worthwhile and highly useful experience but that doesn't stop right there. I will still keep learning and improve my skills. I'm still pretty much dumb about anything. There's so much to learn, so much to achieve, so much to improve, so much to fix. And that's not a bad thing at all because I got time to kill my time (damn). Yeah, and thanks for reading this post. Until then, folks!
