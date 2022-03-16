@@ -31,7 +31,7 @@ I can predict what produces what in Tailwind. The names are straightforward. So 
 
 4. Purge all the unused classes like a chad.
 
-I can finally say *begone, thot!* to the manual way of selecting imported SCSS Bootstrap files and casually avoiding deleting useful stuffs. Tailwind provides me with a superpower ability I usually call **purging the hell out of the production-ready CSS file**. It is very very very very very very very useful at reducing the output production-ready CSS file. It also doesn't come with JS script dependency for it to run so yeah, it's really good.
+I can finally say _begone, thot!_ to the manual way of selecting imported SCSS Bootstrap files and casually avoiding deleting useful stuffs. Tailwind provides me with a superpower ability I usually call **purging the hell out of the production-ready CSS file**. It is very very very very very very very useful at reducing the output production-ready CSS file. It also doesn't come with JS script dependency for it to run so yeah, it's really good.
 
 5. Nicely done breakpoint sizes and defaults
 
