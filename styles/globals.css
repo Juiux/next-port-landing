@@ -302,6 +302,13 @@ li ol {
     @apply h-[250px] w-[250px] bg-hero-logo-light dark:bg-hero-logo md:h-[100px] md:w-[100px];
   }
 
+  .scroll-cursor {
+    @apply fixed bottom-6 right-6 hidden rounded-3xl border border-borderslight bg-sblight
+    p-3 text-textlight shadow-lg transition-all duration-300 hover:rounded-xl hover:bg-accentlight hover:text-sblight
+    support-blur:bg-sblighttp support-blur:backdrop-blur-sm dark:border-borders dark:bg-sbdark
+    dark:text-textnav dark:shadow-none dark:hover:bg-accent dark:hover:text-sbdark support-blur:dark:bg-sbdarktp md:block;
+  }
+
   .token.comment,
   .token.prolog,
   .token.doctype,
