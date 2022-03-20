@@ -3,6 +3,7 @@ import BottomBar from "./bottombar";
 import Footer from "./footer";
 import Navbar from "./navbar";
 import Sidebar from "./sidebar";
+import Stt from "./stt";
 import Thumbnail from "./thumbnail";
 
 export default function Default(props: any) {
@@ -70,6 +71,7 @@ export default function Default(props: any) {
         </article>
       </main>
       <BottomBar />
+      <Stt />
     </>
   );
 }
