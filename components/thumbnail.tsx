@@ -32,7 +32,7 @@ export default function Thumbnail(
   const color = `color=${colorHex}&`;
   const tags = `${processedTags}`;
 
-  const all = `https://api.irvanma.live/api/index?${title}${name}${email}${date}${color}${tags}`;
+  const all = `https://api.irvanma.me/api/index?${title}${name}${email}${date}${color}${tags}`;
 
   return all;
 }
