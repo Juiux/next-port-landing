@@ -15,6 +15,7 @@ export default function Default(props: any) {
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <meta name="description" content={props.desc} />
         <meta key="words" name="keywords" content="blog" />
+        
         <meta property="og:url" content="https://irvanma.live" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={props.title} />
@@ -23,6 +24,7 @@ export default function Default(props: any) {
           property="og:image"
           content={Thumbnail(props.title, props.date, props.tag)}
         />
+
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={props.title} />
         <meta name="twitter:description" content={props.desc} />
@@ -30,6 +32,7 @@ export default function Default(props: any) {
           name="twitter:image"
           content={Thumbnail(props.title, props.date, props.tag)}
         />
+
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="IrvanMA's Lair" />
@@ -59,8 +62,14 @@ export default function Default(props: any) {
           type="image/png"
           sizes="96x96"
         />
-        <link rel="icon" href="/icons/favicon.ico"></link>
-        <link rel="apple-touch-icon" href="/icons/ios/192.png"></link>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          href="https://irvanma.me/rss.xml"
+        />
+
+        <link rel="icon" href="/icons/favicon.ico" />
+        <link rel="apple-touch-icon" href="/icons/ios/192.png" />
       </Head>
       <main className="root-grid">
         <Navbar />
