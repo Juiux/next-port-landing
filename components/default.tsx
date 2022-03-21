@@ -15,7 +15,7 @@ export default function Default(props: any) {
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <meta name="description" content={props.desc} />
         <meta key="words" name="keywords" content="blog" />
-        
+
         <meta property="og:url" content="https://irvanma.live" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={props.title} />
