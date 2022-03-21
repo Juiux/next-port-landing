@@ -1,10 +1,9 @@
 import { handleClick } from "./selectables";
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import * as Icon from "react-feather";
 
 export default function Stt() {
-  const [isVisible, setIsVisible]: [boolean, Dispatch<SetStateAction<any>>] =
-    useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const mainPart = document.getElementById("main-part");
     const toggleVisibility = () => {
