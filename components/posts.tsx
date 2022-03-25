@@ -14,10 +14,10 @@ export default function PostLayout(props: any) {
       <Head>
         <meta key="words" name="keywords" content={props.tag} />
       </Head>
-      <p className="mt-12 text-center text-[2rem] font-bold text-textlight dark:text-textnav">
+      <p className="mt-12 text-center text-[2rem] font-bold text-nord-light-text dark:text-nord-dark-text">
         {props.title}
       </p>
-      <p className="mt-0 text-center text-accentlight dark:text-accent">
+      <p className="mt-0 text-center text-nord-light-accent dark:text-nord-dark-accent">
         {props.date}
       </p>
       <div className="postcard">
