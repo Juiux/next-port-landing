@@ -13,7 +13,7 @@
 }
 
 body {
-  @apply bg-bglight text-textlight dark:bg-bgdark dark:text-textnav;
+  @apply bg-nord-light-bg text-nord-light-text dark:bg-nord-dark-bg dark:text-nord-dark-text;
 }
 
 h1,
@@ -44,11 +44,11 @@ h6 {
 }
 
 code {
-  @apply break-words text-sm text-rednord dark:text-yellnord;
+  @apply break-words text-sm text-nord-light-highlight dark:text-nord-dark-highlight;
 }
 
 pre code {
-  @apply cust-scb text-token-light-unstyled dark:text-token-unstyled;
+  @apply cust-scb text-token-light-unstyled dark:text-token-dark-unstyled;
 }
 
 strong,
@@ -73,11 +73,12 @@ img[alt$="-img"] {
 }
 
 blockquote {
-  @apply border-l-8 border-l-accentlight bg-bglight dark:border-l-accent dark:bg-bgdark;
+  @apply border-l-8 border-l-nord-light-accent bg-nord-light-bg dark:border-l-nord-dark-accent dark:bg-nord-dark-bg;
 }
 
 li blockquote {
-  @apply mb-2 mt-2 w-fit rounded-md border border-l-8 border-borderslight border-l-accentlight bg-bglight dark:border-borders dark:border-l-accent dark:bg-bgdark;
+  @apply mb-2 mt-2 w-fit rounded-md border border-l-8 border-nord-light-borders border-l-nord-light-accent
+  bg-nord-light-bg dark:border-nord-dark-borders dark:border-l-nord-dark-accent dark:bg-nord-dark-bg;
 }
 
 hr {
@@ -86,7 +87,7 @@ hr {
 
 code[class*="language-"],
 pre[class*="language-"] {
-  @apply whitespace-pre break-normal bg-none text-left font-mono leading-normal text-token-light-unstyled dark:text-token-unstyled;
+  @apply whitespace-pre break-normal bg-none text-left font-mono leading-normal text-token-light-unstyled dark:text-token-dark-unstyled;
   word-spacing: normal;
   word-wrap: normal;
   line-height: 1.5;
@@ -101,7 +102,7 @@ pre[class*="language-"] {
 
 pre[class*="language-"],
 pre {
-  @apply m-5 overflow-auto rounded-md border border-borderslight py-4 px-5 text-sm dark:border-borders;
+  @apply m-5 overflow-auto rounded-md border border-nord-light-borders py-4 px-5 text-sm dark:border-nord-dark-borders;
 }
 
 p + pre,
@@ -116,7 +117,7 @@ ul + pre[class*="language-"] {
 :not(pre) > code[class*="language-"],
 pre[class*="language-"],
 pre {
-  @apply bg-bglight dark:bg-bgdark;
+  @apply bg-nord-light-bg dark:bg-nord-dark-bg;
 }
 
 :not(pre) > code[class*="language-"] {
@@ -153,60 +154,61 @@ li ol {
   }
 
   .cust-scb {
-    @apply scrollbar-thin scrollbar-track-bglight scrollbar-thumb-accentlight
-    dark:scrollbar-track-bgdark dark:scrollbar-thumb-accent;
+    @apply scrollbar-thin scrollbar-track-nord-light-bg scrollbar-thumb-nord-light-accent
+    dark:scrollbar-track-nord-dark-bg dark:scrollbar-thumb-nord-dark-accent;
   }
 
   .navicon {
     @apply relative my-2 mx-auto flex h-12 w-12 cursor-pointer items-center 
-    justify-center rounded-3xl bg-sblight text-textlight 
+    justify-center rounded-3xl bg-nord-light-sb text-nord-light-text 
     shadow-md transition-all duration-300 ease-linear 
-    hover:rounded-xl hover:bg-accentlight hover:text-navlight dark:bg-bgdark dark:text-textnav
-    dark:hover:bg-accent dark:hover:text-navdark;
+    hover:rounded-xl hover:bg-nord-light-accent hover:text-nord-light-nav dark:bg-nord-dark-bg dark:text-nord-dark-text
+    dark:hover:bg-nord-dark-accent dark:hover:text-nord-dark-nav;
   }
 
   .navtooltip {
-    @apply absolute left-14 m-2 w-auto min-w-max origin-left scale-0 rounded-md border border-borderslight
-    bg-navlight px-4 py-2 text-xs font-bold uppercase text-textlight
-    shadow-lg transition-all duration-100 dark:border-borders dark:bg-navdark dark:text-textnav 
-    dark:shadow-bgdark;
+    @apply absolute left-14 m-2 w-auto min-w-max origin-left scale-0 rounded-md border border-nord-light-borders
+    bg-nord-light-nav px-4 py-2 text-xs font-bold uppercase text-nord-light-text
+    shadow-lg transition-all duration-100 dark:border-nord-dark-borders dark:bg-nord-dark-nav dark:text-nord-dark-text 
+    dark:shadow-nord-dark-bg;
   }
 
   .nav {
-    @apply sticky top-0 z-50 m-0 hidden h-screen w-16 overflow-y-clip border-r border-borderslight bg-navlight 
-    pt-2 text-textlight shadow-lg dark:border-borders dark:bg-navdark dark:text-textnav md:flex md:flex-none
-    md:flex-col;
+    @apply sticky top-0 z-50 m-0 hidden h-screen w-16 overflow-y-clip border-r border-nord-light-borders bg-nord-light-nav
+    pt-2 text-nord-light-text shadow-lg dark:border-nord-dark-borders dark:bg-nord-dark-nav dark:text-nord-dark-text
+    md:flex md:flex-none md:flex-col;
   }
 
   .navhr {
-    @apply mx-5 my-0.5 rounded-full border-2 border-accentlight bg-accentlight dark:border-accent dark:bg-accent;
+    @apply mx-5 my-0.5 rounded-full border-2 border-nord-light-accent bg-nord-light-accent dark:border-nord-dark-accent
+    dark:bg-nord-dark-accent;
   }
 
   .gitprofile {
-    @apply mt-auto flex translate-y-16 flex-col justify-center bg-bglight align-middle 
-    shadow-inner transition-all duration-300 hover:translate-y-0 dark:bg-bgdark dark:shadow-none;
+    @apply mt-auto flex translate-y-16 flex-col justify-center bg-nord-light-bg align-middle 
+    shadow-inner transition-all duration-300 hover:translate-y-0 dark:bg-nord-dark-bg dark:shadow-none;
   }
 
   .gitchevron {
     @apply relative my-2 mx-auto flex h-12 w-12 cursor-pointer items-center justify-center rounded-full 
-    bg-bglight text-textlight shadow-lg transition-all duration-300 
-    ease-linear group-hover:translate-y-0 hover:bg-bglight hover:text-textlight dark:bg-bgdark
-    dark:text-textnav dark:hover:bg-bgdark dark:hover:text-textnav;
+    bg-nord-light-bg text-nord-light-text shadow-lg transition-all duration-300 
+    ease-linear group-hover:translate-y-0 hover:bg-nord-light-bg hover:text-nord-light-text dark:bg-nord-dark-bg
+    dark:text-nord-dark-text dark:hover:bg-nord-dark-bg dark:hover:text-nord-dark-text;
   }
 
   .sidebar {
     @apply md:cust-scb sticky top-0 z-0 hidden h-screen w-80 items-center justify-start overflow-y-auto border-r 
-    border-borderslight bg-sblight dark:border-borders dark:bg-sbdark md:flex md:flex-col;
+    border-nord-light-borders bg-nord-light-sb dark:border-nord-dark-borders dark:bg-nord-dark-sb md:flex md:flex-col;
   }
 
   .sidebar-section {
-    @apply w-full border-b border-borderslight bg-sblight px-5 py-3 text-textlight outline-none
-    dark:border-borders dark:bg-sbdark dark:text-textnav;
+    @apply w-full border-b border-nord-light-borders bg-nord-light-sb px-5 py-3 text-nord-light-text outline-none
+    dark:border-nord-dark-borders dark:bg-nord-dark-sb dark:text-nord-dark-text;
   }
 
   .selectable-section {
-    @apply transition-all duration-300 ease-linear active:bg-riplight hover:bg-navlight
-    dark:active:bg-ripdark dark:hover:bg-navdark;
+    @apply transition-all duration-300 ease-linear active:bg-nord-light-rip hover:bg-nord-light-nav
+    dark:active:bg-nord-dark-rip dark:hover:bg-nord-dark-nav;
   }
 
   .tagsbs {
@@ -214,7 +216,7 @@ li ol {
   }
 
   .tagsb {
-    @apply mr-2 mb-1 inline-block rounded-md bg-borderslight px-1 py-0.5 text-xs dark:bg-borders;
+    @apply mr-2 mb-1 inline-block rounded-md bg-nord-light-borders px-1 py-0.5 text-xs dark:bg-nord-dark-borders;
   }
 
   .card-section .tagsbs {
@@ -230,8 +232,8 @@ li ol {
   }
 
   .postcard {
-    @apply my-10 w-full rounded-md border border-borderslight bg-sblight text-textlight 
-    dark:border-borders dark:bg-sbdark dark:text-textnav;
+    @apply my-10 w-full rounded-md border border-nord-light-borders bg-nord-light-sb text-nord-light-text
+    dark:border-nord-dark-borders dark:bg-nord-dark-sb dark:text-nord-dark-text;
   }
 
   .postcard p {
@@ -243,7 +245,7 @@ li ol {
   }
 
   .sidebar-header {
-    @apply sidebar-section z-10 bg-sblight text-lg font-bold uppercase dark:bg-sbdark;
+    @apply sidebar-section z-10 bg-nord-light-sb text-lg font-bold uppercase dark:bg-nord-dark-sb;
   }
 
   #bsearch {
@@ -256,8 +258,8 @@ li ol {
 
   a,
   .anchor {
-    @apply break-words text-accentlight transition-all duration-100 ease-linear 
-    hover:text-rednord dark:text-accent dark:hover:text-yellnord;
+    @apply break-words text-nord-light-accent transition-all duration-100 ease-linear 
+    hover:text-nord-light-highlight dark:text-nord-dark-accent dark:hover:text-nord-dark-highlight;
   }
 
   .mainsect {
@@ -266,26 +268,26 @@ li ol {
   }
 
   .footer {
-    @apply w-full px-5 pb-3 pt-7 text-center text-fttextl dark:text-fttext;
+    @apply w-full px-5 pb-3 pt-7 text-center text-nord-light-fttext dark:text-nord-dark-fttext;
   }
 
   .card-section {
-    @apply rounded-md border border-borderslight bg-sblight transition-all duration-300 ease-linear 
-    active:bg-riplight hover:bg-navlight dark:border-borders dark:bg-sbdark dark:active:bg-ripdark 
-    dark:hover:bg-navdark;
+    @apply rounded-md border border-nord-light-borders bg-nord-light-sb transition-all duration-300 ease-linear 
+    active:bg-nord-light-rip hover:bg-nord-light-nav dark:border-nord-dark-borders dark:bg-nord-dark-sb dark:active:bg-nord-dark-rip 
+    dark:hover:bg-nord-dark-nav;
   }
 
   .btn {
-    @apply w-fit rounded-md border border-borderslight bg-transparent bg-sblight px-3 py-2
-    text-xs font-bold transition-all duration-300 ease-linear active:bg-accentlight hover:bg-accentlight
-    hover:text-bglight dark:border-borders dark:bg-sbdark dark:active:bg-accent dark:hover:bg-accent 
-    dark:hover:text-bgdark;
+    @apply w-fit rounded-md border border-nord-light-borders bg-transparent bg-nord-light-sb px-3 py-2
+    text-xs font-bold transition-all duration-300 ease-linear active:bg-nord-light-accent hover:bg-nord-light-accent
+    hover:text-nord-light-bg dark:border-nord-dark-borders dark:bg-nord-dark-sb dark:active:bg-nord-dark-accent dark:hover:bg-nord-dark-accent 
+    dark:hover:text-nord-dark-bg;
   }
 
   .bottombar {
-    @apply sticky bottom-0 grid w-full grid-cols-5 items-center border-t border-borderslight
-    bg-sblight p-3 shadow-btmbar support-blur:bg-sblighttp support-blur:backdrop-blur-sm dark:border-borders dark:bg-sbdark
-    dark:shadow-none support-blur:dark:bg-sbdarktp md:hidden;
+    @apply sticky bottom-0 grid w-full grid-cols-5 items-center border-t border-nord-light-borders
+    bg-nord-light-sb p-3 shadow-btmbar support-blur:bg-nord-light-sbtp support-blur:backdrop-blur-sm dark:border-nord-dark-borders dark:bg-nord-dark-sb
+    dark:shadow-none support-blur:dark:bg-nord-dark-sbtp md:hidden;
   }
 
   .bottomitems {
@@ -293,9 +295,9 @@ li ol {
   }
 
   .stt-bottom {
-    @apply rounded-full bg-accentlight p-3 text-sblight transition-all duration-300 ease-linear
-    active:bg-rednord hover:bg-rednord dark:bg-accent dark:text-sbdark dark:active:bg-yellnord
-    dark:hover:bg-yellnord;
+    @apply rounded-full bg-nord-light-accent p-3 text-nord-light-sb transition-all duration-300 ease-linear
+    active:bg-nord-light-highlight hover:bg-nord-light-highlight dark:bg-nord-dark-accent dark:text-nord-dark-sb dark:active:bg-nord-dark-highlight
+    dark:hover:bg-nord-dark-highlight;
   }
 
   .lapp-logo {
@@ -303,21 +305,21 @@ li ol {
   }
 
   .scroll-cursor {
-    @apply fixed bottom-6 right-6 hidden rounded-3xl border border-borderslight bg-sblight
-    p-3 text-textlight shadow-lg transition-all duration-300 hover:rounded-xl hover:bg-accentlight hover:text-sblight
-    support-blur:bg-sblighttp support-blur:backdrop-blur-sm dark:border-borders dark:bg-sbdark
-    dark:text-textnav dark:shadow-none dark:hover:bg-accent dark:hover:text-sbdark support-blur:dark:bg-sbdarktp md:block;
+    @apply fixed bottom-6 right-6 hidden rounded-3xl border border-nord-light-borders bg-nord-light-sb
+    p-3 text-nord-light-text shadow-lg transition-all duration-300 hover:rounded-xl hover:bg-nord-light-accent hover:text-nord-light-sb
+    support-blur:bg-nord-light-sbtp support-blur:backdrop-blur-sm dark:border-nord-dark-borders dark:bg-nord-dark-sb
+    dark:text-nord-dark-text dark:shadow-none dark:hover:bg-nord-dark-text dark:hover:text-nord-dark-sb support-blur:dark:bg-nord-dark-sbtp md:block;
   }
 
   .token.comment,
   .token.prolog,
   .token.doctype,
   .token.cdata {
-    @apply text-token-light-comment dark:text-token-comment;
+    @apply text-token-light-comment dark:text-token-dark-comment;
   }
 
   .token.punctuation {
-    @apply text-token-light-defaultacc dark:text-token-defaultacc;
+    @apply text-token-light-defaultacc dark:text-token-dark-defaultacc;
   }
 
   .namespace {
@@ -329,15 +331,15 @@ li ol {
   .token.constant,
   .token.symbol,
   .token.deleted {
-    @apply text-token-light-defaultacc dark:text-token-defaultacc;
+    @apply text-token-light-defaultacc dark:text-token-dark-defaultacc;
   }
 
   .token.number {
-    @apply text-token-light-num dark:text-token-num;
+    @apply text-token-light-num dark:text-token-dark-num;
   }
 
   .token.boolean {
-    @apply text-token-light-defaultacc dark:text-token-defaultacc;
+    @apply text-token-light-defaultacc dark:text-token-dark-defaultacc;
   }
 
   .token.selector,
@@ -346,7 +348,7 @@ li ol {
   .token.char,
   .token.builtin,
   .token.inserted {
-    @apply text-token-light-selector dark:text-token-selector;
+    @apply text-token-light-selector dark:text-token-dark-selector;
   }
 
   .token.operator,
@@ -355,23 +357,23 @@ li ol {
   .language-css .token.string,
   .style .token.string,
   .token.variable {
-    @apply text-token-light-defaultacc dark:text-token-defaultacc;
+    @apply text-token-light-defaultacc dark:text-token-dark-defaultacc;
   }
 
   .token.atrule,
   .token.attr-value,
   .token.function,
   .token.class-name {
-    @apply text-token-light-function dark:text-token-function;
+    @apply text-token-light-function dark:text-token-dark-function;
   }
 
   .token.keyword {
-    @apply text-token-light-defaultacc dark:text-token-defaultacc;
+    @apply text-token-light-defaultacc dark:text-token-dark-defaultacc;
   }
 
   .token.regex,
   .token.important {
-    @apply text-token-light-important dark:text-token-important;
+    @apply text-token-light-important dark:text-token-dark-important;
   }
 
   .token.important,
