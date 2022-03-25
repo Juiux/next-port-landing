@@ -308,7 +308,7 @@ li ol {
     @apply fixed bottom-6 right-6 hidden rounded-3xl border border-nord-light-borders bg-nord-light-sb
     p-3 text-nord-light-text shadow-lg transition-all duration-300 hover:rounded-xl hover:bg-nord-light-accent hover:text-nord-light-sb
     support-blur:bg-nord-light-sbtp support-blur:backdrop-blur-sm dark:border-nord-dark-borders dark:bg-nord-dark-sb
-    dark:text-nord-dark-text dark:shadow-none dark:hover:bg-nord-dark-text dark:hover:text-nord-dark-sb support-blur:dark:bg-nord-dark-sbtp md:block;
+    dark:text-nord-dark-text dark:shadow-none dark:hover:bg-nord-dark-accent dark:hover:text-nord-dark-sb support-blur:dark:bg-nord-dark-sbtp md:block;
   }
 
   .token.comment,
