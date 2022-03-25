@@ -82,7 +82,7 @@ li blockquote {
 }
 
 hr {
-  @apply border-[0.5px] border-borders;
+  @apply border-[0.5px] border-nord-light-borders dark:border-nord-dark-borders;
 }
 
 code[class*="language-"],
@@ -154,8 +154,8 @@ li ol {
   }
 
   .cust-scb {
-    @apply scrollbar-thin scrollbar-track-nord-light-bg scrollbar-thumb-nord-light-accent
-    dark:scrollbar-track-nord-dark-bg dark:scrollbar-thumb-nord-dark-accent;
+    @apply scrollbar-thin scrollbar-track-scrollbg scrollbar-thumb-scrollaccent
+    dark:scrollbar-track-scrollbgd dark:scrollbar-thumb-scrollaccentd;
   }
 
   .navicon {
