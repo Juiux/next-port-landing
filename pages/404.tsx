@@ -11,13 +11,13 @@ const PageNotFound: NextPage = ({ allPostsData }: any) => {
       date={undefined}
       allPostsData={allPostsData}
     >
-      <p className="mt-12 text-center text-8xl font-bold text-rednord dark:text-yellnord">
+      <p className="mt-12 text-center text-8xl font-bold text-nord-light-highlight dark:text-nord-dark-highlight">
         404
       </p>
       <p className="mt-2 text-center text-3xl font-bold">
         Oops! Page not found.
       </p>
-      <p className="mt-0 mb-10 text-center text-accentlight dark:text-accent">
+      <p className="mt-0 mb-10 text-center text-nord-light-accent dark:text-nord-dark-accent">
         Looks like the page you&apos;re looking for doesn&apos;t exist.
       </p>
     </Default>

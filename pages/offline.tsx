@@ -11,13 +11,13 @@ const OfflinePage: NextPage = ({ allPostsData }: any) => {
       date={undefined}
       allPostsData={allPostsData}
     >
-      <p className="mt-12 text-center text-8xl font-bold text-rednord dark:text-yellnord">
+      <p className="mt-12 text-center text-8xl font-bold text-nord-light-highlight dark:text-nord-dark-highlight">
         420
       </p>
       <p className="mt-2 text-center text-3xl font-bold">
         You&apos;re offline.
       </p>
-      <p className="mt-0 mb-10 text-center text-accentlight dark:text-accent">
+      <p className="mt-0 mb-10 text-center text-nord-light-accent dark:text-nord-dark-accent">
         Go outside, touch some grass.
       </p>
     </Default>

@@ -16,7 +16,7 @@ const Edu: NextPage = ({ allPostsData, allEduData }: any) => {
       <p className="mt-12 text-center text-3xl font-bold">
         Jadwal Kuliah IF 4 REG B
       </p>
-      <p className="mt-0 text-center text-accentlight dark:text-accent">
+      <p className="mt-0 text-center text-nord-light-accent dark:text-nord-dark-accent">
         Apes together strong.
       </p>
       <div className="postcard flex flex-col">
