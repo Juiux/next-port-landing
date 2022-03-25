@@ -56,7 +56,7 @@ export function CardEduSelectables(props: any) {
     <a
       aria-label={props.title}
       href={props.href}
-      className="card-section flex h-full w-full flex-col text-left text-textlight hover:text-textlight dark:text-textnav dark:hover:text-textnav"
+      className="card-section flex h-full w-full flex-col text-left text-nord-light-text hover:text-nord-light-text dark:text-nord-dark-text dark:hover:text-nord-dark-text"
     >
       <p className="font-semibold">{props.title}</p>
       <p className="z-0 text-sm opacity-60">
