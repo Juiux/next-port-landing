@@ -18,6 +18,10 @@ module.exports = {
           "0 -1px 6px 0 rgb(0 0 0 / 0.05), 0 -1px 3px -1px rgb(0 0 0 / 0.05)",
       },
       colors: {
+        scrollbg: "#E5E9F0",
+        scrollaccent: "#5E81AC",
+        scrollbgd: "#232731",
+        scrollaccentd: "#88C0D0",
         nord: {
           dark: {
             bg: "#232731",
