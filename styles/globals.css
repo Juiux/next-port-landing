@@ -149,7 +149,7 @@ li ol {
 }
 
 @layer components {
-  .preload {
+  .preload * {
     @apply transition-none !important;
   }
 
