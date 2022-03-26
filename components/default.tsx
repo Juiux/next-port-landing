@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 import BottomBar from "./bottombar";
 import Footer from "./footer";
 import Navbar from "./navbar";
@@ -81,6 +82,9 @@ export default function Default(props: any) {
       </main>
       <BottomBar />
       <Stt />
+      <Script id="stop-preload">
+        {`document.body.classList.remove("preload");`}
+      </Script>
     </>
   );
 }
