@@ -1,12 +1,12 @@
 ---
-title: "Introduction"
-date: "2021-05-02"
-desc: "Author's introduction."
+title: Introduction
+date: 2021-05-02
+desc: Author's introduction.
 tag:
-  - "general"
-  - "intro"
----
+- general
+- intro
 
+---
 # Abstract
 
 Seems like blogging been a nice activity since past, eh? This blog actually has changed and hopped from over 69420 frameworks before I decide to just use Next.js with Jekyll-inspired stuffs. It turns out well above my expectations tho and the blog went smooth and fluid.
@@ -17,7 +17,7 @@ My name's Irvan Malik Azantha. I'm currently studying on Universitas Sriwijaya (
 
 # About This Blog
 
-This blog is using Next.js framework as its base. If you want to copy the template or something just `git clone https://github.com/irvanmalik48/blog`, modify stuffs here and there, deploy, and you will most likely good to go.  
+This blog is using Next.js framework as its base. If you want to copy the template or something just `git clone https://github.com/irvanmalik48/blog`, modify stuffs here and there, deploy, and you will most likely good to start.  
 Few summaries about Next.js:
 
 1. Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed.
