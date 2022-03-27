@@ -1,12 +1,12 @@
 ---
 title: Introduction
-date: '2021-05-01'
+date: "2021-05-01"
 desc: Author's introduction.
 tag:
-- general
-- intro
-
+  - general
+  - intro
 ---
+
 # Abstract
 
 Seems like blogging been a nice activity since past, eh? This blog actually has changed and hopped from over 69420 frameworks before I decide to just use Next.js with Jekyll-inspired stuffs. It turns out well above my expectations tho and the blog went smooth and fluid.
