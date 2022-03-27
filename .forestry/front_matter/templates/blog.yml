@@ -5,8 +5,10 @@ fields:
 - type: text
   name: title
   label: title
-- type: datetime
-  name: date
+- name: date
+  type: text
+  config:
+    required: false
   label: date
 - type: text
   name: desc
