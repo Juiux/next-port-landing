@@ -2,17 +2,17 @@
 label: Blog
 hide_body: false
 fields:
-- type: text
-  name: title
-  label: title
-- name: date
-  type: text
-  config:
-    required: false
-  label: date
-- type: text
-  name: desc
-  label: desc
-- type: list
-  name: tag
-  label: tag
+  - type: text
+    name: title
+    label: title
+  - name: date
+    type: text
+    config:
+      required: false
+    label: date
+  - type: text
+    name: desc
+    label: desc
+  - type: list
+    name: tag
+    label: tag

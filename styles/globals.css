@@ -13,7 +13,7 @@
 }
 
 body {
-  @apply bg-nord-light-bg text-nord-light-text dark:bg-nord-dark-bg dark:text-nord-dark-text flex;
+  @apply flex bg-nord-light-bg text-nord-light-text dark:bg-nord-dark-bg dark:text-nord-dark-text;
 }
 
 h1,
