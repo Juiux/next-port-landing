@@ -42,7 +42,7 @@ module.exports = {
             fttext: "hsl(222, 17%, 32%)",
             sb: "hsl(220, 27%, 93%)",
             sbtp: "hsla(220, 27%, 93%, 0.8)",
-            text: "#232731",
+            text: "#4C566A",
             accent: "#5E81AC",
             borders: "hsl(220, 27%, 85%)",
             highlight: "#BF616A",
