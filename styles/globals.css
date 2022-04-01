@@ -149,10 +149,6 @@ li ol {
 }
 
 @layer components {
-  .preload * {
-    @apply transition-none !important;
-  }
-
   .root-grid {
     @apply w-screen gap-0 md:grid md:grid-cols-root;
   }
