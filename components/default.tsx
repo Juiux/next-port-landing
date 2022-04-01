@@ -82,9 +82,6 @@ export default function Default(props: any) {
       </main>
       <BottomBar />
       <Stt />
-      <Script strategy="afterInteractive" id="stop-preload">
-        {`document.body.classList.remove("preload");`}
-      </Script>
     </>
   );
 }
