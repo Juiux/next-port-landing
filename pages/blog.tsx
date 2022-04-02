@@ -2,7 +2,7 @@ import { GetStaticProps, NextPage } from "next";
 import BlogSearch from "../components/blogsearch";
 import Default from "../components/default";
 import { CardSelectables } from "../components/selectables";
-import { getSortedPostsData } from "../lib";
+import { getSortedPostsData } from "../lib/blog";
 
 const Blog: NextPage = ({ allPostsData }: any) => {
   return (

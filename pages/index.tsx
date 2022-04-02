@@ -2,7 +2,7 @@ import type { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import Default from "../components/default";
 import { CardSelectables } from "../components/selectables";
-import { getSortedPostsData } from "../lib";
+import { getSortedPostsData } from "../lib/blog";
 import * as Icons from "react-feather";
 
 const Home: NextPage = ({ allPostsData }: any) => {

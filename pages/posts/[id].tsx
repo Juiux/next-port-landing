@@ -3,7 +3,7 @@ import {
   getAllPostIds,
   getPostData,
   getSortedPostsData,
-} from "../../lib/index";
+} from "../../lib/blog";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 const path = "";

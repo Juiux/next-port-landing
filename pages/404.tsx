@@ -1,6 +1,6 @@
 import { GetStaticProps, NextPage } from "next";
 import Default from "../components/default";
-import { getSortedPostsData } from "../lib";
+import { getSortedPostsData } from "../lib/blog";
 
 const PageNotFound: NextPage = ({ allPostsData }: any) => {
   return (

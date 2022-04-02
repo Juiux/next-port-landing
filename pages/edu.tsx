@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 import Default from "../components/default";
 import { CardEduSelectables } from "../components/selectables";
-import { getSortedPostsData } from "../lib";
+import { getSortedPostsData } from "../lib/blog";
 import { eduData } from "../misc/edu";
 
 const Edu: NextPage = ({ allPostsData, allEduData }: any) => {
