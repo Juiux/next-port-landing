@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@giscus/react": "^1.1.2",
+    "@giscus/react": "^2.0.1",
     "gray-matter": "^4.0.3",
     "next": "^12.1.5-canary.0",
     "next-pwa": "^5.4.6",
