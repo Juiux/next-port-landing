@@ -33,6 +33,9 @@ const nextConfig = {
   modern: true,
   reactStrictMode: true,
   swcMinify: true,
+  compiler: {
+    removeConsole: true,
+  },
   pwa: {
     dest: "public",
     register: true,
