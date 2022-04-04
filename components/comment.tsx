@@ -1,4 +1,4 @@
-import { Giscus } from "@giscus/react";
+import Giscus from "@giscus/react";
 import { useTheme } from "next-themes";
 
 export default function Comment() {
