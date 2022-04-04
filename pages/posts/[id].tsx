@@ -1,9 +1,5 @@
 import PostLayout from "../../components/posts";
-import {
-  getAllPostIds,
-  getPostData,
-  getSortedPostsData,
-} from "../../lib/blog";
+import { getAllPostIds, getPostData, getSortedPostsData } from "../../lib/blog";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 const path = "";
