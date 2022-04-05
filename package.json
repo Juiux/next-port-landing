@@ -18,7 +18,7 @@
     "next-pwa": "^5.4.6",
     "next-sitemap": "^2.5.17",
     "next-themes": "^0.1.1",
-    "preact": "^10.7.0",
+    "preact": "^10.7.1",
     "preact-ssr-prepass": "^1.2.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
