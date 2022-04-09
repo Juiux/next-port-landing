@@ -3,9 +3,10 @@ import * as Icon from "react-feather";
 import { handleClick } from "./selectables";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 
 export default function Navbar(props: any) {
-  const { theme, setTheme } = useTheme();
+  
   return (
     <nav className={"nav " + props.className}>
       <NavIconNext icon={<Icon.Home />} text="Home" href="/" />
@@ -23,9 +24,7 @@ export default function Navbar(props: any) {
       />
       <NavIcon icon={<Icon.FileText />} text="CV" href="#" />
       <NavIconNext icon={<Icon.Info />} text="About" href="/about" />
-      <DarkToggle
-        action={() => setTheme(theme === "dark" ? "light" : "dark")}
-      />
+      <DarkToggle/>
       <GitProfile />
     </nav>
   );
@@ -47,12 +46,23 @@ const NavIcon = ({ icon, text, href, add }: any) => (
   </a>
 );
 
-const DarkToggle = ({ action, add }: any) => (
-  <button className={"navicon group " + add} onClick={action}>
-    <ToggleIcon />
-    <span className="navtooltip group-hover:scale-100">Switch Theme</span>
-  </button>
-);
+const DarkToggle = ({ action, add }: any) => {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
+
+  return (
+    <button className={"navicon group " + add} onClick={
+      () => setTheme(theme === "dark"? "light" : "dark")
+    }>
+      <ToggleIcon />
+      <span className="navtooltip group-hover:scale-100">Switch Theme</span>
+    </button>
+  );
+};
 
 export const ToggleIcon = () => {
   const { theme, setTheme } = useTheme();

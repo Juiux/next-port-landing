@@ -3,9 +3,15 @@ import Link from "next/link";
 import { handleClick } from "./selectables";
 import { ToggleIcon } from "./navbar";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function BottomBar() {
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
 
   return (
     <nav className="bottombar">
