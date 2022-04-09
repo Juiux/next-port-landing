@@ -14,7 +14,7 @@ export default function Comment() {
         mapping="pathname"
         reactionsEnabled="0"
         emitMetadata="0"
-        theme={"transparent_" + theme}
+        theme={`https://giscus.app/themes/${theme}.css`}
       />
     </div>
   );
