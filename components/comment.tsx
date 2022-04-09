@@ -1,8 +1,14 @@
 import Giscus from "@giscus/react";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function Comment() {
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
 
   return (
     <div className="p-5">
