@@ -16,7 +16,7 @@
     "gray-matter": "^4.0.3",
     "next": "^12.1.4",
     "next-pwa": "^5.5.0",
-    "next-sitemap": "^2.5.19",
+    "next-sitemap": "^2.5.20",
     "next-themes": "^0.1.1",
     "preact": "^10.7.1",
     "preact-ssr-prepass": "^1.2.0",
