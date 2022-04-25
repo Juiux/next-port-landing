@@ -1,6 +1,6 @@
 import { MutableRefObject, useCallback, useRef, useState } from "react";
-import { MoreHorizontal } from "react-feather";
 import Selectables from "./selectables";
+import { cachedPosts } from "../misc/blog";
 
 export default function Search({ onFocusHandler }: any) {
   const searchRef: MutableRefObject<HTMLInputElement | null> = useRef(null);
@@ -27,19 +27,15 @@ export default function Search({ onFocusHandler }: any) {
     }
   }, []);
 
-  const onClick = useCallback(
-    (event: any) => {
-      onFocusHandler(true);
-      if (searchRef.current && !searchRef.current.contains(event.target)) {
-        setActive(false);
-        onFocusHandler(false);
-        setQuery("");
-        setResults([]);
-        window.removeEventListener("click", onClick);
-      }
-    },
-    [onFocusHandler]
-  );
+  const onClick = useCallback((event: any) => {
+    if (searchRef.current && !searchRef.current.contains(event.target)) {
+      setActive(false);
+      onFocusHandler(false);
+      setQuery("");
+      setResults([]);
+      window.removeEventListener("click", onClick);
+    }
+  }, []);
 
   const onFocus = () => {
     setActive(true);
@@ -55,7 +51,7 @@ export default function Search({ onFocusHandler }: any) {
         onChange={onChange}
         onFocus={onFocus}
         className="sidebar-section selectable-section text-sm"
-        placeholder="Search post... (use # for tags)"
+        placeholder="Search post..."
         value={query}
       />
       {show(active, results)}
@@ -64,13 +60,26 @@ export default function Search({ onFocusHandler }: any) {
 }
 
 function show(active: boolean, results: any) {
-  return (
-    active &&
-    results.length > 0 &&
-    results !== undefined && (
+  if (active && results.length > 0 && results !== undefined) {
+    return (
       <>
-        <p className="sidebar-header">SEARCHED POSTS</p>
-        {results.map(({ id, title, date, tag, desc }: any, index: any) => (
+        {results.map(({ item }: any, index: any) => (
+          <div className="w-full cursor-pointer" key={index}>
+            <Selectables
+              id={item.id}
+              title={item.title}
+              date={item.date}
+              tag={item.tag}
+              desc={item.desc}
+            />
+          </div>
+        ))}
+      </>
+    );
+  } else {
+    return (
+      <>
+        {cachedPosts.map(({ id, title, date, tag, desc }: any, index: any) => (
           <div className="w-full cursor-pointer" key={index}>
             <Selectables
               id={id}
@@ -81,10 +90,7 @@ function show(active: boolean, results: any) {
             />
           </div>
         ))}
-        <div className="sidebar-section flex items-center justify-center">
-          <MoreHorizontal />
-        </div>
       </>
-    )
-  );
+    );
+  }
 }
