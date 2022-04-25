@@ -6,7 +6,6 @@ import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 
 export default function Navbar(props: any) {
-  
   return (
     <nav className={"nav " + props.className}>
       <NavIconNext icon={<Icon.Home />} text="Home" href="/" />
@@ -24,7 +23,7 @@ export default function Navbar(props: any) {
       />
       <NavIcon icon={<Icon.FileText />} text="CV" href="#" />
       <NavIconNext icon={<Icon.Info />} text="About" href="/about" />
-      <DarkToggle/>
+      <DarkToggle />
       <GitProfile />
     </nav>
   );
@@ -46,7 +45,7 @@ const NavIcon = ({ icon, text, href, add }: any) => (
   </a>
 );
 
-const DarkToggle = ({ action, add }: any) => {
+const DarkToggle = ({ add }: any) => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -55,9 +54,10 @@ const DarkToggle = ({ action, add }: any) => {
   if (!mounted) return null;
 
   return (
-    <button className={"navicon group " + add} onClick={
-      () => setTheme(theme === "dark"? "light" : "dark")
-    }>
+    <button
+      className={"navicon group " + add}
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+    >
       <ToggleIcon />
       <span className="navtooltip group-hover:scale-100">Switch Theme</span>
     </button>
@@ -65,7 +65,7 @@ const DarkToggle = ({ action, add }: any) => {
 };
 
 export const ToggleIcon = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   if (theme == "dark") {
     return <Icon.Sun />;
   } else {
