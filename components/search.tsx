@@ -16,7 +16,7 @@ export default function Search({ onFocusHandler }: any) {
   const onChange = useCallback((event: any) => {
     const query = event.target.value;
     setQuery(query);
-    if (query.length) {
+    if (query.length > 0) {
       fetch(searchEndpoint(query))
         .then((res) => res.json())
         .then((res) => {
