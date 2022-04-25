@@ -60,7 +60,6 @@ const nextConfig = {
   images: {
     domains: ["github.com", "avatars.githubusercontent.com"],
   },
-  /*
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
       Object.assign(config.resolve.alias, {
@@ -72,7 +71,6 @@ const nextConfig = {
     }
     return config;
   },
-  */
 };
 
 module.exports = withPWA(nextConfig);
