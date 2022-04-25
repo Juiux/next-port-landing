@@ -1,15 +1,13 @@
-import { GetStaticProps, NextPage } from "next";
+import { NextPage } from "next";
 import Default from "../components/default";
-import { getSortedPostsData } from "../lib/blog";
 
-const PageNotFound: NextPage = ({ allPostsData }: any) => {
+const PageNotFound: NextPage = () => {
   return (
     <Default
       title="404"
       desc="This is a 404 page."
       tag={undefined}
       date={undefined}
-      allPostsData={allPostsData}
     >
       <p className="mt-12 text-center text-8xl font-bold text-nord-light-highlight dark:text-nord-dark-highlight">
         404
@@ -22,15 +20,6 @@ const PageNotFound: NextPage = ({ allPostsData }: any) => {
       </p>
     </Default>
   );
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData("");
-  return {
-    props: {
-      allPostsData,
-    },
-  };
 };
 
 export default PageNotFound;

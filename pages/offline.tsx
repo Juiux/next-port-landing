@@ -1,15 +1,13 @@
-import { GetStaticProps, NextPage } from "next";
+import { NextPage } from "next";
 import Default from "../components/default";
-import { getSortedPostsData } from "../lib/blog";
 
-const OfflinePage: NextPage = ({ allPostsData }: any) => {
+const OfflinePage: NextPage = () => {
   return (
     <Default
       title="Touch Grass Department"
       desc="This is an offline fallback page."
       tag={undefined}
       date={undefined}
-      allPostsData={allPostsData}
     >
       <p className="mt-12 text-center text-8xl font-bold text-nord-light-highlight dark:text-nord-dark-highlight">
         420
@@ -22,15 +20,6 @@ const OfflinePage: NextPage = ({ allPostsData }: any) => {
       </p>
     </Default>
   );
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData("");
-  return {
-    props: {
-      allPostsData,
-    },
-  };
 };
 
 export default OfflinePage;

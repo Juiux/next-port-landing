@@ -1,18 +1,11 @@
 import { GetStaticProps, NextPage } from "next";
 import Default from "../components/default";
 import { CardEduSelectables } from "../components/selectables";
-import { getSortedPostsData } from "../lib/blog";
 import { eduData } from "../misc/edu";
 
-const Edu: NextPage = ({ allPostsData, allEduData }: any) => {
+const Edu: NextPage = ({ allEduData }: any) => {
   return (
-    <Default
-      title="Jadwal Kuliah"
-      desc="-"
-      tag={undefined}
-      date={undefined}
-      allPostsData={allPostsData}
-    >
+    <Default title="Jadwal Kuliah" desc="-" tag={undefined} date={undefined}>
       <p className="mt-12 text-center text-3xl font-bold">
         Jadwal Kuliah IF 4 REG B
       </p>
@@ -43,13 +36,11 @@ const Edu: NextPage = ({ allPostsData, allEduData }: any) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData("");
   const allEduData = eduData.sort((a: any, b: any) => {
     return a["time"] > b["time"] ? 1 : -1;
   });
   return {
     props: {
-      allPostsData,
       allEduData,
     },
   };

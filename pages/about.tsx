@@ -1,15 +1,13 @@
-import { GetStaticProps, NextPage } from "next";
+import { NextPage } from "next";
 import Default from "../components/default";
-import { getSortedPostsData } from "../lib/blog";
 
-const About: NextPage = ({ allPostsData }: any) => {
+const About: NextPage = () => {
   return (
     <Default
       title="About Me"
       desc="Stuffs about me."
       tag={undefined}
       date={undefined}
-      allPostsData={allPostsData}
     >
       <p className="mt-12 text-center text-3xl font-bold">About Me</p>
       <p className="mt-0 mb-10 text-center text-nord-light-accent dark:text-nord-dark-accent">
@@ -94,15 +92,6 @@ const About: NextPage = ({ allPostsData }: any) => {
       </div>
     </Default>
   );
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData("");
-  return {
-    props: {
-      allPostsData,
-    },
-  };
 };
 
 export default About;

@@ -12,7 +12,6 @@ const Home: NextPage = ({ allPostsData }: any) => {
       desc="Do what you want and do it well."
       tag={undefined}
       date={undefined}
-      allPostsData={allPostsData}
     >
       <div className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
         <div className="lapp-logo"></div>
