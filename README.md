@@ -1,5 +1,7 @@
 # My Website
 
+> This repo is deprecated. Current blog development goes to <https://github.com/irvanmalik48/realm>.
+
 Basically my website. Nothing so special about it.
 
 ## Features
