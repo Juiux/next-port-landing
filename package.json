@@ -32,7 +32,7 @@
     "rehype-toc": "^3.0.2",
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.1.0",
-    "sharp": "^0.30.4",
+    "sharp": "^0.30.7",
     "unified": "^10.1.2"
   },
   "devDependencies": {
