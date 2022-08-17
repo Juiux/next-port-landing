@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@giscus/react": "^2.0.3",
+    "@giscus/react": "^2.2.0",
     "@supabase/supabase-js": "^1.35.2",
     "fuse.js": "^6.5.3",
     "gray-matter": "^4.0.3",
