@@ -23,7 +23,7 @@
     "preact": "^10.10.3",
     "preact-ssr-prepass": "^1.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.1.0",
+    "react-dom": "^18.2.0",
     "react-feather": "^2.0.9",
     "rehype-prism-plus": "^1.4.2",
     "rehype-raw": "^6.1.1",
