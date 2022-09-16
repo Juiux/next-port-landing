@@ -43,7 +43,7 @@
     "eslint-config-next": "12.2.5",
     "eslint-config-prettier": "^8.5.0",
     "postcss": "^8.4.16",
-    "postcss-import": "^14.1.0",
+    "postcss-import": "^15.0.0",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
     "tailwind-scrollbar": "^1.3.1",
