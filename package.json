@@ -16,7 +16,7 @@
     "@supabase/supabase-js": "^1.35.6",
     "fuse.js": "^6.6.2",
     "gray-matter": "^4.0.3",
-    "next": "^12.2.5",
+    "next": "^12.3.0",
     "next-pwa": "^5.5.5",
     "next-sitemap": "^3.1.21",
     "next-themes": "^0.2.0",
