@@ -40,7 +40,7 @@
     "@types/react": "18.0.20",
     "autoprefixer": "^10.4.8",
     "eslint": "8.23.1",
-    "eslint-config-next": "12.2.5",
+    "eslint-config-next": "13.1.1",
     "eslint-config-prettier": "^8.5.0",
     "postcss": "^8.4.16",
     "postcss-import": "^15.0.0",
