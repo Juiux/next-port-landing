@@ -38,7 +38,7 @@
   "devDependencies": {
     "@types/node": "18.11.18",
     "@types/react": "18.0.20",
-    "autoprefixer": "^10.4.8",
+    "autoprefixer": "^10.4.13",
     "eslint": "8.23.1",
     "eslint-config-next": "13.1.1",
     "eslint-config-prettier": "^8.5.0",
