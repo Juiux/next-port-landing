@@ -1,8 +1,8 @@
 .browsersettings::-webkit-scrollbar {
-  display: block;
+  display: none;
 }
 .browsersettings {
-  position: relative;
+  position: absolute;
   overflow-y: scroll;
   height: calc(100% - 150px);
   width: calc(100% - 93px);
@@ -25,7 +25,7 @@
     justify-content: flex-start;
     align-items: center;
     h5 {
-      margin-bottom: 50px;
+      margin-bottom: 0px;
       margin-left: 10px;
       font-family: 'Uni Neue' !important;
       font-style: normal;
@@ -44,6 +44,11 @@
     }
   }
   &__box {
+    // background: var(--unnamed-color-101);
+    // border: 1px solid var(--unnamed-color-36);
+    // box-sizing: border-box;
+    // border-radius: 8px;
+    // margin-top: 15px;
     background: #000f19;
     box-shadow: inset 0px 1px 20px rgb(0 0 0 / 40%);
     box-sizing: border-box;
