@@ -1,0 +1,189 @@
+.browsersettings::-webkit-scrollbar {
+  display: block;
+}
+.browsersettings {
+  position: relative;
+  overflow-y: scroll;
+  height: calc(100% - 150px);
+  width: calc(100% - 93px);
+  display: flex;
+  justify-content: center;
+  .walletIcon {
+    padding: 5px;
+  }
+  .icon img {
+    box-sizing: border-box;
+    background-origin: border-box !important;
+    background: linear-gradient(180deg, #062038 0%, #01152d 100%);
+    border: 2px solid rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    width: 39px;
+    height: 40.3px;
+  }
+  &__header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    h5 {
+      margin-bottom: 50px;
+      margin-left: 10px;
+      font-family: 'Uni Neue' !important;
+      font-style: normal;
+      font-weight: 500;
+      color: #87a7c3 !important;
+    }
+  }
+  &__privacybox {
+    width: 700px;
+    margin-top: 41px;
+    h5 {
+      font-family: 'Uni Neue Regular';
+      font-size: 14px;
+      line-height: 19px;
+      color: var(--unnamed-color-5);
+    }
+  }
+  &__box {
+    background: #000f19;
+    box-shadow: inset 0px 1px 20px rgb(0 0 0 / 40%);
+    box-sizing: border-box;
+    width: 700px;
+    border-radius: 15px;
+    margin-top: 13px;
+    margin-bottom: 27px;
+    p {
+      font-family: 'Uni Neue Bold';
+      font-size: 10px;
+      line-height: 13px;
+      letter-spacing: 1px;
+      margin-bottom: 0px;
+      margin: 0px 10px;
+      color: var(--unnamed-color-5);
+      &__active {
+        color: var(--unnamed-color-3);
+      }
+    }
+    ul {
+      padding: 0px;
+      margin-bottom: 0px;
+      // box-shadow: inset 0px 1px 10px rgb(0 0 0 / 50%);
+      border-radius: 15px;
+    }
+    li {
+      &:last-child {
+        border: none;
+      }
+      border-bottom: 1px solid rgba(#c4c4c4, 0.04);
+      padding: 21px;
+      h4 {
+        font-family: 'Uni Neue Regular';
+        font-weight: 500;
+        line-height: 22px;
+        font-size: 16px;
+        margin-bottom: 3px !important;
+        color: var(--unnamed-color-13);
+        .premium_icon {
+          margin-left: 5px;
+          margin-top: -5px;
+        }
+        .premium_text {
+          background: linear-gradient(180deg, #fdbc40 55.56%, #fc605c 144.44%);
+          // background-image: url('../../../../assets/images/premium_border.svg');
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          font-family: 'Uni Neue';
+          font-style: normal;
+          font-weight: 800;
+          font-size: 10px;
+          line-height: 14px;
+          text-align: center;
+          letter-spacing: 1px;
+        }
+      }
+      h6 {
+        font-size: 12px;
+        line-height: 16px;
+        font-family: 'Uni Neue Regular';
+        color: var(--unnamed-color-5);
+        margin-bottom: 0px;
+      }
+    }
+    .switchBox {
+      display: flex;
+      align-items: center;
+      p {
+        font-family: 'Uni Neue Bold';
+        font-size: 10px;
+        line-height: 13px;
+        letter-spacing: 1px;
+        margin-bottom: 0px;
+      }
+      .mx-2 {
+        .react-switch-handle {
+          background: var(--unnamed-color-107) !important;
+          width: 14px !important;
+          height: 14px !important;
+          margin: 1px 0px 0px -3px !important;
+        }
+        &.disabled {
+          .react-switch-bg {
+            width: 41px !important;
+            height: 18px !important;
+            border: 1px solid rgba(0, 0, 0, 0.1) !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+          }
+        }
+        &.enabled {
+          .react-switch-bg {
+            width: 41px !important;
+            height: 18px !important;
+            background: linear-gradient(
+              90deg,
+              #5ee671 0%,
+              #00f0ff 111.67%
+            ) !important;
+            border: 1px solid rgba(0, 0, 0, 0.1) !important;
+          }
+        }
+      }
+    }
+    .clear {
+      cursor: pointer;
+      margin-bottom: 0px;
+      text-transform: uppercase;
+      font-family: 'Uni Neue Bold';
+      font-size: 14px;
+      line-height: 16px;
+      background: -webkit-linear-gradient(#00b2ff, var(--unnamed-color-1));
+      transform: matrix(1, 0, 0, 1, 0, 0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .cleared {
+      margin-bottom: 0px;
+      text-transform: uppercase;
+      font-family: 'Uni Neue Bold';
+      font-size: 14px;
+      line-height: 16px;
+      background: -webkit-linear-gradient(var(--unnamed-color-22), #5ee571);
+      transform: matrix(1, 0, 0, 1, 0, 0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  &__version {
+    font-family: 'Uni Neue Regular';
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--unnamed-color-5);
+
+    @media (prefers-color-scheme: dark) {
+      opacity: 0.5;
+    }
+  }
+}
