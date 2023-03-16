@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "@giscus/react": "^2.2.0",
-    "@supabase/supabase-js": "^2.4.0",
+    "@supabase/supabase-js": "^2.11.0",
     "fuse.js": "^6.6.2",
     "gray-matter": "^4.0.3",
     "next": "^12.3.0",
